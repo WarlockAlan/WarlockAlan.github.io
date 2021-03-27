@@ -12,10 +12,10 @@
 
 ### **如何寫博客:**
 
-1. 訪問git倉庫中的 [source/_posts](https://github.com/WarlockAlan/WarlockAlan.github.ioo/tree/main/source/_posts)
+1. 訪問git倉庫中的 [source/_posts](https://github.com/WarlockAlan/WarlockAlan.github.io/tree/main/source/_posts)
 2. 點擊右上角的 Add File -> Create a new file
 
-![Screen Shot 2021-03-22 at 10.02.19 PM.png](https://i.loli.net/2021/03/22/J7vR5DFwAylGade.png)
+![image.png](https://i.loli.net/2021/03/27/Y5zTPoBIlZtibXf.png)
 
 3. 如上圖所示, 輸入文件名, 格式為 `標題.md`
 4. 將下列模板填入大片空白中 ( 按照需求修改)
@@ -70,7 +70,8 @@ Here's a sentence with a footnote. [^1]
 5. 你隨時都可以通過 Preview 按鈕來預覽自己寫好的博文.
 6. 點擊最下方的 Commit Changes 綠色按鈕發布博文
 
-![image.png](https://i.loli.net/2021/03/22/F9gsCcykSNKBxVA.png)
+![image.png](https://i.loli.net/2021/03/27/yZESYXOAhMHGlU3.png)
+
 
 7. 將電腦放置一段時間讓其自然生成, 刷新頁面後若途中黃色點變為綠色, 或者本教程開頭的圖標顯示為 Passing, 則成功.
 
