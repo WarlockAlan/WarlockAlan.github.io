@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: WarlockAlan‘s Crucible
-subtitle: ''
+title: WarlockAlan
+subtitle: 'My crucible !'
 description: ''
 keywords:
 author: Alan
@@ -97,7 +97,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: cactus
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
