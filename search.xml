@@ -5,11 +5,30 @@
     
     <entry>
       <title>Hello World</title>
-      <link href="2021/03/27/hello-world/"/>
-      <url>2021/03/27/hello-world/</url>
+      <link href="2021/04/07/hello-world/"/>
+      <url>2021/04/07/hello-world/</url>
       
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>第一次嘗試!</title>
+      <link href="2021/04/07/first-attemp/"/>
+      <url>2021/04/07/first-attemp/</url>
+      
+        <content type="html"><![CDATA[<h2 id="這是一個小標題"><a href="#這是一個小標題" class="headerlink" title="這是一個小標題!"></a>這是一個小標題!</h2><p>可以看到, Github 編輯總有一點點小問題.<br>比如說下面這種情況<br>遇到這種問題, 我們可以先用 Markdown 編輯器編輯之後粘貼到 Github 裡面.<br>(Markdown的規則是, 每一行之後要有兩個空格換行.)</p><p>這是我用Markdown編輯器創建的表格,</p><p>草, 忘了表格怎樣創建了</p><p>手寫好了</p><table><thead><tr><th>姓名</th><th>性別</th></tr></thead><tbody><tr><td>張三</td><td>男</td></tr></tbody></table><p>寫好了</p><p>先在我們粘貼到github裡面.</p><p>好, 現在提交試一下</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 計算機 </category>
+          
+      </categories>
       
       
     </entry>
