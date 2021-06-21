@@ -15,25 +15,6 @@
     </entry>
     
     
-    
-    <entry>
-      <title>第一次嘗試!</title>
-      <link href="2021/04/07/first-attemp/"/>
-      <url>2021/04/07/first-attemp/</url>
-      
-        <content type="html"><![CDATA[<h2 id="這是一個小標題"><a href="#這是一個小標題" class="headerlink" title="這是一個小標題!"></a>這是一個小標題!</h2><p>可以看到, Github 編輯總有一點點小問題.<br>比如說下面這種情況<br>遇到這種問題, 我們可以先用 Markdown 編輯器編輯之後粘貼到 Github 裡面.<br>(Markdown的規則是, 每一行之後要有兩個空格換行.)</p><p>這是我用Markdown編輯器創建的表格,</p><table><thead><tr><th>姓名</th><th>性別</th></tr></thead><tbody><tr><td>張三</td><td>男</td></tr></tbody></table><p>寫好了</p><p>先在我們粘貼到github裡面.</p><p>好, 現在提交試一下</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 計算機 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
   
   
 </search>
