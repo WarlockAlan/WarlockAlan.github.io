@@ -1,4 +1,4 @@
-# Wonderful experience of laser cutting-- we even did it at school!
+# Wonderful experience of laser cutting -- we even did it at school!
 
 ## Backgrounds- why we could do it at school
 
