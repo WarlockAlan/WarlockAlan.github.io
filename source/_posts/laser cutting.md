@@ -1,4 +1,4 @@
-# Wonderful experience of laser cutting in 2021/6/22 -- we even did it at school!
+# Wonderful experience of laser cutting -- we even did it at school!（ 2021/6/22）
 
 ## Backgrounds- why we could do it at school
 
