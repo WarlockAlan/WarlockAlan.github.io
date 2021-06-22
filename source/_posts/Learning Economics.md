@@ -1,4 +1,4 @@
-# My journey of learning Economics--why i love this subject (2020/6/21)
+# My journey of learning Economics--why i love this subject (2021/6/21)
 
 ## What i did in my childhood 
 When I was 9, I began to show an interest in accounting and modeling . I guess I loved those mainly because I wanted to save more money. (Actually I have been developed this habit now.) By learning accounting, I could realize the thing I didn’t need to buy and thus using my money in a more efficient way. By modeling, I could use mathematic knowledge I learned in my classroom to solve practical problems like identifying which scheme would use the lowest money to buy the most goods.
