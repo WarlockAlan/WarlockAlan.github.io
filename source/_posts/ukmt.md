@@ -1,4 +1,4 @@
-# My experience of UKMT in 2020
+# My experience of UKMT in 2020 (Grade 10, in autumn)
 ## What is this contest  
 
 UKMT is the initial of United Kingdom Mathematics,aimed at encouraging students to practice and analyse Maths.  
