@@ -15,3 +15,9 @@ please consider visiting 'em.
 * [Justin's Blog](https://justin.education)  
   Since ur already here, why not go for a visit?
   
+* [Jar's Blog](https://augensternjiang.github.io)
+  As you can probably tell, this man is an anime guy.
+  
+* [Phoenix‘s Blog](https://liuphoenix.github.io/)
+  “Who cares." / "關我屁事."
+  
