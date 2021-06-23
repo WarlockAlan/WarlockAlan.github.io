@@ -10,7 +10,7 @@ banner: "images/banner_sky.jpg"
 
 # Content
 excerpt_link: Read More
-fancybox: true
+fancybox: false
 
 # # Footer
 # copyright: |-
