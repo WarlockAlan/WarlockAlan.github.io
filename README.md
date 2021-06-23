@@ -24,7 +24,6 @@
 ```
 ---
 title: 此處寫入標題
-description: 你對博文的描述
 date: 2099-12-31 23:59:59
 categories:
  - 你的分類
