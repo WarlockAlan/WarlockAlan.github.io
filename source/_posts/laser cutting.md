@@ -1,3 +1,12 @@
+---
+title: 此處寫入標題
+date: 2021-6-22 23:59:59
+categories:
+ -Engineering
+ - School life
+ 
+---
+
 # Wonderful experience of laser cutting -- we even did it at school!（ 2021/6/22）
 
 ## Backgrounds- why we could do it at school
