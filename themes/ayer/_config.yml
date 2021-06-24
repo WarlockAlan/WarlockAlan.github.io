@@ -1,21 +1,19 @@
 # 侧边栏菜单
 menu:
-  主页: /
-  归档: /archives
-  分类: /categories
-  标签: /tags
-  旅行: /tags/旅行/
-  摄影: http://shenyu-vip.lofter.com
-  友链: /friends
-  关于我: /2019/about
+  Homepage: /
+  Archive: /archives
+  Category: /categories
+  Tag: /tags
+  Links: /friends
+  About: /about
 
 # 站点次标题和打字动效
 # https://github.com/mattboldt/typed.js
 subtitle:
   enable: true # 是否开启动效
   text: 面朝大海，春暖花开 # 显示的文字
-  text2: 愿你一生努力，一生被爱 # 滚动播放，如果不需要可以留空
-  text3: 想要的都拥有，得不到的都释怀 # 最多支持三段文字
+  text2:
+  text3:
   startDelay: 0 # 延迟时间
   typeSpeed: 200 # 打字速度
   loop: true # 是否循环
@@ -55,14 +53,14 @@ share_enable: true
 # 国内的社交平台(If you are not in China, maybe you prefer to set:false)
 share_china: true
 # 文章分享文字
-share_text: 分享
+share_text: Share
 
 # 分页文字
 nav_text:
-  page_prev: 上一页
-  page_next: 下一页
-  post_prev: 上一篇
-  post_next: 下一篇
+  page_prev: Previous Page
+  page_next: Next Page
+  post_prev: Previous Post
+  post_next: Next Post
 
 # 文章页是否显示目录
 toc: true
@@ -80,7 +78,7 @@ word_count:
 
 # 打赏
 # 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
-reward_type: 2
+reward_type: 0
 # 打赏wording
 reward_wording: "请我喝杯咖啡吧~"
 # 支付宝二维码图片地址，跟你设置logo的方式一样。比如：/images/alipay.jpg
@@ -90,7 +88,7 @@ weixin: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg
 
 # 版权声明
 # 版权声明type设定：0-关闭版权声明； 1-文章对应的md文件里有copyright: true属性，才有版权声明； 2-所有文章均有版权声明
-copyright_type: 2
+copyright_type: 0
 
 # 是否启用搜索
 # 需要安装hexo-generator-searchdb(https://github.com/theme-next/hexo-generator-searchdb)
@@ -112,7 +110,7 @@ mouse:
   path: /images/mouse.cur
 
 # 鼠标点击效果：0-关闭，1-爱心，2-爆炸烟花，3-粒子烟花
-click_effect: 0
+click_effect: 2
 
 # 页面宽度自定义（不建议修改，可能造成布局混乱），article_width文章宽度，sidebar_width侧边栏宽度
 layout:
@@ -139,7 +137,7 @@ busuanzi:
 
 # 友盟cnzz统计(url填js代码src链接)
 cnzz:
-  enable: true
+  enable: false
   url: https://s9.cnzz.com/z_stat.php?id=1278069914&web_id=1278069914
 
 # Google Analytics
@@ -183,35 +181,26 @@ gongan:
 
 # 友情链接
 friends_link:
-  Ayer主题: #网站名称
-    #网站地址
-    url: https://github.com/Shen-Yu/hexo-theme-ayer
-    #网站图片(可忽略不写)
-    img: /images/ayer.png
-  GitHub:
-    url: https://github.com/Shen-Yu
-    img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/github.png
-  码云:
-    url: https://gitee.com/shen-yu
-    img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/gitee.png
-  Hexo官网:
-    url: https://hexo.io
-    img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/hexo.png
-  Hexo图表插件:
-    url: https://github.com/Shen-Yu/hexo-tag-chart
-    img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/hexo-tag-chart.png
+  Justin's Blog:
+    url: https://justin.education/
+    img: https://i.loli.net/2021/03/30/Ary6xCWRlLZBFSQ.jpg
+  Jar's Blog:
+    url: https://i.loli.net/2021/03/30/Ary6xCWRlLZBFSQ.jpg
+  Phoenix's Blog:
+    url: https://i.loli.net/2021/03/30/Ary6xCWRlLZBFSQ.jpg
+    img: https://liuphoenix.github.io/images/avatar.jpeg
 
 # 评论：1、Valine(推荐)；2、Gitalk；3、Twikoo; 4.MiniValine
 
 # 1、Valine[一款快速、简洁且高效的无后端评论系统](https://github.com/xCss/Valine)
 # 启用Valine必须先创建leancloud应用， 获取 id|key 填入即可
 leancloud:
-  enable: true
+  enable: false
   app_id: #
   app_key: #
 # Valine配置
 valine:
-  enable: true # 是否启用
+  enable: false # 是否启用
   avatar: monsterid # 头像样式(https://valine.js.org/avatar.html)
   placeholder: 给我的文章加点评论吧~ # placeholder
 
@@ -240,14 +229,14 @@ minivaline:
 
 # 首页广告配置
 # 可以根据需要自行增加ad_3，ad_4...，留空则不显示，建议图片和url不要带ad等关键词，否则可能会被adblock等插件屏蔽
-ads:
-  ad_1:
-    title: 云服务器限时秒杀
-    img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/ten_1.jpg
-    url: https://curl.qcloud.com/kvO7hb43
-    width: 300
-  ad_2:
-    title: vultr优惠vps
-    img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/vultr.png
-    url: https://www.vultr.com/?ref=8630075
-    width: 300
+#ads:
+#  ad_1:
+#    title: 云服务器限时秒杀
+#    img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/ten_1.jpg
+#    url: https://curl.qcloud.com/kvO7hb43
+#    width: 300
+#  ad_2:
+#    title: vultr优惠vps
+#    img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/vultr.png
+#    url: https://www.vultr.com/?ref=8630075
+#    width: 300
