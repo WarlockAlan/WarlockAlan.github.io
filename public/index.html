@@ -1,103 +1,257 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>WarlockAlan</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="WarlockAlan" type="application/atom+xml">
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> WarlockAlan</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <!-- mermaid -->
+      
+    <link rel="alternate" href="/atom.xml" title="WarlockAlan" type="application/atom+xml">
 </head>
+  </html>
+</html>
+
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">WarlockAlan</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">My crucible !</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-          <a class="main-nav-link" href="/categories">Categories</a>
-        
-          <a class="main-nav-link" href="/tags">Tags</a>
-        
-          <a class="main-nav-link" href="/about">About</a>
-        
-      </nav>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-Learning Economics" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/06/22/Learning%20Economics/" class="article-date">
-  <time class="dt-published" datetime="2021-06-22T13:04:16.373Z" itemprop="datePublished">2021-06-22</time>
-</a>
+  <div id="app">
     
+      <canvas class="fireworks"></canvas>
+      <style>
+        .fireworks {
+          position: fixed;
+          left: 0;
+          top: 0;
+          z-index: 99999;
+          pointer-events: none;
+        }
+      </style>
+      
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+      
+      <a class="forkMe" href="https://github.com/Shen-Yu/hexo-theme-ayer"
+        target="_blank"><img width="149" height="149" src="/images/forkme.png"
+          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover1.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">WarlockAlan</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
   </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['面朝大海，春暖花开', '', ''],
+        startDelay: 0,
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  
+  
+
+<div class="notice" style="margin-top:50px">
+    <i class="ri-heart-fill"></i>
+    <div class="notice-content" id="broad"></div>
+</div>
+<script type="text/javascript">
+    fetch('https://v1.hitokoto.cn')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("broad").innerHTML = data.hitokoto;
+        })
+        .catch(console.error)
+</script>
+
+<style>
+    .notice {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+    }
+
+    .notice i {
+        float: left;
+        color: #999;
+        font-size: 16px;
+        padding-right: 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+
+    .notice-content {
+        display: initial;
+        vertical-align: middle;
+    }
+</style>
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-School Life"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
   <div class="article-inner">
     
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="My-journey-of-learning-Economics–why-i-love-this-subject-2021-6-21"><a href="#My-journey-of-learning-Economics–why-i-love-this-subject-2021-6-21" class="headerlink" title="My journey of learning Economics–why i love this subject (2021/6/21)"></a>My journey of learning Economics–why i love this subject (2021/6/21)</h1><h2 id="What-i-did-in-my-childhood"><a href="#What-i-did-in-my-childhood" class="headerlink" title="What i did in my childhood"></a>What i did in my childhood</h2><p>When I was 9, I began to show an interest in accounting and modeling . I guess I loved those mainly because I wanted to save more money. (Actually I have been developed this habit now.) By learning accounting, I could realize the thing I didn’t need to buy and thus using my money in a more efficient way. By modeling, I could use mathematic knowledge I learned in my classroom to solve practical problems like identifying which scheme would use the lowest money to buy the most goods.</p>
-<h2 id="Backgrounds-for-Chinese-junior-high-students"><a href="#Backgrounds-for-Chinese-junior-high-students" class="headerlink" title="Backgrounds for Chinese junior high students"></a>Backgrounds for Chinese junior high students</h2><p>Since finance is not a compulsory subject in Chinese junior high schools, I had no choice but to give up my dreams of learning it temporarily. The majority of Chinese students, including me, did time-consuming extra-curricular work in order to pass tough examinations to access senior high schools. Despite this, I continued acquiring knowledge about modeling as I thought that it may be useful in Finance. I sometimes did self-study by downloading online books about Matlab during my senior high school years. </p>
-<h2 id="Special-opportunity-for-me-being-an-A-level-student"><a href="#Special-opportunity-for-me-being-an-A-level-student" class="headerlink" title="Special opportunity for me (being an A-level student)"></a>Special opportunity for me (being an A-level student)</h2><p>In Grade 10, I was delighted to be provided with the opportunity to learn Economics at our A-level centre. I have been learning Business knowledge enthusiastically. In order to get excellent final exam results, I study this subject as soon as I finish my dinner every evening.</p>
-<h2 id="My-experience-of-learning-Economics-at-school"><a href="#My-experience-of-learning-Economics-at-school" class="headerlink" title="My experience of learning Economics at school"></a>My experience of learning Economics at school</h2><p>It is worth mentioning that we have two capable economics teachers. Whenever I have problems, they give me a helping hand to solve them and boost my comprehension further. They are like friends accompanying with me when I am in trouble, rather than simply teachers focused on teaching the syllabus. For example, I got an 80 percent mark in a mock exam, which made me feel sad. My economics teacher did not criticize me at that time. Instead, he smiled at me and said What happened?” Later, he helped me correct my mistakes and I have had much better results in exams since that time.</p>
-<h2 id="What-i-did-for-my-further-study"><a href="#What-i-did-for-my-further-study" class="headerlink" title="What i did for my further study"></a>What i did for my further study</h2><p>Then my economics teacher advised me to take part in a business contest called The Future Business Leader of America. My classmates and I achieved China top 18th in this teamwork event. During the event, I was surprised by how little I knew about economic terms and concepts, so I developed the habit of reading economic essays regularly to broaden my horizons. Thanks to the presentation we did there, I realized that my poor communication skills could have an adverse effect on my academic progress. As a result, I have practiced my speaking by giving more presentations in class.</p>
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/23/School%20Life/"
+    >My daily school life</a> 
+</h2>
+ 
 
       
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/23/School%20Life/" class="article-date">
+  <time datetime="2021-06-23T15:59:59.000Z" itemprop="datePublished">2021-06-23</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/School-life/">School life</a>
+  </div>
+   
     </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Personal-experience–-my-school-life-2021-6-23"><a href="#Personal-experience–-my-school-life-2021-6-23" class="headerlink" title="Personal experience– my school life (2021/6/23)"></a>Personal experience– my school life (2021/6/23)</h1><h2 id="Why-my-school-life-is-uncommon-compared-with-my-other-students"><a href="#Why-my-school-life-is-uncommon-compared-with-my-other-students" class="headerlink" title="Why my school life is uncommon compared with my other students"></a>Why my school life is uncommon compared with my other students</h2><p>Truth to be told, i lived in school dormitory, that makes my school life quite different compared with other students, since i need to live at school 5 days per week and have breakfast, lunch and dinner at canteen as well. Other students, however, just need to go to school at seven twenty in the morning and go back their home in the 5 p.m.</p>
+<h2 id="Brief-introduction-of-students’-daily-routines-in-my-class"><a href="#Brief-introduction-of-students’-daily-routines-in-my-class" class="headerlink" title="Brief introduction of students’ daily routines in my class"></a>Brief introduction of students’ daily routines in my class</h2><p> Students in my class are asked to go to the classroom at 0730. Then we have 30 minutes reading time. From 0800, we have lessons at different periods. We have 10 periods at school every day and we’re allowed to go back home at 0500.</p>
+<h2 id="My-daily-routine-has-a-little-bit-difference-due-to-living-in-the-school-dorm-SWOT-analysis"><a href="#My-daily-routine-has-a-little-bit-difference-due-to-living-in-the-school-dorm-SWOT-analysis" class="headerlink" title="My daily routine has a little bit difference due to living in the school dorm (SWOT analysis)"></a>My daily routine has a little bit difference due to living in the school dorm (SWOT analysis)</h2><h3 id="Strength"><a href="#Strength" class="headerlink" title="Strength"></a>Strength</h3><p>I get up at six fifty every day in the school dormitory, then i go to the school canteen to have breakfast at seven o’clock. I get up late compared with my classmates since they have to spend time commuting. Even though, they still go to the classroom nearly 0730. In contrast, I arrive at my classroom at 0720 and even have 10 minutes spare time to do the self-study.</p>
+<h3 id="Weak"><a href="#Weak" class="headerlink" title="Weak"></a>Weak</h3><p>I have no choice but to have terrible meals at school every day. It sometimes makes me feel sick and decreases my efficiency of study.</p>
+<h3 id="Opportunity"><a href="#Opportunity" class="headerlink" title="Opportunity"></a>Opportunity</h3><p>Only a few students live in the school dorm, that means i may feel isolated from time to time. However, that also means that no one could disturb me to study.</p>
+<p>Besides, the majority of students who live in the dorm are top students, i could learn the way how they study. But it also means the peer pressure is hectic for me.</p>
+<h3 id="Threat"><a href="#Threat" class="headerlink" title="Threat"></a>Threat</h3><p>The self-study room has a poor signal, that means it’s hard for me to use digital devices sometimes. As an international student, i couldn’t live without them in order to look through websites of different universities.</p>
+<h2 id="My-feelings-about-my-own-school-life"><a href="#My-feelings-about-my-own-school-life" class="headerlink" title="My feelings about my own school life"></a>My feelings about my own school life</h2><p>One of my friends used to say that it may be wise for me to rent a flat nearby my school. Actually, my parents rented a flat when i was in the junior high. (My mother has retired so she has enough time.)</p>
+<p>But i didn’t think it was be a good choice. Generally speaking, i didn’t want to disturb my mother’s live since she had retired. In addition, i personally reckon that i must get benefits from my school life. </p>
+<p>First, i do self-study in the evening and ask for my teachers’ help if i need it. (My teachers sometimes work overload until evening) During my school life, i have already developed the ability to concentrate myself to do self-study by reading textbooks or searching information online. I suppose i could fit the self-study life in the university rapidly since i have already lived in this life for a long time.</p>
+<p>Second, i can avoid feeling isolated or even depressed though i live alone. Tell you the truth, when i concentrate on studying, i even forget about time. (And i seldom keep in touch with my parents during  weekday.)  Since culture gap exists, some international students may feel depressed and homesick when they go abroad to study, which makes them perform badly in their study. Obviously i was not one of them.</p>
+<p>Third, thanks to my school life, i have developed the habit to make to-do list to manage my time properly. Many students, including me, feeling relaxed and wasting their time at home.<br>As i don’t have any way to do the entertainment, i must study hard at school (and get great exam scores as well).</p>
+<p>Last but not the least, i can do the majority of things in my everyday life now. Actually, many students, especially the Chinese students, having a poor ability to live alone.</p>
+<p>In other word, i enjoy my life living in the school dormitory.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
     <footer class="article-footer">
-      <a data-url="https://warlockalan.github.io/2021/06/22/Learning%20Economics/" data-id="ckq82odm5000105dxfyrt4jyb" data-title="" class="article-share-link">Share</a>
-      
-      
-      
+       
     </footer>
   </div>
-  
+
+   
+    
 </article>
 
-
-
-  
-    <article id="post-laser cutting" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/06/22/laser%20cutting/" class="article-date">
-  <time class="dt-published" datetime="2021-06-22T13:04:16.373Z" itemprop="datePublished">2021-06-22</time>
-</a>
     
-  </div>
+    <article
+  id="post-Laser Cutting"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
   <div class="article-inner">
     
-    
-    <div class="e-content article-entry" itemprop="articleBody">
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/22/Laser%20Cutting/"
+    >DIY experience</a> 
+</h2>
+ 
+
       
-        <h1 id="Wonderful-experience-of-laser-cutting-–-we-even-did-it-at-school-（-2021-6-22）"><a href="#Wonderful-experience-of-laser-cutting-–-we-even-did-it-at-school-（-2021-6-22）" class="headerlink" title="Wonderful experience of laser cutting – we even did it at school!（ 2021/6/22）"></a>Wonderful experience of laser cutting – we even did it at school!（ 2021/6/22）</h1><h2 id="Backgrounds-why-we-could-do-it-at-school"><a href="#Backgrounds-why-we-could-do-it-at-school" class="headerlink" title="Backgrounds- why we could do it at school"></a>Backgrounds- why we could do it at school</h2><p>Our school has a center called Steam, which aimed to provide different kinds of extra curriculums for students. This center is well-equiped,for example, it has complex laser cutting equipment, that means we have the opportunity to access laser world–laser cutting!</p>
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/22/Laser%20Cutting/" class="article-date">
+  <time datetime="2021-06-22T15:59:59.000Z" itemprop="datePublished">2021-06-22</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Sciences/">Sciences</a> / <a class="article-category-link" href="/categories/Sciences/School-life/">School life</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Wonderful-experience-of-laser-cutting-–-we-even-did-it-at-school-（-2021-6-22）"><a href="#Wonderful-experience-of-laser-cutting-–-we-even-did-it-at-school-（-2021-6-22）" class="headerlink" title="Wonderful experience of laser cutting – we even did it at school!（ 2021/6/22）"></a>Wonderful experience of laser cutting – we even did it at school!（ 2021/6/22）</h1><h2 id="Backgrounds-why-we-could-do-it-at-school"><a href="#Backgrounds-why-we-could-do-it-at-school" class="headerlink" title="Backgrounds- why we could do it at school"></a>Backgrounds- why we could do it at school</h2><p>Our school has a center called Steam, which aimed to provide different kinds of extra curriculums for students. This center is well-equiped,for example, it has complex laser cutting equipment, that means we have the opportunity to access laser world–laser cutting!</p>
 <h2 id="Activities-what-we-did-here"><a href="#Activities-what-we-did-here" class="headerlink" title="Activities- what we did here"></a>Activities- what we did here</h2><p>We used an application online to model different objects. Then we sent our designs to teachers’ computers and they manipulated laser cutting machines by using a computer to cut wood boards.It is worth mentioning that we could bring our designs back home as souvenirs!</p>
 <h2 id="What-i-did-there"><a href="#What-i-did-there" class="headerlink" title="What i did there"></a>What i did there</h2><p> Actually i  downloaded a picture about The University of Toronto on the Internet in order to make a fridge magnet in the morning. It was so  successful that our Physic teacher showed my work in front of my classmates. In the afternoon, since i had already experienced the way to use the modeling application,i designed a box with cover.It took me 2 hours, and i also asked for help during this process.</p>
 <p>My fridge magnet is here below.</p>
@@ -113,134 +267,567 @@
 <p><img src="https://i.loli.net/2021/06/22/RHL71ntXGicPayW.jpg" alt="IMG20210622191656.jpg"></p>
 <h2 id="My-feelings–-what-i-learned-from-today’s-experience"><a href="#My-feelings–-what-i-learned-from-today’s-experience" class="headerlink" title="My feelings– what i learned from today’s experience"></a>My feelings– what i learned from today’s experience</h2><h3 id="For-my-interests"><a href="#For-my-interests" class="headerlink" title="For my interests"></a>For my interests</h3><p>Generally speaking,on the technical level, i had learned the exact way how laser cutting operating. I was surprised that how precise the laser cutting is–the box i made was as good as the handicraft boxes the shops sold. It may boost my comprehension further about engineering–Tell you the truth,i loved handicrafts,and todays’ experience may let me decide to learn engineering in the univerisity.(I decided to learn either Chemistry or Business before.)</p>
 <h3 id="For-my-fault"><a href="#For-my-fault" class="headerlink" title="For my fault"></a>For my fault</h3><p>During today’s event, i didn’t consider about how precise the laser cutting could reach. As a result, i didn’t make a fancy box with different universities’ pictures.(And i wasted some materials as well.) It taught me a lesson that i should think twice before doing something. This may also explain why i made some stupid choices before. I couldn’t change the  history, but the thing is that, i could learn how to behave better from my daily life.</p>
-
+ 
+      <!-- reward -->
       
     </div>
+    
+
+    <!-- copyright -->
+    
     <footer class="article-footer">
-      <a data-url="https://warlockalan.github.io/2021/06/22/laser%20cutting/" data-id="ckq82odm7000305dx6sszed0x" data-title="" class="article-share-link">Share</a>
-      
-      
-      
+       
     </footer>
   </div>
-  
+
+   
+    
 </article>
 
-
-
-  
-    <article id="post-ukmt" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/06/22/ukmt/" class="article-date">
-  <time class="dt-published" datetime="2021-06-22T13:04:16.373Z" itemprop="datePublished">2021-06-22</time>
-</a>
     
-  </div>
+    <article
+  id="post-Learning Economics"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
   <div class="article-inner">
     
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="My-experience-of-UKMT-Grade-10-in-Autumn-2020-10-20"><a href="#My-experience-of-UKMT-Grade-10-in-Autumn-2020-10-20" class="headerlink" title="My experience of UKMT ,Grade 10, in Autumn (2020/10/20)"></a>My experience of UKMT ,Grade 10, in Autumn (2020/10/20)</h1><h2 id="What-is-this-contest"><a href="#What-is-this-contest" class="headerlink" title="What is this contest"></a>What is this contest</h2><p>UKMT is the initial of United Kingdom Mathematics,aimed at encouraging students to practice and analyse Maths.  </p>
-<h2 id="My-final-exam-results"><a href="#My-final-exam-results" class="headerlink" title="My final exam results"></a>My final exam results</h2><p>On the October of 2020,I took part in this contest and finally achieved gold certificate.(I got 103 out of 125,while the requirement for it was getting 86 points.)</p>
-<h2 id="My-reasons-to-attend-it-and-feelings"><a href="#My-reasons-to-attend-it-and-feelings" class="headerlink" title="My reasons to attend it and feelings"></a>My reasons to attend it and feelings</h2><p>I am keen on learning Maths and do well in analysing and tackling practical problems in terms of Maths.When I heard of UKMT,I reckoned that it was a good opportunity for me to strengthen my fundamental mathematic skills in order to learn better in the future for further Maths.In addition to show my abilities in maths field,I also wanted to learn.<br>about the style of Maths questions in countries except China.Tell you the truth, I have never done such kinds of questions since I was getting used to finish questions from China.Thanks to UKMT and my efforts, I got to know structures of exams in other countries.    </p>
-<h2 id="My-preparation-of-UKMT"><a href="#My-preparation-of-UKMT" class="headerlink" title="My preparation of UKMT"></a>My preparation of UKMT</h2><p>In order to achieved my goal of getting gold certificate,I previewed past paper and chose paper from 2015 to 2019 to do,which was a process that quite brought benefits to me.I learned not only some specific ways to solve problems, but also the quality of being diligent.I decided to give up several times when I prepared it.However, I insisted in completing it since it was my first time to contact foreign maths questions(I really would like to harvest something in this field like characteristics or certificate,so I spent one hour doing related questions during that period)  </p>
-<h2 id="My-expectation"><a href="#My-expectation" class="headerlink" title="My expectation"></a>My expectation</h2><p>I did some mistakes beacuse I was daydreaming at that time,I wish I could do it in 2021 and get higher scores(maybe 120,nearly full marks)</p>
-<p><img src="https://i.loli.net/2021/06/21/cMUopT9nS5F4wY3.jpg" alt="0001.jpg"></p>
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/21/Learning%20Economics/"
+    >Brief introduction of my journey in Economics</a> 
+</h2>
+ 
 
       
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/21/Learning%20Economics/" class="article-date">
+  <time datetime="2021-06-21T15:59:59.000Z" itemprop="datePublished">2021-06-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/School-life/">School life</a> / <a class="article-category-link" href="/categories/School-life/Economics/">Economics</a>
+  </div>
+   
     </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="My-journey-of-learning-Economics–why-i-love-this-subject-2021-6-21"><a href="#My-journey-of-learning-Economics–why-i-love-this-subject-2021-6-21" class="headerlink" title="My journey of learning Economics–why i love this subject (2021/6/21)"></a>My journey of learning Economics–why i love this subject (2021/6/21)</h1><h2 id="What-i-did-in-my-childhood"><a href="#What-i-did-in-my-childhood" class="headerlink" title="What i did in my childhood"></a>What i did in my childhood</h2><p>When I was 9, I began to show an interest in accounting and modeling . I guess I loved those mainly because I wanted to save more money. (Actually I have been developed this habit now.) By learning accounting, I could realize the thing I didn’t need to buy and thus using my money in a more efficient way. By modeling, I could use mathematic knowledge I learned in my classroom to solve practical problems like identifying which scheme would use the lowest money to buy the most goods.</p>
+<h2 id="Backgrounds-for-Chinese-junior-high-students"><a href="#Backgrounds-for-Chinese-junior-high-students" class="headerlink" title="Backgrounds for Chinese junior high students"></a>Backgrounds for Chinese junior high students</h2><p>Since finance is not a compulsory subject in Chinese junior high schools, I had no choice but to give up my dreams of learning it temporarily. The majority of Chinese students, including me, did time-consuming extra-curricular work in order to pass tough examinations to access senior high schools. Despite this, I continued acquiring knowledge about modeling as I thought that it may be useful in Finance. I sometimes did self-study by downloading online books about Matlab during my senior high school years. </p>
+<h2 id="Special-opportunity-for-me-being-an-A-level-student"><a href="#Special-opportunity-for-me-being-an-A-level-student" class="headerlink" title="Special opportunity for me (being an A-level student)"></a>Special opportunity for me (being an A-level student)</h2><p>In Grade 10, I was delighted to be provided with the opportunity to learn Economics at our A-level centre. I have been learning Business knowledge enthusiastically. In order to get excellent final exam results, I study this subject as soon as I finish my dinner every evening.</p>
+<h2 id="My-experience-of-learning-Economics-at-school"><a href="#My-experience-of-learning-Economics-at-school" class="headerlink" title="My experience of learning Economics at school"></a>My experience of learning Economics at school</h2><p>It is worth mentioning that we have two capable economics teachers. Whenever I have problems, they give me a helping hand to solve them and boost my comprehension further. They are like friends accompanying with me when I am in trouble, rather than simply teachers focused on teaching the syllabus. For example, I got an 80 percent mark in a mock exam, which made me feel sad. My economics teacher did not criticize me at that time. Instead, he smiled at me and said What happened?” Later, he helped me correct my mistakes and I have had much better results in exams since that time.</p>
+<h2 id="What-i-did-for-my-further-study"><a href="#What-i-did-for-my-further-study" class="headerlink" title="What i did for my further study"></a>What i did for my further study</h2><p>Then my economics teacher advised me to take part in a business contest called The Future Business Leader of America. My classmates and I achieved China top 18th in this teamwork event. During the event, I was surprised by how little I knew about economic terms and concepts, so I developed the habit of reading economic essays regularly to broaden my horizons. Thanks to the presentation we did there, I realized that my poor communication skills could have an adverse effect on my academic progress. As a result, I have practiced my speaking by giving more presentations in class.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
     <footer class="article-footer">
-      <a data-url="https://warlockalan.github.io/2021/06/22/ukmt/" data-id="ckq82odm8000505dx49hv7rno" data-title="" class="article-share-link">Share</a>
-      
-      
-      
+       
     </footer>
   </div>
-  
+
+   
+    
 </article>
 
+    
+    <article
+  id="post-CTB"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/03/10/CTB/"
+    >CTB social sciences journey</a> 
+</h2>
+ 
 
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/03/10/CTB/" class="article-date">
+  <time datetime="2021-03-10T15:59:59.000Z" itemprop="datePublished">2021-03-10</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Teamwork/">Teamwork</a> / <a class="article-category-link" href="/categories/Teamwork/Extra-curriculum/">Extra curriculum</a> / <a class="article-category-link" href="/categories/Teamwork/Extra-curriculum/Sciences/">Sciences</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Try-your-best-to-finish-deadline–My-journey-of-CTB-2021-3-10"><a href="#Try-your-best-to-finish-deadline–My-journey-of-CTB-2021-3-10" class="headerlink" title="Try your best to finish deadline–My journey of CTB (2021/3/10)"></a>Try your best to finish deadline–My journey of CTB (2021/3/10)</h1><h2 id="What-is-CTB"><a href="#What-is-CTB" class="headerlink" title="What is CTB"></a>What is CTB</h2><p>China Thinks Big, with the initial CTB, is a contest which encourages students in Grade 10-12 to think independently or even innovate in the daily life. Each candidate needs to find 3-9 partners to be a team. The team has to choose two to three specific subjects and study in this field. It is worth mentioning that the team needs to submit essays and/or videos to be judged by experts every week.</p>
+<h2 id="What-i-did-in-my-team"><a href="#What-i-did-in-my-team" class="headerlink" title="What i did in my team"></a>What i did in my team</h2><p>Our group had 7 members, all members except me were girls. CTB official guide asked us to choose a role in our team. We had 2 writers, 2 people to analyze, 2 researchers and a team leader. I was a researcher, that means i mainly needed to find bibliographies and reference on the Internet or in the libraries.</p>
+<h3 id="Why-i-chose-this-role"><a href="#Why-i-chose-this-role" class="headerlink" title="Why i chose this role"></a>Why i chose this role</h3><p>I seldom used my computer to study efficiently before CTB. I wanted to strengthen my abilities to search information by CTB.</p>
+<h2 id="What-our-team-chose-to-do"><a href="#What-our-team-chose-to-do" class="headerlink" title="What our team chose to do"></a>What our team chose to do</h2><p>Our team chose social science as the main subject, our topic was “The phenomenon that more youngsters have insomnia, why it happens and how to avoid it “</p>
+<h3 id="Why-i-chose-our-team"><a href="#Why-i-chose-our-team" class="headerlink" title="Why i chose our team"></a>Why i chose our team</h3><p>First, the majority of my members were my responsible classmates. We could have convenient communications and efficient teamwork to do the task.</p>
+<p>Besides, i was a teenager, and our topic was to solve the problem of insomnia in teenagers. In my opinion, insomnia is a serious problem among the youngsters today, it will make us too tired to finish our work thus decreasing the productivity. I wanted to solve it.</p>
+<h2 id="Special-events"><a href="#Special-events" class="headerlink" title="Special events"></a>Special events</h2><h3 id="Handing-out-questionnaires"><a href="#Handing-out-questionnaires" class="headerlink" title="Handing out questionnaires"></a>Handing out questionnaires</h3><p>In order to find precise data about the percentage of Chinese senior high students have insomnia, our team decided to make a questionnaire. We thought twice and finally made one with 10-30 multiple choices (students with insomnia needed to answer extra questions so it is a range of number of questions) since no one would like to answer statement questions.</p>
+<p>Then we handed out it in our school, which had 3000 students, we got nearly 2300 effective questionnaires.</p>
+<h4 id="A-funny-story-during-questionnaire-process"><a href="#A-funny-story-during-questionnaire-process" class="headerlink" title="A funny story during questionnaire process"></a>A funny story during questionnaire process</h4><p>Our team leader printed sentences on the Internet to encourage insomnia people on the insomnia, each questionnaire has its own sentence. </p>
+<p>I realized that we could reach interest innovation just in our daily life!</p>
+<h3 id="Video"><a href="#Video" class="headerlink" title="Video"></a>Video</h3><p>As we performed well in online contest (i will mention it after this section) we reached the final national contest.<br>Before entering it, each team had to send a video to the official, it would be judged by experts and professors.<br>I made a brief presentation in the video as i read many reference about insomnia, that means i could say some academic terms to show we are capable enough to do research.</p>
+<h2 id="Hard-challenges-from-CTB–-frequent-deadlines"><a href="#Hard-challenges-from-CTB–-frequent-deadlines" class="headerlink" title="Hard challenges from CTB– frequent deadlines"></a>Hard challenges from CTB– frequent deadlines</h2><p>If you ask me what impressed me a lot during the CTB online course, i must reply you about the frequent deadlines. We submitted essays every week since deadline was once per week. You would be disqualified if you miss any deadline. One group of my classmates were even be disqualified by that!</p>
+<h3 id="What-i-have-learned-from-it"><a href="#What-i-have-learned-from-it" class="headerlink" title="What i have learned from it"></a>What i have learned from it</h3><p>I should obey all rules once they are told to me. I once think i could miss some deadlines until my classmates were disqualified.</p>
+<p>In addition, we should finish our duty on time. </p>
+<h2 id="Achievement"><a href="#Achievement" class="headerlink" title="Achievement"></a>Achievement</h2><p>This certificate shows we were excellent during online CTB contest and we had the chance to do the presentation in the national contest.</p>
+<p><img src="https://i.loli.net/2021/06/23/Oymjhp5Mx8TgeQi.jpg" alt="32e635de04034a42a5f07cbbab393ca7-0001.jpg"></p>
+<h1 id="A-quite-big-challenge-to-us–national-contest"><a href="#A-quite-big-challenge-to-us–national-contest" class="headerlink" title="A quite big challenge to us–national contest"></a>A quite big challenge to us–national contest</h1><h2 id="Backgrounds"><a href="#Backgrounds" class="headerlink" title="Backgrounds"></a>Backgrounds</h2><p>All competitive groups which finished all deadlines could<br>access in the national contest.</p>
+<p>That means unlike other contests, all teams here have responsible and adequate members, we have much more competitors compared with other contests.</p>
+<p>##What we did there</p>
+<p>Each team needed to submit a video about their topic and feelings of taking part into CTB.</p>
+<p>Besides, each team ought to choose 3-4 members to prepare for a online presentation. It would be judged by experts and professors.<br>But i needed to prepare for IELTS, that means i didn’t have enough spare time to do the presentation.</p>
+<p>##Final score</p>
+<p>Actually we didn’t get award in the national CTB contest. Absolutely we felt sad<br>for a while a that time, but then we remembered the interesting and meaningful experience during our CTB journey. We all felt happy at last.</p>
+<p>#What i have learned from CTB</p>
+<p>First, i knew how to communicate with others efficiently. We preferred face-to-face communication since we could identify whether or not others listen to others by eye contact. Previously, i tended to chat with others by social media, but i didn’t think if my communication was efficient at all!</p>
+<p>Second, i knew how to manage my time wisely. CTB official gave us tasks every week during online contest, which took place between September and December, 2020. At that time, we had to deal with different school subjects. I developed the habit to make a to-do list at that time.</p>
+<p>Third, i met different friends and widen my horizons there. Two girls were not my classmates, they were my classmates’ friends. They were good at different tasks, one was keen on analyzing, and the other did well in searching information. We undertook different tasks by efficient communication. In other words, we developed the ability to do the teamwork.</p>
+<p>Finally, as the researcher, i read different books about insomnia, the most impressive one was The Sleep Revolution, with the author Arianna Huffington. During this process, i develop my skills of reading and extracting information. Besides, l acquired knowledges of avoiding insomnia. I used to be insomnia since the peer pressure was hectic, but i was much better now. My studying efficiency also increased and i got much higher scores at school than before.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
 
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-UKMT"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/10/20/UKMT/"
+    >a Maths contest which we did at school</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/10/20/UKMT/" class="article-date">
+  <time datetime="2020-10-20T15:59:59.000Z" itemprop="datePublished">2020-10-20</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Contest/">Contest</a> / <a class="article-category-link" href="/categories/Contest/Maths/">Maths</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="My-experience-of-UKMT-Grade-10-in-Autumn-2020-10-20"><a href="#My-experience-of-UKMT-Grade-10-in-Autumn-2020-10-20" class="headerlink" title="My experience of UKMT ,Grade 10, in Autumn (2020/10/20)"></a>My experience of UKMT ,Grade 10, in Autumn (2020/10/20)</h1><h2 id="What-is-this-contest"><a href="#What-is-this-contest" class="headerlink" title="What is this contest"></a>What is this contest</h2><p>UKMT is the initial of United Kingdom Mathematics, aimed at encouraging students to practice and analyze Maths.  </p>
+<h2 id="My-final-exam-results"><a href="#My-final-exam-results" class="headerlink" title="My final exam results"></a>My final exam results</h2><p>On the October of 2020,I took part in this contest and finally achieved gold certificate.(I got 103 out of 125,while the requirement for it was getting 86 points.)</p>
+<h2 id="My-reasons-to-attend-it-and-feelings"><a href="#My-reasons-to-attend-it-and-feelings" class="headerlink" title="My reasons to attend it and feelings"></a>My reasons to attend it and feelings</h2><p>I am keen on learning Maths and do well in analyzing and tackling practical problems in terms of Maths. When I heard of UKMT,I reckoned that it was a good opportunity for me to strengthen my fundamental mathematic skills in order to learn better in the future for further Maths. In addition to show my abilities in Maths field, I also wanted to learn.<br>about the style of Maths questions in countries except China. Tell you the truth, I have never done such kinds of questions since I was getting used to finish questions from China. Thanks to UKMT and my efforts, I got to know structures of exams in other countries.    </p>
+<h2 id="My-preparation-of-UKMT"><a href="#My-preparation-of-UKMT" class="headerlink" title="My preparation of UKMT"></a>My preparation of UKMT</h2><p>In order to achieved my goal of getting gold certificate, I previewed past paper and chose paper from 2015 to 2019 to do, which was a process that quite brought benefits to me. I learned not only some specific ways to solve problems, but also the quality of being diligent.  I decided to give up several times when I prepared it .However, I insisted in completing it since it was my first time to contact foreign Maths questions(I really would like to harvest something in this field like characteristics or certificate, so I spent one hour doing related questions during that period)  </p>
+<h2 id="My-expectation"><a href="#My-expectation" class="headerlink" title="My expectation"></a>My expectation</h2><p>I did some mistakes because I was daydreaming at that time, I wish I could do it in 2021 and get higher scores(maybe 120,nearly full marks)</p>
+<p><img src="https://i.loli.net/2021/06/21/cMUopT9nS5F4wY3.jpg" alt="0001.jpg"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+  </article>
   
 
+  
 </section>
-        <aside id="sidebar">
-  
-    
+</div>
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2021/06/22/Learning%20Economics/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2021/06/22/laser%20cutting/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2021/06/22/ukmt/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li></ul>
-    </div>
-  </div>
-
-  
-</aside>
-      </div>
-      <footer id="footer">
-  
+      <footer class="footer">
   <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2021 By Autoload<br>
-      Driven - <a href="https://hexo.io/" target="_blank">Hexo</a>|Theme - <a href="https://github.com/autoload/hexo-theme-auto" target="_blank">Auto</a>
-    </div>
+    <ul>
+      <li>
+        Copyrights &copy;
+        2015-2021
+        <i class="ri-heart-fill heart_icon"></i> Alan
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
   </div>
 </footer>
-    </div>
-    <nav id="mobile-nav">
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
   
-    <a href="/" class="mobile-nav-link">Home</a>
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="WarlockAlan"></a>
+  </div>
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/categories" class="mobile-nav-link">Categories</a>
-  
-    <a href="/tags" class="mobile-nav-link">Tags</a>
-  
-    <a href="/about" class="mobile-nav-link">About</a>
-  
-</nav>
+  <ul class="nav nav-main">
     
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">Homepage</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">Archive</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">Category</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">Tag</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">Links</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">About</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script>
+
+<script src="/js/clickBoom1.js"></script>
+ 
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
 
 
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
-
-
+    
   </div>
 </body>
+
 </html>

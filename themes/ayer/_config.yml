@@ -1,9 +1,9 @@
 # 侧边栏菜单
 menu:
-  Homepage: /
-  Archive: /archives
-  Category: /categories
-  Tag: /tags
+  Home: /
+  Archives: /archives
+  Categories: /categories
+  Tags: /tags
   Links: /friends
   About: /about
 
@@ -22,7 +22,7 @@ subtitle:
 
 # 网站图标和侧边栏logo
 favicon: /favicon.ico
-logo: /images/ayer-side.svg
+logo: /favicon.png
 
 # 封面配置
 # enable-是否启用封面；path-封面背景图；logo-封面logo
