@@ -7,7 +7,6 @@ categories:
  - Sciences
 ---
 
-<font size=6 >
 # Try your best to finish deadline--My journey of CTB (2021/3/10)
 
 ## What is CTB
