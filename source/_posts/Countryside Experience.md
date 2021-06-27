@@ -42,7 +42,7 @@ And i was the leader of my group as well. With effective communications (and my 
 
 Here is a photo:
 
-![1624673719184 _1_.jpg](https://i.loli.net/2021/06/26/Nq7jcUvY4l5FOKb.jpg)
+![微信图片_20210626170545.jpg](https://i.loli.net/2021/06/26/YIfW4gzGxQtJk1q.jpg)
 
 
 ### Entertainment
