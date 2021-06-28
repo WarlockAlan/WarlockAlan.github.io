@@ -1,7 +1,7 @@
 ---
 title: CTB social sciences journey
 date: 2021-3-10 23:59:59
-categories:
+tags:
  - Teamwork
  - Extra curriculum
  - Sciences

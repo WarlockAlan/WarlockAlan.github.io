@@ -1,7 +1,7 @@
 ---
 title: Brief introduction of my journey in Economics
 date: 2021-6-21 23:59:59
-categories:
+tags:
  - School life
  - Economics
 ---

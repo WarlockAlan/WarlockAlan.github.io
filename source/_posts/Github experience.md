@@ -1,7 +1,7 @@
 ---
 title: Special experience: Github related to habits, friendship and more
 date: 2021-6-24 23:59:59
-categories:
+tags:
  - Summary
  
 ---

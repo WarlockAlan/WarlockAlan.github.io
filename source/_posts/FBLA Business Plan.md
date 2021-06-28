@@ -1,7 +1,7 @@
 ---
 title: my FBLA experience
 date: 2021-2-20 23:59:59
-categories:
+tags:
  - Teamwork
  - Contest
  - Economics

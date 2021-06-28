@@ -1,7 +1,7 @@
 ---
 title: My daily school life
 date: 2021-6-23 23:59:59
-categories:
+tags:
  - School life
  
 ---

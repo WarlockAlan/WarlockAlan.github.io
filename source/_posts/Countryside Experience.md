@@ -1,7 +1,7 @@
 ---
 title: Working and living with my classmates
 date: 2021-6-15 23:59:59
-categories:
+tags:
  - Teamwork
  - Extra curriculum
 ---

@@ -1,7 +1,7 @@
 ---
 title: a Maths contest which we did at school 
 date: 2020-10-20 23:59:59
-categories:
+tags:
  - Contest
  - Maths
 
