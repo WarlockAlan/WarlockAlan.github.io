@@ -33,7 +33,7 @@ This is the box I made.
 
 It's clearly there is a cover.
 
-![QQ图片20210622190055.jpg](https://i.loli.net/2021/06/22/oU8DjPs9XTdH4nN.jpg)
+![QQ图片20210622190111.jpg](https://i.loli.net/2021/06/28/gphnj4QHJGlqASZ.jpg)
 
 ### The thing that made me feel quite terrible.
 
