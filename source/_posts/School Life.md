@@ -52,3 +52,4 @@ As I don't have any way to do the entertainment, I must study hard at school (an
 Last but not the least, I can do the majority of things in my everyday life now. Actually, many students, especially the Chinese students, having a poor ability to live alone.
 
 In other word, I enjoy my life living in the school dormitory.
+
