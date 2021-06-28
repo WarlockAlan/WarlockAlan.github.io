@@ -24,12 +24,12 @@ My fridge magnet is here below.
 ![IMG20210622184440.jpg](https://i.loli.net/2021/06/22/YXiwg71ICWfBprK.jpg)
 
 You could see there are two tiny magnets to help this stick on the walls of fridges.
-![QQ图片20210622190055.jpg](https://i.loli.net/2021/06/22/oU8DjPs9XTdH4nN.jpg)
 
+![QQ图片20210622185055.jpg](https://i.loli.net/2021/06/22/5oxKdktYDe4FXQC.jpg)
 
 This is the box I made.
 
-![QQ图片20210622185055.jpg](https://i.loli.net/2021/06/22/5oxKdktYDe4FXQC.jpg)
+![QQ图片20210622190055.jpg](https://i.loli.net/2021/06/22/oU8DjPs9XTdH4nN.jpg)
 
 It's clearly there is a cover.
 
