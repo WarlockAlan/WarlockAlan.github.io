@@ -1,5 +1,5 @@
 ---
-title: about
+title: About
 date: 2021-03-27 10:54:00
 ---
 

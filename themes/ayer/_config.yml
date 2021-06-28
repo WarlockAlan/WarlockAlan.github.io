@@ -11,7 +11,7 @@ menu:
 # https://github.com/mattboldt/typed.js
 subtitle:
   enable: true # 是否开启动效
-  text: 面朝大海，春暖花开 # 显示的文字
+  text: Welcome and Geetings! # 显示的文字
   text2:
   text3:
   startDelay: 0 # 延迟时间
@@ -185,9 +185,9 @@ friends_link:
     url: https://justin.education/
     img: https://i.loli.net/2021/03/30/Ary6xCWRlLZBFSQ.jpg
   Jar's Blog:
-    url: https://i.loli.net/2021/03/30/Ary6xCWRlLZBFSQ.jpg
+    url: https://augensternjiang.github.io/
   Phoenix's Blog:
-    url: https://i.loli.net/2021/03/30/Ary6xCWRlLZBFSQ.jpg
+    url: https://liuphoenix.github.io/
     img: https://liuphoenix.github.io/images/avatar.jpeg
 
 # 评论：1、Valine(推荐)；2、Gitalk；3、Twikoo; 4.MiniValine
