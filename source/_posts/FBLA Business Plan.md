@@ -1,19 +1,20 @@
 ---
-title: FBLA（Business Plan topic）: an unforgettable experience for me
+title: FBLA（Business Plan topic）
 date: 2021-2-20 23:59:59
 tags:
  - Teamwork
  - Contest
  - Economics
- 
 ---
+
+>  an unforgettable experience for me
 
 ### Backgrounds-What is FBLA
 
 The Future Business Leader of America, with the initial FBLA, is an international contest of business and economics. It is the biggest charity organization of students all around the world, with over 100 years history. Each year, FBLA had its own contest, it would include different parts, such as Business Plan, Entrepreneurship and Economics.
 
 
-###What I did in FBLA
+### What I did in FBLA
 
 >Exam at school
 
