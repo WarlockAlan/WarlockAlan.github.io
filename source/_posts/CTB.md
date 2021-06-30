@@ -1,5 +1,5 @@
 ---
-title: Try your best to finish deadlines--My journey of CTB social sciences journey
+title: Try your best to finish deadlines--My journey of CTB 
 date: 2021-3-10 23:59:59
 tags:
  - Teamwork
