@@ -1,9 +1,10 @@
 ---
-title: Our experience in countryside 
+title: Field Trip
 date: 2021-6-15 23:59:59
 tags:
  - Teamwork
  - Extra curriculum
+
 ---
 
 ### Backgrounds
@@ -47,7 +48,7 @@ Here is a photo:
 
 We had also watched a firework show. In addition, we had a talent show in a theatre. I think it couldn't be seen as unforgettable experience, so I didn't introduce them here.
 
-### My feelings--what I have learned from this countryside experience.
+### My feelings--what I have learned from this field trip.
 
 Generally speaking, l had learned the spirit of teamwork during those three days. We worked together, ate together, relaxed together and even slept together! We sometimes shared technique skills of doing busy work like making soybean milk in order to save effort, and we always cooperated with each other to work efficiently. We sometimes argued with each other since we had our own ideas, but we accepted each other gradually through the three-day-long work. As classmates, I believed that our common experience would boost us to care each other in the future.
 
