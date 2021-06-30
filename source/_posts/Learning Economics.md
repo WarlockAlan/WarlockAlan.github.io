@@ -1,5 +1,5 @@
 ---
-title: Brief introduction of my journey about learning Economics
+title: Brief introduction for me to  learn Economics
 date: 2021-6-21 23:59:59
 tags:
  - School life
