@@ -1,5 +1,5 @@
 ---
-title: A brief summary of my Github experience：which related to habits, friendship and more
+title: A brief summary of my Github experience
 date: 2021-6-24 23:59:59
 tags:
  - Summary
