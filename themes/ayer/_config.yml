@@ -10,7 +10,7 @@ menu:
 # https://github.com/mattboldt/typed.js
 subtitle:
   enable: true # 是否开启动效
-  text: Welcome and Geetings! # 显示的文字
+  text: Welcome and Greetings! # 显示的文字
   text2:
   text3:
   startDelay: 0 # 延迟时间
