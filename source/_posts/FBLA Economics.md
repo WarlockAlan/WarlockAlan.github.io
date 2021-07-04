@@ -1,5 +1,5 @@
 ---
-title: FBLA(Economics)  
+title: FBLA (Economics)  
 date: 2021-5-1 23:59:59
 tags:
  - Economics
