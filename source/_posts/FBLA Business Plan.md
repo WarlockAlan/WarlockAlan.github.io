@@ -42,6 +42,10 @@ This is the certificate.
 
 ![QQ图片20210605153532.jpg](https://i.loli.net/2021/06/28/9uT7efsM8OlaK3g.jpg)
 
+This is the medal. (Students from top 11th to top 20th all got this medal.)
+
+![微信图片_20210704120157.jpg](https://i.loli.net/2021/07/04/3UjmQcNLk2e1i6q.jpg)
+
 ### What our team did to prepare for national exam
 
 We were classmates and thus we could do the face-to-face communication every day. At first, we discussed with each other to make sure our companies were different types. Then we asked for our economic teachers' help. (We had a FBLA club at school.) She advised our companies could have relationship between each other.
