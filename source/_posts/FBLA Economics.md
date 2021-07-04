@@ -1,3 +1,13 @@
+---
+title: FBLA(Economics)  
+date: 2021-5-1 23:59:59
+tags:
+ - Economics
+ - Teamwork
+ - Contest
+ - Extra curriculum
+---
+
 ### Backgrounds
 
 FBLA is the largest student charity organization with the longest history around the world. It holds different types of contests related to Business every year. Because of Covid-19, FBLA China only had the opportunity to hold one offline contest-- Beijing Economics National Contest (Beijing is the capital of China). This article is written to share my experience of this contest.
