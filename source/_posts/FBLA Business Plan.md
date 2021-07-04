@@ -56,7 +56,7 @@ When we finished our powerpoint, we also send it to our teacher and she helped u
 
 Last but not the least, we repeated reading our powerpoint together for many times to make sure we got high marks for coherence.
 
-### What i did to prepare for FBLA
+### What I did to prepare for FBLA
 
 >To get high marks to access national contest
 
