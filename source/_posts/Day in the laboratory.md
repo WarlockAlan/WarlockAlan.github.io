@@ -40,7 +40,7 @@ You can see our team have six students.
 
 ![anqku-9h1b1.jpg](https://i.loli.net/2021/07/01/8BV2rbuTPHCY9it.jpg)
  
-According to the experiment plan, we split into three groups A1,A2,B1. And the two graduates were in group B2. Group A needed to do the reaction without the Al203 while group B needs to use both reactants and aluminium oxides.
+According to the experiment plan, we split into three groups A1,A2,B1. And the two graduates were in group B2. Group A needed to do the reaction without the Al`2`O`3` while group B needs to use both reactants and aluminium oxides.
 
 With the help of precise equipment, we discovered that it was important to use aluminium oxides. Without it, the products we made were still poor conductors.
 
