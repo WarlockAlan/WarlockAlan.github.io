@@ -1,14 +1,13 @@
 ---
-title: Reading notes: Principles of Economics (Chapter 1)
+title: Reading notes: Principles of Economics (chapter 1)
 date: 2021-7-5 23:59:59
 tags:
- - Reading notes
  - Economics
+ - Reading notes
  - Hobbies
  - Extra curriculum
  
- ---
-
+---
 
 ### Summary
 
