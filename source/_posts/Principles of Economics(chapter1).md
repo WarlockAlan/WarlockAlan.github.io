@@ -26,7 +26,7 @@ Chapter 1 is Ten Principles of Economics. These 10 principles can be divided int
 
 4.People respond to incentives.
 
->e.g The law of demand. [^1] People respond to incentives so they could get more profits. 
+>e.g The law of demand. (The higher the price, the lower the quantity demanded and vice versa.)  People respond to incentives so they could get more profits. 
 
 **How people interact**
 
@@ -128,4 +128,3 @@ d. the way in which producers or consumers in unregulated markets impose costs o
 
 My wrong answer: B
 
-[^1]: The higher the price, the lower the quantity demanded and vice versa.
