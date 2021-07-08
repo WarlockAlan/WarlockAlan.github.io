@@ -24,7 +24,7 @@ Chapter 2 is Thinking Like an Economist. This chapter shows two kinds of economi
 
 > The production possibilities frontier/curve
 
-![image.png](https://i.loli.net/2021/07/08/dwSkxQYpzfZyWEg.png)
+![image.png](https://i.loli.net/2021/07/08/wZu5XpSxIchCUFe.png)
 
 * This is a curve to explain opportunity cost, efficiency, inefficiency and unachievable.
 * As the diagram shows, the points A,B and C stand for efficiency. The point X is inefficiency and the point Y is unachievable.
