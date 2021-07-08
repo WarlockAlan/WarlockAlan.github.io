@@ -16,7 +16,7 @@ Chapter 2 is Thinking Like an Economist. This chapter shows two kinds of economi
 
 > The circular-flow diagram
 
-![image.png](https://i.loli.net/2021/07/08/YxB4PyjbO7zi518.png)
+![image.png](https://i.loli.net/2021/07/08/FrZLvlt6Opd9H7j.png)
 
 * You can see how dollars flow among households and firms in the economy.
 * In the markets for goods and services, firms are sellers and households are buyers.
