@@ -56,7 +56,7 @@ Chapter 5 is Elasticity and its Application. This chapter introduces elasticity(
 
 * absolute value<1 inelastic (change in unit quantity demanded is smaller the change in unit price)
 
-####Applications
+#### Applications
 
 * Total revenue= price * quantity
 
@@ -68,7 +68,7 @@ Chapter 5 is Elasticity and its Application. This chapter introduces elasticity(
 
 * For inelastic demand, the lower the price, the lower the revenue.（14*80 > 10*88 ）
 
-###Definitions
+### Definitions
 
 1.Elasticity-- a measure of the responsiveness of quantity demanded or quantity supplied to a change in one of its determinants
 
@@ -82,7 +82,7 @@ Chapter 5 is Elasticity and its Application. This chapter introduces elasticity(
 
 6.Price elasticity of supply-- a measure of how much the quantity supplied of a good responds to a change in the price of that good, computed as the percentage change in quantity supplied divided by the percentage change in price
 
-###Review
+### Review
 
 There are some exercises in this book. I recorded questions I didn't answer correctly here.
 
