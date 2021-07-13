@@ -7,11 +7,11 @@ tags:
  - Economics
 ---
 
-###Summary
+### Summary
 
 Chapter 4 is The Market Forces of Supply And Demand. This chapter explains how market force(supply/demand) determines the allocation of resources（the quantity and price of goods in the market.
 
-####Supply/Demand Curve
+#### Supply/Demand Curve
 
 >Quantity demand
 
@@ -63,7 +63,7 @@ Chapter 4 is The Market Forces of Supply And Demand. This chapter explains how m
 
 * Many reasons lead to the shift in the supply curve. e.g Technology of production, Expectations of future price, Number of sellers.
 
-####Supply and Demand Together
+#### Supply and Demand Together
 
 >Excess supply/demand
 
@@ -83,7 +83,7 @@ Chapter 4 is The Market Forces of Supply And Demand. This chapter explains how m
 
 You can also use the diagrams to analyze the change of equilibrium price and equilibrium quantity when the demand curve shifts or the supply curve shifts to the left.
 
-###Definitions
+### Definitions
 
 1.Market-- a group of buyers and sellers of a particular good or service
 
@@ -125,7 +125,7 @@ You can also use the diagrams to analyze the change of equilibrium price and equ
 
 20.Law of supply and demand-- the claim that the price of any good adjusts to bring the quantity supplied and the quantity demanded of that good into balance
 
-###Review
+### Review
 
 There are some exercises in this book. I recorded questions I didn't answer correctly here.
 
