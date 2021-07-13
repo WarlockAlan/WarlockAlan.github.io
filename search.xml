@@ -1,6 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Reading notes-- Principles of Economics (chapter5)</title>
+    <url>/2099/12/31/Principles%20of%20Economics(chapter5)/</url>
+    <content><![CDATA[<p>###Summary<br>Chapter 5 is Elasticity and its Application. This chapter introduces elasticity(a measure of the responsiveness of quantity demanded or quantity supplied to a change in one of its determinants).</p>
+<blockquote>
+<p>Price elasticity of demand</p>
+</blockquote>
+<ul>
+<li><p> measure of how much the quantity demanded of a good responds to a change in the price of that good</p>
+</li>
+<li><p>Price elasticity of demand = <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\frac{\Delta&space;Demand}{\Delta&space;Price}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\frac{\Delta&space;Demand}{\Delta&space;Price}" title="\frac{\Delta Demand}{\Delta Price}" /></a></p>
+</li>
+<li><p>Always a negative number. (As price increases, the quantity demanded decreases.)</p>
+</li>
+<li><p> absolute value &gt;1 elastic (change in unit quantity demanded is greater the change in unit price)</p>
+</li>
+<li><p> absolute value&lt;1 inelastic(change in unit quantity demanded is smaller the change in unit price)</p>
+</li>
+</ul>
+<blockquote>
+<p>Income elasticity of demand</p>
+</blockquote>
+<ul>
+<li><p>a measure of how much the quantity demanded of a good responds to a change in consumers’ income</p>
+</li>
+<li><p>Income elasticity of demand=<a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\frac{\Delta&space;Demand}{\Delta&space;Income}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\frac{\Delta&space;Demand}{\Delta&space;Income}" title="\frac{\Delta Demand}{\Delta Income}" /></a></p>
+</li>
+<li><p>Always smaller than 1. Because not all income is used for buying this good.</p>
+</li>
+<li><p>If the value is positive, this good is a kind of normal good. (As income increases, the demand for normal goods increases.)</p>
+</li>
+<li><p>If the value is negative, this good is a kind of inferior good.(As income decreases, the demand for inferior goods decreases.)</p>
+</li>
+</ul>
+<blockquote>
+<p>Cross-price elasticity of demand</p>
+</blockquote>
+<ul>
+<li><p>a measure of how much the quantity demanded of one good responds to a change in the price of another good</p>
+</li>
+<li><p>Cross-price elasticity of demand= <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\frac{\Delta&space;Demand_{good&space;A}}{\Delta&space;Price_{good&space;B}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\frac{\Delta&space;Demand_{good&space;A}}{\Delta&space;Price_{good&space;B}}" title="\frac{\Delta Demand_{good A}}{\Delta Price_{good B}}" /></a></p>
+</li>
+<li><p>If the value is positive, good A and good B are substitutes.(As price of good B increases, the demand for B decreases and the demand for its substitutes good A increases.)</p>
+</li>
+<li><p>If the value is negative, good A and good B are complements.(As price of good B increases, the demand for B decreases and the demand for its complements good A decreases.)</p>
+</li>
+</ul>
+<blockquote>
+<p>Price elasticity of supply</p>
+</blockquote>
+<ul>
+<li><p> a measure of how much the quantity supplied of a good responds to a change in the price of that good</p>
+</li>
+<li><p>Price elasticity of supply= <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\frac{\Delta&space;Supply}{\Delta&space;Price}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\frac{\Delta&space;Supply}{\Delta&space;Price}" title="\frac{\Delta Supply}{\Delta Price}" /></a></p>
+</li>
+<li><p>Always a positive number. (As price increases, the quantity supplied increases.)</p>
+</li>
+<li><p>absolute value&gt;1 elastic (change in unit quantity demanded is greater the change in unit price)</p>
+</li>
+<li><p>absolute value&lt;1 inelastic (change in unit quantity demanded is smaller the change in unit price)</p>
+</li>
+</ul>
+<p>####Applications</p>
+<ul>
+<li>Total revenue= </li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/13/qNrhHoLEMxBl6a8.png" alt="image.png"></p>
+<ul>
+<li>For elastic demand, the lower the price, the greater the revenue. (50<em>80 &lt; 65</em>110)</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/13/gULmqaFIGS5c8Kn.png" alt="image.png"></p>
+<ul>
+<li>For inelastic demand, the lower the price, the lower the revenue.（14<em>80 &gt; 10</em>88 ）</li>
+</ul>
+<p>###Definitions</p>
+<p>1.Elasticity– a measure of the responsiveness of quantity demanded or quantity supplied to a change in one of its determinants</p>
+<p>2.Price elasticity of demand– a measure of how much the quantity demanded of a good responds to a change in the price of that good, computed as the percentage change in quantity demanded divided by the percentage change in price</p>
+<p>3.Total revenue– the amount paid by buyers and received by sellers of a good, computed as the price of the good times the quantity sold</p>
+<p>4.Income elasticity of demand– a measure of how much the quantity demanded of a good responds to a change in consumers’ income, computed as the percentage change in quantity demanded divided by the percentage change in income</p>
+<p>5.Cross-price elasticity of demand– a measure of how much the quantity demanded of one good responds to a change in the price of another good, computed as the percentage change in quantity demanded of the first good divided by the percentage change in price of the second good</p>
+<p>6.Price elasticity of supply– a measure of how much the quantity supplied of a good responds to a change in the price of that good, computed as the percentage change in quantity supplied divided by the percentage change in price</p>
+<p>###Review</p>
+<p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p>
+<blockquote>
+<p>1.In competitive markets, farmers adopt new technologies that will eventually reduce their revenue because_____ (Correct answer: A)</p>
+</blockquote>
+<p>a. each farmer is a price taker</p>
+<p>b. farmers are short-sighted</p>
+<p>c. regulation requires the use of best practices</p>
+<p>d. consumers pressure farmers to lower prices</p>
+<p>My wrong answer: D</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Reading notes</tag>
+        <tag>Hobbies</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Reading notes--Principles of Economics (chapter4)</title>
     <url>/2021/07/12/Principles%20of%20Economics(chapter4)/</url>
     <content><![CDATA[<p>###Summary</p>
