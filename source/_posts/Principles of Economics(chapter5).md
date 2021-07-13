@@ -58,7 +58,7 @@ Chapter 5 is Elasticity and its Application. This chapter introduces elasticity(
 
 ####Applications
 
-* Total revenue= 
+* Total revenue= price * quantity
 
 ![image.png](https://i.loli.net/2021/07/13/qNrhHoLEMxBl6a8.png)
 
