@@ -7,7 +7,7 @@ tags:
  - Economics
 ---
 
-###Summary
+### Summary
 Chapter 5 is Elasticity and its Application. This chapter introduces elasticity(a measure of the responsiveness of quantity demanded or quantity supplied to a change in one of its determinants).
 
 >Price elasticity of demand
