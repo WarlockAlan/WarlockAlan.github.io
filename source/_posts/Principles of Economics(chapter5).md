@@ -1,5 +1,5 @@
 ---
-title: Reading notes-- Principles of Economics (chapter5)
+title: Reading notes--Principles of Economics (chapter5)
 date: 2021-12-13 23:59:59
 tags:
  - Hobbies
