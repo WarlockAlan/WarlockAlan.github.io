@@ -1,5 +1,5 @@
 ---
-title: Reading notes--Principles of Economics（chapter2）
+title: Reading notes--Principles of Economics (chapter2)
 date: 2021-7-8 23:59:59
 tags:
  - Reading notes
