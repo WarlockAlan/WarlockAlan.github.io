@@ -22,6 +22,8 @@ Chapter 9 is Application: International Trade. This chapter compares total surpl
 * For exporting countries, the domestic consumer surplus decreases and producer surplus increases. But the gain is greater than loss.
 * For importing countries, the domestic producer surplus decreases and consumer surplus increases. But the gain is greater than loss.
 
+>Tariff and deadweight loss
+
 ![image.png](https://i.loli.net/2021/07/17/x1bmUEn4jyewRAc.png)
 
 * Tariff is a tax on import.
