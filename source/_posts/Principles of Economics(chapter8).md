@@ -8,7 +8,7 @@ tags:
  
 ---
 
-###Summary
+### Summary
 Chapter 8 is Application: The Cost of Taxation. This chapter introduces the deadweight loss(welfare loss) and the relationship between tax/tax revenue and welfare loss.
 
 >Deadweight loss
@@ -41,11 +41,11 @@ Chapter 8 is Application: The Cost of Taxation. This chapter introduces the dead
 * The deadweight loss surges as the tax rate increases(because the area of triangle is the deadweight loss).
 * The curve shows that the tax revenue first increases then decreases is called Laffer curve.
 
-###Definitions
+### Definitions
 
 1.Deadweight loss-- the fall in total surplus that results from a market distortion, such as a tax
 
-###Review
+### Review
 
 >1.A tax on a good has deadweight loss if_____(Correct answer: A)
 
