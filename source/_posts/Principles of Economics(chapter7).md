@@ -8,7 +8,7 @@ tags:
  
 ---
 
-###Summary
+### Summary
 
 Chapter 7 is Consumers, Producers, and the Efficiency of Markets. This chapter explains consumer surplus, producer surplus and the total surplus in the market.
 
@@ -36,7 +36,7 @@ Chapter 7 is Consumers, Producers, and the Efficiency of Markets. This chapter e
 * Free markets allocate the demand for goods to the sellers who can produce then at the lowest cost.
 * Free markets produce the quantity of goods that maximizes the sum of consumer and producer surplus.
 
-###Definitions
+### Definitions
 
 1.Welfare economics-- the study of how the allocation of resources affects economic well-being
 
@@ -52,6 +52,6 @@ Chapter 7 is Consumers, Producers, and the Efficiency of Markets. This chapter e
 
 7.Equality-- the property of distributing economic prosperity uniformly among the members of society
 
-###Review
+### Review
 
 I did all questions correctly! Excellent!
