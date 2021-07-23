@@ -6,7 +6,7 @@ tags:
  - Contest
  - Teamwork
  - Leadership
- - Extra Curriculum
+ - Extra curriculum
  
 ---
 
