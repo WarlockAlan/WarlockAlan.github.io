@@ -62,7 +62,7 @@ Chapter 11 is Public Goods and Common Resources. This chapter divides the goods 
 
 There are some exercises in this book. I recorded questions I didn't answer correctly here.
 
->1. Common resources are_____(Correct answer: C)
+>1.Common resources are_____(Correct answer: C)
 
 a. efficiently provided by the market forces
 
