@@ -1,6 +1,6 @@
 ---
 title: FBLA Emerging Leaders Summit--July 20th
-date: 2021-7-24 23:59:59
+date: 2021-7-20 23:59:59
 tags:
  - Economics
  - Contest
