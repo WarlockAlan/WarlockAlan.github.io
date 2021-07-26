@@ -1,6 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Reading notes--Principles of Economics (chapter12)</title>
+    <url>/2021/07/26/Principles%20of%20Economics(chapter12)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 12 is the Design of the Tax System. This chapter introduces different tax systems and the tax system in the US.</p>
+<blockquote>
+<p>US tax system</p>
+</blockquote>
+<ul>
+<li><p>The most important taxes for the federal government are personal income taxes and payroll taxes for social insurance. </p>
+</li>
+<li><p>The most important taxes for state and local governments are sales taxes and property taxes.</p>
+</li>
+</ul>
+<blockquote>
+<p>Different tax systems</p>
+</blockquote>
+<ul>
+<li><p>Proportional tax is a tax for which high-income and low-income taxpayers pay the same fraction of income.</p>
+</li>
+<li><p>Regressive tax is a tax for which high-income taxpayers pay a smaller fraction of their income than do low-income taxpayers.</p>
+</li>
+<li><p>Progressive tax is a tax for which high-income taxpayers pay a larger fraction of their income than do low-income taxpayers. </p>
+</li>
+</ul>
+<blockquote>
+<p>Principles of tax</p>
+</blockquote>
+<ul>
+<li>Equity</li>
+</ul>
+<p>1.It should obey the benefits principle (the idea that people should pay taxes based on the benefits they receive from government services).</p>
+<p>2.It should obey the ability-to-pay principle (the idea that taxes should be levied on a person according to how well that person can shoulder the burden).</p>
+<ul>
+<li>Efficiency   </li>
+</ul>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><p>1.Average tax rate– total taxes paid divided by total income </p>
+<p>2.Marginal tax rate– the amount by which taxes increase from an additional dollar of income</p>
+<p>3.Lump-sum tax rate– a tax that is the same amount for every person</p>
+<p>4.Benefits principle– the idea that people should pay taxes based on the benefits they receive from government services</p>
+<p>5.Ability-to-pay principle– the idea that taxes should be levied on a person according to how well that person can shoulder the burden</p>
+<p>6.Vertical equity– the idea that taxpayers with a greater ability to pay taxes should pay larger amounts</p>
+<p>7.Horizontal equity– the idea that taxpayers with similar abilities to pay taxes should pay the same amount</p>
+<p>8.Proportional tax– a tax for which high-income and low-income taxpayers pay the same fraction of income</p>
+<p>9.Regressive tax– a tax for which high-income taxpayers pay a smaller fraction of their income than do low-income taxpayers</p>
+<p>10.Progressive tax– a tax for which high-income taxpayers pay a larger fraction of their income than do low-income taxpayers</p>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p>
+<blockquote>
+<ol>
+<li>Betty gives piano lessons. She has an opportunity cost of 50 dollars per lesson and charges 60 dollars. She has two students: Archie, who has a willingness to pay of 70 dollars, and Veronica, who has a willingness to pay of 90 dollars. When the government puts a 20 dollars tax on piano lessons and Betty raises her price to 80 dollars, the deadweight loss is_____ and the tax revenue is_____.  (Correct answer: C)</li>
+</ol>
+</blockquote>
+<p>a. 10,20</p>
+<p>b. 10,40</p>
+<p>c. 20.20</p>
+<p>d. 20,40</p>
+<p>My wrong answer: A</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Reading notes</tag>
+        <tag>Hobbies</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Reading notes--Principles of Economics (chapter11)</title>
     <url>/2021/07/23/Principles%20of%20Economics(chapter11)/</url>
     <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 11 is Public Goods and Common Resources. This chapter divides the goods into four categories by using the definition of excludability (he property of a good whereby a person can be prevented from using it) and rivalry in consumption(the property of a good whereby one person’s use diminishes other people’s use).</p>
@@ -64,8 +127,117 @@
       </tags>
   </entry>
   <entry>
+    <title>Reading notes--Principles of Economics (chapter10)</title>
+    <url>/2021/07/22/Principles%20of%20Economics(chapter10)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 10 is Externalities. This chapter introduces the situation when the producers and consumers are not the only interested parties.</p>
+<p><img src="https://i.loli.net/2021/07/22/wxVsohOCNI8tcdH.png" alt="image.png"></p>
+<p><img src="https://i.loli.net/2021/07/22/53aFvksLRUjDC4W.png" alt="image.png"></p>
+<ul>
+<li>Externalities include external cost and external benefit.</li>
+<li>Externalities make the equilibrium not the optimum.</li>
+<li>The use of tax or subsidy can make the equilibrium equal to the optimum if the new supply curve(private cost) coincides with the social-cost curve.</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/22/Kiuq5TMcjhs17NP.png" alt="image.png"></p>
+<p><img src="https://i.loli.net/2021/07/22/piUTMqukotO3zQF.png" alt="image.png"></p>
+<ul>
+<li>Corrective tax and pollution permits are used for decreasing negative externality.</li>
+<li>Pollution permits mean the firms can buy the rights to pollute more from other firms.</li>
+<li>Pollution permits could be better because different kinds of firms have the different cost to avoid polluting. </li>
+<li>Regulation can be another way to limit the negative externality. If the negative externality is much greater than the private benefits, the regulation would be better.</li>
+</ul>
+<blockquote>
+<p>Coase theorem is the proposition that if private parties can bargain without cost over the allocation of resources, they can solve the problem of externalities on their own.</p>
+</blockquote>
+<ul>
+<li>Private parties may not solve the problem of negative externality if the process of bargain has the cost.</li>
+</ul>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><p>1.Externality– the uncompensated impact of one person’s actions on the well-being of a bystander</p>
+<p>2.Internalizing the externality– altering incentives so that people take into account the external effects of their actions</p>
+<p>3.Corrective taxes– a tax designed to induce private decision makers to take into account the social costs that arise from a negative externality</p>
+<p>4.Coase theorem– the proposition that if private parties can bargain without cost over the allocation of resources, they can solve the problem of externalities on their own</p>
+<p>5.Transaction costs– the costs that parties incur during the process of agreeing to and following through on a bargain</p>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>I did all questions correctly! Excellent!</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Reading notes</tag>
+        <tag>Hobbies</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FBLA Emerging Leaders Summit--July 21st</title>
+    <url>/2021/07/21/ELAJuly21/</url>
+    <content><![CDATA[<h3 id="Backgrounds"><a href="#Backgrounds" class="headerlink" title="Backgrounds"></a>Backgrounds</h3><p>We had three case studies on July 21st. In each 30-minute case study session, group members needed to read the whole case and chose three representatives who answer three questions respectively. The cases were in English and representatives were allowed to answer the question in Chinese.</p>
+<h3 id="What-I-did"><a href="#What-I-did" class="headerlink" title="What I did"></a>What I did</h3><p>I was a representative to answer the second question during one case study. That case introduced how Starbuck be famous all around the world. The question I needed to answer is to explain how you could see Kevin (the Starbuck CEO) is brave enough to burden the risk and how he realized Starbuck would be in trouble in 2007.</p>
+<p>Although representatives could also speak Chinese to answer questions, I still answered the questions in English in order to strengthen my poor English-speaking skill. Except using information about introducing the situation of Starbuck from the main body, I also noticed the information (a diagram) in appendix. The diagram showed that the revenue of Starbuck increased while its net profit decreased from 2006 to 2007, which helped me to explain how the Starbuck could be in trouble.</p>
+<p><img src="https://i.loli.net/2021/07/25/5WsZDtMHaxSRNiE.png" alt="image.png"></p>
+<h3 id="My-feelings"><a href="#My-feelings" class="headerlink" title="My feelings"></a>My feelings</h3><p>Thanks to my previous experience of giving a presentation, I was not so frightened of it. However, I was poor in speaking English so I thought I didn’t perform well at that time. Anyway, my friends were so kind that they encouraged me and said I was good enough. I felt lucky and impressed to meet these friends.</p>
+<h3 id="The-ending"><a href="#The-ending" class="headerlink" title="The ending"></a>The ending</h3><p>We finally finished the Emerging Leader Summit. Here is a photo to record this journey.</p>
+<p><img src="https://i.loli.net/2021/07/25/jad9kKewP3LE2MO.png" alt="image.png"></p>
+<p>Some great contributors who were approved by the FBLA China got the certificate. I was one part of them.</p>
+<p><img src="https://i.loli.net/2021/07/25/dLBSveqN2mElaUH.png" alt="image.png"></p>
+<p><img src="https://i.loli.net/2021/07/25/BgYwb3PnkhoqQvT.jpg" alt="880eb0d135405880be9354f8b332c70.jpg"></p>
+]]></content>
+      <tags>
+        <tag>Teamwork</tag>
+        <tag>Extra curriculum</tag>
+        <tag>Leadership</tag>
+        <tag>Economics</tag>
+        <tag>Contest</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FBLA Emerging Leaders Summit--July 20th</title>
+    <url>/2021/07/20/ELAJuly20/</url>
+    <content><![CDATA[<h3 id="Backgrounds"><a href="#Backgrounds" class="headerlink" title="Backgrounds"></a>Backgrounds</h3><p>We had seven workshops on July 20th. During the workshop, the FBLA China National and Provincial leaders shared knowledge and experience related to the leadership with us. The seven workshops had these topics:</p>
+<ul>
+<li>Communication</li>
+<li>Creative Thinking</li>
+<li>Critical Thinking</li>
+<li>Organization</li>
+<li>Teamwork</li>
+<li>Decision Making</li>
+<li>Problematic solving</li>
+</ul>
+<p><strong>I recorded some important bullet points.</strong></p>
+<blockquote>
+<p>Communication</p>
+</blockquote>
+<p>There are three basic models of communication:</p>
+<ol>
+<li>The linear model (messages from senders to receivers)</li>
+<li>The interaction model (receivers give feedback)</li>
+<li>The transaction model (receivers help boost further comprehension)</li>
+</ol>
+<blockquote>
+<p>Organization</p>
+</blockquote>
+<p>We played a game during the workshop. We needed to find who had the median age among us without using the digital devices or notes. At that time, we queued</p>
+<blockquote>
+<p>Introduction of the leadership<br>We did a questionnaire to analyze our characteristics. After finishing it, I found I have such leadership traits:</p>
+</blockquote>
+<ol>
+<li>Emotional self-awareness</li>
+<li>Independence</li>
+<li>Assertiveness</li>
+<li>Openness</li>
+<li>Unselfishness</li>
+</ol>
+<p><img src="https://i.loli.net/2021/07/24/L3YqglOnbysruTP.jpg" alt="c6a2dd35c43b133b218fb043ffdf1c5.jpg"></p>
+<p><img src="https://i.loli.net/2021/07/24/YPkCKH6SJtQZVFN.jpg" alt="1d64d2ff79b971fef5e10cc767a8129.jpg"></p>
+<h3 id="My-feelings"><a href="#My-feelings" class="headerlink" title="My feelings"></a>My feelings</h3><p>I have realized my own leadership traits during the workshop. I think I will use them in the future. Besides, the FBLA China asked emerging leaders to swap seats in each session. I had met many kind friends who had creative ideas. We shared our ideas with each other and even made contact on the social medias. I had a wonderful experience at that time.</p>
+]]></content>
+      <tags>
+        <tag>Teamwork</tag>
+        <tag>Extra curriculum</tag>
+        <tag>Leadership</tag>
+        <tag>Economics</tag>
+        <tag>Contest</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>FBLA Emerging Leaders Summit--July 19th</title>
-    <url>/2021/07/23/ELAJuly19/</url>
+    <url>/2021/07/19/ELAJuly19/</url>
     <content><![CDATA[<h3 id="Backgrounds"><a href="#Backgrounds" class="headerlink" title="Backgrounds"></a>Backgrounds</h3><p>Students who used to take part in FBLA contests could submit two essays to be FBLA emerging leaders. Each emerging leader, including me, needed to attend a meeting (we call it ELA) and performed well in order to be approved by the FBLA official. This year, the ELA took place from July 19th to July 21th. </p>
 <h3 id="The-meeting-on-July-19th"><a href="#The-meeting-on-July-19th" class="headerlink" title="The meeting on July 19th"></a>The meeting on July 19th</h3><p>This meeting includes two parts, one is the analysis of FBLA contests in the next year and the other is an icebreaking game.</p>
 <blockquote>
@@ -189,115 +361,6 @@
 </blockquote>
 <p>We traded with each other in a virtual aluminium future good market. In this market, each team (10 members) had 1500 dollars originally and the initial price of per unit aluminium was 100 dollars. In each turn, the FBLA official told us information related to the aluminium. And we needed to trade with others by evaluating the price of aluminium future good.</p>
 <p>I have learned a lot during the activity. First, I used a lot of economic knowledge to analyze the price of aluminium in the future. Besides, when other members in our team had different ideas, we communicated with each other to justify ideas. I learned how to do the teamwork effectively. I was impressed by the third turn in this game because the information (the change of oil industries) in this turn was not related to aluminium. I realized that we should know how to distinguish useful information from useless information.</p>
-]]></content>
-      <tags>
-        <tag>Teamwork</tag>
-        <tag>Extra curriculum</tag>
-        <tag>Leadership</tag>
-        <tag>Economics</tag>
-        <tag>Contest</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Reading notes--Principles of Economics (chapter10)</title>
-    <url>/2021/07/22/Principles%20of%20Economics(chapter10)/</url>
-    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 10 is Externalities. This chapter introduces the situation when the producers and consumers are not the only interested parties.</p>
-<p><img src="https://i.loli.net/2021/07/22/wxVsohOCNI8tcdH.png" alt="image.png"></p>
-<p><img src="https://i.loli.net/2021/07/22/53aFvksLRUjDC4W.png" alt="image.png"></p>
-<ul>
-<li>Externalities include external cost and external benefit.</li>
-<li>Externalities make the equilibrium not the optimum.</li>
-<li>The use of tax or subsidy can make the equilibrium equal to the optimum if the new supply curve(private cost) coincides with the social-cost curve.</li>
-</ul>
-<p><img src="https://i.loli.net/2021/07/22/Kiuq5TMcjhs17NP.png" alt="image.png"></p>
-<p><img src="https://i.loli.net/2021/07/22/piUTMqukotO3zQF.png" alt="image.png"></p>
-<ul>
-<li>Corrective tax and pollution permits are used for decreasing negative externality.</li>
-<li>Pollution permits mean the firms can buy the rights to pollute more from other firms.</li>
-<li>Pollution permits could be better because different kinds of firms have the different cost to avoid polluting. </li>
-<li>Regulation can be another way to limit the negative externality. If the negative externality is much greater than the private benefits, the regulation would be better.</li>
-</ul>
-<blockquote>
-<p>Coase theorem is the proposition that if private parties can bargain without cost over the allocation of resources, they can solve the problem of externalities on their own.</p>
-</blockquote>
-<ul>
-<li>Private parties may not solve the problem of negative externality if the process of bargain has the cost.</li>
-</ul>
-<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><p>1.Externality– the uncompensated impact of one person’s actions on the well-being of a bystander</p>
-<p>2.Internalizing the externality– altering incentives so that people take into account the external effects of their actions</p>
-<p>3.Corrective taxes– a tax designed to induce private decision makers to take into account the social costs that arise from a negative externality</p>
-<p>4.Coase theorem– the proposition that if private parties can bargain without cost over the allocation of resources, they can solve the problem of externalities on their own</p>
-<p>5.Transaction costs– the costs that parties incur during the process of agreeing to and following through on a bargain</p>
-<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>I did all questions correctly! Excellent!</p>
-]]></content>
-      <tags>
-        <tag>Economics</tag>
-        <tag>Reading notes</tag>
-        <tag>Hobbies</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FBLA Emerging Leaders Summit--July 21st</title>
-    <url>/2021/07/21/ELAJuly21/</url>
-    <content><![CDATA[<h3 id="Backgrounds"><a href="#Backgrounds" class="headerlink" title="Backgrounds"></a>Backgrounds</h3><p>We had three case studies on July 21st. In each 30-minute case study session, group members needed to read the whole case and chose three representatives who answer three questions respectively. The cases were in English and representatives were allowed to answer the question in Chinese.</p>
-<h3 id="What-I-did"><a href="#What-I-did" class="headerlink" title="What I did"></a>What I did</h3><p>I was a representative to answer the second question during one case study. That case introduced how Starbuck be famous all around the world. The question I needed to answer is to explain how you could see Kevin (the Starbuck CEO) is brave enough to burden the risk and how he realized Starbuck would be in trouble in 2007.</p>
-<p>Although representatives could also speak Chinese to answer questions, I still answered the questions in English in order to strengthen my poor English-speaking skill. Except using information about introducing the situation of Starbuck from the main body, I also noticed the information (a diagram) in appendix. The diagram showed that the revenue of Starbuck increased while its net profit decreased from 2006 to 2007, which helped me to explain how the Starbuck could be in trouble.</p>
-<p><img src="https://i.loli.net/2021/07/25/5WsZDtMHaxSRNiE.png" alt="image.png"></p>
-<h3 id="My-feelings"><a href="#My-feelings" class="headerlink" title="My feelings"></a>My feelings</h3><p>Thanks to my previous experience of giving a presentation, I was not so frightened of it. However, I was poor in speaking English so I thought I didn’t perform well at that time. Anyway, my friends were so kind that they encouraged me and said I was good enough. I felt lucky and impressed to meet these friends.</p>
-<h3 id="The-ending"><a href="#The-ending" class="headerlink" title="The ending"></a>The ending</h3><p>We finally finished the Emerging Leader Summit. Here is a photo to record this journey.</p>
-<p><img src="https://i.loli.net/2021/07/25/jad9kKewP3LE2MO.png" alt="image.png"></p>
-<p>Some great contributors who were approved by the FBLA China got the certificate. I was one part of them.</p>
-<p><img src="https://i.loli.net/2021/07/25/dLBSveqN2mElaUH.png" alt="image.png"></p>
-<p><img src="https://i.loli.net/2021/07/25/BgYwb3PnkhoqQvT.jpg" alt="880eb0d135405880be9354f8b332c70.jpg"></p>
-]]></content>
-      <tags>
-        <tag>Teamwork</tag>
-        <tag>Extra curriculum</tag>
-        <tag>Leadership</tag>
-        <tag>Economics</tag>
-        <tag>Contest</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FBLA Emerging Leaders Summit--July 20th</title>
-    <url>/2021/07/20/ELAJuly20/</url>
-    <content><![CDATA[<h3 id="Backgrounds"><a href="#Backgrounds" class="headerlink" title="Backgrounds"></a>Backgrounds</h3><p>We had seven workshops on July 20th. During the workshop, the FBLA China National and Provincial leaders shared knowledge and experience related to the leadership with us. The seven workshops had these topics:</p>
-<ul>
-<li>Communication</li>
-<li>Creative Thinking</li>
-<li>Critical Thinking</li>
-<li>Organization</li>
-<li>Teamwork</li>
-<li>Decision Making</li>
-<li>Problematic solving</li>
-</ul>
-<p><strong>I recorded some important bullet points.</strong></p>
-<blockquote>
-<p>Communication</p>
-</blockquote>
-<p>There are three basic models of communication:</p>
-<ol>
-<li>The linear model (messages from senders to receivers)</li>
-<li>The interaction model (receivers give feedback)</li>
-<li>The transaction model (receivers help boost further comprehension)</li>
-</ol>
-<blockquote>
-<p>Organization</p>
-</blockquote>
-<p>We played a game during the workshop. We needed to find who had the median age among us without using the digital devices or notes. At that time, we queued</p>
-<blockquote>
-<p>Introduction of the leadership<br>We did a questionnaire to analyze our characteristics. After finishing it, I found I have such leadership traits:</p>
-</blockquote>
-<ol>
-<li>Emotional self-awareness</li>
-<li>Independence</li>
-<li>Assertiveness</li>
-<li>Openness</li>
-<li>Unselfishness</li>
-</ol>
-<p><img src="https://i.loli.net/2021/07/24/L3YqglOnbysruTP.jpg" alt="c6a2dd35c43b133b218fb043ffdf1c5.jpg"></p>
-<p><img src="https://i.loli.net/2021/07/24/YPkCKH6SJtQZVFN.jpg" alt="1d64d2ff79b971fef5e10cc767a8129.jpg"></p>
-<h3 id="My-feelings"><a href="#My-feelings" class="headerlink" title="My feelings"></a>My feelings</h3><p>I have realized my own leadership traits during the workshop. I think I will use them in the future. Besides, the FBLA China asked emerging leaders to swap seats in each session. I had met many kind friends who had creative ideas. We shared our ideas with each other and even made contact on the social medias. I had a wonderful experience at that time.</p>
 ]]></content>
       <tags>
         <tag>Teamwork</tag>
@@ -990,6 +1053,41 @@
       </tags>
   </entry>
   <entry>
+    <title>My school life--living in the dormitory</title>
+    <url>/2021/06/23/Daily%20School%20Life/</url>
+    <content><![CDATA[<h3 id="My-unique-school-life"><a href="#My-unique-school-life" class="headerlink" title="My unique school life"></a>My unique school life</h3><p>Truth to be told, I lived in school dormitory, that makes my school life quite different compared with other students, since I need to live at school 5 days per week and have breakfast, lunch and dinner at canteen as well. Other students, however, just need to go to school at seven twenty in the morning and go back their home in the 5 p.m.</p>
+<h3 id="Daily-routines"><a href="#Daily-routines" class="headerlink" title="Daily routines"></a>Daily routines</h3><p><em>My daily routine has a little bit difference due to living in the school dorm (SWOT Analysis )</em></p>
+<p> Students in my class are asked to go to the classroom at 0730. Then we have 30 minutes reading time. From 0800, we have lessons at different periods. We have 10 periods at school every day and we’re allowed to go back home at 0500.</p>
+<blockquote>
+<p>Advantages</p>
+</blockquote>
+<p>I get up at six fifty every day in the school dormitory, then I go to the school canteen to have breakfast at seven o’clock. I get up late compared with my classmates since they have to spend time commuting. Even though, they still go to the classroom nearly 0730. In contrast, I arrive at my classroom at 0720 and even have 10 minutes spare time to do the self-study.</p>
+<blockquote>
+<p>Disadvantages</p>
+</blockquote>
+<p>I have no choice but to have terrible meals at school every day. It sometimes makes me feel sick and decreases my efficiency of study.</p>
+<blockquote>
+<p>Opportunities</p>
+</blockquote>
+<p>Only a few students live in the school dorm, that means I may feel isolated from time to time. However, that also means that no one could disturb me to study.</p>
+<p>Besides, the majority of students who live in the dorm are top students, I could learn the way how they study. But it also means the peer pressure is hectic for me.</p>
+<blockquote>
+<p>Threats</p>
+</blockquote>
+<p>The self-study room has a poor signal, that means it’s hard for me to use digital devices sometimes. As an international student, I couldn’t live without them in order to look through websites of different universities.</p>
+<h3 id="My-Feelings"><a href="#My-Feelings" class="headerlink" title="My Feelings"></a>My Feelings</h3><p>One of my friends used to say that it may be wise for me to rent a flat nearby my school. Actually, my parents rented a flat when I was in the junior high. (My mother has retired so she has enough time.)</p>
+<p>But I didn’t think it was be a good choice. Generally speaking, I didn’t want to disturb my mother’s live since she had retired. In addition, I personally reckon that I must get benefits from my school life. </p>
+<p>First, I do self-study in the evening and ask for my teachers’ help if I need it. (My teachers sometimes work overload until evening) During my school life, I have already developed the ability to concentrate myself to do self-study by reading textbooks or searching information online. I suppose I could fit the self-study life in the university rapidly since I have already lived in this life for a long time.</p>
+<p>Second, I can avoid feeling isolated or even depressed though I live alone. Tell you the truth, when I concentrate on studying, I even forget about time. (And I seldom keep in touch with my parents during weekday.)  Since culture gap exists, some international students may feel depressed and homesick when they go abroad to study, which makes them perform badly in their study. Obviously, I was not one of them.</p>
+<p>Third, thanks to my school life, I have developed the habit to make to-do list to manage my time properly. Many students, including me, feeling relaxed and wasting their time at home.<br>As I don’t have any way to do the entertainment, I must study hard at school (and get great exam scores as well).</p>
+<p>Last but not the least, I can do the majority of things in my everyday life now. Actually, many students, especially the Chinese students, having a poor ability to live alone.</p>
+<p>In other word, I enjoy my life living in the school dormitory.</p>
+]]></content>
+      <tags>
+        <tag>School life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Marshmallow Challenge</title>
     <url>/2021/06/23/Marshmallow%20Challenge/</url>
     <content><![CDATA[<h3 id="Backgrounds"><a href="#Backgrounds" class="headerlink" title="Backgrounds"></a>Backgrounds</h3><p>Our economic teacher organized a game called Marshmallow Challenge in her class after we finished CAIE international examinations. In this game, students worked in groups (a group had 4 students) to build a tower by using marshmallows and sticks. Our teacher would measure the height of tower and gave students tokens (1 mm= 10 tokens). It is worth mentioning that the marshmallows and sticks were charged. The first 1o marshmallows were free, but others were charged by 20 tokens per marshmallows. And each stick needed 10 tokens too.</p>
@@ -1034,41 +1132,6 @@
         <tag>Sciences</tag>
         <tag>School life</tag>
         <tag>Economics</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>My school life--living in the dormitory</title>
-    <url>/2021/06/23/Daily%20School%20Life/</url>
-    <content><![CDATA[<h3 id="My-unique-school-life"><a href="#My-unique-school-life" class="headerlink" title="My unique school life"></a>My unique school life</h3><p>Truth to be told, I lived in school dormitory, that makes my school life quite different compared with other students, since I need to live at school 5 days per week and have breakfast, lunch and dinner at canteen as well. Other students, however, just need to go to school at seven twenty in the morning and go back their home in the 5 p.m.</p>
-<h3 id="Daily-routines"><a href="#Daily-routines" class="headerlink" title="Daily routines"></a>Daily routines</h3><p><em>My daily routine has a little bit difference due to living in the school dorm (SWOT Analysis )</em></p>
-<p> Students in my class are asked to go to the classroom at 0730. Then we have 30 minutes reading time. From 0800, we have lessons at different periods. We have 10 periods at school every day and we’re allowed to go back home at 0500.</p>
-<blockquote>
-<p>Advantages</p>
-</blockquote>
-<p>I get up at six fifty every day in the school dormitory, then I go to the school canteen to have breakfast at seven o’clock. I get up late compared with my classmates since they have to spend time commuting. Even though, they still go to the classroom nearly 0730. In contrast, I arrive at my classroom at 0720 and even have 10 minutes spare time to do the self-study.</p>
-<blockquote>
-<p>Disadvantages</p>
-</blockquote>
-<p>I have no choice but to have terrible meals at school every day. It sometimes makes me feel sick and decreases my efficiency of study.</p>
-<blockquote>
-<p>Opportunities</p>
-</blockquote>
-<p>Only a few students live in the school dorm, that means I may feel isolated from time to time. However, that also means that no one could disturb me to study.</p>
-<p>Besides, the majority of students who live in the dorm are top students, I could learn the way how they study. But it also means the peer pressure is hectic for me.</p>
-<blockquote>
-<p>Threats</p>
-</blockquote>
-<p>The self-study room has a poor signal, that means it’s hard for me to use digital devices sometimes. As an international student, I couldn’t live without them in order to look through websites of different universities.</p>
-<h3 id="My-Feelings"><a href="#My-Feelings" class="headerlink" title="My Feelings"></a>My Feelings</h3><p>One of my friends used to say that it may be wise for me to rent a flat nearby my school. Actually, my parents rented a flat when I was in the junior high. (My mother has retired so she has enough time.)</p>
-<p>But I didn’t think it was be a good choice. Generally speaking, I didn’t want to disturb my mother’s live since she had retired. In addition, I personally reckon that I must get benefits from my school life. </p>
-<p>First, I do self-study in the evening and ask for my teachers’ help if I need it. (My teachers sometimes work overload until evening) During my school life, I have already developed the ability to concentrate myself to do self-study by reading textbooks or searching information online. I suppose I could fit the self-study life in the university rapidly since I have already lived in this life for a long time.</p>
-<p>Second, I can avoid feeling isolated or even depressed though I live alone. Tell you the truth, when I concentrate on studying, I even forget about time. (And I seldom keep in touch with my parents during weekday.)  Since culture gap exists, some international students may feel depressed and homesick when they go abroad to study, which makes them perform badly in their study. Obviously, I was not one of them.</p>
-<p>Third, thanks to my school life, I have developed the habit to make to-do list to manage my time properly. Many students, including me, feeling relaxed and wasting their time at home.<br>As I don’t have any way to do the entertainment, I must study hard at school (and get great exam scores as well).</p>
-<p>Last but not the least, I can do the majority of things in my everyday life now. Actually, many students, especially the Chinese students, having a poor ability to live alone.</p>
-<p>In other word, I enjoy my life living in the school dormitory.</p>
-]]></content>
-      <tags>
-        <tag>School life</tag>
       </tags>
   </entry>
   <entry>
