@@ -1,9 +1,10 @@
 ---
-title: Brief introduction for me to  learn Economics
+title: Personal statement-- my journey of learning Economics
 date: 2021-6-21 23:59:59
 tags:
  - School life
  - Economics
+ - Personal statement
 ---
 
 ### What i did in my childhood 
