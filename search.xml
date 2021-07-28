@@ -1,6 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Reading notes--Principles of Economics (chapter 13)</title>
+    <url>/2021/07/28/Principles%20of%20Economics(chapter13)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 13 is the Cost of Production. This chapter introduces revenue, cost and profit.</p>
+<blockquote>
+<p>Revenue</p>
+</blockquote>
+<ul>
+<li>Total revenue is the amount a firm receives for the sale of its output.</li>
+<li>Revenue = quantity * price</li>
+</ul>
+<blockquote>
+<p>Cost</p>
+</blockquote>
+<ul>
+<li>Explicit cost is input cost that requires an outlay of money by the firm.</li>
+<li>Implicit cost is input cost that does not require an outlay of money by the firm.</li>
+<li>Fixed cost is cost that does not vary with the quantity of output produced.</li>
+<li>Variable costs is cost that varies with the quantity of output produced.</li>
+</ul>
+<blockquote>
+<p>Profit </p>
+</blockquote>
+<ul>
+<li>Profit = Total revenue - Total cost</li>
+<li>Economic profit is total revenue minus total cost, including both explicit and implicit costs.</li>
+<li>Accounting profit is total revenue minus total explicit cost.</li>
+<li>Total opportunity cost is implicit cost pluses explicit cost.</li>
+</ul>
+<blockquote>
+<p>Production function</p>
+</blockquote>
+<ul>
+<li>The relationship between the quantity of inputs used to make a good and the quantity of output of that good.</li>
+</ul>
+<blockquote>
+<p>Diminishing marginal product </p>
+</blockquote>
+<ul>
+<li><p>The property whereby the marginal product of an input declines as the quantity of the input increases.</p>
+</li>
+<li><p>Due to it, the production function gets flatter as the number of input increases.</p>
+</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/28/df1SsRHgyJZajCr.png" alt="image.png"></p>
+<ul>
+<li>Due to it, the total-cost curve gets steeper as the quantity of output increases.</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/28/OhmKpoyqiLw6V1v.png" alt="image.png"></p>
+<ul>
+<li><p>Profit maximization</p>
+</li>
+<li><p>Average total cost = marginal cost</p>
+</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/28/SIznELUaAkb1yjl.png" alt="image.png"></p>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><p>1.Total revenue– the amount a firm receives for the sale of its output</p>
+<p>2.Total cost– the market value of the inputs a firm uses in production</p>
+<blockquote>
+<p>TC = FC + VC</p>
+</blockquote>
+<p>3.Profit– total revenue minus total cost</p>
+<p>4.Explicit costs– input costs that require an outlay of money by the firm</p>
+<p>5.Implicit costs– input costs that do not require an outlay of money by the firm</p>
+<p>6.Economic profit– total revenue minus total cost, including both explicit and implicit costs</p>
+<p>7.Accounting profit– total revenue minus total explicit cost</p>
+<p>8.Production function– the relationship between the quantity of inputs used to make a good and the quantity of output of that good</p>
+<p>9.Marginal product– the increase in output that arises from an additional unit of input</p>
+<p>10.Diminishing marginal product– the property whereby the marginal product of an input declines as the quantity of the input increases</p>
+<p>11.Fixed cost– costs that do not vary with the quantity of output produced</p>
+<blockquote>
+<p>FC</p>
+</blockquote>
+<p>12.Variable costs– costs that vary with the quantity of output produced</p>
+<blockquote>
+<p>VC</p>
+</blockquote>
+<p>13.Average total cost– total cost divided by the quantity of output</p>
+<blockquote>
+<p>ATC = TC / Q</p>
+</blockquote>
+<p>14.Average fixed cost– fixed cost divided by the quantity of output</p>
+<blockquote>
+<p>AFC = FC / Q</p>
+</blockquote>
+<p>15.Average variable cost– variable cost divided by the quantity of output</p>
+<blockquote>
+<p>AVC = VC / Q</p>
+</blockquote>
+<p>16.Marginal cost– the increase in total cost that arises from an extra unit of production</p>
+<blockquote>
+<p>MC =  <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\Delta&space;TC&space;}{\Delta&space;Q&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\Delta&space;TC&space;}{\Delta&space;Q&space;}" title="\frac{\Delta TC }{\Delta Q }" /></a></p>
+</blockquote>
+<p>17.Efficient scale– the quantity of output that minimizes average total cost</p>
+<p>18.Economies of scale– the property whereby long-run average total costs falls as the quantity of output increases</p>
+<p>19.Diseconomies of scale– the property whereby long-run average total cost rises as the quantity of output increases</p>
+<p>20.Constant returns to scale– the property whereby long-run average total cost stays the same as the quantity of output changes</p>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>I did all questions correctly! Excellent!</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Reading notes</tag>
+        <tag>Hobbies</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Reading notes--Principles of Economics (chapter12)</title>
     <url>/2021/07/26/Principles%20of%20Economics(chapter12)/</url>
     <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 12 is the Design of the Tax System. This chapter introduces different tax systems and the tax system in the US.</p>
