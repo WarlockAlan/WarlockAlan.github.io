@@ -43,11 +43,11 @@ Chapter 6 is Supply, Demand, and Government Policies. This chapter explains maxi
 
 ### Definitions
 
-1.Price ceiling-- a legal maximum on the price at which a good can be sold
+1. Price ceiling-- a legal maximum on the price at which a good can be sold
 
-2.Price floor-- a legal minimum on the price at which a good can be sold
+2. Price floor-- a legal minimum on the price at which a good can be sold
 
-3.Tax incidence-- the manner in which the burden of a tax is shared among participants in a market
+3. Tax incidence-- the manner in which the burden of a tax is shared among participants in a market
 
 ### Review
 
