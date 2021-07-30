@@ -54,8 +54,6 @@ Chapter 1 is Ten Principles of Economics. These 10 principles can be divided int
 
 ###Definitions
 
-There are some economic definitions we should know.
-
 1.Scarcity-- the limited nature of society's resources
 
 2.Economics-- the study of how society manages its scarce resources
