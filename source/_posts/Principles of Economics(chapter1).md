@@ -54,37 +54,37 @@ Chapter 1 is Ten Principles of Economics. These 10 principles can be divided int
 
 ###Definitions
 
-1.Scarcity-- the limited nature of society's resources
+1. Scarcity-- the limited nature of society's resources
 
-2.Economics-- the study of how society manages its scarce resources
+2. Economics-- the study of how society manages its scarce resources
 
-3.Efficiency-- the property of society getting the most it can from its scarce resources
+3. Efficiency-- the property of society getting the most it can from its scarce resources
 
-4.Equality-- the property of distributing economic prosperity uniformly among the members of society
+4. Equality-- the property of distributing economic prosperity uniformly among the members of society
 
-5.Opportunity cost-- whatever must be given up to obtain some item
+5. Opportunity cost-- whatever must be given up to obtain some item
 
-6.Rational people-- those who systematically and purposefully do the best they can to achieve their objectives
+6. Rational people-- those who systematically and purposefully do the best they can to achieve their objectives
 
-7.Marginal change-- a small incremental adjustment to a plan of action
+7. Marginal change-- a small incremental adjustment to a plan of action
 
-8.Incentive-- something that induces a person to act
+8. Incentive-- something that induces a person to act
 
-9.Market economy-- an economy that allocates resources through the decentralized decisions of many firms and households as they interact in markets for goods and services
+9. Market economy-- an economy that allocates resources through the decentralized decisions of many firms and households as they interact in markets for goods and services
 
-10.Property rights-- the ability of an individual to own and exercise control over scarce resources
+10. Property rights-- the ability of an individual to own and exercise control over scarce resources
 
-11.Market failure--  a situation in which a market left on its own fails to allocate resources efficiently
+11. Market failure--  a situation in which a market left on its own fails to allocate resources efficiently
 
-12.Externality-- the impact of one person's actions on the well-being of a bystander
+12. Externality-- the impact of one person's actions on the well-being of a bystander
 
-13.Market power-- the ability of a single economic actor(or small group of actors)to have a substantial influence on market prices
+13. Market power-- the ability of a single economic actor(or small group of actors)to have a substantial influence on market prices
 
-14.Productivity-- the quantity of goods and services produced from each unit of labor input
+14. Productivity-- the quantity of goods and services produced from each unit of labor input
 
-15.Inflation-- an increase in the overall level of prices in the economy
+15. Inflation-- an increase in the overall level of prices in the economy
 
-16.Business cycle-- fluctuations in economic activity, such as employment and production
+16. Business cycle-- fluctuations in economic activity, such as employment and production
 
 ###Review
 
