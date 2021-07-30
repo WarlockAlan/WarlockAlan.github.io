@@ -34,15 +34,15 @@ Chapter 10 is Externalities. This chapter introduces the situation when the prod
 
 ### Definitions
 
-1.Externality-- the uncompensated impact of one person's actions on the well-being of a bystander
+1. Externality-- the uncompensated impact of one person's actions on the well-being of a bystander
 
-2.Internalizing the externality-- altering incentives so that people take into account the external effects of their actions
+2. Internalizing the externality-- altering incentives so that people take into account the external effects of their actions
 
-3.Corrective taxes-- a tax designed to induce private decision makers to take into account the social costs that arise from a negative externality
+3. Corrective taxes-- a tax designed to induce private decision makers to take into account the social costs that arise from a negative externality
 
-4.Coase theorem-- the proposition that if private parties can bargain without cost over the allocation of resources, they can solve the problem of externalities on their own
+4. Coase theorem-- the proposition that if private parties can bargain without cost over the allocation of resources, they can solve the problem of externalities on their own
 
-5.Transaction costs-- the costs that parties incur during the process of agreeing to and following through on a bargain
+5. Transaction costs-- the costs that parties incur during the process of agreeing to and following through on a bargain
 
 ### Review
 
