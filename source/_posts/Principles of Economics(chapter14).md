@@ -51,7 +51,7 @@ This chapter 14 is the Firms in Competitive markets. This chapter introduces the
 * Firms loss its revenue but do not burden the variable cost of production.
 * Firms shut down if the total revenue is smaller than the variable cost.
 
-![image.png](https://i.loli.net/2021/07/30/ERqKyurNs1vQltA.png)
+![image.png](https://i.loli.net/2021/07/30/qrWc8Lz2QX7akjt.png)
 
 > Supply curve in a competitive market
 
