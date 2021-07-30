@@ -38,19 +38,19 @@ Chapter 7 is Consumers, Producers, and the Efficiency of Markets. This chapter e
 
 ### Definitions
 
-1.Welfare economics-- the study of how the allocation of resources affects economic well-being
+1. Welfare economics-- the study of how the allocation of resources affects economic well-being
 
-2.Willingness to pay-- the maximum amount that a buyer will pay for a good
+2. Willingness to pay-- the maximum amount that a buyer will pay for a good
 
-3.Consumer surplus-- the amount a buyer is willing to pay for a good minus the amount the buyer actually pays for it
+3. Consumer surplus-- the amount a buyer is willing to pay for a good minus the amount the buyer actually pays for it
 
-4.Cost-- the value of everything a seller must give up to produce a good
+4. Cost-- the value of everything a seller must give up to produce a good
+ 
+5. Producer surplus-- the amount a seller is paid for a good minus the seller's cost of providing it
 
-5.Producer surplus-- the amount a seller is paid for a good minus the seller's cost of providing it
+6. Efficiency-- the property of a resource allocation of maximizing the total surplus received by all members of society
 
-6.Efficiency-- the property of a resource allocation of maximizing the total surplus received by all members of society
-
-7.Equality-- the property of distributing economic prosperity uniformly among the members of society
+7. Equality-- the property of distributing economic prosperity uniformly among the members of society
 
 ### Review
 
