@@ -38,25 +38,25 @@ Chapter 12 is the Design of the Tax System. This chapter introduces different ta
 
 ### Definitions
 
-1.Average tax rate-- total taxes paid divided by total income 
+1. Average tax rate-- total taxes paid divided by total income 
 
-2.Marginal tax rate-- the amount by which taxes increase from an additional dollar of income
+2. Marginal tax rate-- the amount by which taxes increase from an additional dollar of income
 
-3.Lump-sum tax rate-- a tax that is the same amount for every person
+3. Lump-sum tax rate-- a tax that is the same amount for every person
 
-4.Benefits principle-- the idea that people should pay taxes based on the benefits they receive from government services
+4. Benefits principle-- the idea that people should pay taxes based on the benefits they receive from government services
 
-5.Ability-to-pay principle-- the idea that taxes should be levied on a person according to how well that person can shoulder the burden
+5. Ability-to-pay principle-- the idea that taxes should be levied on a person according to how well that person can shoulder the burden
 
-6.Vertical equity-- the idea that taxpayers with a greater ability to pay taxes should pay larger amounts
+6. Vertical equity-- the idea that taxpayers with a greater ability to pay taxes should pay larger amounts
 
-7.Horizontal equity-- the idea that taxpayers with similar abilities to pay taxes should pay the same amount
+7. Horizontal equity-- the idea that taxpayers with similar abilities to pay taxes should pay the same amount
 
-8.Proportional tax-- a tax for which high-income and low-income taxpayers pay the same fraction of income
+8. Proportional tax-- a tax for which high-income and low-income taxpayers pay the same fraction of income
 
-9.Regressive tax-- a tax for which high-income taxpayers pay a smaller fraction of their income than do low-income taxpayers
+9. Regressive tax-- a tax for which high-income taxpayers pay a smaller fraction of their income than do low-income taxpayers
 
-10.Progressive tax-- a tax for which high-income taxpayers pay a larger fraction of their income than do low-income taxpayers
+10. Progressive tax-- a tax for which high-income taxpayers pay a larger fraction of their income than do low-income taxpayers
 
 ### Review
 
