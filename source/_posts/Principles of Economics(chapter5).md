@@ -70,17 +70,17 @@ Chapter 5 is Elasticity and its Application. This chapter introduces elasticity(
 
 ### Definitions
 
-1.Elasticity-- a measure of the responsiveness of quantity demanded or quantity supplied to a change in one of its determinants
+1. Elasticity-- a measure of the responsiveness of quantity demanded or quantity supplied to a change in one of its determinants
 
-2.Price elasticity of demand-- a measure of how much the quantity demanded of a good responds to a change in the price of that good, computed as the percentage change in quantity demanded divided by the percentage change in price
+2. Price elasticity of demand-- a measure of how much the quantity demanded of a good responds to a change in the price of that good, computed as the percentage change in quantity demanded divided by the percentage change in price
 
-3.Total revenue-- the amount paid by buyers and received by sellers of a good, computed as the price of the good times the quantity sold
+3. Total revenue-- the amount paid by buyers and received by sellers of a good, computed as the price of the good times the quantity sold
 
-4.Income elasticity of demand-- a measure of how much the quantity demanded of a good responds to a change in consumers' income, computed as the percentage change in quantity demanded divided by the percentage change in income
+4. Income elasticity of demand-- a measure of how much the quantity demanded of a good responds to a change in consumers' income, computed as the percentage change in quantity demanded divided by the percentage change in income
 
-5.Cross-price elasticity of demand-- a measure of how much the quantity demanded of one good responds to a change in the price of another good, computed as the percentage change in quantity demanded of the first good divided by the percentage change in price of the second good
+5. Cross-price elasticity of demand-- a measure of how much the quantity demanded of one good responds to a change in the price of another good, computed as the percentage change in quantity demanded of the first good divided by the percentage change in price of the second good
 
-6.Price elasticity of supply-- a measure of how much the quantity supplied of a good responds to a change in the price of that good, computed as the percentage change in quantity supplied divided by the percentage change in price
+6. Price elasticity of supply-- a measure of how much the quantity supplied of a good responds to a change in the price of that good, computed as the percentage change in quantity supplied divided by the percentage change in price
 
 ### Review
 
