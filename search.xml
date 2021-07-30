@@ -1,6 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Reading notes--Principles of Economics (chapter14)</title>
+    <url>/2021/07/30/Principles%20of%20Economics(chapter14)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>This chapter 14 is the Firms in Competitive markets. This chapter introduces the nature and characteristics of competitive markets.</p>
+<blockquote>
+<p>What it is</p>
+</blockquote>
+<ul>
+<li>Competitive market is a market with many buyers and sellers trading identical products so that each buyer and seller is a price taker.</li>
+</ul>
+<blockquote>
+<p>Characteristics</p>
+</blockquote>
+<ul>
+<li>average revenue = price</li>
+<li>marginal revenue = price</li>
+</ul>
+<blockquote>
+<p>Profit</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/30/KunAmLQGigFEd6S.png" alt="image.png"></p>
+<p><img src="https://i.loli.net/2021/07/30/9oY7mPQyKrk5pVO.png" alt="image.png"></p>
+<ul>
+<li>Profit = TR - TC</li>
+<li>Profit = (TR/Q - TC/Q）* Q</li>
+<li>Profit = (P - ATC) * Q</li>
+</ul>
+<blockquote>
+<p>Profit maximization</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/30/VgOZPLUDhGmCMqS.png" alt="image.png"></p>
+<ul>
+<li>marginal cost = marginal revenue </li>
+<li>price = marginal revenue</li>
+<li>produce the quantity when P = MC</li>
+</ul>
+<blockquote>
+<p>Exit</p>
+</blockquote>
+<ul>
+<li>Exit means firms do not produce goods any more in the long run.</li>
+<li>Firms loss its revenue but do not burden the total cost of production.</li>
+<li>Firms exit if the total revenue is smaller than the total cost.</li>
+</ul>
+<blockquote>
+<p>Shut down</p>
+</blockquote>
+<ul>
+<li>Shut down means firms do not produce goods any more in the short run.</li>
+<li>Firms loss its revenue but do not burden the variable cost of production.</li>
+<li>Firms shut down if the total revenue is smaller than the variable cost.</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/30/ERqKyurNs1vQltA.png" alt="image.png"></p>
+<blockquote>
+<p>Supply curve in a competitive market</p>
+</blockquote>
+<ul>
+<li>In the short run</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/30/Ud3FZiQebYxKfjS.png" alt="image.png"></p>
+<p><img src="https://i.loli.net/2021/07/30/8tEZKBHeaI2TjJh.png" alt="image.png"></p>
+<ul>
+<li>In the long run</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/30/TJ7AkRCxsyl5u1n.png" alt="image.png"></p>
+<p><img src="https://i.loli.net/2021/07/30/nR1cBHsxAjMK7C5.png" alt="image.png"></p>
+<p><strong>Price = minimum ATC in the long run</strong></p>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol>
+<li><p>Competitive market– a market with many buyers and sellers trading identical products so that each buyer and seller is a price taker</p>
+</li>
+<li><p>Marginal revenue– the change in total revenue from an additional unit sold</p>
+</li>
+<li><p>Average revenue– total revenue divided by the quantity sold</p>
+</li>
+<li><p>Sunk cost– a cost that has already been committed and cannot be recovered</p>
+</li>
+</ol>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p>
+<blockquote>
+<ol>
+<li>A competitive firm maximizes profit by choosing the quantity at which_____(Correct answer: B)</li>
+</ol>
+</blockquote>
+<p>a. average total cost is at its minimum</p>
+<p>b. marginal cost equals the price</p>
+<p>c. average total cost equals the price</p>
+<p>d. marginal cost equals average total cost</p>
+<p>My wrong answer: D</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Reading notes</tag>
+        <tag>Hobbies</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Reading notes--Principles of Economics (chapter 13)</title>
     <url>/2021/07/28/Principles%20of%20Economics(chapter13)/</url>
     <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 13 is the Cost of Production. This chapter introduces revenue, cost and profit.</p>
