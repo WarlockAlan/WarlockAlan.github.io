@@ -43,7 +43,7 @@ Chapter 8 is Application: The Cost of Taxation. This chapter introduces the dead
 
 ### Definitions
 
-1.Deadweight loss-- the fall in total surplus that results from a market distortion, such as a tax
+1. Deadweight loss-- the fall in total surplus that results from a market distortion, such as a tax
 
 ### Review
 
