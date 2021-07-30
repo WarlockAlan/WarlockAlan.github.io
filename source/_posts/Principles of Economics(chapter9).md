@@ -32,9 +32,9 @@ Chapter 9 is Application: International Trade. This chapter compares total surpl
 
 ### Definitions
 
-1.World price-- the price of a good that prevails in the world market for that good
+1. World price-- the price of a good that prevails in the world market for that good
 
-2.Tariff-- a tax on goods produced abroad and sold domestically
+2. Tariff-- a tax on goods produced abroad and sold domestically
 
 ### Review
 
