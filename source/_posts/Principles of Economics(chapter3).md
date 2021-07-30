@@ -26,15 +26,15 @@ As the diagram shows, China can produce both more iron ore and cars than Aus. Th
 
 ### Definitions
 
-1.Absolute advantage-- the ability to produce a good using fewer inputs than another producer
+1. Absolute advantage-- the ability to produce a good using fewer inputs than another producer
 
-2.Opportunity cost-- whatever must be given up to obtain some item
+2. Opportunity cost-- whatever must be given up to obtain some item
 
-3.Comparative advantage-- the ability to produce a good at a lower opportunity cost than another producer
+3. Comparative advantage-- the ability to produce a good at a lower opportunity cost than another producer
 
-4.Imports-- goods produced abroad and sold domestically
+4. Imports-- goods produced abroad and sold domestically
 
-5.Exports-- goods produced domestically and sold abroad
+5. Exports-- goods produced domestically and sold abroad
 
 
 ### Review
