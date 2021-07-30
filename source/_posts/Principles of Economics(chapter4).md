@@ -85,45 +85,45 @@ You can also use the diagrams to analyze the change of equilibrium price and equ
 
 ### Definitions
 
-1.Market-- a group of buyers and sellers of a particular good or service
+1. Market-- a group of buyers and sellers of a particular good or service
 
-2.Competitive market-- a market in which there are many buyers and many sellers so that each has a negligible impact on the market price
+2. Competitive market-- a market in which there are many buyers and many sellers so that each has a negligible impact on the market price
 
-3.Quantity demanded-- the amount of a good that buyers are willing and able to purchase
+3. Quantity demanded-- the amount of a good that buyers are willing and able to purchase
 
-4.Law of demand-- the claim that, other things being equal, the quantity demanded of a good falls when the price of the good rises
+4. Law of demand-- the claim that, other things being equal, the quantity demanded of a good falls when the price of the good rises
 
-5.Demand schedule-- a table that shows the relationship between the price of a good and the quantity demanded
+5. Demand schedule-- a table that shows the relationship between the price of a good and the quantity demanded
 
-6.Demand curve-- a graph of the relationship between the price of a good and the quantity demanded
+6. Demand curve-- a graph of the relationship between the price of a good and the quantity demanded
 
-7.Normal good-- a good for which, other things being equal, an increase in income leads to an increase in demand
+7. Normal good-- a good for which, other things being equal, an increase in income leads to an increase in demand
 
-8.Inferior good-- a good for which, other things being equal, an increase in income leads to a decrease in demand
+8. Inferior good-- a good for which, other things being equal, an increase in income leads to a decrease in demand
 
-9.Substitutes-- two goods for which an increase in the price of one leads to an increase in the demand for the other
+9. Substitutes-- two goods for which an increase in the price of one leads to an increase in the demand for the other
 
-10.Complements-- two goods for which an increase in the price of one leads to a decrease in the demand for the other
+10. Complements-- two goods for which an increase in the price of one leads to a decrease in the demand for the other
 
-11.Quantity supplied-- the amount of a good that sellers are willing and able to sell
+11. Quantity supplied-- the amount of a good that sellers are willing and able to sell
 
-12.Law of supply-- the claim that, other things being equal, the quantity supplied of a good rises when the price of the good rises
+12. Law of supply-- the claim that, other things being equal, the quantity supplied of a good rises when the price of the good rises
 
-13.Supply schedule-- a table that shows the relationship between the price of a good and the quantity supplied
+13. Supply schedule-- a table that shows the relationship between the price of a good and the quantity supplied
 
-14.Supply curve-- a graph of the relationship between the price of a good and the quantity supplied
+14. Supply curve-- a graph of the relationship between the price of a good and the quantity supplied
 
-15.Equilibrium-- a situation in which the market price has reached the level at which quantity supplied equals quantity demanded
+15. Equilibrium-- a situation in which the market price has reached the level at which quantity supplied equals quantity demanded
 
-16.Equilibrium price-- the price that balances quantity supplied and quantity demanded
+16. Equilibrium price-- the price that balances quantity supplied and quantity demanded
 
-17.Equilibrium quantity-- the quantity supplied and the quantity demanded at the equilibrium price
+17. Equilibrium quantity-- the quantity supplied and the quantity demanded at the equilibrium price
 
-18.Surplus-- a situation in which quantity supplied is greater than quantity demanded
+18. Surplus-- a situation in which quantity supplied is greater than quantity demanded
 
-19.Shortage-- a situation in which quantity demanded is greater than quantity supplied
+19. Shortage-- a situation in which quantity demanded is greater than quantity supplied
 
-20.Law of supply and demand-- the claim that the price of any good adjusts to bring the quantity supplied and the quantity demanded of that good into balance
+20. Law of supply and demand-- the claim that the price of any good adjusts to bring the quantity supplied and the quantity demanded of that good into balance
 
 ### Review
 
