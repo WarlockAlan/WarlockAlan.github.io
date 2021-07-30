@@ -55,59 +55,59 @@ Chapter 13 is the Cost of Production. This chapter introduces revenue, cost and 
 
 ### Definitions
 
-1.Total revenue-- the amount a firm receives for the sale of its output
+1. Total revenue-- the amount a firm receives for the sale of its output
 
-2.Total cost-- the market value of the inputs a firm uses in production
+2. Total cost-- the market value of the inputs a firm uses in production
 
 > TC = FC + VC
 
-3.Profit-- total revenue minus total cost
+3. Profit-- total revenue minus total cost
 
-4.Explicit costs-- input costs that require an outlay of money by the firm
+4. Explicit costs-- input costs that require an outlay of money by the firm
 
-5.Implicit costs-- input costs that do not require an outlay of money by the firm
+5. Implicit costs-- input costs that do not require an outlay of money by the firm
 
-6.Economic profit-- total revenue minus total cost, including both explicit and implicit costs
+6. Economic profit-- total revenue minus total cost, including both explicit and implicit costs
 
-7.Accounting profit-- total revenue minus total explicit cost
+7. Accounting profit-- total revenue minus total explicit cost
 
-8.Production function-- the relationship between the quantity of inputs used to make a good and the quantity of output of that good
+8. Production function-- the relationship between the quantity of inputs used to make a good and the quantity of output of that good
 
-9.Marginal product-- the increase in output that arises from an additional unit of input
+9. Marginal product-- the increase in output that arises from an additional unit of input
 
-10.Diminishing marginal product-- the property whereby the marginal product of an input declines as the quantity of the input increases
+10. Diminishing marginal product-- the property whereby the marginal product of an input declines as the quantity of the input increases
 
-11.Fixed cost-- costs that do not vary with the quantity of output produced
+11. Fixed cost-- costs that do not vary with the quantity of output produced
 
 > FC
 
-12.Variable costs-- costs that vary with the quantity of output produced
+12. Variable costs-- costs that vary with the quantity of output produced
 
 > VC
 
-13.Average total cost-- total cost divided by the quantity of output
+13. Average total cost-- total cost divided by the quantity of output
 
 > ATC = TC / Q
 
-14.Average fixed cost-- fixed cost divided by the quantity of output
+14. Average fixed cost-- fixed cost divided by the quantity of output
 
 > AFC = FC / Q
 
-15.Average variable cost-- variable cost divided by the quantity of output
+15. Average variable cost-- variable cost divided by the quantity of output
 
 > AVC = VC / Q
 
-16.Marginal cost-- the increase in total cost that arises from an extra unit of production
+16. Marginal cost-- the increase in total cost that arises from an extra unit of production
 
 > MC =  <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\Delta&space;TC&space;}{\Delta&space;Q&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\Delta&space;TC&space;}{\Delta&space;Q&space;}" title="\frac{\Delta TC }{\Delta Q }" /></a>
 
-17.Efficient scale-- the quantity of output that minimizes average total cost
+17. Efficient scale-- the quantity of output that minimizes average total cost
 
-18.Economies of scale-- the property whereby long-run average total costs falls as the quantity of output increases
+18. Economies of scale-- the property whereby long-run average total costs falls as the quantity of output increases
 
-19.Diseconomies of scale-- the property whereby long-run average total cost rises as the quantity of output increases
+19. Diseconomies of scale-- the property whereby long-run average total cost rises as the quantity of output increases
 
-20.Constant returns to scale-- the property whereby long-run average total cost stays the same as the quantity of output changes
+20. Constant returns to scale-- the property whereby long-run average total cost stays the same as the quantity of output changes
 
 ### Review
 
