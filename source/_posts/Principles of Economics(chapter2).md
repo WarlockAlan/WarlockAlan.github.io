@@ -38,17 +38,17 @@ Lawmakers sometimes try to prohibit reselling tickets, or "scalping" as it is so
 * Laws that limit the resale of tickets for entertainment and sports events make potential audience members for those events worse off on average.
 ### Definitions
 
-1.Circular-flow diagram-- a visual model of the economy that shows how dollars flow through markets among households and firms
+1. Circular-flow diagram-- a visual model of the economy that shows how dollars flow through markets among households and firms
 
-2.Production possibilities frontier-- a graph that shows the combinations of output that the economy can possibly produce given the available factors of production and the available production technology
+2. Production possibilities frontier-- a graph that shows the combinations of output that the economy can possibly produce given the available factors of production and the available production technology
 
-3.Microeconomics-- the study of how households and firms make decisions and how they interact in markets
+3. Microeconomics-- the study of how households and firms make decisions and how they interact in markets
 
-4.Marcoeconomics-- the study of economy-wide phenomena, including inflation, unemployment, and economic growth.
+4. Marcoeconomics-- the study of economy-wide phenomena, including inflation, unemployment, and economic growth.
 
-5.Positive statements-- claims that attempt to describe the world as it is
+5. Positive statements-- claims that attempt to describe the world as it is
 
-6.Normative statements-- claims that attempt to prescribe how the world should be
+6. Normative statements-- claims that attempt to prescribe how the world should be
 
 ### Review
 
