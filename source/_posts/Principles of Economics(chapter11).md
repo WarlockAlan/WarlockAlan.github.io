@@ -40,23 +40,23 @@ Chapter 11 is Public Goods and Common Resources. This chapter divides the goods 
 
 ### Definitions
 
-1.Excludability-- the property of a good whereby a person can be prevented from using it
+1. Excludability-- the property of a good whereby a person can be prevented from using it
 
-2.Public goods-- good that are neither excludable nor rival in consumption
+2. Public goods-- good that are neither excludable nor rival in consumption
 
-3.Free rider-- a person who receives the benefit of a good but avoids paying for it
+3. Free rider-- a person who receives the benefit of a good but avoids paying for it
 
-4.Rivalry in consumption-- the property of a good whereby one person's use diminishes other people's use
+4. Rivalry in consumption-- the property of a good whereby one person's use diminishes other people's use
 
-5.Common resources-- goods that are excludable but not rival in consumption
+5. Common resources-- goods that are excludable but not rival in consumption
 
-6.Cost-benefit analysis-- a study that compares the costs and benefits to society of providing a public good
+6. Cost-benefit analysis-- a study that compares the costs and benefits to society of providing a public good
 
-7.Private goods-- goods that are both excludable and rival in consumption
+7. Private goods-- goods that are both excludable and rival in consumption
 
-8.Club goods-- goods that are excludable but not rival in consumption
+8. Club goods-- goods that are excludable but not rival in consumption
 
-9.Tragedy of the Commons-- a parable that illustrates why common resources are used more than is desirable from the standpoint of society as a whole
+9. Tragedy of the Commons-- a parable that illustrates why common resources are used more than is desirable from the standpoint of society as a whole
 
 ### Review
 
