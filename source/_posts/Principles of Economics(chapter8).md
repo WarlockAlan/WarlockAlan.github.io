@@ -47,6 +47,8 @@ Chapter 8 is Application: The Cost of Taxation. This chapter introduces the dead
 
 ### Review
 
+There are some exercises in this book. I recorded questions I didn't answer correctly here.
+
 >1.A tax on a good has deadweight loss if_____(Correct answer: A)
 
 a. the reduction in consumer and producer surplus is greater than the tax revenue
