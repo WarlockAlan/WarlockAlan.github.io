@@ -54,6 +54,10 @@ The chapter 15 is Monopoly. This chapter introduces the situation of monopoly.
 
 * Because different consumers have different willingnesses to buy the same good, the price discrimination increases the total surplus.
 
+* Differences between Competition and Monopoly
+
+![image.png](https://i.loli.net/2021/08/04/jTmZ8XaHGLBxDIi.png)
+
 ### Definitions
 
 1.Monopoly-- a firm that is the sole seller of a product without any close substitutes
