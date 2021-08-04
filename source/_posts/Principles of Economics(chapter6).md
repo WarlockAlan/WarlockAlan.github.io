@@ -51,6 +51,8 @@ Chapter 6 is Supply, Demand, and Government Policies. This chapter explains maxi
 
 ### Review
 
+There are some exercises in this book. I recorded questions I didn't answer correctly here.
+
 >1. When the government imposes a binding price floor, it causes_____ (Correct answer: D)
 
 a. the supply curve to shift to the left
