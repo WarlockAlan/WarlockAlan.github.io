@@ -22,9 +22,13 @@ Chapter 18 is The Markets for the Factors of Production. This chapter introduces
 
 ![The market for land](https://i.loli.net/2021/08/29/ybQKajT7lEOIpVr.png)
 
+* The market for land
+
 ![The market for capital](https://i.loli.net/2021/08/29/4ETfjSPzl1q385J.png)
 
-* The market for land and the market for capital are the same as the market for labour
+* The market for capital
+
+**The market for land and the market for capital are the same as the market for labour**
 
 > Production function
 
