@@ -16,6 +16,7 @@ Chapter 18 is The Markets for the Factors of Production. This chapter introduces
 
 ![The market for labour](https://i.loli.net/2021/08/29/XZBa6EqPDekpugz.png)
 
+* The market for labour
 * The price of labours is the wage rate.
 * The market price and quantity of labours are determined by the demand and supply of labours.
 
@@ -23,7 +24,7 @@ Chapter 18 is The Markets for the Factors of Production. This chapter introduces
 
 ![The market for capital](https://i.loli.net/2021/08/29/4ETfjSPzl1q385J.png)
 
-* The same as the market for labour
+* The market for land and the market for capital are the same as the market for labour
 
 > Production function
 
