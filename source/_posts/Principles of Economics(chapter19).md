@@ -1,6 +1,6 @@
 ---
 title: Reading notes--Principles of Economics (chapter19)
-date: 2021-7-5 23:59:59
+date: 2021-9-5 23:59:59
 tags:
  - Reading notes
  - Economics
