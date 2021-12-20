@@ -28,7 +28,7 @@ Chapter 9 is Application: International Trade. This chapter compares total surpl
 
 * Tariff is a tax on import.
 * Tariff has no effect for a exporting country.
-* D and E in this diagram represent the deadweight loss from the tariff.
+* D and F in this diagram represent the deadweight loss from the tariff.
 
 ### Definitions
 
