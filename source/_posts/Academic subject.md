@@ -4,7 +4,7 @@ date: 2022-3-5 23:59:59
 tags:
  - Personal statement
  - Economics
- - Extra-curriculum
+ - Extra curriculum
 ---
 
 **Introduction**
