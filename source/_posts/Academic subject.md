@@ -1,6 +1,6 @@
 ---
 title: An academic subject inspires me
-date: 2099-12-31 23:59:59
+date: 2022-3-5 23:59:59
 tags:
  - Personal statement
  - Economics
