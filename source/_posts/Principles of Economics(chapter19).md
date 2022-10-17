@@ -75,4 +75,4 @@ c. government
 
 d. all of the above
 
-My wring answer: D
+My wrong answer: D
