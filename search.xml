@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Reading notes related to text mining</title>
+    <url>/2099/12/31/Text%20mining/</url>
+    <content><![CDATA[<h3 id="reading-notes–-Further-learning-in-statistics-and-data-science"><a href="#reading-notes–-Further-learning-in-statistics-and-data-science" class="headerlink" title="reading notes– Further learning in statistics and data science"></a>reading notes– Further learning in statistics and data science</h3><p>I read the book ‘Opinion Mining and Sentiment Analysis’ by Pang and Lee and thus made notes related to statistics and data science. </p>
+<h4 id="Text-mining"><a href="#Text-mining" class="headerlink" title="Text mining"></a>Text mining</h4><blockquote>
+<p>Text mining (also known as text analysis), is the process of transforming unstructured text into structured data for easy analysis. Text mining uses natural language processing (NLP), allowing machines to understand the human language and process it automatically.</p>
+</blockquote>
+<h5 id="Normalisation"><a href="#Normalisation" class="headerlink" title="Normalisation"></a>Normalisation</h5><blockquote>
+<p>Text normalization is the process of transforming text into a single canonical form that it might not have had before.</p>
+</blockquote>
+<p>Stemming and lemmatisation are two approaches for text normalisation.</p>
+<p>1.Lemmatization is a text normalization technique used in Natural Language Processing (NLP), that switches any kind of a word to its base root mode. Lemmatization is responsible for grouping different inflected forms of words into the root form, having the same meaning.</p>
+<p><strong>Lemma: the basic form of a word, for example the singular form of a noun or the infinitive form of a verb, as it is shown at the beginning of a dictionary entry</strong></p>
+<p>2.In linguistic morphology and information retrieval, stemming is the process of reducing inflected (or sometimes derived) words to their word stem, base or root form—generally a written word form.</p>
+<blockquote>
+<p>notes in Chinese</p>
+</blockquote>
+<p>最常见的词汇规范化的实践有：</p>
+<ol>
+<li><p>词干提取（Stemming）：词干提取是一个初级的、基于规则的脱去后缀（如“ing”，“ly”，“es”，“s”等等）的过程</p>
+</li>
+<li><p>词元化（Lemmatization）：另一方面，词元化，是一个组织好的、一步一步的获取词根的过程。</p>
+</li>
+<li><p>词汇规范化: 另外一种文本型的噪音与一个词语的多种表达形式有关。例如，“play”，“player”，“played”，“plays”和“playing”都是单词“play”的变种。尽管它们有不同的意思，但是根据上下文来看，它们是意思是相似的。这个步骤是将一个单词的所有不同形式转换为它的规范形式（也被称为词条（lemma））</p>
+</li>
+</ol>
+<h4 id="Opinion-mining"><a href="#Opinion-mining" class="headerlink" title="Opinion mining"></a>Opinion mining</h4><blockquote>
+<p>Opinion mining, or sentiment analysis, is a text analysis technique that uses computational linguistics and natural language processing to automatically identify and extract sentiment or opinion from within text (positive, negative, neutral, etc.)</p>
+</blockquote>
+<p>In my words, opinion mining is just one part in text mining as text mining analyses text which are expressed factually whereas opinion mining analyses text which are expressed subjectively.</p>
+<blockquote>
+<p>Sentiment analysis, also referred to as opinion mining, is an approach to natural language processing (NLP) that identifies the emotional tone behind a body of text. This is a popular way for organizations to determine and categorize opinions about a product, service, or idea. It involves the use of data mining, machine learning (ML) and artificial intelligence (AI) to mine text for sentiment and subjective information.</p>
+</blockquote>
+<p><strong>Emotional tone refers to positive, negative or neutral attitudes.</strong></p>
+<h4 id="Subjectivity-polarity-score"><a href="#Subjectivity-polarity-score" class="headerlink" title="Subjectivity polarity score"></a>Subjectivity polarity score</h4><p>The polarity score is a float within the range [-1.0, 1.0] . The subjectivity is a float within the range [0.0, 1.0] where 0.0 is very objective and 1.0 is very subjective. </p>
+<p>In short, text polarity is a measure of how negative or how positive a piece of text is.<br>Most of the time, NLP models can predict simply positive or negative words and phrases quite well. For example, the words “amazing”, “superb”, and “wonderful” can easily be labelled as highly positive. The words “bad”, “sad”, and “mad” can easily be labelled as negative. However, we can’t just look at polarity from the frame of individual words, it’s important to take a larger context for evaluating total polarity. For example, the word “bad” may be negative but what about the phrase “not bad”? Is that neutral? Or is that the opposite of bad? At this point we’re getting into linguistics and semantics rather than natural language processing.</p>
+<p>The two biggest open source libraries for NLP in Python are spaCy and NLTK, and both of these libraries measure polarity on a normalized scale of -1 to 1. The Text API measures, combines, and normalizes values on both the polarity of the overall text, individual sentences, and individual phrases.</p>
+<blockquote>
+<p>Example <a href="https://www.ebaina.com/articles/140000005269">https://www.ebaina.com/articles/140000005269</a><br>notes in Chinese</p>
+</blockquote>
+<blockquote>
+<p>极性(polarity)指的是一陈述是肯定还是否定的性质，如果某个词只能出现在肯定或者否定的陈述中，那么这个词就是极性项(polarity item)。在英语中at all是一个否定极性项，它只能出现在否定句中。</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>Extra curriculum</tag>
+        <tag>Sciences</tag>
+        <tag>Reading notes</tag>
+        <tag>Hobbies</tag>
+        <tag>Statistics and data science</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Reading notes--Principles of Economics (chapter19)</title>
     <url>/2022/06/05/Principles%20of%20Economics(chapter19)/</url>
     <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 19 is Earnings and Discrimination. This chapter introduces different kinds of discrimination. (e.g Why doctors earn more wages than workers)</p>
@@ -1812,41 +1864,6 @@
       </tags>
   </entry>
   <entry>
-    <title>My school life--living in the dormitory</title>
-    <url>/2021/06/23/Daily%20School%20Life/</url>
-    <content><![CDATA[<h3 id="My-unique-school-life"><a href="#My-unique-school-life" class="headerlink" title="My unique school life"></a>My unique school life</h3><p>Truth to be told, I lived in school dormitory, that makes my school life quite different compared with other students, since I need to live at school 5 days per week and have breakfast, lunch and dinner at canteen as well. Other students, however, just need to go to school at seven twenty in the morning and go back their home in the 5 p.m.</p>
-<h3 id="Daily-routines"><a href="#Daily-routines" class="headerlink" title="Daily routines"></a>Daily routines</h3><p><em>My daily routine has a little bit difference due to living in the school dorm (SWOT Analysis )</em></p>
-<p> Students in my class are asked to go to the classroom at 0730. Then we have 30 minutes reading time. From 0800, we have lessons at different periods. We have 10 periods at school every day and we’re allowed to go back home at 0500.</p>
-<blockquote>
-<p>Advantages</p>
-</blockquote>
-<p>I get up at six fifty every day in the school dormitory, then I go to the school canteen to have breakfast at seven o’clock. I get up late compared with my classmates since they have to spend time commuting. Even though, they still go to the classroom nearly 0730. In contrast, I arrive at my classroom at 0720 and even have 10 minutes spare time to do the self-study.</p>
-<blockquote>
-<p>Disadvantages</p>
-</blockquote>
-<p>I have no choice but to have terrible meals at school every day. It sometimes makes me feel sick and decreases my efficiency of study.</p>
-<blockquote>
-<p>Opportunities</p>
-</blockquote>
-<p>Only a few students live in the school dorm, that means I may feel isolated from time to time. However, that also means that no one could disturb me to study.</p>
-<p>Besides, the majority of students who live in the dorm are top students, I could learn the way how they study. But it also means the peer pressure is hectic for me.</p>
-<blockquote>
-<p>Threats</p>
-</blockquote>
-<p>The self-study room has a poor signal, that means it’s hard for me to use digital devices sometimes. As an international student, I couldn’t live without them in order to look through websites of different universities.</p>
-<h3 id="My-Feelings"><a href="#My-Feelings" class="headerlink" title="My Feelings"></a>My Feelings</h3><p>One of my friends used to say that it may be wise for me to rent a flat nearby my school. Actually, my parents rented a flat when I was in the junior high. (My mother has retired so she has enough time.)</p>
-<p>But I didn’t think it was be a good choice. Generally speaking, I didn’t want to disturb my mother’s live since she had retired. In addition, I personally reckon that I must get benefits from my school life. </p>
-<p>First, I do self-study in the evening and ask for my teachers’ help if I need it. (My teachers sometimes work overload until evening) During my school life, I have already developed the ability to concentrate myself to do self-study by reading textbooks or searching information online. I suppose I could fit the self-study life in the university rapidly since I have already lived in this life for a long time.</p>
-<p>Second, I can avoid feeling isolated or even depressed though I live alone. Tell you the truth, when I concentrate on studying, I even forget about time. (And I seldom keep in touch with my parents during weekday.)  Since culture gap exists, some international students may feel depressed and homesick when they go abroad to study, which makes them perform badly in their study. Obviously, I was not one of them.</p>
-<p>Third, thanks to my school life, I have developed the habit to make to-do list to manage my time properly. Many students, including me, feeling relaxed and wasting their time at home.<br>As I don’t have any way to do the entertainment, I must study hard at school (and get great exam scores as well).</p>
-<p>Last but not the least, I can do the majority of things in my everyday life now. Actually, many students, especially the Chinese students, having a poor ability to live alone.</p>
-<p>In other word, I enjoy my life living in the school dormitory.</p>
-]]></content>
-      <tags>
-        <tag>School life</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Marshmallow Challenge</title>
     <url>/2021/06/23/Marshmallow%20Challenge/</url>
     <content><![CDATA[<h3 id="Backgrounds"><a href="#Backgrounds" class="headerlink" title="Backgrounds"></a>Backgrounds</h3><p>Our economic teacher organized a game called Marshmallow Challenge in her class after we finished CAIE international examinations. In this game, students worked in groups (a group had 4 students) to build a tower by using marshmallows and sticks. Our teacher would measure the height of tower and gave students tokens (1 mm= 10 tokens). It is worth mentioning that the marshmallows and sticks were charged. The first 1o marshmallows were free, but others were charged by 20 tokens per marshmallows. And each stick needed 10 tokens too.</p>
@@ -1890,6 +1907,41 @@
         <tag>Economics</tag>
         <tag>Teamwork</tag>
         <tag>Sciences</tag>
+        <tag>School life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>My school life--living in the dormitory</title>
+    <url>/2021/06/23/Daily%20School%20Life/</url>
+    <content><![CDATA[<h3 id="My-unique-school-life"><a href="#My-unique-school-life" class="headerlink" title="My unique school life"></a>My unique school life</h3><p>Truth to be told, I lived in school dormitory, that makes my school life quite different compared with other students, since I need to live at school 5 days per week and have breakfast, lunch and dinner at canteen as well. Other students, however, just need to go to school at seven twenty in the morning and go back their home in the 5 p.m.</p>
+<h3 id="Daily-routines"><a href="#Daily-routines" class="headerlink" title="Daily routines"></a>Daily routines</h3><p><em>My daily routine has a little bit difference due to living in the school dorm (SWOT Analysis )</em></p>
+<p> Students in my class are asked to go to the classroom at 0730. Then we have 30 minutes reading time. From 0800, we have lessons at different periods. We have 10 periods at school every day and we’re allowed to go back home at 0500.</p>
+<blockquote>
+<p>Advantages</p>
+</blockquote>
+<p>I get up at six fifty every day in the school dormitory, then I go to the school canteen to have breakfast at seven o’clock. I get up late compared with my classmates since they have to spend time commuting. Even though, they still go to the classroom nearly 0730. In contrast, I arrive at my classroom at 0720 and even have 10 minutes spare time to do the self-study.</p>
+<blockquote>
+<p>Disadvantages</p>
+</blockquote>
+<p>I have no choice but to have terrible meals at school every day. It sometimes makes me feel sick and decreases my efficiency of study.</p>
+<blockquote>
+<p>Opportunities</p>
+</blockquote>
+<p>Only a few students live in the school dorm, that means I may feel isolated from time to time. However, that also means that no one could disturb me to study.</p>
+<p>Besides, the majority of students who live in the dorm are top students, I could learn the way how they study. But it also means the peer pressure is hectic for me.</p>
+<blockquote>
+<p>Threats</p>
+</blockquote>
+<p>The self-study room has a poor signal, that means it’s hard for me to use digital devices sometimes. As an international student, I couldn’t live without them in order to look through websites of different universities.</p>
+<h3 id="My-Feelings"><a href="#My-Feelings" class="headerlink" title="My Feelings"></a>My Feelings</h3><p>One of my friends used to say that it may be wise for me to rent a flat nearby my school. Actually, my parents rented a flat when I was in the junior high. (My mother has retired so she has enough time.)</p>
+<p>But I didn’t think it was be a good choice. Generally speaking, I didn’t want to disturb my mother’s live since she had retired. In addition, I personally reckon that I must get benefits from my school life. </p>
+<p>First, I do self-study in the evening and ask for my teachers’ help if I need it. (My teachers sometimes work overload until evening) During my school life, I have already developed the ability to concentrate myself to do self-study by reading textbooks or searching information online. I suppose I could fit the self-study life in the university rapidly since I have already lived in this life for a long time.</p>
+<p>Second, I can avoid feeling isolated or even depressed though I live alone. Tell you the truth, when I concentrate on studying, I even forget about time. (And I seldom keep in touch with my parents during weekday.)  Since culture gap exists, some international students may feel depressed and homesick when they go abroad to study, which makes them perform badly in their study. Obviously, I was not one of them.</p>
+<p>Third, thanks to my school life, I have developed the habit to make to-do list to manage my time properly. Many students, including me, feeling relaxed and wasting their time at home.<br>As I don’t have any way to do the entertainment, I must study hard at school (and get great exam scores as well).</p>
+<p>Last but not the least, I can do the majority of things in my everyday life now. Actually, many students, especially the Chinese students, having a poor ability to live alone.</p>
+<p>In other word, I enjoy my life living in the school dormitory.</p>
+]]></content>
+      <tags>
         <tag>School life</tag>
       </tags>
   </entry>
