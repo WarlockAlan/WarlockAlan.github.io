@@ -40,7 +40,7 @@ Stemming and lemmatisation are two approaches for text normalisation.
 #### Opinion mining
 > Opinion mining, or sentiment analysis, is a text analysis technique that uses computational linguistics and natural language processing to automatically identify and extract sentiment or opinion from within text (positive, negative, neutral, etc.)
 
-In my words, opinion mining is just one part in text mining as text mining analyses text which are expressed factually whereas opinion mining analyses text which are expressed subjectively.
+In my words, opinion mining is just one part in text mining; text mining involves classical text mining and opinion mining；The former one analyses text which are expressed factually whereas the latter one analyses text which are expressed subjectively.
 
 > Sentiment analysis, also referred to as opinion mining, is an approach to natural language processing (NLP) that identifies the emotional tone behind a body of text. This is a popular way for organizations to determine and categorize opinions about a product, service, or idea. It involves the use of data mining, machine learning (ML) and artificial intelligence (AI) to mine text for sentiment and subjective information.
 
