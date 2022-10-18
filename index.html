@@ -232,6 +232,96 @@
 
     
     <article
+  id="post-Naive Bayes classifier and Markov Chain"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/07/03/Naive%20Bayes%20classifier%20and%20Markov%20Chain/"
+    >Reading notes related to Naive Bayes classifiers and Markov Chain</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/07/03/Naive%20Bayes%20classifier%20and%20Markov%20Chain/" class="article-date">
+  <time datetime="2022-07-03T15:59:59.000Z" itemprop="datePublished">2022-07-03</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="reading-notes-Further-learning-in-statistics-and-data-science"><a href="#reading-notes-Further-learning-in-statistics-and-data-science" class="headerlink" title="reading notes- Further learning in statistics and data science"></a>reading notes- Further learning in statistics and data science</h3><p>I read the book ‘Reinforcement Learning’ by S. Sutton and thus made reading notes about markov chain and also I learned knowledge about Bayes classifiers.</p>
+<h4 id="Classifier"><a href="#Classifier" class="headerlink" title="Classifier"></a>Classifier</h4><blockquote>
+<p>“An algorithm that implements classification, especially in a concrete implementation, is known as a classifier. The term “classifier” sometimes also refers to the mathematical function, implemented by a classification algorithm, that maps input data to a category.”</p>
+</blockquote>
+<h4 id="Bayes-classifier"><a href="#Bayes-classifier" class="headerlink" title="Bayes classifier"></a>Bayes classifier</h4><p>Classifiers based on Bayes’ Theorem.</p>
+<h4 id="Bayes’-Theorem"><a href="#Bayes’-Theorem" class="headerlink" title="Bayes’ Theorem"></a>Bayes’ Theorem</h4><p><img src="https://s2.loli.net/2022/10/18/SkhXpHdMur1abLe.png" alt="3.png"></p>
+<p><img src="https://s2.loli.net/2022/10/18/wOSQCAHdnJNIevY.png" alt="1.png"></p>
+<p><img src="https://s2.loli.net/2022/10/18/rKnV4ILX8Yj6Rl2.png" alt="2.png"></p>
+<h4 id="Naive-Bayes-classifier"><a href="#Naive-Bayes-classifier" class="headerlink" title="Naive Bayes classifier"></a>Naive Bayes classifier</h4><p>Classifiers based on Bayes’ Theorem <strong>with an assumption of independence among predictors</strong>.</p>
+<p>####What are the Pros and Cons of Naive Bayes?</p>
+<p>Pros:</p>
+<ol>
+<li><p>It is easy and fast to predict class of test data set. It also perform well in multi class prediction</p>
+</li>
+<li><p>When assumption of independence holds, a Naive Bayes classifier performs better compare to other models like logistic regression and you need less training data.</p>
+</li>
+<li><p>It perform well in case of categorical input variables compared to numerical variable(s). For numerical variable, normal distribution is assumed (bell curve, which is a strong assumption).</p>
+</li>
+</ol>
+<p>Cons:</p>
+<ol>
+<li>If categorical variable has a category (in test data set), which was not observed in training data set, then model will assign a 0 (zero) probability and will be unable to make a prediction. This is often known as “Zero Frequency”. To solve this, we can use the smoothing technique. One of the simplest smoothing techniques is called Laplace estimation.</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/21134457">https://www.zhihu.com/question/21134457</a> (useful linkage to Naive Bayes classifiers)</p>
+</blockquote>
+<h4 id="Markov-chain-and-laplace-smoothing"><a href="#Markov-chain-and-laplace-smoothing" class="headerlink" title="Markov chain and laplace smoothing"></a>Markov chain and laplace smoothing</h4><p>It is a pretty tough section so i only made notes in Chinese to help me understand this section better.</p>
+<p><img src="https://s2.loli.net/2022/10/18/fKgv9LOt1IpoHT6.jpg" alt="1.jpg"></p>
+<p>这个矩阵就是转移概率矩阵P，并且它是保持不变的，就是说第一天到第二天的转移概率矩阵跟第二天到第三天的转移概率矩阵是一样的。</p>
+<p><img src="https://s2.loli.net/2022/10/18/Kq5BHvs6wCuJ2Fp.jpg" alt="2.jpg"></p>
+<blockquote>
+<h4 id="One-application"><a href="#One-application" class="headerlink" title="One application"></a>One application</h4><p>For example, consider a hypothetical market with Markov properties where historical data has given us the following patterns: After a week characterized by a bull market trend there is a 90% chance that another bullish week will follow. Additionally, there is a 7.5% chance that the bull week instead will be followed by a bearish one, or a 2.5% chance that it will be a stagnant one. After a bearish week there’s an 80% chance that the upcoming week also will be bearish, and so on. This data is compiled to form a matrix and then the results are drawn thereof.</p>
+</blockquote>
+<p>拉普拉斯平滑（Laplace Smoothing）又被称为加 1 平滑，是比较常用的平滑方法。平滑方法的存在时为了解决零概率问题。</p>
+<blockquote>
+<p>背景:为什么要做平滑处理?</p>
+</blockquote>
+<p>零概率问题，就是在计算实例的概率时，如果某个量x，在观察样本库（训练集）中没有出现过，会导致整个实例的概率结果是0。在文本分类的问题中，当一个词语没有在训练样本中出现，该词语调概率为0，使用连乘计算文本出现概率时也为0。这是不合理的，不能因为一个事件没有观察到就武断的认为该事件的概率是0。</p>
+<blockquote>
+<p>拉普拉斯的理论支撑</p>
+</blockquote>
+<p>为了解决零概率的问题，法国数学家拉普拉斯最早提出用加1的方法估计没有出现过的现象的概率，所以加法平滑也叫做拉普拉斯平滑。<br>假定训练样本很大时，每个分量x的计数加1造成的估计概率变化可以忽略不计，但可以方便有效的避免零概率问题。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Extra-curriculum/" rel="tag">Extra curriculum</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hobbies/" rel="tag">Hobbies</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mathematics/" rel="tag">Mathematics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Reading-notes/" rel="tag">Reading notes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sciences/" rel="tag">Sciences</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Statistics-and-data-science/" rel="tag">Statistics and data science</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
   id="post-Principles of Economics(chapter19)"
   class="article article-type-post"
   itemscope
@@ -950,146 +1040,13 @@
 </article>
 
     
-    <article
-  id="post-Principles of Economics(chapter14)"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/07/30/Principles%20of%20Economics(chapter14)/"
-    >Reading notes--Principles of Economics (chapter14)</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/07/30/Principles%20of%20Economics(chapter14)/" class="article-date">
-  <time datetime="2021-07-30T15:59:59.000Z" itemprop="datePublished">2021-07-30</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>This chapter 14 is the Firms in Competitive markets. This chapter introduces the nature and characteristics of competitive markets.</p>
-<blockquote>
-<p>What it is</p>
-</blockquote>
-<ul>
-<li>Competitive market is a market with many buyers and sellers trading identical products so that each buyer and seller is a price taker.</li>
-</ul>
-<blockquote>
-<p>Characteristics</p>
-</blockquote>
-<ul>
-<li>average revenue = price</li>
-<li>marginal revenue = price</li>
-</ul>
-<blockquote>
-<p>Profit</p>
-</blockquote>
-<p><img src="https://i.loli.net/2021/07/30/KunAmLQGigFEd6S.png" alt="image.png"></p>
-<p><img src="https://i.loli.net/2021/07/30/9oY7mPQyKrk5pVO.png" alt="image.png"></p>
-<ul>
-<li>Profit = TR - TC</li>
-<li>Profit = (TR/Q - TC/Q）* Q</li>
-<li>Profit = (P - ATC) * Q</li>
-</ul>
-<blockquote>
-<p>Profit maximization</p>
-</blockquote>
-<p><img src="https://i.loli.net/2021/07/30/VgOZPLUDhGmCMqS.png" alt="image.png"></p>
-<ul>
-<li>marginal cost = marginal revenue </li>
-<li>price = marginal revenue</li>
-<li>produce the quantity when P = MC</li>
-</ul>
-<blockquote>
-<p>Exit</p>
-</blockquote>
-<ul>
-<li>Exit means firms do not produce goods any more in the long run.</li>
-<li>Firms loss its revenue but do not burden the total cost of production.</li>
-<li>Firms exit if the total revenue is smaller than the total cost.</li>
-</ul>
-<blockquote>
-<p>Shut down</p>
-</blockquote>
-<ul>
-<li>Shut down means firms do not produce goods any more in the short run.</li>
-<li>Firms loss its revenue but do not burden the variable cost of production.</li>
-<li>Firms shut down if the total revenue is smaller than the variable cost.</li>
-</ul>
-<p><img src="https://i.loli.net/2021/07/30/qrWc8Lz2QX7akjt.png" alt="image.png"></p>
-<blockquote>
-<p>Supply curve in a competitive market</p>
-</blockquote>
-<ul>
-<li>In the short run</li>
-</ul>
-<p><img src="https://i.loli.net/2021/07/30/Ud3FZiQebYxKfjS.png" alt="image.png"></p>
-<p><img src="https://i.loli.net/2021/07/30/8tEZKBHeaI2TjJh.png" alt="image.png"></p>
-<ul>
-<li>In the long run</li>
-</ul>
-<p><img src="https://i.loli.net/2021/07/30/TJ7AkRCxsyl5u1n.png" alt="image.png"></p>
-<p><img src="https://i.loli.net/2021/07/30/nR1cBHsxAjMK7C5.png" alt="image.png"></p>
-<p><strong>Price = minimum ATC in the long run</strong></p>
-<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol>
-<li><p>Competitive market– a market with many buyers and sellers trading identical products so that each buyer and seller is a price taker</p>
-</li>
-<li><p>Marginal revenue– the change in total revenue from an additional unit sold</p>
-</li>
-<li><p>Average revenue– total revenue divided by the quantity sold</p>
-</li>
-<li><p>Sunk cost– a cost that has already been committed and cannot be recovered</p>
-</li>
-</ol>
-<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p>
-<blockquote>
-<ol>
-<li>A competitive firm maximizes profit by choosing the quantity at which_____(Correct answer: B)</li>
-</ol>
-</blockquote>
-<p>a. average total cost is at its minimum</p>
-<p>b. marginal cost equals the price</p>
-<p>c. average total cost equals the price</p>
-<p>d. marginal cost equals average total cost</p>
-<p>My wrong answer: D</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Economics/" rel="tag">Economics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hobbies/" rel="tag">Hobbies</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Reading-notes/" rel="tag">Reading notes</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next Page</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next Page</a>
   </nav>
   
 </section>
