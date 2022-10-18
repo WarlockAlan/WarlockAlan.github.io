@@ -1,6 +1,6 @@
 ---
 title: Reading notes related to text mining
-date: 2022-7-2 23:59:59
+date: 2022-8-14 23:59:59
 tags:
  - Hobbies
  - Statistics and data science
