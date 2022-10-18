@@ -59,3 +59,8 @@ The two biggest open source libraries for NLP in Python are spaCy and NLTK, and 
 > notes in Chinese
 
 > 极性(polarity)指的是一陈述是肯定还是否定的性质，如果某个词只能出现在肯定或者否定的陈述中，那么这个词就是极性项(polarity item)。在英语中at all是一个否定极性项，它只能出现在否定句中。
+
+#### Opinion holders and opinion targets
+
+One of the key subtasks in sentiment analysis is opinion role extraction. It can be divided into the extraction of opinion holders (OH), i.e. entities ex-pressing an opinion, and the extraction of opinion targets (OT), i.e. entities or propositions at which sentiment is directed.
+
