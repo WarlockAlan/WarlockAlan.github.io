@@ -1,5 +1,5 @@
 ---
-title: Reading notes--Principles of Economics (chapter8)
+title: test
 date: 2025-7-16 23:59:59
 tags:
  - Reading notes
