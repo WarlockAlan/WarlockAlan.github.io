@@ -1,3 +1,10 @@
+```shell
+# `just init` 用於初始化
+just post "YOUR POST NAME HERE"
+just push # to push the changes
+just preview # preview your blog in browser
+```
+
 ### **注意事項:**
 
 * 請保持這個 repo 公開, 不然自動部署將無法工作
@@ -19,7 +26,6 @@
 
 3. 如上圖所示, 輸入文件名, 格式為 `標題.md`
 4. 將下列模板填入大片空白中 ( 按照需求修改)
-
 
 ```
 ---
@@ -65,17 +71,13 @@ Here's a sentence with a footnote. [^1]
 [^1]: This is the footnote.
 ```
 
-
 5. 你隨時都可以通過 Preview 按鈕來預覽自己寫好的博文.
 6. 點擊最下方的 Commit Changes 綠色按鈕發布博文
 
 ![image.png](https://i.loli.net/2021/03/27/yZESYXOAhMHGlU3.png)
 
-
 7. 將電腦放置一段時間讓其自然生成, 刷新頁面後若途中黃色點變為綠色, 或者本教程開頭的圖標顯示為 Passing, 則成功.
 
-
-
-如果網頁沒有顯示, 記得刷新瀏覽器;  
-如果小圓點變為紅色, 檢查你的博文格式有沒有出問題;  
+如果網頁沒有顯示, 記得刷新瀏覽器;
+如果小圓點變為紅色, 檢查你的博文格式有沒有出問題;
 當然你也可以隨時聯繫我.
