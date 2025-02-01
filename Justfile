@@ -15,11 +15,11 @@ init:
 post name:
     if (Test-Path .\source\_posts\{{name}}.md) { Write-Error "File with that name already exists"; }
     npx hexo new {{name}}
-    & "C:\Program Files\Typora\Typora.exe" .\source\_posts\{{name}}.md 
+    & "C:\Program Files\Typora\Typora.exe" .\source\_posts\{{name}}.md
 
 push:
     git add -A
-    git commit -m "Update at $(date yyyyMMdd)"
+    git commit -m 'Update at $(date -Format "yyyyMMdd HH:mm:ss")'
     git push
 
 pull:
