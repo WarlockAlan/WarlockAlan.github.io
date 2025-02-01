@@ -19,7 +19,7 @@ post name:
 
 push:
     git add -A
-    git commit -m 'Update at $(date -Format "yyyyMMdd HH:mm:ss")'
+    git commit -m "Update at $(Get-date -Format yyyyMMdd_HH:mm:ss)"
     git push
 
 pull:
