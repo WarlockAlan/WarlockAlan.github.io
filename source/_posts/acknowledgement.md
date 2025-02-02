@@ -1,5 +1,5 @@
 ---
-title: acknowledgement
+title: Acknowledgement
 date: 2025-02-02 22:56:26
 tags:
 ---
