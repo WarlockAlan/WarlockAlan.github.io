@@ -17,6 +17,10 @@ post name:
     npx hexo new {{name}}
     & "C:\Program Files\Typora\Typora.exe" .\source\_posts\{{name}}.md
 
+edit name:
+    if (!Test-Path .\source\_posts\{{name}}.md) { Write-Error "File with that name does not exist"; }
+    & "C:\Program Files\Typora\Typora.exe" .\source\_posts\{{name}}.md
+
 push:
     git add -A
     git commit -m "Update at $(Get-date -Format yyyyMMdd_HH:mm:ss)"
