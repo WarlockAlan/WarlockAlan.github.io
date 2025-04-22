@@ -1,0 +1,2482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>使用Mediacrawler爬虫抓取数据的攻略</title>
+    <url>/2025/04/22/%E4%BD%BF%E7%94%A8Mediacrawler%E7%88%AC%E8%99%AB%E6%8A%93%E5%8F%96%E6%95%B0%E6%8D%AE%E7%9A%84%E6%94%BB%E7%95%A5/</url>
+    <content><![CDATA[<p>使用基于Python开发的Mediacrawler爬虫可以抓取b站、小红书等几乎所有国内新媒体平台的推文、视频数据。这里的数据涵盖观看量、点赞、收藏之类的可公开的量化数据，也包含评论这种文本数据。这个爬虫基于Playwright开发，虽然现在大公司都针对Playwright反爬，但是我拿来平时练手做的项目显然没有那么高级的反爬。Mediacrawler是github的开源项目，不得不说做出这个大佬太强了（github stars最高的含金量）。</p>
+<p>Clone、配置好这个github项目之后运行界面长这样：</p>
+<p><img src="https://matuimg.com/i/2025/04/22/pr4vu7.png" alt="微信图片_20250422153737"></p>
+<p>–platform 选择平台如b站、小红书 –lt 选择登陆方式（login type比如qr cpde)</p>
+<p>–keywords 输入搜索的关键词 -get_comments 选择是否要获取评论文本信息</p>
+<p>输出的数据格式选择csv，因为excel可以直接处理csv格式的数据。</p>
+<p>比如我们在B站搜索“出国旅行”关键词，跑出来以下数据（会出现在data文件夹中，每次爬虫爬完之后记得把Browser_data文件夹给删掉）</p>
+<p>会发现有三个文件，一个是关于视频本身播放量等数据，一个是抓取的评论文本，还有一个是视频Up主的信息。<img src="https://matuimg.com/i/2025/04/22/pr4u9x.jpg" alt="PixPin_2025-04-22_15-44-45"></p>
+<p>打开文件视频数据和作者数据长这样：</p>
+<p><img src="https://matuimg.com/i/2025/04/22/pr548y.png" alt="微信图片_20250422154702"><br><img src="https://matuimg.com/i/2025/04/22/pr547p.png" alt="微信图片_20250422154712"></p>
+<p>评论的数据没有，我没有抓取出国旅行这一关键词的数据，但我抓取了我喜欢的游戏战锤的评论，如图：</p>
+<p><img src="https://matuimg.com/i/2025/04/22/ps8daj.jpg" alt="PixPin_2025-04-22_15-48-13"></p>
+<p>剩下的数据分析工作就很简单了，因为数据分析工作的难点从来不是分析数据而是如何获取数据。现在已经得到了excel文件，那数据分析工作也很简单了。（如果是其他格式的文件可能还得使用Python清洗等）</p>
+<p>有原始数据的话数据分析就很容易，比如我filter 粉丝小于某个数 filter播放量大于某个数由此找到低粉爆款视频。再filter这些博主。</p>
+<p><img src="https://matuimg.com/i/2025/04/22/pn67gz.png" alt="微信图片_20250422155031"></p>
+<p><img src="https://matuimg.com/i/2025/04/22/po5i58.png" alt="微信图片_20250422155146"></p>
+<p>视频的评论直接清洗获得词频再做词云图就好了。文件太大了不能丢给AI做，后续也需要验证AI做的是否可信。</p>
+<p>优化以及后续：不要学我一样先获取comments,爬虫初步抓取的时候先别抓comments，先filter出来低粉爆款视频再抓取这些视频的comments。毕竟comments太多抓取太慢了。同时我b站账号似乎触犯了平台反爬虫的机制，已经不能成功抓取数据了，后续可以配置干净的Ip狠狠抓取。但切记不要玩的太过火，小心吃上国家饭。</p>
+]]></content>
+      <tags>
+        <tag>Statistics and data science</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux_Notes</title>
+    <url>/2025/02/03/Linux-Notes/</url>
+    <content><![CDATA[<p>搜索 wt 打开 windows terminal 默认打开的是 powershell （类似 cmd 的东西） 不用管</p>
+<h3 id="PS-your-command-here-PS-wsl-WSL-for-Windows-Subsystem-for-Linux-虚拟机"><a href="#PS-your-command-here-PS-wsl-WSL-for-Windows-Subsystem-for-Linux-虚拟机" class="headerlink" title="PS &gt; __ #your command here PS &gt; wsl # WSL for Windows Subsystem for Linux 虚拟机"></a>PS &gt; __ #your command here PS &gt; wsl # WSL for Windows Subsystem for Linux 虚拟机</h3><p>所有操作都是在终端内进行的</p>
+<h3 id="cd-change-directory-改变当前目录（文件夹）"><a href="#cd-change-directory-改变当前目录（文件夹）" class="headerlink" title="cd change directory 改变当前目录（文件夹）"></a><code>cd</code> change directory 改变当前目录（文件夹）</h3><ul>
+<li>cd my_folder</li>
+<li>cd # 不带任何参数，回到用户目录 <code>~</code> <code>$HOME</code></li>
+<li><code>pwd</code> - print working directory 将当前的目录输出到终端</li>
+<li><code>touch</code> - 创建新文件</li>
+<li><code>-</code> flag  <code>--</code> </li>
+<li><code>ls</code> - list files ** <code>-A</code> &#x2F; <code>--almost-all</code>  - use this to see hidden files - 前面带点的文件 <code>.bashrc</code> 被隐藏的文件 ** <code>-a</code> &#x2F; <code>--all</code> ** <code>-l</code> 输出为一个 table</li>
+<li><code>mkdir</code> - make directory</li>
+</ul>
+<blockquote>
+<p>directory 目录，实际上就是文件夹</p>
+</blockquote>
+<ul>
+<li><code>rm</code> - remove ** <code>-r</code> recursive 递归删除 - 删除该文件和他的子文件</li>
+<li><code>rmdir</code> - remove directory - useless</li>
+<li><code>explorer.exe</code> 用微软文件管理器打开 只在 wsl 里可用</li>
+<li>大部分命令都实现了 <code>-h</code> 这个 flag，或 <code>--help</code> 使用这个flag查看命令说明</li>
+<li><code>man</code> manual 查看某个命令的手册</li>
+</ul>
+<p>** <code>man mkdir</code></p>
+<ul>
+<li><code>nano</code> 文本编辑器 ** 在终端中 <code>^</code> 代表 CTRL</li>
+<li><code>sudo</code> - super user do ** 如果要求你使用 <code>root</code> （根用户），操作需要 <code>elevated</code> （提升权限），<code>permission denied</code></li>
+</ul>
+<hr>
+<p>黑马的教程用的是 CentOS，他安装软件使用 <code>yum</code> 或者 <code>rpm</code>，我是用的是 Ubuntu，安装软件使用 <code>apt</code></p>
+<p><code>apt search</code> 搜索软件包</p>
+<p><code>apt install</code> 安装软件包</p>
+<p>如果你太久没更新 apt，里面的包太老了，所以就没法安装某些新软件</p>
+<p><code>apt update</code> 是更新 apt</p>
+<p><code>apt upgrade</code> 更新你用 apt 安装的软件</p>
+<hr>
+<p>启动 MySQL</p>
+<ul>
+<li><p><code>systemctl start mysql</code></p>
+</li>
+<li><p><code>systemctl</code> system control</p>
+</li>
+<li><p><code>mysqld</code> MySQL Daemon </p>
+</li>
+<li><p>start &#x2F; restart &#x2F; stop</p>
+<p><code>sudo mysql -u root -p </code></p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQL_NOTES</title>
+    <url>/2025/02/03/SQL-NOTES/</url>
+    <content><![CDATA[<p>网上挑选了一些SQL笔记，这一份比较的凝练实用。</p>
+<p><img src="E:\sql_notes\1.jpg" alt="P1"></p>
+<p><img src="E:\sql_notes\2.jpg" alt="P2"></p>
+<p><img src="E:\sql_notes\3.jpg" alt="P3"></p>
+<p><img src="E:\sql_notes\4.jpg" alt="P4"></p>
+<p><img src="E:\sql_notes\5.jpg" alt="P5"></p>
+<p><img src="E:\sql_notes\6.jpg" alt="P6"></p>
+<p><img src="E:\sql_notes\7.jpg" alt="P7"></p>
+<p><img src="E:\sql_notes\8.jpg" alt="P8"></p>
+<p><img src="E:\sql_notes\9.jpg" alt="P9"></p>
+]]></content>
+      <tags>
+        <tag>Notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Edinburgh_Travel_Guide</title>
+    <url>/2025/02/02/Edinburgh-Travel-Guide/</url>
+    <content><![CDATA[<h1 id="Explore-Edinburgh-A-Timeless-Journey-through-Scotland’s-Capital-🏰"><a href="#Explore-Edinburgh-A-Timeless-Journey-through-Scotland’s-Capital-🏰" class="headerlink" title="Explore Edinburgh: A Timeless Journey through Scotland’s Capital 🏰"></a>Explore Edinburgh: A Timeless Journey through Scotland’s Capital 🏰</h1><p><strong>✨ In-Depth Highlights of Edinburgh</strong>  </p>
+<ul>
+<li><p><strong>Edinburgh Castle</strong><br><img src="https://imgur.com/a/EsSa1Wq" alt="Edinburgh Castle"><br>Perched atop Castle Rock, this iconic fortress houses the Crown Jewels of Scotland and the Stone of Destiny. Explore its medieval Great Hall and the poignant National War Museum, while soaking in sweeping views of the city.  </p>
+</li>
+<li><p><strong>Royal Mile</strong><br><img src="https://imgur.com/a/REfipPz" alt="Royal Mile"><br>A vibrant artery connecting the castle to Holyrood Palace, this mile-long stretch buzzes with street performers, traditional tartan shops, and hidden closes (alleys) revealing tales of Edinburgh’s medieval past. Don’t miss the Writers’ Museum, celebrating literary legends like Robert Burns.  </p>
+</li>
+<li><p><strong>Arthur’s Seat</strong><br><img src="https://imgur.com/a/L6I1EJO" alt="Arthur’s Seat"><br>An extinct volcano in Holyrood Park, this rugged hike rewards adventurers with 360° vistas of Edinburgh’s skyline, the Firth of Forth, and lush countryside. Geologists adore its ancient rock formations dating back 350 million years.  </p>
+</li>
+<li><p><strong>Holyrood Palace</strong><br><img src="https://imgur.com/a/3HvlMG2" alt="Holyrood Palace"><br>Wander through the opulent State Apartments where Mary, Queen of Scots once lived, and explore the haunting ruins of the 12th-century abbey adjacent to the palace. The palace gardens bloom with Scottish flora in summer.  </p>
+</li>
+<li><p><strong>Edinburgh Fringe Festival</strong><br><img src="https://imgur.com/a/Xo0oanm" alt="Fringe Festival"><br>The world’s largest arts festival transforms the city every August, with over 3,000 shows spanning comedy, theatre, and avant-garde performances. Streets pulse with creativity, making it a cultural pilgrim’s paradise. 🎭</p>
+</li>
+</ul>
+<p><strong>💡 Travel Tips</strong>  </p>
+<ul>
+<li><strong>Best Time</strong>: May-September for mild weather and festivals.  </li>
+<li><strong>Transport</strong>: Walkable city center; use buses for longer distances.  </li>
+<li><strong>Must-Try</strong>: Haggis (with whisky sauce!), shortbread, and local craft beers.</li>
+</ul>
+<p><del>欢迎大家来爱丁堡这个愚蠢的地方陪我坐牢</del></p>
+]]></content>
+      <tags>
+        <tag>Tourism Industry</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Acknowledgement</title>
+    <url>/2025/02/02/Acknowledgement/</url>
+    <content><![CDATA[<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>感谢<em>Jason哥哥</em> 援助的脚本和自动部署，之前本博客的自动部署失效了。</p>
+<p>滴水之恩当涌泉相报。</p>
+<p><img src="https://tb2.bdstatic.com/tb/editor/images/face/i_f09.png?t=20140803" alt="感谢Jason哥哥"></p>
+<p>即日起重新开始更新本博客。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Reading notes related to text mining</title>
+    <url>/2022/08/14/Text%20mining/</url>
+    <content><![CDATA[<h3 id="reading-notes–-Further-learning-in-statistics-and-data-science"><a href="#reading-notes–-Further-learning-in-statistics-and-data-science" class="headerlink" title="reading notes– Further learning in statistics and data science"></a>reading notes– Further learning in statistics and data science</h3><p>I read the book ‘Opinion Mining and Sentiment Analysis’ by Pang and Lee and thus made notes related to statistics and data science. </p>
+<h4 id="Text-mining"><a href="#Text-mining" class="headerlink" title="Text mining"></a>Text mining</h4><blockquote>
+<p>Text mining (also known as text analysis), is the process of transforming unstructured text into structured data for easy analysis. Text mining uses natural language processing (NLP), allowing machines to understand the human language and process it automatically.</p>
+</blockquote>
+<h5 id="Normalisation"><a href="#Normalisation" class="headerlink" title="Normalisation"></a>Normalisation</h5><blockquote>
+<p>Text normalization is the process of transforming text into a single canonical form that it might not have had before.</p>
+</blockquote>
+<p>Stemming and lemmatisation are two approaches for text normalisation.</p>
+<p>1.Lemmatization is a text normalization technique used in Natural Language Processing (NLP), that switches any kind of a word to its base root mode. Lemmatization is responsible for grouping different inflected forms of words into the root form, having the same meaning.</p>
+<p><strong>Lemma: the basic form of a word, for example the singular form of a noun or the infinitive form of a verb, as it is shown at the beginning of a dictionary entry</strong></p>
+<p>2.In linguistic morphology and information retrieval, stemming is the process of reducing inflected (or sometimes derived) words to their word stem, base or root form—generally a written word form.</p>
+<blockquote>
+<p>notes in Chinese</p>
+</blockquote>
+<p>最常见的词汇规范化的实践有：</p>
+<ol>
+<li><p>词干提取（Stemming）：词干提取是一个初级的、基于规则的脱去后缀（如“ing”，“ly”，“es”，“s”等等）的过程</p>
+</li>
+<li><p>词元化（Lemmatization）：另一方面，词元化，是一个组织好的、一步一步的获取词根的过程。</p>
+</li>
+<li><p>词汇规范化: 另外一种文本型的噪音与一个词语的多种表达形式有关。例如，“play”，“player”，“played”，“plays”和“playing”都是单词“play”的变种。尽管它们有不同的意思，但是根据上下文来看，它们是意思是相似的。这个步骤是将一个单词的所有不同形式转换为它的规范形式（也被称为词条（lemma））</p>
+</li>
+</ol>
+<h4 id="Opinion-mining"><a href="#Opinion-mining" class="headerlink" title="Opinion mining"></a>Opinion mining</h4><blockquote>
+<p>Opinion mining, or sentiment analysis, is a text analysis technique that uses computational linguistics and natural language processing to automatically identify and extract sentiment or opinion from within text (positive, negative, neutral, etc.)</p>
+</blockquote>
+<p>In my words, opinion mining is just one part in text mining; text mining involves classical text mining and opinion mining；The former one analyses text which are expressed factually whereas the latter one analyses text which are expressed subjectively.</p>
+<blockquote>
+<p>Sentiment analysis, also referred to as opinion mining, is an approach to natural language processing (NLP) that identifies the emotional tone behind a body of text. This is a popular way for organizations to determine and categorize opinions about a product, service, or idea. It involves the use of data mining, machine learning (ML) and artificial intelligence (AI) to mine text for sentiment and subjective information.</p>
+</blockquote>
+<p><strong>Emotional tone refers to positive, negative or neutral attitudes.</strong></p>
+<h4 id="Subjectivity-polarity-score"><a href="#Subjectivity-polarity-score" class="headerlink" title="Subjectivity polarity score"></a>Subjectivity polarity score</h4><p>The polarity score is a float within the range [-1.0, 1.0] . The subjectivity is a float within the range [0.0, 1.0] where 0.0 is very objective and 1.0 is very subjective. </p>
+<p>In short, text polarity is a measure of how negative or how positive a piece of text is.<br>Most of the time, NLP models can predict simply positive or negative words and phrases quite well. For example, the words “amazing”, “superb”, and “wonderful” can easily be labelled as highly positive. The words “bad”, “sad”, and “mad” can easily be labelled as negative. However, we can’t just look at polarity from the frame of individual words, it’s important to take a larger context for evaluating total polarity. For example, the word “bad” may be negative but what about the phrase “not bad”? Is that neutral? Or is that the opposite of bad? At this point we’re getting into linguistics and semantics rather than natural language processing.</p>
+<p>The two biggest open source libraries for NLP in Python are spaCy and NLTK, and both of these libraries measure polarity on a normalized scale of -1 to 1. The Text API measures, combines, and normalizes values on both the polarity of the overall text, individual sentences, and individual phrases.</p>
+<blockquote>
+<p>Example <a href="https://www.ebaina.com/articles/140000005269">https://www.ebaina.com/articles/140000005269</a><br>notes in Chinese</p>
+</blockquote>
+<blockquote>
+<p>极性(polarity)指的是一陈述是肯定还是否定的性质，如果某个词只能出现在肯定或者否定的陈述中，那么这个词就是极性项(polarity item)。在英语中at all是一个否定极性项，它只能出现在否定句中。</p>
+</blockquote>
+<h4 id="Opinion-holders-and-opinion-targets"><a href="#Opinion-holders-and-opinion-targets" class="headerlink" title="Opinion holders and opinion targets"></a>Opinion holders and opinion targets</h4><p>One of the key subtasks in sentiment analysis is opinion role extraction. It can be divided into the extraction of opinion holders (OH), i.e. entities ex-pressing an opinion, and the extraction of opinion targets (OT), i.e. entities or propositions at which sentiment is directed.</p>
+]]></content>
+      <tags>
+        <tag>Extra curriculum</tag>
+        <tag>Sciences</tag>
+        <tag>Statistics and data science</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes related to Naive Bayes classifiers and Markov Chain</title>
+    <url>/2022/07/03/Naive%20Bayes%20classifier%20and%20Markov%20Chain/</url>
+    <content><![CDATA[<h3 id="reading-notes-Further-learning-in-statistics-and-data-science"><a href="#reading-notes-Further-learning-in-statistics-and-data-science" class="headerlink" title="reading notes- Further learning in statistics and data science"></a>reading notes- Further learning in statistics and data science</h3><p>I read the book ‘Reinforcement Learning’ by S. Sutton and thus made reading notes about markov chain and also I learned knowledge about Bayes classifiers.</p>
+<h4 id="Classifier"><a href="#Classifier" class="headerlink" title="Classifier"></a>Classifier</h4><blockquote>
+<p>“An algorithm that implements classification, especially in a concrete implementation, is known as a classifier. The term “classifier” sometimes also refers to the mathematical function, implemented by a classification algorithm, that maps input data to a category.”</p>
+</blockquote>
+<h4 id="Bayes-classifier"><a href="#Bayes-classifier" class="headerlink" title="Bayes classifier"></a>Bayes classifier</h4><p>Classifiers based on Bayes’ Theorem.</p>
+<h4 id="Bayes’-Theorem"><a href="#Bayes’-Theorem" class="headerlink" title="Bayes’ Theorem"></a>Bayes’ Theorem</h4><p><img src="https://s2.loli.net/2022/10/18/SkhXpHdMur1abLe.png" alt="3.png"></p>
+<p><img src="https://s2.loli.net/2022/10/18/wOSQCAHdnJNIevY.png" alt="1.png"></p>
+<p><img src="https://s2.loli.net/2022/10/18/rKnV4ILX8Yj6Rl2.png" alt="2.png"></p>
+<h4 id="Naive-Bayes-classifier"><a href="#Naive-Bayes-classifier" class="headerlink" title="Naive Bayes classifier"></a>Naive Bayes classifier</h4><p>Classifiers based on Bayes’ Theorem <strong>with an assumption of independence among predictors</strong>.</p>
+<p>####What are the Pros and Cons of Naive Bayes?</p>
+<p>Pros:</p>
+<ol>
+<li><p>It is easy and fast to predict class of test data set. It also perform well in multi class prediction</p>
+</li>
+<li><p>When assumption of independence holds, a Naive Bayes classifier performs better compare to other models like logistic regression and you need less training data.</p>
+</li>
+<li><p>It perform well in case of categorical input variables compared to numerical variable(s). For numerical variable, normal distribution is assumed (bell curve, which is a strong assumption).</p>
+</li>
+</ol>
+<p>Cons:</p>
+<ol>
+<li>If categorical variable has a category (in test data set), which was not observed in training data set, then model will assign a 0 (zero) probability and will be unable to make a prediction. This is often known as “Zero Frequency”. To solve this, we can use the smoothing technique. One of the simplest smoothing techniques is called Laplace estimation.</li>
+</ol>
+<blockquote>
+<p><a href="https://www.zhihu.com/question/21134457">https://www.zhihu.com/question/21134457</a> (useful linkage to Naive Bayes classifiers)</p>
+</blockquote>
+<h4 id="Markov-chain-and-laplace-smoothing"><a href="#Markov-chain-and-laplace-smoothing" class="headerlink" title="Markov chain and laplace smoothing"></a>Markov chain and laplace smoothing</h4><p>It is a pretty tough section so i only made notes in Chinese to help me understand this section better.</p>
+<p><img src="https://s2.loli.net/2022/10/18/fKgv9LOt1IpoHT6.jpg" alt="1.jpg"></p>
+<p>这个矩阵就是转移概率矩阵P，并且它是保持不变的，就是说第一天到第二天的转移概率矩阵跟第二天到第三天的转移概率矩阵是一样的。</p>
+<p><img src="https://s2.loli.net/2022/10/18/Kq5BHvs6wCuJ2Fp.jpg" alt="2.jpg"></p>
+<blockquote>
+<h4 id="One-application"><a href="#One-application" class="headerlink" title="One application"></a>One application</h4><p>For example, consider a hypothetical market with Markov properties where historical data has given us the following patterns: After a week characterized by a bull market trend there is a 90% chance that another bullish week will follow. Additionally, there is a 7.5% chance that the bull week instead will be followed by a bearish one, or a 2.5% chance that it will be a stagnant one. After a bearish week there’s an 80% chance that the upcoming week also will be bearish, and so on. This data is compiled to form a matrix and then the results are drawn thereof.</p>
+</blockquote>
+<p>拉普拉斯平滑（Laplace Smoothing）又被称为加 1 平滑，是比较常用的平滑方法。平滑方法的存在时为了解决零概率问题。</p>
+<blockquote>
+<p>背景:为什么要做平滑处理?</p>
+</blockquote>
+<p>零概率问题，就是在计算实例的概率时，如果某个量x，在观察样本库（训练集）中没有出现过，会导致整个实例的概率结果是0。在文本分类的问题中，当一个词语没有在训练样本中出现，该词语调概率为0，使用连乘计算文本出现概率时也为0。这是不合理的，不能因为一个事件没有观察到就武断的认为该事件的概率是0。</p>
+<blockquote>
+<p>拉普拉斯的理论支撑</p>
+</blockquote>
+<p>为了解决零概率的问题，法国数学家拉普拉斯最早提出用加1的方法估计没有出现过的现象的概率，所以加法平滑也叫做拉普拉斯平滑。<br>假定训练样本很大时，每个分量x的计数加1造成的估计概率变化可以忽略不计，但可以方便有效的避免零概率问题。</p>
+]]></content>
+      <tags>
+        <tag>Extra curriculum</tag>
+        <tag>Sciences</tag>
+        <tag>Mathematics</tag>
+        <tag>Statistics and data science</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter19)</title>
+    <url>/2022/06/05/Principles%20of%20Economics(chapter19)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 19 is Earnings and Discrimination. This chapter introduces different kinds of discrimination. (e.g Why doctors earn more wages than workers)</p>
+<blockquote>
+<p>Labour market discrimination– education</p>
+</blockquote>
+<ul>
+<li><p>A well-educated worker tends to have a greater wage because of human capital and signaling effect. </p>
+</li>
+<li><p>Human capital effect: The well-educated labours have a greater productivity so they have greater wage rates. </p>
+</li>
+<li><p>Signaling effect: The access of university does not increase the productivity of labours but it is a signal that labours have the greater ability to master skills so they have greater wage rates&#x2F;</p>
+</li>
+</ul>
+<blockquote>
+<p>Labour market discrimination– job</p>
+</blockquote>
+<ul>
+<li><p>e.g A superstar always earns a greater wage than a carpenter or a plumber.</p>
+</li>
+<li><p>reason 1: Every customer in the market wants to enjoy the good supplied by the best producer. </p>
+</li>
+<li><p>reason 2: The good is produced with a technology that makes it possible for the best producer to supply every customer at low cost.</p>
+</li>
+</ul>
+<blockquote>
+<p>Discrimination by employers</p>
+</blockquote>
+<ul>
+<li><p>Wage differential will be eliminated by it in markets with free entry and exit.</p>
+</li>
+<li><p>Reason: If employers discriminate one sort of employees, the demand for it will decrease so the wage rate of it decreases in the labour market. Then some employers will recruit them since the cost of these labours decreases.</p>
+</li>
+</ul>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><p>1.Compensating differential– a difference in wages that arises to offset the nonmonetary characteristics of different jobs</p>
+<p>2.Strike– the organized withdrawal of labor from a firm by a union</p>
+<p>3.Discrimination– the offering of different opportunities to similar individuals who differ only by race, ethnic group, sex, age, or other personal characteristics</p>
+<p>4.Human capital– the knowledge and skills that workers acquire through education and on-the-job training</p>
+<p>5.Efficiency wage– above equilibrium wages paid by firms to increase worker productivity</p>
+<p>6.Statistical discrimination– discrimination that arises because an irrelevant but observable personal characteristic is correlated with a relevant but unobservable attribute</p>
+<p>7.Union– a worker association that bargains with employers over wages and working conditions</p>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p>
+<blockquote>
+<ol>
+<li>Among full-time U.S. workers, white women earn about_____ percent less than white men, and black men earn about_____ percent less than white men. (Correct answer: C)</li>
+</ol>
+</blockquote>
+<p>a. 5;20</p>
+<p>b. 5;40</p>
+<p>c. 20;20</p>
+<p>d. 20;40</p>
+<p>My wrong answer: A</p>
+<blockquote>
+<ol start="2">
+<li>The forces of competition in markets with free entry and exit tend to eliminate wage differentials that arise from discrimination by_____ (Correct answer: A)</li>
+</ol>
+</blockquote>
+<p>a. employers</p>
+<p>b. customers</p>
+<p>c. government</p>
+<p>d. all of the above</p>
+<p>My wrong answer: D</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>An academic subject inspires me</title>
+    <url>/2022/03/05/Academic%20subject/</url>
+    <content><![CDATA[<p><strong>Introduction</strong></p>
+<p>One of the academic subjects that has boosted my further interest is Economics. This short essay will demonstrate my journey of learning it.</p>
+<p><strong>Background</strong></p>
+<p>I could only start studying Economics in Grade 10, because it was not available on the curriculum before then. (Economics is a subject which can only be studied by international students because it is not a compulsory subject for Chinese national education system.)</p>
+<p><strong>Experience of learning Economics</strong></p>
+<p>Despite my relatively poor English, I still understood the main points from my English Economics teacher quickly perhaps I worked hard in it. Learning about supply and demand in commerce caught my interest quickly in Economics and I found it fascinating and wanted to learn more in this field, for instance, how a market works. I became aware of the need to improve my English language skills when I did not understand some specific vocabulary such as vice versa, ceteris paribus and capita. From then on, I read English books to improve my lexical resources. For example, the book Principles of Economics which illustrates some fundamentals in Economics. From this book, I was surprised to find there is a strong relationship between Mathematics and Economics, for instance, you could use calculus(integration)to calculate total welfare in one market. This opened up a whole new world to me because I did well in Mathematics which helped me study this field in more depth. I finished all exercises in each chapter and made reading notes to summarize the main points.</p>
+<p><strong>Experience of taking part in FBLA</strong></p>
+<p>Because of my outstanding performance in the final exam of the semester, my teacher suggested that I take part in a business contest which was called The Future Business Leader of America (FBLA). The preparation was intense but I learnt a great deal of new information which the school syllabus had not provided. Then I cooperated with two partners to do a presentation focused on a business plan about attracting investment from investors and received excellent scores. I strengthened not only my economic knowledge but also speaking skills during the preparation of the presentation.</p>
+<p><strong>Conclusion</strong></p>
+<p>In conclusion, I have been capable and motivated to learn more about Economics and I hope to focus more on this interesting subject in the future and perhaps study it at university level.</p>
+]]></content>
+      <tags>
+        <tag>Personal statement</tag>
+        <tag>Economics</tag>
+        <tag>Extra curriculum</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>My greatest skill</title>
+    <url>/2022/01/16/My%20greatest%20skill/</url>
+    <content><![CDATA[<blockquote>
+<p>Introduction</p>
+</blockquote>
+<p>My greatest skill is my ability to use study skills to enhance my understanding of school subjects. These involve the study skills of doing efficient research online, managing time wisely and cooperate with others to solve problems if necessary. This short essay will illustrate how I have been developing and strengthening these study skills.</p>
+<blockquote>
+<p>Background</p>
+</blockquote>
+<p>My home is far away from the school and therefore I live in the school dormitory during weekdays so my parents cannot accompany me as well as give me help. The majority of students in our class tend to have extra-curricular classes to improve their learning in order to get excellent exam scores. For me, I consider self-study to be more advantageous so I do it instead of having those extra curricular-classes.</p>
+<blockquote>
+<p>My study experiences</p>
+</blockquote>
+<p>In the textbooks I use, it is necessary to answer questions in order to check if I have mastered knowledge precisely. However, these questions are limited so I then use the internet to find appropriate exercises. Doing past papers is a good choice, but the majority of them only cover one unit. So, I collaborate with another student to classify questions that cover chapters we have already learned and organize them in an online file. In addition, I pay for an annual subscription of a website called Save My Exams which provides appropriate questions. This website is useful because it addresses individual topics in detail rather than more generally therefore it is more in-depth and improves my learning.</p>
+<blockquote>
+<p>The skill i need to develop</p>
+</blockquote>
+<p>I am keen to avoid procrastination which is the enemy to these study skills especially in terms of time management. I did not master Physics knowledge due to this lack of organizing my time well in revising physics, I did badly in the monthly exam which was disappointing due to the lack of review which occurred owing to my poor ability to execute my plan of reviewing science subjects.  </p>
+<blockquote>
+<p>Conclusion</p>
+</blockquote>
+<p>Overall, because of my experience living in the school dormitory, I have been strengthening my self-study skills which will be beneficial for me when I attend university.</p>
+]]></content>
+      <tags>
+        <tag>Personal statement</tag>
+        <tag>School life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter18)</title>
+    <url>/2021/08/29/Principles%20of%20Economics(chapter18)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 18 is The Markets for the Factors of Production. This chapter introduces the market for labour, land and capital.</p>
+<blockquote>
+<p>The versatility of supply and demand</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/08/29/XZBa6EqPDekpugz.png" alt="The market for labour"></p>
+<ul>
+<li>The market for labour</li>
+<li>The price of labours is the wage rate.</li>
+<li>The market price and quantity of labours are determined by the demand and supply of labours.</li>
+</ul>
+<p><img src="https://i.loli.net/2021/08/29/ybQKajT7lEOIpVr.png" alt="The market for land"></p>
+<ul>
+<li>The market for land</li>
+</ul>
+<p><img src="https://i.loli.net/2021/08/29/4ETfjSPzl1q385J.png" alt="The market for capital"></p>
+<ul>
+<li>The market for capital</li>
+</ul>
+<p><strong>The market for land and the market for capital are the same as the market for labour</strong></p>
+<blockquote>
+<p>Production function</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/08/29/TesQCBpYFbo6wxH.jpg" alt="acb46cbeb5a72834ca8c4e331aadecc.jpg"></p>
+<ul>
+<li>Production function is the relationship between the quantity of inputs used to make a good and the quantity of output of that good.</li>
+</ul>
+<blockquote>
+<p>The value of the marginal product of labour</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/08/29/eivwhRg3oxkCDnP.png" alt="image.png"></p>
+<ul>
+<li>Value of the marginal product is the marginal product of an input times the price of the output </li>
+<li>It decreases as the quantity of labour increases (because of the diminishing marginal product)</li>
+<li>Diminishing marginal product is the property whereby the marginal product of an input declines as the quantity of the input increases</li>
+<li>The market wage is equal to the value of marginal product</li>
+</ul>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><p>1.Factors of production– the inputs used to produce goods and services</p>
+<p>2.Production function– the relationship between the quantity of inputs used to make a good and the quantity of output of that good</p>
+<p>3.Marginal product of labour– the increase in the amount of output from an additional unit of labor</p>
+<p>4.Diminishing marginal product– the property whereby the marginal product of an input declines as the quantity of the input increases</p>
+<p>5.Value of the marginal product– the marginal product of an input times the price of the output    </p>
+<p>6.Capital– the equipment and structures used to produce goods and services</p>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p>
+<blockquote>
+<ol>
+<li>Approximately what percentage of U.S. national income is paid to workers rather than to owners of capital and land? (Correct answer: C)</li>
+</ol>
+</blockquote>
+<p>a. 25 percent</p>
+<p>b. 45 percent</p>
+<p>c. 65 percent</p>
+<p>d. 85 percent</p>
+<p>My wrong answer: B</p>
+<blockquote>
+<ol start="2">
+<li>Around 1973. the U.S. economy experienced a significant_____ in productivity growth, coupled with a_____ in the growth of real wages. (Correct answer: D)</li>
+</ol>
+</blockquote>
+<p>a. pickup; pickup</p>
+<p>b. pickup; slowdown</p>
+<p>c. slowdown; pickup</p>
+<p>d. slowdown; slowdown</p>
+<p>My wrong answer: D</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter17)</title>
+    <url>/2021/08/17/Principles%20of%20Economics(chapter17)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 17 is Oligopoly. This chapter introduces oligopoly, a kind of market structure.</p>
+<ul>
+<li>Oligopoly is a market structure in which only a few sellers offer similar or identical products</li>
+</ul>
+<blockquote>
+<p>Prisoner Dilemma</p>
+</blockquote>
+<p><strong>Prisoners’ dilemma is a particular “game” between two captured prisoners that illustrates why cooperation is difficult to maintain even when it is mutually beneficial.</strong></p>
+<p><img src="https://i.loli.net/2021/08/17/u2BnPTWMERmwdX7.png" alt="image.png"></p>
+<ul>
+<li><p>Each player will choose the best strategy for them regardless of the strategies chosen by others.</p>
+</li>
+<li><p>In this picture, each player will choose to defect although cooperation is mutually beneficial.</p>
+</li>
+</ul>
+<blockquote>
+<p>Nash equilibrium</p>
+</blockquote>
+<ul>
+<li><p>Each company will choose to produce more goods in order to get more market shares rather than producing fewer to keep the market price high.</p>
+</li>
+<li><p>As the supply increases, the market price decreases.</p>
+</li>
+<li><p>Each company stops producing more goods as their total revenue decreases, the quantity they produce is called Nash equilibrium.</p>
+</li>
+<li><p>The quantity supplied in oligopoly is greater than that in monopoly, but smaller than that in the competitive market.</p>
+</li>
+</ul>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><p>1.Oligopoly– a market structure in which only a few sellers offer similar or identical products</p>
+<p>2.Cartel– a group of firms acting in unison </p>
+<p>3.Prisoners’ dilemma– a particular “game” between two captured prisoners that illustrates why cooperation is difficult to maintain even when it is mutually beneficial</p>
+<p>4.Game theory– the study of how people behave in strategic situations</p>
+<p>5.Nash equilibrium– a situation in which economic actors interacting with one another each choose their best strategy given the strategies that all the other factors have chosen</p>
+<p>6.Dominant strategy– a strategy that is best for a player in a game regardless of the strategies chosen by the other players</p>
+<p>7.Collusion– an agreement among firms in a market about quantities to produce or prices to charge</p>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>I did all questions correctly! Excellent!</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Personal statement-- my stories of learning Mathematics</title>
+    <url>/2021/08/16/My%20stories%20of%20learning%20Mathematics/</url>
+    <content><![CDATA[<blockquote>
+<p>The place where I learnt something very important to my personal growth was at the A level centre where I studied my IGCSE examinations. This short essay will focus on my experience with Mathematics when I was in Grade 10. </p>
+</blockquote>
+<h3 id="My-experience-of-a-mock-exam"><a href="#My-experience-of-a-mock-exam" class="headerlink" title="My experience of a mock exam"></a>My experience of a mock exam</h3><p>According to the Cambridge Assessment International Education, Asians perform well in IGCSE Mathematic examinations. The majority of students in my class, including me, always advocate that IGCSE Mathematic examination is easier compared with the Chinese alternative because students need to in Chinese alternative. During the lesson, I used to feel extremely bored and spend the whole course session daydreaming, which caused me to omit some important formulae. After nearly one-month, we were given a mock examination. My exam result was average rather than excellent which was disappointing. Thus, I liaised with the high achieving students and found that they paid full attention to listening to the teacher during class. </p>
+<blockquote>
+<p>From then on, I had previewed and reviewed each mathematic chapter gradually to make sure I could master mathematic formulae clearly. But I still had a problem which was I was too careless. Here is one of my stories.</p>
+</blockquote>
+<h3 id="My-experience-of-Euclid-Contest"><a href="#My-experience-of-Euclid-Contest" class="headerlink" title="My experience of Euclid Contest"></a>My experience of Euclid Contest</h3><p>Three months after the mock examination, I took part in a mathematic contest called Euclid at school which was a little bit difficult because no multiple choices in it. Due to my inattention, I even forgot that our teacher had said there were no multiple choices. In addition, I did not read the question correctly because I read so fast which meant I misunderstood some questions and answered them incorrectly. The results showed that I got 68 out of 100 and the international top 25% required 69 marks.</p>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>This contest experience taught me a number of lessons. First, it encouraged me to study harder in the mathematics field as questions in the contest were difficult. Second, I have developed a good learning habit which is reviewing and previewing. Finally, this experience made me try the best and I realized I should be more attentive and improve my concentration and motivation if I want to fulfil my potential.</p>
+]]></content>
+      <tags>
+        <tag>Personal statement</tag>
+        <tag>School life</tag>
+        <tag>Mathematics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter16)</title>
+    <url>/2021/08/07/Principles%20of%20Economics(chapter16)/</url>
+    <content><![CDATA[<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>Chapter 16 is Monopolistic Competition. This chapter introduces monopolistic competition, a kind of market structure.</p>
+<ul>
+<li>Monopolistic competition is a market structure in which many firms sell products that are similar but not identical.</li>
+</ul>
+<blockquote>
+<p>Characteristics</p>
+</blockquote>
+<ul>
+<li>Many sellers: There are many firms competing for the same group of customers.</li>
+<li>Product differentiation: Each firm produces a product that is at least slightly different from those of other firms. Thus, rather being a price taker, each firm faces a downward- sloping demand curve.</li>
+<li>Free entry and exit: Firms can enter or exit the market without restriction. Thus, the number of firms in the market adjusts until economic profits are driven to zero.</li>
+</ul>
+<p><img src="https://i.loli.net/2021/08/07/lQrxTyO5PckMbnR.png" alt="image.png"></p>
+<ul>
+<li>Firms cannot earn economic profits in the long run.</li>
+<li>P &gt; MC</li>
+<li>Profit maximization: sell goods at the quantity where MR &#x3D; MC</li>
+</ul>
+<p><img src="https://i.loli.net/2021/08/07/OTc8H2wWUjtEPdv.png" alt="image.png"></p>
+<ul>
+<li>Efficient scale is the quantity where MC &#x3D; ATC.</li>
+<li>Excess capacity is the difference between efficient scale and quantity produced.</li>
+<li>Markup is the difference between price and marginal cost.</li>
+</ul>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><p>1.Oligopoly– a market structure in which only a few sellers offer similar or identical products</p>
+<p>2.Monopolistic competition– a market structure in which many firms sell products that are similar but not identical</p>
+<h3 id="Review-1"><a href="#Review-1" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p>
+<blockquote>
+<ol>
+<li>New firms will enter a monopolistically competitive market of_____（Correct answer: D）</li>
+</ol>
+</blockquote>
+<p>a. marginal revenue is greater than marginal cost</p>
+<p>b. marginal revenue is greater than average total cost</p>
+<p>c. price is greater than marginal cost</p>
+<p>d. price is greater than average total cost</p>
+<p>My wrong answer: C</p>
+<blockquote>
+<ol start="2">
+<li>What is true of a monopolistically competitive market in long-run equilibrium<br>(Correct answer: A)</li>
+</ol>
+</blockquote>
+<p>a. Price is greater than marginal cost</p>
+<p>b. Price is equal to marginal revenue</p>
+<p>c. Firms make positive economic profits</p>
+<p>d. Firms produce at the minimum of average total cost</p>
+<p>My wrong answer: D</p>
+<blockquote>
+<ol start="3">
+<li>Advertising can be a signal of quality_____ (Correct answer: B)</li>
+</ol>
+</blockquote>
+<p>a. if advertising is freely available to all firms</p>
+<p>b. if the benefit of attracting customers is greater for firms </p>
+<p>c. only if consumers are irrationally attracted to products they see advertised</p>
+<p>d. only if the content of the ads contains credible information about the products</p>
+<p>My wrong answer: D</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter15)</title>
+    <url>/2021/08/04/Principles%20of%20Economics(chapter15)/</url>
+    <content><![CDATA[<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>The chapter 15 is Monopoly. This chapter introduces the situation of monopoly.</p>
+<ul>
+<li>Monopoly is the situation when a firm that is the sole seller of a product without any close substitutes.</li>
+</ul>
+<p><img src="https://i.loli.net/2021/08/04/P2bMGAODcQ9XmyH.png" alt="image.png"></p>
+<ul>
+<li>Natural monopoly is a type of monopoly that arises because a single firm can supply a  good or service to an entire market at a lower cost than could two or more firms</li>
+</ul>
+<p><img src="https://i.loli.net/2021/08/04/IvF6A2sSkRicqjU.png" alt="image.png"></p>
+<ul>
+<li>A monopolist’s marginal revenue is less than the price of its good because of the downward-sloping demand curve.</li>
+</ul>
+<blockquote>
+<p>Profit maximization</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/08/04/VEoBq2eclADRg8t.png" alt="image.png"></p>
+<ul>
+<li>Find the Q at which MR &#x3D; MC.</li>
+<li>On the demand curve, find P at which consumers will buy Q.</li>
+<li>If P &gt; ATC, the monopoly earns a profit.</li>
+</ul>
+<p><strong>For a competitive firm: P&#x3D;MR&#x3D;MC</strong></p>
+<p><strong>For a monopoly firm: P&gt;MR&#x3D;MC</strong></p>
+<blockquote>
+<p>The deadweight loss</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/08/04/cAkUDBSeICVGoXY.png" alt="image.png"></p>
+<ul>
+<li>A benevolent social planner maximizes total surplus in the market by choosing the level of output where the marginal cost curve and demand curve intersect.</li>
+</ul>
+<p><img src="https://i.loli.net/2021/08/04/gPQb2JnkvRZD3Xa.png" alt="image.png"></p>
+<ul>
+<li>Because a monopoly charges a price above the marginal cost, not all consumers who value the good at more than its cost buy it. It causes the deadweight loss.</li>
+</ul>
+<blockquote>
+<p>Price discrimination</p>
+</blockquote>
+<ul>
+<li>Price discrimination is the business practice of selling the same good at different prices to different customers.</li>
+</ul>
+<p><img src="https://i.loli.net/2021/08/04/rBiSuRNO26y4MKI.png" alt="image.png"></p>
+<p><img src="https://i.loli.net/2021/08/04/MT26p1jIhuLRE8Z.png" alt="image.png"></p>
+<ul>
+<li>Because different consumers have different willingnesses to buy the same good, the price discrimination increases the total surplus.</li>
+</ul>
+<blockquote>
+<p>Differences between Competition and Monopoly</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/08/04/jTmZ8XaHGLBxDIi.png" alt="image.png"></p>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><p>1.Monopoly– a firm that is the sole seller of a product without any close substitutes</p>
+<p>2.Natural monopoly– a type of monopoly that arises because a single firm can supply a  good or service to an entire market at a lower cost than could two or more firms</p>
+<p>3.Price discrimination– the business practice of selling the same good at different prices to different customers</p>
+<h3 id="Review-1"><a href="#Review-1" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p>
+<blockquote>
+<ol>
+<li>If a monopoly’s fixed costs increase, its price will_____ and its profit will_____. (Correct answer: D）</li>
+</ol>
+</blockquote>
+<p>a. increase; decrease</p>
+<p>b. decrease; increase</p>
+<p>c. increase; stay the same</p>
+<p>d. stay the same; decrease</p>
+<p>My wrong answer: A</p>
+<blockquote>
+<ol start="2">
+<li>The deadweight loss from monopoly arises because_____. (Correct answer: B)</li>
+</ol>
+</blockquote>
+<p>a. the monopoly firm makes higher profits than a competitive firm would</p>
+<p>b. some potential consumers who forgo buying the good value it more than its marginal cost</p>
+<p>c. consumers who buy the good have to pay more than marginal cost, reducing their consumer surplus</p>
+<p>d. the monopoly firm chooses a quantity that fails to equate price and average revenue</p>
+<p>My wrong answer: D</p>
+<blockquote>
+<ol start="3">
+<li>Antitrust regulators are likely to prohibit two firms from merging if_____. (Correct answer: C)</li>
+</ol>
+</blockquote>
+<p>a. there are many other firms in the industry</p>
+<p>b. there are sizable synergies to the combination</p>
+<p>c. the combined firm will have a large share of the market</p>
+<p>d. the combined firm will undercut competitors with lower prices</p>
+<p>My wrong answer: A</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter14)</title>
+    <url>/2021/07/30/Principles%20of%20Economics(chapter14)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>This chapter 14 is the Firms in Competitive markets. This chapter introduces the nature and characteristics of competitive markets.</p>
+<blockquote>
+<p>What it is</p>
+</blockquote>
+<ul>
+<li>Competitive market is a market with many buyers and sellers trading identical products so that each buyer and seller is a price taker.</li>
+</ul>
+<blockquote>
+<p>Characteristics</p>
+</blockquote>
+<ul>
+<li>average revenue &#x3D; price</li>
+<li>marginal revenue &#x3D; price</li>
+</ul>
+<blockquote>
+<p>Profit</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/30/KunAmLQGigFEd6S.png" alt="image.png"></p>
+<p><img src="https://i.loli.net/2021/07/30/9oY7mPQyKrk5pVO.png" alt="image.png"></p>
+<ul>
+<li>Profit &#x3D; TR - TC</li>
+<li>Profit &#x3D; (TR&#x2F;Q - TC&#x2F;Q）* Q</li>
+<li>Profit &#x3D; (P - ATC) * Q</li>
+</ul>
+<blockquote>
+<p>Profit maximization</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/30/VgOZPLUDhGmCMqS.png" alt="image.png"></p>
+<ul>
+<li>marginal cost &#x3D; marginal revenue </li>
+<li>price &#x3D; marginal revenue</li>
+<li>produce the quantity when P &#x3D; MC</li>
+</ul>
+<blockquote>
+<p>Exit</p>
+</blockquote>
+<ul>
+<li>Exit means firms do not produce goods any more in the long run.</li>
+<li>Firms loss its revenue but do not burden the total cost of production.</li>
+<li>Firms exit if the total revenue is smaller than the total cost.</li>
+</ul>
+<blockquote>
+<p>Shut down</p>
+</blockquote>
+<ul>
+<li>Shut down means firms do not produce goods any more in the short run.</li>
+<li>Firms loss its revenue but do not burden the variable cost of production.</li>
+<li>Firms shut down if the total revenue is smaller than the variable cost.</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/30/qrWc8Lz2QX7akjt.png" alt="image.png"></p>
+<blockquote>
+<p>Supply curve in a competitive market</p>
+</blockquote>
+<ul>
+<li>In the short run</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/30/Ud3FZiQebYxKfjS.png" alt="image.png"></p>
+<p><img src="https://i.loli.net/2021/07/30/8tEZKBHeaI2TjJh.png" alt="image.png"></p>
+<ul>
+<li>In the long run</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/30/TJ7AkRCxsyl5u1n.png" alt="image.png"></p>
+<p><img src="https://i.loli.net/2021/07/30/nR1cBHsxAjMK7C5.png" alt="image.png"></p>
+<p><strong>Price &#x3D; minimum ATC in the long run</strong></p>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol>
+<li><p>Competitive market– a market with many buyers and sellers trading identical products so that each buyer and seller is a price taker</p>
+</li>
+<li><p>Marginal revenue– the change in total revenue from an additional unit sold</p>
+</li>
+<li><p>Average revenue– total revenue divided by the quantity sold</p>
+</li>
+<li><p>Sunk cost– a cost that has already been committed and cannot be recovered</p>
+</li>
+</ol>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p>
+<blockquote>
+<ol>
+<li>A competitive firm maximizes profit by choosing the quantity at which_____(Correct answer: B)</li>
+</ol>
+</blockquote>
+<p>a. average total cost is at its minimum</p>
+<p>b. marginal cost equals the price</p>
+<p>c. average total cost equals the price</p>
+<p>d. marginal cost equals average total cost</p>
+<p>My wrong answer: D</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter 13)</title>
+    <url>/2021/07/28/Principles%20of%20Economics(chapter13)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 13 is the Cost of Production. This chapter introduces revenue, cost and profit.</p>
+<blockquote>
+<p>Revenue</p>
+</blockquote>
+<ul>
+<li>Total revenue is the amount a firm receives for the sale of its output.</li>
+<li>Revenue &#x3D; quantity * price</li>
+</ul>
+<blockquote>
+<p>Cost</p>
+</blockquote>
+<ul>
+<li>Explicit cost is input cost that requires an outlay of money by the firm.</li>
+<li>Implicit cost is input cost that does not require an outlay of money by the firm.</li>
+<li>Fixed cost is cost that does not vary with the quantity of output produced.</li>
+<li>Variable costs is cost that varies with the quantity of output produced.</li>
+</ul>
+<blockquote>
+<p>Profit </p>
+</blockquote>
+<ul>
+<li>Profit &#x3D; Total revenue - Total cost</li>
+<li>Economic profit is total revenue minus total cost, including both explicit and implicit costs.</li>
+<li>Accounting profit is total revenue minus total explicit cost.</li>
+<li>Total opportunity cost is implicit cost pluses explicit cost.</li>
+</ul>
+<blockquote>
+<p>Production function</p>
+</blockquote>
+<ul>
+<li>The relationship between the quantity of inputs used to make a good and the quantity of output of that good.</li>
+</ul>
+<blockquote>
+<p>Diminishing marginal product </p>
+</blockquote>
+<ul>
+<li><p>The property whereby the marginal product of an input declines as the quantity of the input increases.</p>
+</li>
+<li><p>Due to it, the production function gets flatter as the number of input increases.</p>
+</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/28/df1SsRHgyJZajCr.png" alt="image.png"></p>
+<ul>
+<li>Due to it, the total-cost curve gets steeper as the quantity of output increases.</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/28/OhmKpoyqiLw6V1v.png" alt="image.png"></p>
+<ul>
+<li><p>Profit maximization</p>
+</li>
+<li><p>Average total cost &#x3D; marginal cost</p>
+</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/28/SIznELUaAkb1yjl.png" alt="image.png"></p>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol>
+<li><p>Total revenue– the amount a firm receives for the sale of its output</p>
+</li>
+<li><p>Total cost– the market value of the inputs a firm uses in production</p>
+</li>
+</ol>
+<blockquote>
+<p>TC &#x3D; FC + VC</p>
+</blockquote>
+<ol start="3">
+<li><p>Profit– total revenue minus total cost</p>
+</li>
+<li><p>Explicit costs– input costs that require an outlay of money by the firm</p>
+</li>
+<li><p>Implicit costs– input costs that do not require an outlay of money by the firm</p>
+</li>
+<li><p>Economic profit– total revenue minus total cost, including both explicit and implicit costs</p>
+</li>
+<li><p>Accounting profit– total revenue minus total explicit cost</p>
+</li>
+<li><p>Production function– the relationship between the quantity of inputs used to make a good and the quantity of output of that good</p>
+</li>
+<li><p>Marginal product– the increase in output that arises from an additional unit of input</p>
+</li>
+<li><p>Diminishing marginal product– the property whereby the marginal product of an input declines as the quantity of the input increases</p>
+</li>
+<li><p>Fixed cost– costs that do not vary with the quantity of output produced</p>
+</li>
+</ol>
+<blockquote>
+<p>FC</p>
+</blockquote>
+<ol start="12">
+<li>Variable costs– costs that vary with the quantity of output produced</li>
+</ol>
+<blockquote>
+<p>VC</p>
+</blockquote>
+<ol start="13">
+<li>Average total cost– total cost divided by the quantity of output</li>
+</ol>
+<blockquote>
+<p>ATC &#x3D; TC &#x2F; Q</p>
+</blockquote>
+<ol start="14">
+<li>Average fixed cost– fixed cost divided by the quantity of output</li>
+</ol>
+<blockquote>
+<p>AFC &#x3D; FC &#x2F; Q</p>
+</blockquote>
+<ol start="15">
+<li>Average variable cost– variable cost divided by the quantity of output</li>
+</ol>
+<blockquote>
+<p>AVC &#x3D; VC &#x2F; Q</p>
+</blockquote>
+<ol start="16">
+<li>Marginal cost– the increase in total cost that arises from an extra unit of production</li>
+</ol>
+<blockquote>
+<p>MC &#x3D;  <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\Delta&space;TC&space;}{\Delta&space;Q&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\Delta&space;TC&space;}{\Delta&space;Q&space;}" title="\frac{\Delta TC }{\Delta Q }" /></a></p>
+</blockquote>
+<ol start="17">
+<li><p>Efficient scale– the quantity of output that minimizes average total cost</p>
+</li>
+<li><p>Economies of scale– the property whereby long-run average total costs falls as the quantity of output increases</p>
+</li>
+<li><p>Diseconomies of scale– the property whereby long-run average total cost rises as the quantity of output increases</p>
+</li>
+<li><p>Constant returns to scale– the property whereby long-run average total cost stays the same as the quantity of output changes</p>
+</li>
+</ol>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>I did all questions correctly! Excellent!</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter12)</title>
+    <url>/2021/07/26/Principles%20of%20Economics(chapter12)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 12 is the Design of the Tax System. This chapter introduces different tax systems and the tax system in the US.</p>
+<blockquote>
+<p>US tax system</p>
+</blockquote>
+<ul>
+<li><p>The most important taxes for the federal government are personal income taxes and payroll taxes for social insurance. </p>
+</li>
+<li><p>The most important taxes for state and local governments are sales taxes and property taxes.</p>
+</li>
+</ul>
+<blockquote>
+<p>Different tax systems</p>
+</blockquote>
+<ul>
+<li><p>Proportional tax is a tax for which high-income and low-income taxpayers pay the same fraction of income.</p>
+</li>
+<li><p>Regressive tax is a tax for which high-income taxpayers pay a smaller fraction of their income than do low-income taxpayers.</p>
+</li>
+<li><p>Progressive tax is a tax for which high-income taxpayers pay a larger fraction of their income than do low-income taxpayers.</p>
+</li>
+</ul>
+<blockquote>
+<p>Principles of tax</p>
+</blockquote>
+<ul>
+<li>Equity</li>
+</ul>
+<p>1.It should obey the benefits principle (the idea that people should pay taxes based on the benefits they receive from government services).</p>
+<p>2.It should obey the ability-to-pay principle (the idea that taxes should be levied on a person according to how well that person can shoulder the burden).</p>
+<ul>
+<li>Efficiency</li>
+</ul>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol>
+<li><p>Average tax rate– total taxes paid divided by total income </p>
+</li>
+<li><p>Marginal tax rate– the amount by which taxes increase from an additional dollar of income</p>
+</li>
+<li><p>Lump-sum tax rate– a tax that is the same amount for every person</p>
+</li>
+<li><p>Benefits principle– the idea that people should pay taxes based on the benefits they receive from government services</p>
+</li>
+<li><p>Ability-to-pay principle– the idea that taxes should be levied on a person according to how well that person can shoulder the burden</p>
+</li>
+<li><p>Vertical equity– the idea that taxpayers with a greater ability to pay taxes should pay larger amounts</p>
+</li>
+<li><p>Horizontal equity– the idea that taxpayers with similar abilities to pay taxes should pay the same amount</p>
+</li>
+<li><p>Proportional tax– a tax for which high-income and low-income taxpayers pay the same fraction of income</p>
+</li>
+<li><p>Regressive tax– a tax for which high-income taxpayers pay a smaller fraction of their income than do low-income taxpayers</p>
+</li>
+<li><p>Progressive tax– a tax for which high-income taxpayers pay a larger fraction of their income than do low-income taxpayers</p>
+</li>
+</ol>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p>
+<blockquote>
+<ol>
+<li>Betty gives piano lessons. She has an opportunity cost of 50 dollars per lesson and charges 60 dollars. She has two students: Archie, who has a willingness to pay of 70 dollars, and Veronica, who has a willingness to pay of 90 dollars. When the government puts a 20 dollars tax on piano lessons and Betty raises her price to 80 dollars, the deadweight loss is_____ and the tax revenue is_____.  (Correct answer: C)</li>
+</ol>
+</blockquote>
+<p>a. 10,20</p>
+<p>b. 10,40</p>
+<p>c. 20.20</p>
+<p>d. 20,40</p>
+<p>My wrong answer: A</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter11)</title>
+    <url>/2021/07/23/Principles%20of%20Economics(chapter11)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 11 is Public Goods and Common Resources. This chapter divides the goods into four categories by using the definition of excludability (he property of a good whereby a person can be prevented from using it) and rivalry in consumption(the property of a good whereby one person’s use diminishes other people’s use).</p>
+<blockquote>
+<p>Private goods</p>
+</blockquote>
+<ul>
+<li>Rival in consumption</li>
+<li>Excludable</li>
+<li>e.g ice-cream cones, clothing, congested toll roads</li>
+</ul>
+<blockquote>
+<p>Club goods</p>
+</blockquote>
+<ul>
+<li>Not rival in consumption</li>
+<li>Excludable</li>
+<li>e.g satellite TV, fire protection, uncongested toll roads</li>
+</ul>
+<blockquote>
+<p>Common resources</p>
+</blockquote>
+<ul>
+<li>Non-excludable</li>
+<li>Rival in consumption</li>
+<li>e.g fish in the ocean, the environment, congested non-toll roads</li>
+<li>The common resources tend to be used excessively.</li>
+</ul>
+<blockquote>
+<p>Public goods</p>
+</blockquote>
+<ul>
+<li>Non-excludable</li>
+<li>Not rival in consumption</li>
+<li>e.g tornado siren, national defense, uncongested non-toll roads</li>
+<li>People who receive the benefit of a good but avoid paying for it is called free riders.</li>
+</ul>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol>
+<li><p>Excludability– the property of a good whereby a person can be prevented from using it</p>
+</li>
+<li><p>Public goods– good that are neither excludable nor rival in consumption</p>
+</li>
+<li><p>Free rider– a person who receives the benefit of a good but avoids paying for it</p>
+</li>
+<li><p>Rivalry in consumption– the property of a good whereby one person’s use diminishes other people’s use</p>
+</li>
+<li><p>Common resources– goods that are excludable but not rival in consumption</p>
+</li>
+<li><p>Cost-benefit analysis– a study that compares the costs and benefits to society of providing a public good</p>
+</li>
+<li><p>Private goods– goods that are both excludable and rival in consumption</p>
+</li>
+<li><p>Club goods– goods that are excludable but not rival in consumption</p>
+</li>
+<li><p>Tragedy of the Commons– a parable that illustrates why common resources are used more than is desirable from the standpoint of society as a whole</p>
+</li>
+</ol>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p>
+<blockquote>
+<p>1.Common resources are_____(Correct answer: C)</p>
+</blockquote>
+<p>a. efficiently provided by the market forces</p>
+<p>b. underprovided in the absence of government</p>
+<p>c. overused in the absence of government</p>
+<p>d. a type of natural monopoly</p>
+<p>My wrong answer: B</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter10)</title>
+    <url>/2021/07/22/Principles%20of%20Economics(chapter10)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 10 is Externalities. This chapter introduces the situation when the producers and consumers are not the only interested parties.</p>
+<p><img src="https://i.loli.net/2021/07/22/wxVsohOCNI8tcdH.png" alt="image.png"></p>
+<p><img src="https://i.loli.net/2021/07/22/53aFvksLRUjDC4W.png" alt="image.png"></p>
+<ul>
+<li>Externalities include external cost and external benefit.</li>
+<li>Externalities make the equilibrium not the optimum.</li>
+<li>The use of tax or subsidy can make the equilibrium equal to the optimum if the new supply curve(private cost) coincides with the social-cost curve.</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/22/Kiuq5TMcjhs17NP.png" alt="image.png"></p>
+<p><img src="https://i.loli.net/2021/07/22/piUTMqukotO3zQF.png" alt="image.png"></p>
+<ul>
+<li>Corrective tax and pollution permits are used for decreasing negative externality.</li>
+<li>Pollution permits mean the firms can buy the rights to pollute more from other firms.</li>
+<li>Pollution permits could be better because different kinds of firms have the different cost to avoid polluting. </li>
+<li>Regulation can be another way to limit the negative externality. If the negative externality is much greater than the private benefits, the regulation would be better.</li>
+</ul>
+<blockquote>
+<p>Coase theorem is the proposition that if private parties can bargain without cost over the allocation of resources, they can solve the problem of externalities on their own.</p>
+</blockquote>
+<ul>
+<li>Private parties may not solve the problem of negative externality if the process of bargain has the cost.</li>
+</ul>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol>
+<li><p>Externality– the uncompensated impact of one person’s actions on the well-being of a bystander</p>
+</li>
+<li><p>Internalizing the externality– altering incentives so that people take into account the external effects of their actions</p>
+</li>
+<li><p>Corrective taxes– a tax designed to induce private decision makers to take into account the social costs that arise from a negative externality</p>
+</li>
+<li><p>Coase theorem– the proposition that if private parties can bargain without cost over the allocation of resources, they can solve the problem of externalities on their own</p>
+</li>
+<li><p>Transaction costs– the costs that parties incur during the process of agreeing to and following through on a bargain</p>
+</li>
+</ol>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>I did all questions correctly! Excellent!</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FBLA Emerging Leaders Summit--July 21st</title>
+    <url>/2021/07/21/ELAJuly21/</url>
+    <content><![CDATA[<h3 id="Backgrounds"><a href="#Backgrounds" class="headerlink" title="Backgrounds"></a>Backgrounds</h3><p>We had three case studies on July 21st. In each 30-minute case study session, group members needed to read the whole case and chose three representatives who answer three questions respectively. The cases were in English and representatives were allowed to answer the question in Chinese.</p>
+<h3 id="What-I-did"><a href="#What-I-did" class="headerlink" title="What I did"></a>What I did</h3><p>I was a representative to answer the second question during one case study. That case introduced how Starbuck be famous all around the world. The question I needed to answer is to explain how you could see Kevin (the Starbuck CEO) is brave enough to burden the risk and how he realized Starbuck would be in trouble in 2007.</p>
+<p>Although representatives could also speak Chinese to answer questions, I still answered the questions in English in order to strengthen my poor English-speaking skill. Except using information about introducing the situation of Starbuck from the main body, I also noticed the information (a diagram) in appendix. The diagram showed that the revenue of Starbuck increased while its net profit decreased from 2006 to 2007, which helped me to explain how the Starbuck could be in trouble.</p>
+<p><img src="https://i.loli.net/2021/07/25/5WsZDtMHaxSRNiE.png" alt="image.png"></p>
+<h3 id="My-feelings"><a href="#My-feelings" class="headerlink" title="My feelings"></a>My feelings</h3><p>Thanks to my previous experience of giving a presentation, I was not so frightened of it. However, I was poor in speaking English so I thought I didn’t perform well at that time. Anyway, my friends were so kind that they encouraged me and said I was good enough. I felt lucky and impressed to meet these friends.</p>
+<h3 id="The-ending"><a href="#The-ending" class="headerlink" title="The ending"></a>The ending</h3><p>We finally finished the Emerging Leader Summit. Here is a photo to record this journey.</p>
+<p><img src="https://i.loli.net/2021/07/25/jad9kKewP3LE2MO.png" alt="image.png"></p>
+<p>Some great contributors who were approved by the FBLA China got the certificate. I was one part of them.</p>
+<p><img src="https://i.loli.net/2021/07/25/dLBSveqN2mElaUH.png" alt="image.png"></p>
+<p><img src="https://i.loli.net/2021/07/25/BgYwb3PnkhoqQvT.jpg" alt="880eb0d135405880be9354f8b332c70.jpg"></p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Extra curriculum</tag>
+        <tag>Teamwork</tag>
+        <tag>Leadership</tag>
+        <tag>Contest</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FBLA Emerging Leaders Summit--July 20th</title>
+    <url>/2021/07/20/ELAJuly20/</url>
+    <content><![CDATA[<h3 id="Backgrounds"><a href="#Backgrounds" class="headerlink" title="Backgrounds"></a>Backgrounds</h3><p>We had seven workshops on July 20th. During the workshop, the FBLA China National and Provincial leaders shared knowledge and experience related to the leadership with us. The seven workshops had these topics:</p>
+<ul>
+<li>Communication</li>
+<li>Creative Thinking</li>
+<li>Critical Thinking</li>
+<li>Organization</li>
+<li>Teamwork</li>
+<li>Decision Making</li>
+<li>Problematic solving</li>
+</ul>
+<p><strong>I recorded some important bullet points.</strong></p>
+<blockquote>
+<p>Communication</p>
+</blockquote>
+<p>There are three basic models of communication:</p>
+<ol>
+<li>The linear model (messages from senders to receivers)</li>
+<li>The interaction model (receivers give feedback)</li>
+<li>The transaction model (receivers help boost further comprehension)</li>
+</ol>
+<blockquote>
+<p>Organization</p>
+</blockquote>
+<p>We played a game during the workshop. We needed to find who had the median age among us without using the digital devices or notes. At that time, we queued</p>
+<blockquote>
+<p>Introduction of the leadership<br>We did a questionnaire to analyze our characteristics. After finishing it, I found I have such leadership traits:</p>
+</blockquote>
+<ol>
+<li>Emotional self-awareness</li>
+<li>Independence</li>
+<li>Assertiveness</li>
+<li>Openness</li>
+<li>Unselfishness</li>
+</ol>
+<p><img src="https://i.loli.net/2021/07/24/L3YqglOnbysruTP.jpg" alt="c6a2dd35c43b133b218fb043ffdf1c5.jpg"></p>
+<p><img src="https://i.loli.net/2021/07/24/YPkCKH6SJtQZVFN.jpg" alt="1d64d2ff79b971fef5e10cc767a8129.jpg"></p>
+<h3 id="My-feelings"><a href="#My-feelings" class="headerlink" title="My feelings"></a>My feelings</h3><p>I have realized my own leadership traits during the workshop. I think I will use them in the future. Besides, the FBLA China asked emerging leaders to swap seats in each session. I had met many kind friends who had creative ideas. We shared our ideas with each other and even made contact on the social medias. I had a wonderful experience at that time.</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Extra curriculum</tag>
+        <tag>Teamwork</tag>
+        <tag>Leadership</tag>
+        <tag>Contest</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FBLA Emerging Leaders Summit--July 19th</title>
+    <url>/2021/07/19/ELAJuly19/</url>
+    <content><![CDATA[<h3 id="Backgrounds"><a href="#Backgrounds" class="headerlink" title="Backgrounds"></a>Backgrounds</h3><p>Students who used to take part in FBLA contests could submit two essays to be FBLA emerging leaders. Each emerging leader, including me, needed to attend a meeting (we call it ELA) and performed well in order to be approved by the FBLA official. This year, the ELA took place from July 19th to July 21th. </p>
+<h3 id="The-meeting-on-July-19th"><a href="#The-meeting-on-July-19th" class="headerlink" title="The meeting on July 19th"></a>The meeting on July 19th</h3><p>This meeting includes two parts, one is the analysis of FBLA contests in the next year and the other is an icebreaking game.</p>
+<blockquote>
+<p>The analysis of FBLA contests</p>
+</blockquote>
+<p>In the next year, FBLA China decides to hold contests with these 15 topics: </p>
+<ul>
+<li>Entrepreneurship</li>
+<li>International Business</li>
+<li>Marketing </li>
+<li>Business Management</li>
+<li>Banking&#x2F;Financial System</li>
+<li>Hospitality&#x2F;Event</li>
+<li>Sports&#x2F;Entertainment Management</li>
+<li>Business Plan</li>
+<li>Business Financial Plan</li>
+<li>Business Ethics</li>
+<li>Sales Presentation</li>
+<li>Social Media Strategies</li>
+<li>Introduction to Business Presentation</li>
+<li>Data Analysis </li>
+<li>Economics</li>
+</ul>
+<p>FBLA China judges its contests with these five aspects: Knowledge familiarity, Easiness to win, Academic support, Event attractiveness, Skillset simplicity. The official gives each topic its points in each aspect in order(out of five).</p>
+<blockquote>
+<p>Entrepreneurship (3,2,5,4,3)</p>
+</blockquote>
+<ul>
+<li>It is a traditional topic which has the longest history.</li>
+</ul>
+<blockquote>
+<p>International Business (3,1,5,4,3)</p>
+</blockquote>
+<ul>
+<li>It includes a lot of macroeconomic knowledges.</li>
+</ul>
+<blockquote>
+<p>Marketing (4,1,5,5,3)</p>
+</blockquote>
+<ul>
+<li>It is hard to win in this topic.</li>
+</ul>
+<blockquote>
+<p>Business Management (3,3,3,2,4)</p>
+</blockquote>
+<blockquote>
+<p>Banking&#x2F;Financial System (1,4,5,3,4)</p>
+</blockquote>
+<ul>
+<li>It is hard for Chinese students because this topic related to knowledge about the US banking system.</li>
+</ul>
+<blockquote>
+<p>Hospitality&#x2F;Event (1,5,3,4,5)</p>
+</blockquote>
+<ul>
+<li>A new topic.</li>
+<li>It includes many jargons.</li>
+</ul>
+<blockquote>
+<p>Sports&#x2F;Entertainment Management (2,4,3,4,4)</p>
+</blockquote>
+<ul>
+<li>A new topic.</li>
+<li>It includes knowledge about journalism..</li>
+</ul>
+<blockquote>
+<p>Business Plan (2,2,4,5,2)</p>
+</blockquote>
+<ul>
+<li>It is similar to the topic Entrepreneurship.</li>
+<li>A report topic.</li>
+</ul>
+<blockquote>
+<p>Business Financial Plan (1,2,4,4,2)</p>
+</blockquote>
+<ul>
+<li>A report topic.</li>
+<li>It focuses on accounting. e.g debit</li>
+</ul>
+<blockquote>
+<p>Business Ethics (3,2,3,4,4)</p>
+</blockquote>
+<ul>
+<li>It includes the business law. e.g Antitrust law</li>
+</ul>
+<blockquote>
+<p>Sales Presentation (3,4,3,4,4)</p>
+</blockquote>
+<ul>
+<li>Not difficult.</li>
+</ul>
+<blockquote>
+<p>Social Media Strategies (3,3,3,4,4)</p>
+</blockquote>
+<ul>
+<li>It is similar to the topic marketing.</li>
+<li>Students didn’t perform well in the past.</li>
+</ul>
+<blockquote>
+<p>Introduction to Business Presentation (3,4,3,3,5)</p>
+</blockquote>
+<ul>
+<li>Not difficult.</li>
+<li>Only students in Grade 9&#x2F;10 could take part in it.</li>
+</ul>
+<blockquote>
+<p>Data Analysis</p>
+</blockquote>
+<ul>
+<li>A new topic.</li>
+<li>Do presentation in this contest.</li>
+</ul>
+<blockquote>
+<p>Economics (5,3,5,4,3)</p>
+</blockquote>
+<ul>
+<li>Each candidate in other topics needs to do the economic test.</li>
+</ul>
+<blockquote>
+<p>Icebreaking activity</p>
+</blockquote>
+<p>We traded with each other in a virtual aluminium future good market. In this market, each team (10 members) had 1500 dollars originally and the initial price of per unit aluminium was 100 dollars. In each turn, the FBLA official told us information related to the aluminium. And we needed to trade with others by evaluating the price of aluminium future good.</p>
+<p>I have learned a lot during the activity. First, I used a lot of economic knowledge to analyze the price of aluminium in the future. Besides, when other members in our team had different ideas, we communicated with each other to justify ideas. I learned how to do the teamwork effectively. I was impressed by the third turn in this game because the information (the change of oil industries) in this turn was not related to aluminium. I realized that we should know how to distinguish useful information from useless information.</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Extra curriculum</tag>
+        <tag>Teamwork</tag>
+        <tag>Leadership</tag>
+        <tag>Contest</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter9)</title>
+    <url>/2021/07/17/Principles%20of%20Economics(chapter9)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 9 is Application: International Trade. This chapter compares total surplus before and after trade. It also introduces tariff and the change of total surplus after tariff.</p>
+<blockquote>
+<p>Total surplus before and after trade</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/17/bBESCtW4ZGFrI9x.png" alt="image.png"></p>
+<p><img src="https://i.loli.net/2021/07/17/wAGU7tTqLCDFgKx.png" alt="image.png"></p>
+<ul>
+<li>Both exporting and importing countries can gain more total surplus.</li>
+<li>For exporting countries, the domestic consumer surplus decreases and producer surplus increases. But the gain is greater than loss.</li>
+<li>For importing countries, the domestic producer surplus decreases and consumer surplus increases. But the gain is greater than loss.</li>
+</ul>
+<blockquote>
+<p>Tariff and deadweight loss</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/17/x1bmUEn4jyewRAc.png" alt="image.png"></p>
+<ul>
+<li>Tariff is a tax on import.</li>
+<li>Tariff has no effect for a exporting country.</li>
+<li>D and F in this diagram represent the deadweight loss from the tariff.</li>
+</ul>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol>
+<li><p>World price– the price of a good that prevails in the world market for that good</p>
+</li>
+<li><p>Tariff– a tax on goods produced abroad and sold domestically</p>
+</li>
+</ol>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p>
+<blockquote>
+<p>1.The nation of Openia allows free trade and exports steel. If steel exports were prohibited, the price of steel in Openia would be_____, benefiting steel_____(Correct answer: B)</p>
+</blockquote>
+<p>a. higher; consumers</p>
+<p>b. lower; consumers</p>
+<p>c. higher; producers</p>
+<p>d. lower; producers</p>
+<p>My wrong answer: C</p>
+<blockquote>
+<p>2.When a nation opens itself to trade in a good and becomes an importer,_____(Correct answer: A)</p>
+</blockquote>
+<p>a. producer surplus decreases, but consumer surplus and total surplus both increase</p>
+<p>b. producer surplus decreases, consumer surplus increases, and so the impact on total surplus is ambiguous</p>
+<p>c. producer surplus and total surplus increase, but consumer surplus decreases</p>
+<p>d. producer surplus, consumer surplus, and total surplus all increase</p>
+<p>My wrong answer: C</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter8)</title>
+    <url>/2021/07/16/Principles%20of%20Economics(chapter8)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 8 is Application: The Cost of Taxation. This chapter introduces the deadweight loss(welfare loss) and the relationship between tax&#x2F;tax revenue and welfare loss.</p>
+<blockquote>
+<p>Deadweight loss</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/16/xDaLzuVfEymcN6F.png" alt="image.png"></p>
+<p><img src="https://i.loli.net/2021/07/16/tA62rBaS9KZl8OQ.jpg" alt="0de09793ae0857881843904dd95982a.jpg"></p>
+<ul>
+<li>Without tax, the consumer surplus is A+B+C, the producer surplus is D+E+F.</li>
+<li>With tax, the tax revenue is B+D, the consumer surplus is A, the producer surplus is F.</li>
+<li>C+E is deadweight loss(welfare loss).</li>
+<li>Deadweight loss occurs when the total surplus of the consumption is smaller than the tax required. At that time, people will not consume goods, that means consumers and producers will not get surplus they should get if the tax is not imposed. Besides, tax is not levied on this consumption because this consumption does not exist.</li>
+</ul>
+<blockquote>
+<p>The Determinants of the Deadweight Loss</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/16/1DNAeYIhKE2JtM6.jpg" alt="微信图片_20210716114730.jpg"></p>
+<p><img src="https://i.loli.net/2021/07/16/jqXpy4OGDYnSbVe.jpg" alt="微信图片_20210716114725.jpg"></p>
+<ul>
+<li>Each diagram has a same size of tax.</li>
+<li>The greater the elasticities of supply and demand, the larger the deadweight loss of a tax.</li>
+</ul>
+<blockquote>
+<p>Deadweight Loss and Tax Revenue as Taxes Vary</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/16/oNrh5X9gHtsV6Om.png" alt="image.png"></p>
+<p><img src="https://i.loli.net/2021/07/16/cF9EY2GzDBg1jhU.png" alt="image.png"></p>
+<ul>
+<li>As the tax rate increases, the tax revenue increases first. Then it decreases.</li>
+<li>The deadweight loss surges as the tax rate increases(because the area of triangle is the deadweight loss).</li>
+<li>The curve shows that the tax revenue first increases then decreases is called Laffer curve.</li>
+</ul>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol>
+<li>Deadweight loss– the fall in total surplus that results from a market distortion, such as a tax</li>
+</ol>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p>
+<blockquote>
+<p>1.A tax on a good has deadweight loss if_____(Correct answer: A)</p>
+</blockquote>
+<p>a. the reduction in consumer and producer surplus is greater than the tax revenue</p>
+<p>b. the tax revenue is greater than the reduction in consumer and producer surplus</p>
+<p>c. the reduction in consumer surplus is greater than the reduction in producer surplus</p>
+<p>d. the reduction in producer surplus is greater than the reduction in consumer surplus</p>
+<p>My wrong answer: B</p>
+<blockquote>
+<ol start="2">
+<li>Eggs have a supply curve that is linear and upward-sloping and a demand curve that is linear and downward-sloping. If a 2 cent per egg tax is increased to 3 cents, the deadweight loss of the tax_____(Correct answer: C)</li>
+</ol>
+</blockquote>
+<p>a. increases by less than 50 percent and may even decline</p>
+<p>b. increases by exactly 50 percent</p>
+<p>c. increases by more than 50 percent</p>
+<p>d. The answer depends on whether supply or demand is more elastic</p>
+<blockquote>
+<p>3.Peanut butter has an upward-sloping supply curve and a downward-sloping demand curve. If a 10 cent per pound tax is increased to 15 cents, the government’s tax revenue_____ (Correct answer: A)</p>
+</blockquote>
+<p>a. increases by less than 50 percent and may even decline</p>
+<p>b. increases by exactly 50 percent</p>
+<p>c. increases by more than 50 percent</p>
+<p>d. The answer depends on whether supply or demand is more elastic</p>
+<p><strong>Tips: As a tax grows larger, it distorts incentives more, and its deadweight loss grows larger. Because a tax reduces the size of the market, however, tax revenue does not continually increase. It first rises with the size of a tax, but if the tax gets large enough, tax revenue starts to fall.</strong></p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter7)</title>
+    <url>/2021/07/15/Principles%20of%20Economics(chapter7)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 7 is Consumers, Producers, and the Efficiency of Markets. This chapter explains consumer surplus, producer surplus and the total surplus in the market.</p>
+<blockquote>
+<p>Consumer surplus</p>
+</blockquote>
+<ul>
+<li>the amount a buyer is willing to pay for a good minus the amount the buyer actually pays for it</li>
+</ul>
+<blockquote>
+<p>Producer surplus</p>
+</blockquote>
+<ul>
+<li>the amount a seller is paid for a good minus the seller’s cost of providing it</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/15/lkNJUen3Yf2wuqC.jpg" alt="figure-fig1_Q320.jpg"></p>
+<p><strong>Total surplus&#x3D; consumer surplus + producer surplus&#x3D; (value to byers- amount paid by buyers)+ (amount received by sellers- cost to sellers)</strong></p>
+<ul>
+<li><p>amount paid by buyers&#x3D; amount received by sellers- cost to sellers</p>
+</li>
+<li><p>Total surplus&#x3D; value to buyers- cost to sellers</p>
+</li>
+</ul>
+<blockquote>
+<p>Efficiency of Market</p>
+</blockquote>
+<ul>
+<li>Free markets allocate the supply of goods to the buyers who value them most, as measured by their willingness to pay.</li>
+<li>Free markets allocate the demand for goods to the sellers who can produce then at the lowest cost.</li>
+<li>Free markets produce the quantity of goods that maximizes the sum of consumer and producer surplus.</li>
+</ul>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol>
+<li><p>Welfare economics– the study of how the allocation of resources affects economic well-being</p>
+</li>
+<li><p>Willingness to pay– the maximum amount that a buyer will pay for a good</p>
+</li>
+<li><p>Consumer surplus– the amount a buyer is willing to pay for a good minus the amount the buyer actually pays for it</p>
+</li>
+<li><p>Cost– the value of everything a seller must give up to produce a good</p>
+</li>
+<li><p>Producer surplus– the amount a seller is paid for a good minus the seller’s cost of providing it</p>
+</li>
+<li><p>Efficiency– the property of a resource allocation of maximizing the total surplus received by all members of society</p>
+</li>
+<li><p>Equality– the property of distributing economic prosperity uniformly among the members of society</p>
+</li>
+</ol>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>I did all questions correctly! Excellent!</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter6)</title>
+    <url>/2021/07/14/Principles%20of%20Economics(chapter6)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 6 is Supply, Demand, and Government Policies. This chapter explains maximum price, minimum price and how sellers&#x2F;consumers burden the tax.</p>
+<blockquote>
+<p>Maximum price</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/14/MHiyrSNR1keQc7w.png" alt="image.png"></p>
+<ul>
+<li><p>Also called price ceiling– a legal maximum on the price at which a good can be sold</p>
+</li>
+<li><p>If the maximum price is lower than the equilibrium price, we call it a price ceiling that is binding(because this price ceiling will affect the equilibrium price).</p>
+</li>
+<li><p>The quantity demanded will increase and quantity supplied will decrease so there is shortage(excess demand).</p>
+</li>
+</ul>
+<blockquote>
+<p>Minimum price</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/14/6faGB3VhZDjvR9m.png" alt="image.png"></p>
+<ul>
+<li><p>Also called price floor– a legal minimum on the price at which a good can be sold</p>
+</li>
+<li><p>If the minimum price is higher than the equilibrium price, we call it a price floor that is binding(because this price floor will affect the equilibrium price).</p>
+</li>
+<li><p>The quantity demanded will decrease and quantity supplied will increases so there is surplus(excess supply).</p>
+</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/14/FXtYqh2V5CNWeP7.jpg" alt="微信图片_20210714094232.jpg"></p>
+<ul>
+<li>For elastic supply and inelastic demand, buyers burden more tax than sellers.</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/14/nHFsxGRZmU3j9gW.jpg" alt="微信图片_20210714094226.jpg"></p>
+<ul>
+<li>For inelastic supply and elastic demand, sellers burden more tax than sellers.</li>
+</ul>
+<p><strong>Conclusion: A tax burden falls more heavily on the side of the market that is less elastic.</strong></p>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol>
+<li><p>Price ceiling– a legal maximum on the price at which a good can be sold</p>
+</li>
+<li><p>Price floor– a legal minimum on the price at which a good can be sold</p>
+</li>
+<li><p>Tax incidence– the manner in which the burden of a tax is shared among participants in a market</p>
+</li>
+</ol>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p>
+<blockquote>
+<ol>
+<li>When the government imposes a binding price floor, it causes_____ (Correct answer: D)</li>
+</ol>
+</blockquote>
+<p>a. the supply curve to shift to the left</p>
+<p>b. the demand curve to shift to the right</p>
+<p>c. a shortage of the good to develop</p>
+<p>d. a surplus of the good to develop</p>
+<p>My wrong answer: C</p>
+<blockquote>
+<ol start="2">
+<li>Which of the following increases quantity supplied, decreases quantity demanded, and increases the price that consumer pay? (Correct answer: C)</li>
+</ol>
+</blockquote>
+<p>a. the passage of a tax on a good</p>
+<p>b. the repeal of a tax on a good</p>
+<p>c. the imposition of a binding price floor</p>
+<p>d. the removal of a binding price floor</p>
+<p>My wrong answer: D</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter5)</title>
+    <url>/2021/07/13/Principles%20of%20Economics(chapter5)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 5 is Elasticity and its Application. This chapter introduces elasticity(a measure of the responsiveness of quantity demanded or quantity supplied to a change in one of its determinants).</p>
+<blockquote>
+<p>Price elasticity of demand</p>
+</blockquote>
+<ul>
+<li><p>measure of how much the quantity demanded of a good responds to a change in the price of that good</p>
+</li>
+<li><p>Price elasticity of demand &#x3D; <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\frac{\Delta&space;Demand}{\Delta&space;Price}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\frac{\Delta&space;Demand}{\Delta&space;Price}" title="\frac{\Delta Demand}{\Delta Price}" /></a></p>
+</li>
+<li><p>Always a negative number. (As price increases, the quantity demanded decreases.)</p>
+</li>
+<li><p>absolute value &gt;1 elastic (change in unit quantity demanded is greater the change in unit price)</p>
+</li>
+<li><p>absolute value&lt;1 inelastic(change in unit quantity demanded is smaller the change in unit price)</p>
+</li>
+</ul>
+<blockquote>
+<p>Income elasticity of demand</p>
+</blockquote>
+<ul>
+<li><p>a measure of how much the quantity demanded of a good responds to a change in consumers’ income</p>
+</li>
+<li><p>Income elasticity of demand&#x3D;<a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\frac{\Delta&space;Demand}{\Delta&space;Income}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\frac{\Delta&space;Demand}{\Delta&space;Income}" title="\frac{\Delta Demand}{\Delta Income}" /></a></p>
+</li>
+<li><p>Always smaller than 1. Because not all income is used for buying this good.</p>
+</li>
+<li><p>If the value is positive, this good is a kind of normal good. (As income increases, the demand for normal goods increases.)</p>
+</li>
+<li><p>If the value is negative, this good is a kind of inferior good.(As income decreases, the demand for inferior goods decreases.)</p>
+</li>
+</ul>
+<blockquote>
+<p>Cross-price elasticity of demand</p>
+</blockquote>
+<ul>
+<li><p>a measure of how much the quantity demanded of one good responds to a change in the price of another good</p>
+</li>
+<li><p>Cross-price elasticity of demand&#x3D; <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\frac{\Delta&space;Demand_{good&space;A}}{\Delta&space;Price_{good&space;B}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\frac{\Delta&space;Demand_{good&space;A}}{\Delta&space;Price_{good&space;B}}" title="\frac{\Delta Demand_{good A}}{\Delta Price_{good B}}" /></a></p>
+</li>
+<li><p>If the value is positive, good A and good B are substitutes.(As price of good B increases, the demand for B decreases and the demand for its substitutes good A increases.)</p>
+</li>
+<li><p>If the value is negative, good A and good B are complements.(As price of good B increases, the demand for B decreases and the demand for its complements good A decreases.)</p>
+</li>
+</ul>
+<blockquote>
+<p>Price elasticity of supply</p>
+</blockquote>
+<ul>
+<li><p>a measure of how much the quantity supplied of a good responds to a change in the price of that good</p>
+</li>
+<li><p>Price elasticity of supply&#x3D; <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\frac{\Delta&space;Supply}{\Delta&space;Price}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\frac{\Delta&space;Supply}{\Delta&space;Price}" title="\frac{\Delta Supply}{\Delta Price}" /></a></p>
+</li>
+<li><p>Always a positive number. (As price increases, the quantity supplied increases.)</p>
+</li>
+<li><p>absolute value&gt;1 elastic (change in unit quantity demanded is greater the change in unit price)</p>
+</li>
+<li><p>absolute value&lt;1 inelastic (change in unit quantity demanded is smaller the change in unit price)</p>
+</li>
+</ul>
+<h4 id="Applications"><a href="#Applications" class="headerlink" title="Applications"></a>Applications</h4><ul>
+<li>Total revenue&#x3D; price * quantity</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/13/qNrhHoLEMxBl6a8.png" alt="image.png"></p>
+<ul>
+<li>For elastic demand, the lower the price, the greater the revenue. (50<em>80 &lt; 65</em>110)</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/13/gULmqaFIGS5c8Kn.png" alt="image.png"></p>
+<ul>
+<li>For inelastic demand, the lower the price, the lower the revenue.（14<em>80 &gt; 10</em>88 ）</li>
+</ul>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol>
+<li><p>Elasticity– a measure of the responsiveness of quantity demanded or quantity supplied to a change in one of its determinants</p>
+</li>
+<li><p>Price elasticity of demand– a measure of how much the quantity demanded of a good responds to a change in the price of that good, computed as the percentage change in quantity demanded divided by the percentage change in price</p>
+</li>
+<li><p>Total revenue– the amount paid by buyers and received by sellers of a good, computed as the price of the good times the quantity sold</p>
+</li>
+<li><p>Income elasticity of demand– a measure of how much the quantity demanded of a good responds to a change in consumers’ income, computed as the percentage change in quantity demanded divided by the percentage change in income</p>
+</li>
+<li><p>Cross-price elasticity of demand– a measure of how much the quantity demanded of one good responds to a change in the price of another good, computed as the percentage change in quantity demanded of the first good divided by the percentage change in price of the second good</p>
+</li>
+<li><p>Price elasticity of supply– a measure of how much the quantity supplied of a good responds to a change in the price of that good, computed as the percentage change in quantity supplied divided by the percentage change in price</p>
+</li>
+</ol>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p>
+<blockquote>
+<p>1.In competitive markets, farmers adopt new technologies that will eventually reduce their revenue because_____ (Correct answer: A)</p>
+</blockquote>
+<p>a. each farmer is a price taker</p>
+<p>b. farmers are short-sighted</p>
+<p>c. regulation requires the use of best practices</p>
+<p>d. consumers pressure farmers to lower prices</p>
+<p>My wrong answer: D</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter4)</title>
+    <url>/2021/07/12/Principles%20of%20Economics(chapter4)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 4 is The Market Forces of Supply And Demand. This chapter explains how market force(supply&#x2F;demand) determines the allocation of resources（the quantity and price of goods in the market.</p>
+<h4 id="Supply-Demand-Curve"><a href="#Supply-Demand-Curve" class="headerlink" title="Supply&#x2F;Demand Curve"></a>Supply&#x2F;Demand Curve</h4><blockquote>
+<p>Quantity demand</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/12/XDY5Kl6OWVgaJ1q.png" alt="image.png"></p>
+<ul>
+<li>The demand curve slopes downward.</li>
+<li>Other things being equal, the quantity demanded of a good falls when the price of the good rises. (The law of demand)</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/12/sb6pAxUWy9XP4jT.png" alt="image.png"></p>
+<ul>
+<li>When the demand increases, we can say there is an extension along the demand curve. When the demand decreases, we can say there is a contraction along the demand curve.</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/12/ySsFDBYMX1OJA6l.png" alt="image.png"></p>
+<ul>
+<li>You can use a demand schedule to show the relationship between the price of a good and the quantity demanded.</li>
+</ul>
+<blockquote>
+<p>Quantity supply</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/12/WNFZVMK6L5IQrGR.png" alt="image.png"></p>
+<ul>
+<li>The supply curve slopes upward.</li>
+<li>Other things being equal, the quantity supplied of a good rises when the price of the good rises. (The law of supply)</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/12/HXnxf6v897uUVsI.png" alt="image.png"></p>
+<ul>
+<li>When the supply increases, we can say there is an extension along the supply curve. When the demand decreases, we can say there is a contraction along the supply curve.</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/12/gr8kVhsFUeQdEqR.png" alt="image.png"></p>
+<ul>
+<li>You can use a supply schedule to show the relationship between the price of a good and the quantity supplied.</li>
+</ul>
+<blockquote>
+<p>Shifts in the demand curve</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/12/JjRETF9zSlCPYne.png" alt="image.png"></p>
+<ul>
+<li><p>The demand curve shifts as the demand changes due to any reasons except the change of the price. In other words, the demand changes at any given price.</p>
+</li>
+<li><p>The demand increases when the demand curve shifts to the right, the demand decreases when the demand curve shifts to the left.</p>
+</li>
+<li><p>Many reasons lead to the shift in the demand curve. e.g Income, Price of related goods, Tastes, Expectations of future price, Number of byers.</p>
+</li>
+</ul>
+<blockquote>
+<p>Shifts in the supply curve</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/12/EHa7U4sYDydKAko.png" alt="image.png"></p>
+<ul>
+<li><p>The supply curve shifts as the supply changes due to any reasons except the change of the price. In other words, the supply changes at any given price.</p>
+</li>
+<li><p>The supply increases when the supply curve shifts to the right, the supply decreases when the supply curve shifts to the left.</p>
+</li>
+<li><p>Many reasons lead to the shift in the supply curve. e.g Technology of production, Expectations of future price, Number of sellers.</p>
+</li>
+</ul>
+<h4 id="Supply-and-Demand-Together"><a href="#Supply-and-Demand-Together" class="headerlink" title="Supply and Demand Together"></a>Supply and Demand Together</h4><blockquote>
+<p>Excess supply&#x2F;demand</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/12/kqr7xufwGoKYVeH.png" alt="image.png"></p>
+<ul>
+<li><p>When the price above the equilibrium price（the price when supply curve and demand curve intersect), the quantity supplied is greater than the quantity demanded. In other words, there is a excess supply(surplus). </p>
+</li>
+<li><p>When the price below the equilibrium price（the price when supply curve and demand curve intersect), the quantity supplied is smaller than the quantity demanded. In other words, there is a excess demand(shortage). </p>
+</li>
+<li><p>As a result, the market price moves towards the equilibrium price.</p>
+</li>
+</ul>
+<blockquote>
+<p>How to influence equilibrium price and equilibrium quantity</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/12/jfQTaMhGDdpYsbi.png" alt="image.png"></p>
+<ul>
+<li>When the supply curve shifts to the right, the equilibrium price decreases and the equilibrium quantity increases.</li>
+</ul>
+<p>You can also use the diagrams to analyze the change of equilibrium price and equilibrium quantity when the demand curve shifts or the supply curve shifts to the left.</p>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol>
+<li><p>Market– a group of buyers and sellers of a particular good or service</p>
+</li>
+<li><p>Competitive market– a market in which there are many buyers and many sellers so that each has a negligible impact on the market price</p>
+</li>
+<li><p>Quantity demanded– the amount of a good that buyers are willing and able to purchase</p>
+</li>
+<li><p>Law of demand– the claim that, other things being equal, the quantity demanded of a good falls when the price of the good rises</p>
+</li>
+<li><p>Demand schedule– a table that shows the relationship between the price of a good and the quantity demanded</p>
+</li>
+<li><p>Demand curve– a graph of the relationship between the price of a good and the quantity demanded</p>
+</li>
+<li><p>Normal good– a good for which, other things being equal, an increase in income leads to an increase in demand</p>
+</li>
+<li><p>Inferior good– a good for which, other things being equal, an increase in income leads to a decrease in demand</p>
+</li>
+<li><p>Substitutes– two goods for which an increase in the price of one leads to an increase in the demand for the other</p>
+</li>
+<li><p>Complements– two goods for which an increase in the price of one leads to a decrease in the demand for the other</p>
+</li>
+<li><p>Quantity supplied– the amount of a good that sellers are willing and able to sell</p>
+</li>
+<li><p>Law of supply– the claim that, other things being equal, the quantity supplied of a good rises when the price of the good rises</p>
+</li>
+<li><p>Supply schedule– a table that shows the relationship between the price of a good and the quantity supplied</p>
+</li>
+<li><p>Supply curve– a graph of the relationship between the price of a good and the quantity supplied</p>
+</li>
+<li><p>Equilibrium– a situation in which the market price has reached the level at which quantity supplied equals quantity demanded</p>
+</li>
+<li><p>Equilibrium price– the price that balances quantity supplied and quantity demanded</p>
+</li>
+<li><p>Equilibrium quantity– the quantity supplied and the quantity demanded at the equilibrium price</p>
+</li>
+<li><p>Surplus– a situation in which quantity supplied is greater than quantity demanded</p>
+</li>
+<li><p>Shortage– a situation in which quantity demanded is greater than quantity supplied</p>
+</li>
+<li><p>Law of supply and demand– the claim that the price of any good adjusts to bring the quantity supplied and the quantity demanded of that good into balance</p>
+</li>
+</ol>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p>
+<blockquote>
+<ol>
+<li>If the economy goes into a recession and incomes fall, what happens in the markets for inferior goods? (Correct answer: A)</li>
+</ol>
+</blockquote>
+<p>a. prices and quantities both rise</p>
+<p>b. prices and quantities both fall</p>
+<p>c. prices rise and quantities fall</p>
+<p>d. prices fall and quantities rise</p>
+<p>My wrong answer: B</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter3)</title>
+    <url>/2021/07/09/Principles%20of%20Economics(chapter3)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 3 is Interdependence and the Gains from Trade. This chapter explains one principle of Economics–Trade can make everyone better off. In order to explain it, I need to introduce three definitions first.</p>
+<ul>
+<li>Absolute advantage– the ability to produce a good using fewer inputs than another producer</li>
+<li>Comparative advantage– the ability to produce a good at a lower opportunity cost than another producer</li>
+<li>Opportunity cost– whatever must be given up to obtain some item</li>
+</ul>
+<p><img src="https://i.loli.net/2021/07/09/F1J5AZ2Qlsdem9B.png" alt="image.png"></p>
+<ul>
+<li>This diagram means China could produce 80 iron ore or 100 cars.</li>
+<li>Australia could produce 70 iron ore or 50 cars.</li>
+</ul>
+<p>As the diagram shows, China can produce both more iron ore and cars than Aus. That means China has absolute advantage in producing both goods. However, according to the definition of opportunity cost, the opportunity cost for China to produce an iron ore is 1.25 cars. (Because producing 80 iron core needs to abandon 100 cars). And the opportunity cost for Australia to produce 1 iron core is just 0.71 car. In other words, Australia has the comparative advantage in producing iron core.</p>
+<blockquote>
+<p>This is the key to explain why trade can make everyone better off. Trade can make everyone in the economy produce goods with the lowest opportunity cost.</p>
+</blockquote>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol>
+<li><p>Absolute advantage– the ability to produce a good using fewer inputs than another producer</p>
+</li>
+<li><p>Opportunity cost– whatever must be given up to obtain some item</p>
+</li>
+<li><p>Comparative advantage– the ability to produce a good at a lower opportunity cost than another producer</p>
+</li>
+<li><p>Imports– goods produced abroad and sold domestically</p>
+</li>
+<li><p>Exports– goods produced domestically and sold abroad</p>
+</li>
+</ol>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>I did all questions correctly! Excellent!</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter2)</title>
+    <url>/2021/07/08/Principles%20of%20Economics(chapter2)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 2 is Thinking Like an Economist. This chapter shows two kinds of economic models, some history stories about Economics and many examples to explain the way of how economists think.</p>
+<p><strong>Economic models</strong></p>
+<blockquote>
+<p>The circular-flow diagram</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/08/FrZLvlt6Opd9H7j.png" alt="image.png"></p>
+<ul>
+<li>You can see how dollars flow among households and firms in the economy.</li>
+<li>In the markets for goods and services, firms are sellers and households are buyers.</li>
+<li>In the markets for factors of production, firms are buyers and households are sellers.</li>
+</ul>
+<blockquote>
+<p>The production possibilities frontier&#x2F;curve</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/08/wZu5XpSxIchCUFe.png" alt="image.png"></p>
+<ul>
+<li>This is a curve to explain opportunity cost, efficiency, inefficiency and unachievable.</li>
+<li>As the diagram shows, the points A,B and C stand for efficiency. The point X is inefficiency and the point Y is unachievable.</li>
+<li>The point A moves towards the point C means the opportunity cost of some cottons are some amounts of wines.</li>
+</ul>
+<p><strong>The way of economists think</strong></p>
+<blockquote>
+<p>The phenomenon of ticket resale.</p>
+</blockquote>
+<p>Lawmakers sometimes try to prohibit reselling tickets, or “scalping” as it is sometimes called, in order to keep the ticket price low. However, many economists side with the scalpers rather than the lawmakers. They think the ticket price without scalping cannot show the real value of the ticket. The rule influences market force(the invisible hand).</p>
+<ul>
+<li>Laws that limit the resale of tickets for entertainment and sports events make potential audience members for those events worse off on average.</li>
+</ul>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol>
+<li><p>Circular-flow diagram– a visual model of the economy that shows how dollars flow through markets among households and firms</p>
+</li>
+<li><p>Production possibilities frontier– a graph that shows the combinations of output that the economy can possibly produce given the available factors of production and the available production technology</p>
+</li>
+<li><p>Microeconomics– the study of how households and firms make decisions and how they interact in markets</p>
+</li>
+<li><p>Marcoeconomics– the study of economy-wide phenomena, including inflation, unemployment, and economic growth.</p>
+</li>
+<li><p>Positive statements– claims that attempt to describe the world as it is</p>
+</li>
+<li><p>Normative statements– claims that attempt to prescribe how the world should be</p>
+</li>
+</ol>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>I did all questions correctly! Excellent!</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter1)</title>
+    <url>/2021/07/05/Principles%20of%20Economics(chapter1)/</url>
+    <content><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 1 is Ten Principles of Economics. These 10 principles can be divided into three parts and I write some examples to explain them.</p>
+<p><strong>How People Make Decisions</strong></p>
+<p>1.People face trade-offs.</p>
+<p>2.The cost of something is what you give up to get it.</p>
+<blockquote>
+<p>These two principles explain opportunity cost (the next best alternative forgone for an economic decision). Why we should use this concept? Here is an example about considering the cost of studying in a university. Some people may calculate the cost like tuition fee and meal fee. However, it is wrong because you still need to use meal fee for meals if you don’t go to a university. Besides, you don’t calculate your cost of time.</p>
+</blockquote>
+<p>3.Rational people think at the margin.</p>
+<blockquote>
+<p>Margin change means a small incremental adjustment to a plan of action. For instance, if a plane ticket costs 500 dollars, it should sell a ticket with the price greater than 500 dollars to earn profits. However, if there is a free seat and no one would reserve it, it could be sold with the price smaller than 500. Why? Because in this case, the marginal benefit is the price of that ticket, and the marginal cost is the oil used by plane to carry one more passenger (it could be ignored). In other words, it is profitable when the marginal benefit is greater than the marginal cost.</p>
+</blockquote>
+<p>4.People respond to incentives.</p>
+<blockquote>
+<p>e.g The law of demand. (The higher the price, the lower the quantity demanded and vice versa.)  People respond to incentives so they could get more profits. </p>
+</blockquote>
+<p><strong>How people interact</strong></p>
+<p>5.Trade can make everyone better off.</p>
+<blockquote>
+<p>Because countries can specialize in what they are good at. In other words, producing goods with the lowest opportunity cost.</p>
+</blockquote>
+<p>6.Markets are usually a good way to organize economics activity.</p>
+<p>7.Governments can sometimes improve market outcomes.</p>
+<blockquote>
+<p>These two principles explain mixed economies and introduce the invisible hand–market, which can allocate resources efficiently.</p>
+</blockquote>
+<p><strong>How the Economy as a Whole Works</strong></p>
+<p>8.A country’s standard of living depends in its ability to produce goods and services.</p>
+<p>9.Prices rise when the government prints too much money.</p>
+<p>10.Society faces a short-run trade-off between inflation and unemployment.</p>
+<blockquote>
+<p>Increasing the amount of money in the economy stimulates the overall level of spending and thus the demand for goods and services.<br>Higher demand may over time cause firms to raise their prices, but in the meantime, it also encourages them to hire more workers and produce a larger quantity of goods and services.<br>More hiring means lower unemployment. </p>
+</blockquote>
+<p>###Definitions</p>
+<ol>
+<li><p>Scarcity– the limited nature of society’s resources</p>
+</li>
+<li><p>Economics– the study of how society manages its scarce resources</p>
+</li>
+<li><p>Efficiency– the property of society getting the most it can from its scarce resources</p>
+</li>
+<li><p>Equality– the property of distributing economic prosperity uniformly among the members of society</p>
+</li>
+<li><p>Opportunity cost– whatever must be given up to obtain some item</p>
+</li>
+<li><p>Rational people– those who systematically and purposefully do the best they can to achieve their objectives</p>
+</li>
+<li><p>Marginal change– a small incremental adjustment to a plan of action</p>
+</li>
+<li><p>Incentive– something that induces a person to act</p>
+</li>
+<li><p>Market economy– an economy that allocates resources through the decentralized decisions of many firms and households as they interact in markets for goods and services</p>
+</li>
+<li><p>Property rights– the ability of an individual to own and exercise control over scarce resources</p>
+</li>
+<li><p>Market failure–  a situation in which a market left on its own fails to allocate resources efficiently</p>
+</li>
+<li><p>Externality– the impact of one person’s actions on the well-being of a bystander</p>
+</li>
+<li><p>Market power– the ability of a single economic actor(or small group of actors)to have a substantial influence on market prices</p>
+</li>
+<li><p>Productivity– the quantity of goods and services produced from each unit of labor input</p>
+</li>
+<li><p>Inflation– an increase in the overall level of prices in the economy</p>
+</li>
+<li><p>Business cycle– fluctuations in economic activity, such as employment and production</p>
+</li>
+</ol>
+<p>###Review</p>
+<p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p>
+<blockquote>
+<p>1.Your opportunity cost of going to a movie is_____(Correct answer: C)</p>
+</blockquote>
+<p>a. the price of the ticket</p>
+<p>b. the price of the ticket plus the cost of ant soda and popcorn you buy at the theater</p>
+<p>c. the total cash expenditure needed to go to the movie plus the value of your time</p>
+<p>d. zero, as long as you enjoy the movie and consider it a worthwhile use of time and money</p>
+<p>My wrong answer: D</p>
+<blockquote>
+<p>2.Because people respond to incentives,_____(Correct answer: D)</p>
+</blockquote>
+<p>a. policymakers can alter outcomes by changing punishments or rewards</p>
+<p>b. policies can have unintended consequences</p>
+<p>c. society faces a trade-off between efficiency and equality</p>
+<p>d. All of the above</p>
+<p>My wrong answer: A</p>
+<blockquote>
+<p>3.Adam Smith’s “invisible hand” refers to_____(Correct answer: D)</p>
+</blockquote>
+<p>a. the subtle and often hidden methods that businesses use to profit at consumers’ expense</p>
+<p>b. the ability of free markets to reach desirable outcomes, despite the self-interest of market participants</p>
+<p>c. the ability of government regulation to benefit consumers even if the consumers are unaware of the regulations</p>
+<p>d. the way in which producers or consumers in unregulated markets impose costs on innocent bystanders</p>
+<p>My wrong answer: B</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Hobbies</tag>
+        <tag>Reading notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>To be a great Class Sanitation Commissioner</title>
+    <url>/2021/06/30/Class%20Sanitation%20Commissioner/</url>
+    <content><![CDATA[<h3 id="Backgrounds-and-my-responsibility"><a href="#Backgrounds-and-my-responsibility" class="headerlink" title="Backgrounds and my responsibility"></a>Backgrounds and my responsibility</h3><p>In the beginning of Grade 10, my class advisor asked me to be the Class Sanitation Commissioner. It is a job to manage the students to clean our classroom and deliver meals from canteens to our class. Originally, my class advisor let me to do this simply because I was the only one who lived in the school dormitory since this job was time-consuming. (The Class Sanitation Commissioner needed to supervise students to do their work after school.)</p>
+<h3 id="What-I-did-at-first"><a href="#What-I-did-at-first" class="headerlink" title="What I did at first"></a>What I did at first</h3><p>At the beginning, I needed to make a table to make sure each student in our class had their position (like sweeping the floor in Monday or cleaning the blackboard in Wednesday). But I made a mistake at that time–I let my classmates choose the positions they want. After I asked them to choose positions they want in our QQ group online, I realized I shouldn’t do that. Obviously, some classmates complained that they wanted to do another work, and the process of choosing students was time-consuming. Finally, our monitor advised me to redistribute positions by myself and I did it.</p>
+<blockquote>
+<p>What I have learned from it</p>
+</blockquote>
+<p>Sometimes I should think twice before making a decision. Tell you the truth, when I redistributed the positions, some of my classmates argued with me. That was my fault because I let them choose work they want before.</p>
+<h3 id="The-cooperation-between-two-Class-Sanitation-Commissioners"><a href="#The-cooperation-between-two-Class-Sanitation-Commissioners" class="headerlink" title="The cooperation between two Class Sanitation Commissioners"></a>The cooperation between two Class Sanitation Commissioners</h3><p>As time passes, our class advisor realized it was difficult for one Class Sanitation Commissioners to do all works so she asked another student to do this work as well.<br>Generally speaking, we didn’t split the responsibilities the Class Sanitation Commissioner should take into two totally different parts. Some classmates used to say it was not wise to do so because we may ask the other Class Sanitation Commissioner to bear responsibilities. However, as something wrong in our classroom (about sanitation), one of us would bear the duty actively when the other one was absent.</p>
+<blockquote>
+<p>By the way, thanks to this experience, I even made friends with another Class Sanitation Commissioner, Jason. We discuss tough questions in the spare time.</p>
+</blockquote>
+<h3 id="What-we-and-I-did-during-this-year"><a href="#What-we-and-I-did-during-this-year" class="headerlink" title="What we and I did during this year"></a>What we and I did during this year</h3><p>Except stuffs I have mentioned before, the obligations also include passing the check from school supervisors every week and taking the disinfectant from another building every day.<br>It is worth mentioning that our class pass each check excellently.</p>
+<blockquote>
+<p>Each year, our school asks us to choose one person who bears the most obligations and provides the greatest services for students in each class. Obviously, the Class Sanitation Commissioners take more duties than others. And I take the disinfectant every day, that means I bear a little bit more duty than another Class Sanitation Commissioner, Jason.</p>
+</blockquote>
+<p>You could see a picture below. In the blank of Rewards and punishment record, you will see “Outstanding Student Leader” in Chinese.</p>
+<p><img src="https://i.loli.net/2021/06/30/zeq4ortVKhOXGvw.jpg" alt="253e29d33ae80f93ba1fc7d89e2e4f5.jpg"></p>
+<h3 id="My-feelings"><a href="#My-feelings" class="headerlink" title="My feelings"></a>My feelings</h3><p>Through being a Class Sanitation Commissioner is really exhausting, I was still grateful to get this opportunity. I strengthened my ability to lead others to bear their own duty. During this process, I developed the spirit of helping my classmates and bearing responsibilities actively. Besides, I got to know how to communicate with classmates efficiently and kindly. Sometimes students may be angry about duties they have. They may think it is unfair and complain it with Class Sanitation Commissioner. In order to avoid getting into trouble (like arguing), it’s important for us to handle such things properly. I used to go mad easily, now I’m much better in terms of controlling my feelings. Last but not least, I have learned how to organize students to do suitable work. For example, students in our class thought it was easy to clean the blackboard so they all chose to do this work. And I chose someone who wasn’t capable enough to do other work to clean the blackboard.</p>
+]]></content>
+      <tags>
+        <tag>Leadership</tag>
+        <tag>School life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Titration Experiment</title>
+    <url>/2021/06/26/Titration%20Experiment/</url>
+    <content><![CDATA[<h3 id="Backgrounds"><a href="#Backgrounds" class="headerlink" title="Backgrounds"></a>Backgrounds</h3><p>Our A-level center organized an event to let Grade 9 students who wanted to study in our center learn more about our center. During this event, our teachers set different lessons and Grade 9 students could choose what they were interested in. In order to let them have better experience during the lessons, our A-level center also asked its students to take part in the lessons and help them.</p>
+<h3 id="What-I-did"><a href="#What-I-did" class="headerlink" title="What I did"></a>What I did</h3><p>I was proud of taking part in the Chemistry lessons because our Chemistry teacher chose students by herself instead of choosing students randomly. (Actually, all teachers except Chemistry teacher chose students to take part in their classes randomly.) During the Chemistry lessons(actually, we had three same lessons at that time), I needed to help students do an experiment called titration.</p>
+<h3 id="Introduction-what-is-titration"><a href="#Introduction-what-is-titration" class="headerlink" title="Introduction: what is titration"></a>Introduction: what is titration</h3><p><img src="https://i.loli.net/2021/07/08/S3xbnI8Z7qjROLU.png" alt="image.png"></p>
+<p>Titration is used to indicate the concentration of an unknown solution, which is usually used in acid-base titration.</p>
+<p>The actual end point of the titration usually adds slightly more amount of solution than it need to ensure the other solution is fully reacted.</p>
+<p>In acid-base titration, we often use litmus, methyl orange and phenolphthalein as indicator.</p>
+<h3 id="My-preparation"><a href="#My-preparation" class="headerlink" title="My preparation"></a>My preparation</h3><p>Truth to be told, titration is an experiment in the A-level Chemistry practical paper syllabus. In other words, students in Grade 11 had already did it in their A-level examinations. But thing is that, as Grade 10 IGCSE students, I only knew the theoretical knowledge about this experiment. In addition, I was not good at doing experiments on my own. I even felt scared of using a burner! In other words, it must be a challenge for me to do this experiment.</p>
+<blockquote>
+<p>Practicing it in advance</p>
+</blockquote>
+<p>Our teacher found the spare time and let us do the titration experiment in the school laboratory in advance. She taught us the theoretical knowledge first (and I had acquired it before), then she let us do the experiment step by step and guided students. </p>
+<p>Here is a photo from our Class Advisor.</p>
+<p><img src="https://i.loli.net/2021/07/08/Lv8rRZXUkVS53g4.jpg" alt="1625708899667.jpeg"></p>
+<blockquote>
+<p>Review and improve the experiment</p>
+</blockquote>
+<p>It was hard for us to use the burette and pipette. We hadn’t used it before and the way to use them was a little bit complex. I practiced the way to use them for three times in order to master it.</p>
+<h3 id="My-feelings"><a href="#My-feelings" class="headerlink" title="My feelings"></a>My feelings</h3><p>I was proud of getting the opportunity to do this titration experiment. Firstly, titration is an experiment in the A-level Chemistry examination syllabus. I practiced it for my A-level Chemistry examination in advance. Secondly, I am poor in doing the experiment on my own. (It is not my fault but the problem the majority of Chinese students have. In Chinese, Chemistry exams don’t involve practical experiments, leading to a fact that most of us are poor in it.) However, if you want to study Chemistry in the universities all around the world, it’s important to develop skills of doing the practical experiment. But we cannot access the chemical laboratory to practice them in our daily life. In other words, today’s titration experiment was a valuable experience for me.</p>
+]]></content>
+      <tags>
+        <tag>Extra curriculum</tag>
+        <tag>Sciences</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>A brief summary of my Github experience</title>
+    <url>/2021/06/24/Github%20experience/</url>
+    <content><![CDATA[<h3 id="Why-I-do-it"><a href="#Why-I-do-it" class="headerlink" title="Why I do it"></a>Why I do it</h3><p>I have used Github for several months (although I just updated articles recently). Actually. my original purpose of using Github is just to record contests and extra-curriculums I did and show my feelings about them. However, thanks to Github, I was interested in recording my daily life gradually. In addition, I write this article to thank for one of my friends, Justin, who helped me a lot to give me technical support about how to use Github.</p>
+<blockquote>
+<p>My feelings of using Github (Programming part)</p>
+</blockquote>
+<p>Tell you the truth, it’s quite difficult for me to set my own Github repository since i don’t have the gift for programming. It is worth mentioning that Github is not suitable for the Greenhand, since it needs complex codes to operate. I used to search information online to set my Github blog（it took me nearly two weeks, but I was not totally successfully– I didn’t know how to send my articles to Github! Anyway, at least I developed my skills of self-study and searching information during this process.</p>
+<blockquote>
+<p>My feelings of using Github (Writing articles part)</p>
+</blockquote>
+<p>With my friend Justin’s help (I will mention it later), I could push my articles to my Github easily. I was proud of my Github whenever I see the layout of it is fantastic (at least I think so). In addition, I have a sense of achievement when I see my articles on it.</p>
+<p>What’s more, I have been developing the habit of recording my daily life gradually. I was surprised when I saw my previous experience (I nearly forgot half of them). I used to think that keeping diaries is just a waste of time. Thanks to Github, I found it was quite meaningful.</p>
+<p>Finally, i must mention that my English writing skill is improved. Some of my classmates were confused why I didn’t use my mother tongue to write articles on Github. I wanted to strengthen my ability to write English articles and obviously I wouldn’t lose this chance.</p>
+<h3 id="My-contributor-Justin-and-more"><a href="#My-contributor-Justin-and-more" class="headerlink" title="My contributor Justin and more"></a>My contributor Justin and more</h3><p>I am grateful to Justin for his helping hand. Generally speaking, I could say that I cannot use Github so comfortably without Justin’s help. </p>
+<p>First, he made a linkage to my repository, that means I can push my articles to Github much easier. </p>
+<p>Besides, he helped me to change the theme in Github. The theme in Github can be described as a format you used in your Github. Each format has its own pictures and layout. Justin let me look through some websites to choose a theme l love, (Without his guide, I even couldn’t find the websites to download themes) then he changed the theme by himself. （I just loved a few themes, but he was so patient that he helped me to choose a reliable theme. In addition, it was time-consuming and complex to change a theme, I even didn’t how to change it.）He also taught me many useful skills such as judging which theme was good by looking through the functions it has. I used to judge it only by which picture it had was beautiful.</p>
+<p>Last but not least, I also acquired quite a great amount of useful knowledge about Computer Science from Justin. For example, the way how the Github operates. I used to simply learn how to use Github, but I did never think about what is Github before Justin teaching me.</p>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>I was keen on updating articles on Github, not only i loved recording my daily life, but also I met my friend Justin through Github.</p>
+]]></content>
+      <tags>
+        <tag>Summary</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>My school life--living in the dormitory</title>
+    <url>/2021/06/23/Daily%20School%20Life/</url>
+    <content><![CDATA[<h3 id="My-unique-school-life"><a href="#My-unique-school-life" class="headerlink" title="My unique school life"></a>My unique school life</h3><p>Truth to be told, I lived in school dormitory, that makes my school life quite different compared with other students, since I need to live at school 5 days per week and have breakfast, lunch and dinner at canteen as well. Other students, however, just need to go to school at seven twenty in the morning and go back their home in the 5 p.m.</p>
+<h3 id="Daily-routines"><a href="#Daily-routines" class="headerlink" title="Daily routines"></a>Daily routines</h3><p><em>My daily routine has a little bit difference due to living in the school dorm (SWOT Analysis )</em></p>
+<p> Students in my class are asked to go to the classroom at 0730. Then we have 30 minutes reading time. From 0800, we have lessons at different periods. We have 10 periods at school every day and we’re allowed to go back home at 0500.</p>
+<blockquote>
+<p>Advantages</p>
+</blockquote>
+<p>I get up at six fifty every day in the school dormitory, then I go to the school canteen to have breakfast at seven o’clock. I get up late compared with my classmates since they have to spend time commuting. Even though, they still go to the classroom nearly 0730. In contrast, I arrive at my classroom at 0720 and even have 10 minutes spare time to do the self-study.</p>
+<blockquote>
+<p>Disadvantages</p>
+</blockquote>
+<p>I have no choice but to have terrible meals at school every day. It sometimes makes me feel sick and decreases my efficiency of study.</p>
+<blockquote>
+<p>Opportunities</p>
+</blockquote>
+<p>Only a few students live in the school dorm, that means I may feel isolated from time to time. However, that also means that no one could disturb me to study.</p>
+<p>Besides, the majority of students who live in the dorm are top students, I could learn the way how they study. But it also means the peer pressure is hectic for me.</p>
+<blockquote>
+<p>Threats</p>
+</blockquote>
+<p>The self-study room has a poor signal, that means it’s hard for me to use digital devices sometimes. As an international student, I couldn’t live without them in order to look through websites of different universities.</p>
+<h3 id="My-Feelings"><a href="#My-Feelings" class="headerlink" title="My Feelings"></a>My Feelings</h3><p>One of my friends used to say that it may be wise for me to rent a flat nearby my school. Actually, my parents rented a flat when I was in the junior high. (My mother has retired so she has enough time.)</p>
+<p>But I didn’t think it was be a good choice. Generally speaking, I didn’t want to disturb my mother’s live since she had retired. In addition, I personally reckon that I must get benefits from my school life. </p>
+<p>First, I do self-study in the evening and ask for my teachers’ help if I need it. (My teachers sometimes work overload until evening) During my school life, I have already developed the ability to concentrate myself to do self-study by reading textbooks or searching information online. I suppose I could fit the self-study life in the university rapidly since I have already lived in this life for a long time.</p>
+<p>Second, I can avoid feeling isolated or even depressed though I live alone. Tell you the truth, when I concentrate on studying, I even forget about time. (And I seldom keep in touch with my parents during weekday.)  Since culture gap exists, some international students may feel depressed and homesick when they go abroad to study, which makes them perform badly in their study. Obviously, I was not one of them.</p>
+<p>Third, thanks to my school life, I have developed the habit to make to-do list to manage my time properly. Many students, including me, feeling relaxed and wasting their time at home.<br>As I don’t have any way to do the entertainment, I must study hard at school (and get great exam scores as well).</p>
+<p>Last but not the least, I can do the majority of things in my everyday life now. Actually, many students, especially the Chinese students, having a poor ability to live alone.</p>
+<p>In other word, I enjoy my life living in the school dormitory.</p>
+]]></content>
+      <tags>
+        <tag>School life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Marshmallow Challenge</title>
+    <url>/2021/06/23/Marshmallow%20Challenge/</url>
+    <content><![CDATA[<h3 id="Backgrounds"><a href="#Backgrounds" class="headerlink" title="Backgrounds"></a>Backgrounds</h3><p>Our economic teacher organized a game called Marshmallow Challenge in her class after we finished CAIE international examinations. In this game, students worked in groups (a group had 4 students) to build a tower by using marshmallows and sticks. Our teacher would measure the height of tower and gave students tokens (1 mm&#x3D; 10 tokens). It is worth mentioning that the marshmallows and sticks were charged. The first 1o marshmallows were free, but others were charged by 20 tokens per marshmallows. And each stick needed 10 tokens too.</p>
+<h3 id="What-our-group-did"><a href="#What-our-group-did" class="headerlink" title="What our group did"></a>What our group did</h3><p>When we got marshmallows and sticks, we first measured their length and found that the cost of marshmallows and sticks was quite low compared the tokens you could get if you build a higher tower. As the diagram showed, you just needed three extra marshmallows and six extra sticks to enlarge the tower. (Each stick was 5 cm long, in other words, you could 500  more tokens while only pay for the cost of 120.)</p>
+<p><img src="https://i.loli.net/2021/07/07/BNEoCnbOejASHhZ.jpg" alt="QQ图片20210707193827.jpg"></p>
+<p>So we(members in our group) built the tower together and asked our teacher to measure its height. It was 25.5 cm tall which was the tallest in our class.</p>
+<p>Here is a photo to record our achievement.</p>
+<p><img src="https://i.loli.net/2021/07/07/DmOEVtTZ8AK9fFb.jpg" alt="1624535116434.jpeg"></p>
+<h3 id="Analysis–why-we-could-build-the-tallest-tower"><a href="#Analysis–why-we-could-build-the-tallest-tower" class="headerlink" title="Analysis–why we could build the tallest tower"></a>Analysis–why we could build the tallest tower</h3><blockquote>
+<p>Cooperation</p>
+</blockquote>
+<p>We performed well partially because we cooperated with each other excellently. Each member in our group did tasks positively, we tried our best to think ideas and gave others advice through the efficient communication. For example, one of us advised to build one layer of the tower then combined the tower and its new layer through sticks, it could make sure our tower is solid enough. </p>
+<p>Besides, when we felt that our tower would topple down, we would try our best to reinforce it.</p>
+<p><img src="https://i.loli.net/2021/07/07/bN3QVRc82Mivqw9.jpg" alt="1624535136676.jpeg"></p>
+<blockquote>
+<p>Scientific design</p>
+</blockquote>
+<p>We used a scientific way to design the structure of our tower. Actually, we were asked to draw a poster to introduce our tower. And in this poster, we enumerated some advantages of our design.</p>
+<p>This is our poster.<br><img src="https://i.loli.net/2021/07/07/aDdZXIqvR37AsJW.jpg" alt="IMG_20210707_151924.jpg"></p>
+<p>This is our marshmallow tower.<br><img src="https://i.loli.net/2021/07/07/Fp9HqZ52aXGrsbd.jpg" alt="1624535116434.jpeg"></p>
+<ol>
+<li><p>Triangular structure: We have already mathematic trigonometry knowledge in primary school or secondary school. Triangular structure is the solidest structure.</p>
+</li>
+<li><p>Bearing： We used two bearings to reinforce our tower efficiently. As we know, the base was important for a tower. It would topple down by the turning effect caused by the weight.</p>
+</li>
+</ol>
+<p>(Simple physic knowledge, you could even find it in IGCSE physic book.</p>
+<p><img src="https://i.loli.net/2021/07/07/uIUQ6j2qeR5y1kv.jpg" alt="微信图片_20210707205510.jpg"></p>
+<h3 id="Teachers’-summary–-what-economic-knowledges-we-have-learned-from-this-activity"><a href="#Teachers’-summary–-what-economic-knowledges-we-have-learned-from-this-activity" class="headerlink" title="Teachers’ summary– what economic knowledges we have learned from this activity"></a>Teachers’ summary– what economic knowledges we have learned from this activity</h3><blockquote>
+<p>Fixed cost and variable cost</p>
+</blockquote>
+<p>In this game, the cost of marshmallows and sticks changed as the number of them we used were changed. In other words, the cost of them were variable cost. Meanwhile, the cost of hiring workers (we were workers) to build the tower remained the constant, so it was a kind of fixed cost.</p>
+<blockquote>
+<p>Diminishing marginal benefits</p>
+</blockquote>
+<p>We may find that it is easy to build the first layer of the tower. However, as the tower enlarged, you may find that it is much more difficult to add an extra layer. You needed to add bearings to support the base. In other words, with the same marginal revenue (one layer of the tower means a fixed value of extra height and thus get the tokens). the marginal cost increased the marginal benefits diminished.</p>
+<h3 id="The-prize–-we-were-winners"><a href="#The-prize–-we-were-winners" class="headerlink" title="The prize– we were winners"></a>The prize– we were winners</h3><p>Students who built the tallest tower would get a badge. There were four types of badges (all of them have contents related to Economics on them) to choose. I took a picture of my badge. The “MC&#x3D;MR” stands for marginal cost equals to marginal revenue, which is an economic concept for profit maximization.</p>
+<p><img src="https://i.loli.net/2021/07/07/KfaEBtGCsQ276uV.jpg" alt="微信图片_20210707210722.jpg"></p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Teamwork</tag>
+        <tag>Sciences</tag>
+        <tag>School life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Wonderful experience of laser cutting</title>
+    <url>/2021/06/22/Laser%20Cutting/</url>
+    <content><![CDATA[<h3 id="Backgrounds-why-we-could-do-it-at-school"><a href="#Backgrounds-why-we-could-do-it-at-school" class="headerlink" title="Backgrounds- why we could do it at school"></a>Backgrounds- why we could do it at school</h3><p>Our school has a center called Steam, which aimed to provide different kinds of extra curriculums for students. This center is well-equipped, for example, it has complex laser cutting equipment, that means we have the opportunity to access laser world–laser cutting!</p>
+<h3 id="Activities-what-we-did-here"><a href="#Activities-what-we-did-here" class="headerlink" title="Activities- what we did here"></a>Activities- what we did here</h3><p>We used an application online to model different objects. Then we sent our designs to teachers’ computers and they manipulated laser cutting machines by using a computer to cut wood boards. It is worth mentioning that we could bring our designs back home as souvenirs!</p>
+<h3 id="What-I-did-there"><a href="#What-I-did-there" class="headerlink" title="What I did there"></a>What I did there</h3><p> Actually, I downloaded a picture about The University of Toronto on the Internet in order to make a fridge magnet in the morning. It was so successful that our Physic teacher showed my work in front of my classmates. In the afternoon, since I had already experienced the way to use the modeling application, I designed a box with cover. It took me 2 hours, and I also asked for help during this process.</p>
+<p>My fridge magnet is here below.</p>
+<p><img src="https://i.loli.net/2021/06/22/YXiwg71ICWfBprK.jpg" alt="IMG20210622184440.jpg"></p>
+<p>You could see there are two tiny magnets to help this stick on the walls of fridges.</p>
+<p><img src="https://i.loli.net/2021/06/22/5oxKdktYDe4FXQC.jpg" alt="QQ图片20210622185055.jpg"></p>
+<p>This is the box I made.</p>
+<p><img src="https://i.loli.net/2021/06/22/oU8DjPs9XTdH4nN.jpg" alt="QQ图片20210622190055.jpg"></p>
+<p>It’s clearly there is a cover.</p>
+<p><img src="https://i.loli.net/2021/06/28/gphnj4QHJGlqASZ.jpg" alt="QQ图片20210622190111.jpg"></p>
+<h3 id="The-thing-that-made-me-feel-quite-terrible"><a href="#The-thing-that-made-me-feel-quite-terrible" class="headerlink" title="The thing that made me feel quite terrible."></a>The thing that made me feel quite terrible.</h3><p>To be honest, I put pictures about different top universities in the Canada and UK originally on the box. However, the laser cutting couldn’t draw complicated pictures. As a result, you could only see a little bit pictures on my box!</p>
+<p><img src="https://i.loli.net/2021/06/22/Pu6XIUwHZQsBEtg.jpg" alt="QQ图片20210622191952.jpg"></p>
+<p>I also made some other fridge magnets. They didn’t have clear university pictures as well. Here is an example.</p>
+<p><img src="https://i.loli.net/2021/06/22/RHL71ntXGicPayW.jpg" alt="IMG20210622191656.jpg"></p>
+<h3 id="My-feelings–-what-I-learned-from-today’s-experience"><a href="#My-feelings–-what-I-learned-from-today’s-experience" class="headerlink" title="My feelings– what I learned from today’s experience"></a>My feelings– what I learned from today’s experience</h3><blockquote>
+<p>For my interests</p>
+</blockquote>
+<p>Generally speaking, on the technical level, I had learned the exact way how laser cutting operating. I was surprised that how precise the laser cutting is–the box I made was as good as the handicraft boxes the shops sold. It may boost my comprehension further about engineering–Tell you the truth, I loved handicrafts, and todays’ experience may let me decide to learn engineering in the university. (I decided to learn either Chemistry or Business before.)</p>
+<blockquote>
+<p>For my faults</p>
+</blockquote>
+<p>During today’s event, I didn’t consider about how precise the laser cutting could reach. As a result, I didn’t make a fancy box with different universities’ pictures. (And I wasted some materials as well.) It taught me a lesson that I should think twice before doing something. This may also explain why I made some stupid choices before. I couldn’t change the history, but the thing is that, I could learn how to behave better from my daily life.</p>
+]]></content>
+      <tags>
+        <tag>Sciences</tag>
+        <tag>School life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Personal statement-- my journey of learning Economics</title>
+    <url>/2021/06/21/Learning%20Economics/</url>
+    <content><![CDATA[<h3 id="What-i-did-in-my-childhood"><a href="#What-i-did-in-my-childhood" class="headerlink" title="What i did in my childhood"></a>What i did in my childhood</h3><p>When I was 9, I began to show an interest in accounting and modeling. I guess I loved those mainly because I wanted to save more money. (Actually, I have been developed this habit now.) By learning accounting, I could realize the thing I didn’t need to buy and thus using my money in a more efficient way. By modeling, I could use mathematic knowledge I learned in my classroom to solve practical problems like identifying which scheme would use the lowest money to buy the most goods.</p>
+<h3 id="Backgrounds-for-Chinese-junior-high-students"><a href="#Backgrounds-for-Chinese-junior-high-students" class="headerlink" title="Backgrounds for Chinese junior high students"></a>Backgrounds for Chinese junior high students</h3><p>Since finance is not a compulsory subject in Chinese junior high schools, I had no choice but to give up my dreams of learning it temporarily. The majority of Chinese students, including me, did time-consuming extra-curricular work in order to pass tough examinations to access senior high schools. Despite this, I continued acquiring knowledge about modeling as I thought that it may be useful in Finance. I sometimes did self-study by downloading online books about Matlab during my senior high school years. </p>
+<h3 id="Special-opportunity-for-me-being-an-A-level-student"><a href="#Special-opportunity-for-me-being-an-A-level-student" class="headerlink" title="Special opportunity for me (being an A-level student)"></a>Special opportunity for me (being an A-level student)</h3><p>In Grade 10, I was delighted to be provided with the opportunity to learn Economics at our A-level centre. I have been learning Business knowledge enthusiastically. In order to get excellent final exam results, I study this subject as soon as I finish my dinner every evening.</p>
+<h3 id="My-experience-of-learning-Economics-at-school"><a href="#My-experience-of-learning-Economics-at-school" class="headerlink" title="My experience of learning Economics at school"></a>My experience of learning Economics at school</h3><p>It is worth mentioning that we have two capable economics teachers. Whenever I have problems, they give me a helping hand to solve them and boost my comprehension further. They are like friends accompanying with me when I am in trouble, rather than simply teachers focused on teaching the syllabus. For example, I got an 80 percent mark in a mock exam, which made me feel sad. My economics teacher did not criticize me at that time. Instead, he smiled at me and said What happened?” Later, he helped me correct my mistakes and I have had much better results in exams since that time.</p>
+<h3 id="What-I-did-for-my-further-study"><a href="#What-I-did-for-my-further-study" class="headerlink" title="What I did for my further study"></a>What I did for my further study</h3><p>Then my economics teacher advised me to take part in a business contest called The Future Business Leader of America. My classmates and I achieved China top 18th in this teamwork event. During the event, I was surprised by how little I knew about economic terms and concepts, so I developed the habit of reading economic essays regularly to broaden my horizons. Thanks to the presentation we did there, I realized that my poor communication skills could have an adverse effect on my academic progress. As a result, I have practiced my speaking by giving more presentations in class.</p>
+]]></content>
+      <tags>
+        <tag>Personal statement</tag>
+        <tag>Economics</tag>
+        <tag>School life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Field Trip</title>
+    <url>/2021/06/15/Field%20Trip/</url>
+    <content><![CDATA[<h3 id="Backgrounds"><a href="#Backgrounds" class="headerlink" title="Backgrounds"></a>Backgrounds</h3><p>Our A-level centre organized an extra-curriculum to let all its A-level students live in a countryside for three days. This activity aimed at strengthening our teamwork spirit and experiencing lives as volunteers, so our countryside life included not only busy work, but also relaxing entertainment.</p>
+<h3 id="Busy-work"><a href="#Busy-work" class="headerlink" title="Busy work"></a>Busy work</h3><p>We did a lot of meaningful activities, such as growing scindapsus aureus, making dumplings, removing weeds, using grass to make shoes and cutting branches.</p>
+<p>Obviously, all of them above required teamwork, but the majority of them just needed us to work as a team. Each student did the same work in these activities. In other words, everyone didn’t need to specialize in a particular task and did their specific role.</p>
+<p>Therefore, I will introduce another activity we did there–making a kind of Chinese traditional drink–soybean milk.</p>
+<blockquote>
+<p>Making soybean milk</p>
+</blockquote>
+<p>The step of making soybean milk is below:</p>
+<p>1.Put soybeans and water in a stone mill.</p>
+<p>2.Rotate the stone mill horizontally by holding a handle on it.</p>
+<p>3.Collect the soybean milk by using a brush.</p>
+<p>4.Put the soybean milk into the stone mill again. Then continues the steps 2 and 3 above.</p>
+<p>Five or six students needed to work as a group to make the soybean milk. Each student had its own task. One student needed to put soybeans or soybean milk into the mill, one student needed to collect soybean milk, one student needed to wash the mill, other student needed to rotate the mill.</p>
+<p>You can see that it’s impossible for us to make soybean milk unless each student does their own task well. I was interested in making soybean milk, (mainly because I loved drinking it)<br>so I chose the hardest work–rotating the mill.</p>
+<p>And I was the leader of my group as well. With effective communications (and my strength to rotate the mill), our group made the soybean milk efficiently.</p>
+<p>Here is a photo:</p>
+<p><img src="https://i.loli.net/2021/06/26/YIfW4gzGxQtJk1q.jpg" alt="微信图片_20210626170545.jpg"></p>
+<blockquote>
+<p>Entertainment</p>
+</blockquote>
+<p>We had also watched a firework show. In addition, we had a talent show in a theatre. I think it couldn’t be seen as unforgettable experience, so I didn’t introduce them here.</p>
+<h3 id="My-feelings–what-I-have-learned-from-this-field-trip"><a href="#My-feelings–what-I-have-learned-from-this-field-trip" class="headerlink" title="My feelings–what I have learned from this field trip."></a>My feelings–what I have learned from this field trip.</h3><p>Generally speaking, l had learned the spirit of teamwork during those three days. We worked together, ate together, relaxed together and even slept together! We sometimes shared technique skills of doing busy work like making soybean milk in order to save effort, and we always cooperated with each other to work efficiently. We sometimes argued with each other since we had our own ideas, but we accepted each other gradually through the three-day-long work. As classmates, I believed that our common experience would boost us to care each other in the future.</p>
+<p>In addition, we have also mastered skills that we could only learn in the countryside, like growing scindapsus aureus. We realized how difficult the farmers were and thus saved grains and protect plants.</p>
+<p>In other words, a meaningful memory.</p>
+]]></content>
+      <tags>
+        <tag>Extra curriculum</tag>
+        <tag>Teamwork</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>The day in the laboratory</title>
+    <url>/2021/06/11/Day%20in%20the%20laboratory/</url>
+    <content><![CDATA[<h3 id="Backgrounds"><a href="#Backgrounds" class="headerlink" title="Backgrounds"></a>Backgrounds</h3><p>After finishing CAIE international examinations, our A-level center held an extra-curriculum. It asked students’ parents to provide internship and each student could choose one job to practice. Originally, I would like to work in a bank for one day. However, the opportunities to go there were limited so I made my second option—going to a laboratory to do chemical experiments.</p>
+<p>###What we did there</p>
+<blockquote>
+<p>In the morning</p>
+</blockquote>
+<p>At first, we looked around a company (The laboratory was in the company). From a staff in it, we got to know what this company did. Generally speaking, it was a company for graduates from the university to do experiments, they applied for patents and the company tried to produce and sell products related to their patents. In other words, this company was a business incubator for innovation.</p>
+<p>The stuff introduced three projects they currently did, including a new kind of insulator (which is used to replace air conditioners in rural areas), a new kind of conductors (which is used in the digital devices, I will introduce it later) and a modern technique to produce masks (by using electrostatic force).</p>
+<blockquote>
+<p>In the afternoon</p>
+</blockquote>
+<p>After lunch, we chose the topic we were interested in and did the experiment on our own. I chose to make the new kind of conductor with my friends.</p>
+<h3 id="The-conductor-we-made–-why-it-was-uncommon"><a href="#The-conductor-we-made–-why-it-was-uncommon" class="headerlink" title="The conductor we made– why it was uncommon"></a>The conductor we made– why it was uncommon</h3><blockquote>
+<p>The purpose of it was uncommon</p>
+</blockquote>
+<p>Have you ever thought about using conductors in the digital devices like mobile phones? It may be ridiculous if you hear of this idea for the first time. You may think the use of conductor make the digital devices hotter. Truth to be told, I had the same idea as well at first. Then the staffs (actually two graduates) told us they would use the conductor to combine the microprocessor (the thermal energy comes from here) and the device to release thermal energy. In traditional digital devices, only air conducts energy from microprocessor to cooling equipment, but air is an insulator to conduct thermal energy. Obviously, this innovation can make thermal energy release more rapidly and thus protecting the digital devices.</p>
+<blockquote>
+<p>The reaction of it was uncommon</p>
+</blockquote>
+<p>They use carboxylic acid and aluminium oxides as reactants (also need a kind of catalyst). This reaction was uncommon because its raw materials were cheap and they were not toxic or poisonous. It is worth mentioning that this reaction happens in room temperature rapidly and the product is in liquid state–which means it could be shaped easily.</p>
+<h3 id="Our-cooperation-during-the-experiment"><a href="#Our-cooperation-during-the-experiment" class="headerlink" title="Our cooperation during the experiment"></a>Our cooperation during the experiment</h3><p>You can see our team have six students.</p>
+<p><img src="https://i.loli.net/2021/07/01/8BV2rbuTPHCY9it.jpg" alt="anqku-9h1b1.jpg"></p>
+<p>According to the experiment plan, we split into three groups A1,A2,B1. And the two graduates were in group B2. Group A needed to do the reaction without the Al<code>2</code>O<code>3</code> while group B needs to use both reactants and aluminium oxides.</p>
+<p>With the help of precise equipment, we discovered that it was important to use aluminium oxides. Without it, the products we made were still poor conductors.</p>
+<p>However, I still didn’t know how to explain this phenomenon. The two graduates simply said this reaction was a kind of additional reaction. Anyway, this experiment boosted my interest of learning sciences, especially Physics and Chemistry further.</p>
+<h3 id="The-difficulty-we-met"><a href="#The-difficulty-we-met" class="headerlink" title="The difficulty we met"></a>The difficulty we met</h3><p>There were too many difficulties during the experiment. For example, it was too time-consuming to use precise equipment like digital balance to weigh the mass of reactants. One kind of reactants, for example, carboxylic acid, is a kind of ropy liquid. When you add it to the container on the balance, it may stick on the wall of container.</p>
+<p>You could see how difficult we weighed the reactants from this picture.</p>
+<p><img src="https://i.loli.net/2021/07/01/1i4q3wDuJVHNIsS.jpg" alt="ad5ns-tvixk.jpg"></p>
+<p>Besides, the reaction was vigorous when you added the catalyst. We needed to stir the reactants by a glass rod to make sure the product was uniform.</p>
+<h3 id="Our-products-and-my-feelings"><a href="#Our-products-and-my-feelings" class="headerlink" title="Our products and my feelings"></a>Our products and my feelings</h3><p>This is the product our group A1 made. I am proud of our successful product.</p>
+<p><img src="https://i.loli.net/2021/07/01/Penu7TzAWpCxjLb.jpg" alt="4d10cdecbb8439fec44f61a415d6bb8.jpg"></p>
+<p><img src="https://i.loli.net/2021/07/01/4m8TSWVNCaG7lbZ.jpg" alt="IMG20210701135431.jpg"></p>
+<p>I think it is meaningful to do the experiment in a laboratory today. First, I got to know what I would do in an experiment. This brought benefits not only for my practical A-level Chemistry examination but also let me know what I would do if I decide to be a scientist in the future. In other words, my today’s experience helped me to decide what subject I would learn in the university. Besides, we developed the skill of cooperation（for example, ways to communicate efficiently with each other） and strengthened the fundamental scientific skills(organic chemistry), </p>
+<p>Last but not least, I also realized how weak my ability to do the practical reaction. I spent much more time to do this experiment and it taught me a lesson that I should practice and do more experiments by myself instead of simply learning theorical knowledge.</p>
+]]></content>
+      <tags>
+        <tag>Extra curriculum</tag>
+        <tag>Sciences</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FBLA (Economics)</title>
+    <url>/2021/05/01/FBLA%20Economics/</url>
+    <content><![CDATA[<h3 id="Backgrounds"><a href="#Backgrounds" class="headerlink" title="Backgrounds"></a>Backgrounds</h3><p>FBLA is the largest student charity organization with the longest history around the world. It holds different types of contests related to Business every year. Because of Covid-19, FBLA China only had the opportunity to hold one offline contest– Beijing Economics National Contest (Beijing is the capital of China). This article is written to share my experience of this contest.</p>
+<blockquote>
+<p>Since I have already mentioned a lot about how I prepared for FBLA, I will not write any more about it in this article.</p>
+</blockquote>
+<h3 id="My-feelings-about-offline-online-contests"><a href="#My-feelings-about-offline-online-contests" class="headerlink" title="My feelings about offline&#x2F;online contests"></a>My feelings about offline&#x2F;online contests</h3><p>Tell you the truth, offline activities make me feel much more excited than online activities. During the offline activities, I could immerse in the academic atmosphere by talking with others face-to-face in a formal place like meeting room. Before taking part into this offline Beijing National Economics FBLA contest, I have already taken part in an online Business National FBLA Contest. Generally speaking, the event was boring. It was hard for you to meet competitive students all over the provinces in China. The application used for preparing online events even had bugs at that time. For the talent show, the FBLA<br>official had no choice but to ask students upload their talent show videos and played videos.</p>
+<h3 id="Contests"><a href="#Contests" class="headerlink" title="Contests"></a>Contests</h3><p>It had three parts, Economic fundamentals (multiple economics choices), further comprehension (reading reference to answer questions), thinking and innovation (teamwork to answer questions). You could take part in an academic meeting (community of inquiry) if you apply for it in advance.</p>
+<p>However, though I have prepared a lot, I still couldn’t get awards. (I got 89 in fundamental and anyone who reached 90 was national top 20th. Besides, the situation was similar in the part further comprehension.)</p>
+<p><img src="https://i.loli.net/2021/07/04/pFZDcETxu32ndjH.png" alt="image.png"></p>
+<blockquote>
+<p>Analysis–why I couldn’t get top 20th awards.</p>
+</blockquote>
+<p>I have summarized some reasons after this contest. First, I was not good at English compared with other students in Grade 11. I was only in Grade 10, and it was hard to find students in Grade 10 to get national top 20th award. Besides, although I couldn’t get top 20th, I still got great scores, they showed my preparation was meaningful. (Actually, I got the greatest scores in my school and still exceeded the majority of students at that time.)<br>For teamwork to answer questions, I was poor in speaking and that was my fault. It must let our group get fewer scores. In addition, a few members in our group were not capable. </p>
+<h3 id="My-future-plan-and-feelings-about-this-year’s-FBLA-Economic-Contest"><a href="#My-future-plan-and-feelings-about-this-year’s-FBLA-Economic-Contest" class="headerlink" title="My future plan and feelings about this year’s FBLA Economic Contest"></a>My future plan and feelings about this year’s FBLA Economic Contest</h3><blockquote>
+<p>My future plan </p>
+</blockquote>
+<p>I still have many chances in the future. After all, I am only a Grade 10 student. I only need to get a few more scores to reach top 20th so I will take part in this contest in the future. By the way, in the next year, students in Grade 10 would be busy applying for universities. In other words, they won’t take part in the FBLA in the next year. And I was nearly the top student in Grade 10 so I want to get top 5th in the next year, not simply an award for top 20th. Last but not least, my preparation this year could also be used in the next year.</p>
+<blockquote>
+<p>My feelings</p>
+</blockquote>
+<p>Obviously, I felt regretted and sad. “Why I couldn’t get one extra point to get national top 20th?” I had this thought from time to time. Anyway, I have experienced a lot during the FBLA Economics Contest. I have met a lot of competitive students and discussed with each other about our school lives and hobbies. We came from different cities so we also talked about them. In other words, I not only comprehended Economics further but also felt relaxed during the contest.</p>
+<h3 id="Extra-event-Community-of-inquiry"><a href="#Extra-event-Community-of-inquiry" class="headerlink" title="Extra event: Community of inquiry"></a>Extra event: Community of inquiry</h3><p>I applied for this event in advance and got the opportunity to take part in it luckily. It was an event that we discussed with each other to show our ideas about a given topic. This year, there were two topics A and B.</p>
+<blockquote>
+<p>You could see the two topics here according to the FBLA official guide.</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/04/IBVZpzMNu4lbO6E.png" alt="image.png"></p>
+<p>And I chose the topic B.</p>
+<blockquote>
+<p>Further introduction about Community of inquiry</p>
+</blockquote>
+<ol>
+<li><p>Each topic had 5 teams. Each team had at most 10 members. (And our team had 7 members since the other three were absent) </p>
+</li>
+<li><p>There were three parts during the community of inquiry. In part A, each team had to make a powerpoint to express their ideas to experts. In part B, each team needed to choose a representative to ask other group questions about the powerpoint they made. In part C, each team needed to choose a representative to answer questions from experts.</p>
+</li>
+<li><p>Each part will be judged. The students who performed well in any part will get the award of outstanding contributor.</p>
+</li>
+<li><p>Each team had one hour to discuss freely and one hour to prepare for the powerpoint. You were allowed to speak both English and Chinese during the discussion but you couldn’t use Chinese in the powerpoint.</p>
+</li>
+</ol>
+<blockquote>
+<p>What our team did to prepare for the powerpoint in part A</p>
+</blockquote>
+<p>Firstly, we discussed a lot and tried to find our common idea. Our topic was about monopoly in big technology corporations. We originally decided to show advantages and disadvantages of it. Then we found it was time-consuming because we only had three minutes to explain in part A. Next, we only enumerated the disadvantages of it. And made the entire powerpoint finally.</p>
+<p>There were two stories during this process. First, when we decided to only show only disadvantages of monopoly in part A, our representative of part A was a bit worried. He said he was capable enough to show all advantages and disadvantages of monopoly. (He was right, he did well in speaking English and his TOEFL score was 115.) We thought the experts may not get the points from our powerpoint if he talked too much. But he still tried to mention advantages of monopoly and failed. Anyway, we still thanked for his effort and he performed well finally. From this experience, I knew we should know how to accept and reject.<br>Besides, when we made the powerpoint, we were surprised to the requirement of the powerpoint–the length-width ratio of the powerpoint should be 17:4. (Because the screen had this length-width ratio.) That was so tough to make a powerpoint with this length-width ratio. You nearly saw nothing when you tried to preview it with your own laptop.</p>
+<p>In order to prepare for the powerpoint, the members of our team ate nothing for dinner! </p>
+<blockquote>
+<p>What I did in part C</p>
+</blockquote>
+<p>I was the representative for part C in our group. It was a tough part since the experts would ask you questions and you didn’t know the questions in advance. To prepare for it,(Actually, it was hard to prepare for it.）I reviewed a lot of knowledge about the monopoly and even drew a mind map.</p>
+<p>During the part C, the expert asked us how to prevent monopoly. I answered this question about imposing anti-trust laws. I used an example, Standard Oil Company, which was a monopoly company in eighteen seventy and it was split into 34 regional oil companies by the US government. </p>
+<p>Finally I got the award of Outstanding Contributor. I felt proud of it.</p>
+<p><img src="https://i.loli.net/2021/07/04/7jsEyWS5fm1ePHT.jpg" alt="微信图片_20210703203249.jpg"></p>
+<blockquote>
+<p>My feelings about being a representative </p>
+</blockquote>
+<p>I originally thought I couldn’t be a representative for our group. I was poor in speaking English and all members were in Grade 11 except me. However, my group members encouraged me to do it, and I performed not badly!</p>
+<p>Of course when I sat down in the seat on the stage, I felt nervous. When the expert asked us questions, I nearly forgot all economic knowledge. Anyway, I tried to calm down and show my own ideas at that time. I tried to make me feel relaxed by paying my attention to other things (distracting my attention to being an outstanding contributor). Tell you the truth, on the stage, I just thought the lamplight towards the stage was quite bright. And when P immersed in that atmosphere, I didn’t feel nervous any more.<br>This was quite a memorable experience, I strengthened my skills of speaking English, met many new friends and learned how to analyze practical questions by using Economic knowledge I had learned in class.</p>
+<p>Here is a photo about our team at that time. I will remember this unforgettable experience. I hope I will meet them in the future although it is lowly possible.</p>
+<p><img src="https://i.loli.net/2021/07/04/KIVl9f3MopBUugi.jpg" alt="微信图片_20210704145234.jpg"></p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Extra curriculum</tag>
+        <tag>Teamwork</tag>
+        <tag>Contest</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Try your best to finish deadlines--My journey of CTB</title>
+    <url>/2021/03/10/CTB/</url>
+    <content><![CDATA[<h3 id="What-is-CTB"><a href="#What-is-CTB" class="headerlink" title="What is CTB"></a>What is CTB</h3><p>China Thinks Big, with the initial CTB, is a contest which encourages students in Grade 10-12 to think independently or even innovate in the daily life. Each candidate needs to find 3-9 partners to be a team. The team has to choose two to three specific subjects and study in this field. It is worth mentioning that the team needs to submit essays and&#x2F;or videos to be judged by experts every week.</p>
+<h3 id="Brief-introduction-of-my-team-and-me-in-CTB"><a href="#Brief-introduction-of-my-team-and-me-in-CTB" class="headerlink" title="Brief introduction of my team and me in CTB"></a>Brief introduction of my team and me in CTB</h3><blockquote>
+<p>What I did in my team</p>
+</blockquote>
+<p>Our group had 7 members, all members except me were girls. CTB official guide asked us to choose a role in our team. We had 2 writers, 2 people to analyze, 2 researchers and a team leader. I was a researcher, that means I mainly needed to find bibliographies and reference on the Internet or in the libraries.</p>
+<blockquote>
+<p>Why I chose this role</p>
+</blockquote>
+<p>I seldom used my computer to study efficiently before CTB. I wanted to strengthen my abilities to search information by CTB.</p>
+<blockquote>
+<p>Which topic did our team choose to do</p>
+</blockquote>
+<p>Our team chose social science as the main subject, our topic was “The phenomenon that more youngsters have insomnia, why it happens and how to avoid it “</p>
+<blockquote>
+<p>Why I chose our team</p>
+</blockquote>
+<p>First, the majority of my members were my responsible classmates. We could have convenient communications and efficient teamwork to do the task.</p>
+<p>Besides, I was a teenager, and our topic was to solve the problem of insomnia in teenagers. In my opinion, insomnia is a serious problem among the youngsters today, it will make us too tired to finish our work thus decreasing the productivity. I wanted to solve it.</p>
+<h3 id="Special-events"><a href="#Special-events" class="headerlink" title="Special events"></a>Special events</h3><blockquote>
+<p>Handing out questionnaires </p>
+</blockquote>
+<p>In order to find precise data about the percentage of Chinese senior high students have insomnia, our team decided to make a questionnaire. We thought twice and finally made one with 10-30 multiple choices (students with insomnia needed to answer extra questions so it is a range of number of questions) since no one would like to answer statement questions.</p>
+<p>Then we handed out it in our school, which had 3000 students, we got nearly 2300 effective questionnaires.</p>
+<h4 id="A-funny-story-during-questionnaire-process"><a href="#A-funny-story-during-questionnaire-process" class="headerlink" title="A funny story during questionnaire process"></a>A funny story during questionnaire process</h4><p>Our team leader printed sentences on the Internet to encourage insomnia people on the insomnia, each questionnaire has its own sentence. </p>
+<p>I realized that we could reach interest innovation just in our daily life!</p>
+<blockquote>
+<p>Video </p>
+</blockquote>
+<p>As we performed well in online contest (I will mention it after this section) we reached the final national contest.<br>Before entering it, each team had to send a video to the official, it would be judged by experts and professors.<br>I made a brief presentation in the video as I read many references about insomnia, that means I could say some academic terms to show we are capable enough to do research.</p>
+<h3 id="Hard-challenges-from-CTB–-frequent-deadlines"><a href="#Hard-challenges-from-CTB–-frequent-deadlines" class="headerlink" title="Hard challenges from CTB– frequent deadlines"></a>Hard challenges from CTB– frequent deadlines</h3><p>If you ask me what impressed me a lot during the CTB online course, i must reply you about the frequent deadlines. We submitted essays every week since deadline was once per week. You would be disqualified if you miss any deadline. One group of my classmates were even be disqualified by that!</p>
+<blockquote>
+<p>What I have learned from it</p>
+</blockquote>
+<p>I should obey all rules once they are told to me. I once think I could miss some deadlines until my classmates were disqualified.</p>
+<p>In addition, we should finish our duty on time. </p>
+<h3 id="Achievement"><a href="#Achievement" class="headerlink" title="Achievement"></a>Achievement</h3><p>This certificate shows we were excellent during online CTB contest and we had the chance to do the presentation in the national contest.</p>
+<p><img src="https://i.loli.net/2021/06/23/Oymjhp5Mx8TgeQi.jpg" alt="32e635de04034a42a5f07cbbab393ca7-0001.jpg"></p>
+<h3 id="A-quite-big-challenge-to-us–national-contest"><a href="#A-quite-big-challenge-to-us–national-contest" class="headerlink" title="A quite big challenge to us–national contest"></a>A quite big challenge to us–national contest</h3><blockquote>
+<p>Backgrounds</p>
+</blockquote>
+<p>All competitive groups which finished all deadlines could<br>access in the national contest.</p>
+<p>That means unlike other contests, all teams here have responsible and adequate members, we have much more competitors compared with other contests.</p>
+<blockquote>
+<p>What we did there</p>
+</blockquote>
+<p>Each team needed to submit a video about their topic and feelings of taking part into CTB.</p>
+<p>Besides, each team ought to choose 3-4 members to prepare for an online presentation. It would be judged by experts and professors.<br>But i needed to prepare for IELTS, that means I didn’t have enough spare time to do the presentation.</p>
+<blockquote>
+<p>Final score</p>
+</blockquote>
+<p>Actually, we didn’t get award in the national CTB contest. Absolutely we felt sad<br>for a while at that time, but then we remembered the interesting and meaningful experience during our CTB journey. We all felt happy at last.</p>
+<p>###What I have learned from CTB</p>
+<p>First, I knew how to communicate with others efficiently. We preferred face-to-face communication since we could identify whether or not others listen to others by eye contact. Previously, I tended to chat with others by social media, but I didn’t think if my communication was efficient at all!</p>
+<p>Second, I knew how to manage my time wisely. CTB official gave us tasks every week during online contest, which took place between September and December, 2020. At that time, we had to deal with different school subjects. I developed the habit to make a to-do list at that time.</p>
+<p>Third, I met different friends and widen my horizons there. Two girls were not my classmates, they were my classmates’ friends. They were good at different tasks, one was keen on analyzing, and the other did well in searching information. We undertook different tasks by efficient communication. In other words, we developed the ability to do the teamwork.</p>
+<p>Finally, as the researcher, I read different books about insomnia, the most impressive one was The Sleep Revolution, with the author Arianna Huffington. During this process, I develop my skills of reading and extracting information. Besides, l acquired knowledges of avoiding insomnia. I used to be insomnia since the peer pressure was hectic, but I was much better now. My studying efficiency also increased and I got much higher scores at school than before.</p>
+]]></content>
+      <tags>
+        <tag>Extra curriculum</tag>
+        <tag>Teamwork</tag>
+        <tag>Sciences</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FBLA（Business Plan topic）</title>
+    <url>/2021/02/20/FBLA%20Business%20Plan/</url>
+    <content><![CDATA[<blockquote>
+<p> an unforgettable experience for me</p>
+</blockquote>
+<h3 id="Backgrounds-What-is-FBLA"><a href="#Backgrounds-What-is-FBLA" class="headerlink" title="Backgrounds-What is FBLA"></a>Backgrounds-What is FBLA</h3><p>The Future Business Leader of America, with the initial FBLA, is an international contest of business and economics. It is the biggest charity organization of students all around the world, with over 100 years history. Each year, FBLA had its own contest, it would include different parts, such as Business Plan, Entrepreneurship and Economics.</p>
+<h3 id="What-I-did-in-FBLA"><a href="#What-I-did-in-FBLA" class="headerlink" title="What I did in FBLA"></a>What I did in FBLA</h3><blockquote>
+<p>Exam at school</p>
+</blockquote>
+<p>Students who wanted to take part in FBLA needed to do an exam. The questions in this exam were depends on the topic you chosen. I chose the topic Business Plan. The top three students at school would get the opportunity to access national FBLA exam.</p>
+<p>I prepared a lot (I would mention it after this section) and got great scores. (Not only I could access national contest, but also the top 2% in the eastern China competition area.)</p>
+<blockquote>
+<p>National exam</p>
+</blockquote>
+<p>In national exam, each team would get question in advance to prepare for a presentation. It is worth mentioning that each team needed to use a powerpoint to support their presentation.</p>
+<p>According to the official guide, the contents of powerpoint must contain business plans of setting up three different companies. Our team had three members, so we decided to split the powerpoint into three and each one made one business plan of his own company.</p>
+<h3 id="Mistakes-during-our-presentation"><a href="#Mistakes-during-our-presentation" class="headerlink" title="Mistakes during our presentation."></a>Mistakes during our presentation.</h3><p>Truth to be told, because of Covid-19, our national FBLA contest was held online. When we did the presentation, because of the problem of the Internet, our powerpoint didn’t slide smoothly. </p>
+<p>At that time, we were nervous. Then we calmed down and still performed well! </p>
+<h3 id="Final-score"><a href="#Final-score" class="headerlink" title="Final score"></a>Final score</h3><p>We achieved top 18th in China.</p>
+<p>This is the certificate.</p>
+<p><img src="https://i.loli.net/2021/06/28/9uT7efsM8OlaK3g.jpg" alt="QQ图片20210605153532.jpg"></p>
+<p>This is the medal. (Students from top 11th to top 20th all got this medal.)</p>
+<p><img src="https://i.loli.net/2021/07/04/3UjmQcNLk2e1i6q.jpg" alt="微信图片_20210704120157.jpg"></p>
+<h3 id="What-our-team-did-to-prepare-for-national-exam"><a href="#What-our-team-did-to-prepare-for-national-exam" class="headerlink" title="What our team did to prepare for national exam"></a>What our team did to prepare for national exam</h3><p>We were classmates and thus we could do the face-to-face communication every day. At first, we discussed with each other to make sure our companies were different types. Then we asked for our economic teachers’ help. (We had a FBLA club at school.) She advised our companies could have relationship between each other.</p>
+<p>After a long-time discussion, we chose to write business plan of these three types companies: A company to produce clothes, a company to hold events and a company to combine sole traders&#x2F;retailors and producers. The process of discussion was tough since we had different ideas. But generally speaking, we showed respect with each other.</p>
+<p>When we finished our powerpoint, we also send it to our teacher and she helped us to change, delete or add contents. For example, one of our team members, Judy, she deleted a lot of contents as we had only totally seven minutes to do the presentation.</p>
+<p>Last but not the least, we repeated reading our powerpoint together for many times to make sure we got high marks for coherence.</p>
+<h3 id="What-I-did-to-prepare-for-FBLA"><a href="#What-I-did-to-prepare-for-FBLA" class="headerlink" title="What I did to prepare for FBLA"></a>What I did to prepare for FBLA</h3><blockquote>
+<p>To get high marks to access national contest</p>
+</blockquote>
+<p>Each student got an official guide at that time. There were many past paper questions and I did the majority of them. I also review our economic books to master the concepts of economics.</p>
+<blockquote>
+<p>To perform better in presentation</p>
+</blockquote>
+<p>Tell you the truth, I was poor in speaking English, (By the way, my partners did well in it.) so I didn’t want to fall behind. I practiced a lot in my spare time. For example, I couldn’t speak complex years or percentages fluently at that time, so I repeated such numbers and even made hints on the powerpoint to avoid saying wrong words.</p>
+<h3 id="My-feelings-to-take-part-in-FBLA"><a href="#My-feelings-to-take-part-in-FBLA" class="headerlink" title="My feelings to take part in FBLA"></a>My feelings to take part in FBLA</h3><p>I loved FBLA, mainly because I have learned a lot from FBLA. As I mentioned before, I strengthen my knowledge of economics&#x2F;business and English speaking ability.</p>
+<p>During the process of preparation, I also learned how to do efficient self-study. For example, I made to-do list or forced me to read at least 10 pages official guide. I used to play with my phone when I do self-study. Obviously, mobile phone distracted my attention. Thanks to my experience of attending FBLA, my productivity had increased a lot.</p>
+<p>In addition, I learned to manage my time properly at that time. I guess I developed this habit because I was really busy at that time. The hectic pressure forced me to manage my time wisely.</p>
+]]></content>
+      <tags>
+        <tag>Economics</tag>
+        <tag>Teamwork</tag>
+        <tag>Contest</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>My experience of UKMT in Grade 10</title>
+    <url>/2020/10/20/UKMT/</url>
+    <content><![CDATA[<h3 id="Backgrounds"><a href="#Backgrounds" class="headerlink" title="Backgrounds"></a>Backgrounds</h3><p>UKMT is the initial of United Kingdom Mathematics Trust, which is a Mathematic Contest aimed at encouraging students to practice and analyze Mathematics. 30 multiple choices are needed to be answered in UKMT.</p>
+<h3 id="My-reasons-to-attend-it-and-feelings"><a href="#My-reasons-to-attend-it-and-feelings" class="headerlink" title="My reasons to attend it and feelings"></a>My reasons to attend it and feelings</h3><p>I am keen on learning Mathematics and doing well in analyzing and tackling practical problems in terms of Mathematics. When I heard of UKMT, I reckoned that it was a good opportunity for me to strengthen my fundamental mathematic skills in order to learn better in the future for further Mathematics. In addition to show my abilities in Mathematic field, I also wanted to learn about the style of Mathematic questions in countries except China. Tell you the truth, I have never done such kinds of questions since I was getting used to finish questions from China. Thanks to UKMT and my efforts, I got to know structures of exams in other countries.    </p>
+<p>I also found an interesting point through my experience of UKMT: Unlike exams in China, a student would lose points if he writes wrong answer in multiple choices in many foreign Mathematic exams. That means he couldn’t guess answers.</p>
+<h3 id="My-preparation-of-UKMT-and-the-final-result"><a href="#My-preparation-of-UKMT-and-the-final-result" class="headerlink" title="My preparation of UKMT and the final result"></a>My preparation of UKMT and the final result</h3><p>In order to achieved my goal of getting gold certificate, I previewed past papers and chose papers from 2015 to 2019 to practice, which was a process that quite brought benefits to me. I learned not only some specific ways to solve problems, but also the quality of being diligent.  I wanted to give up from time to time when I prepared it. However, I insisted in completing it since it was my first time to contact foreign Mathematics questions (I really would like to achieve something in this field like characteristics of analyzing or certificates of contests, so I spent one hour doing related questions during that period)</p>
+<p>I finally achieved gold certificate. (I got 103 out of 125, while the requirement for gold certificate was getting 86 points.)<br>However, I did some mistakes because I was daydreaming at that time, I wish I could do it in 2021 and get higher scores (maybe 120, nearly full marks)<br><img src="https://i.loli.net/2021/06/21/cMUopT9nS5F4wY3.jpg" alt="0001.jpg"></p>
+]]></content>
+      <tags>
+        <tag>Contest</tag>
+        <tag>Mathematics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>My Dragon Boat Race experience</title>
+    <url>/2020/10/15/Dragon%20Boat%20Race/</url>
+    <content><![CDATA[<h3 id="Backgrounds–what-is-the-dragon-boat-race"><a href="#Backgrounds–what-is-the-dragon-boat-race" class="headerlink" title="Backgrounds–what is the dragon boat race"></a>Backgrounds–what is the dragon boat race</h3><p>Dragon boat race is a kind of traditional race in China. In a dragon boat race, team and team compete with each other and each team requires 22 paddlers and a drummer.  Dragon boat is a boat looks like a dragon, I guess it is very famous among the Chinese people because dragon is the spirit of brave, victory and other positive characteristics (Totally different compared with Western culture, Western people usually think dragon is evil). There are so many evidences to show the Chinese people love dragon boat. There is a traditional festival called Dragon Boat Festival in China, students have even a three-day-holiday at that time. In addition, the Chinese people always call themselves the descendants of the dragon.</p>
+<h3 id="Why-I-could-get-the-opportunity-to-take-part-in-the-dragon-boat-race"><a href="#Why-I-could-get-the-opportunity-to-take-part-in-the-dragon-boat-race" class="headerlink" title="Why I could get the opportunity to take part in the dragon boat race"></a>Why I could get the opportunity to take part in the dragon boat race</h3><p>Since dragon boat is a part of Chinese traditional culture, Nanjing (my city) Education Sector held an race to encourage teenagers to experience dragon boat. There were five teams in our Nanjing senior high school group. I took part in this race, mainly because I wanted to experience the dragon boat race. As I have mentioned before, a dragon boat team needs 22 paddlers and a drummer. In other words, I couldn’t do that unless I took part in this race.</p>
+<h3 id="What-we-did-to-prepare-for-the-race"><a href="#What-we-did-to-prepare-for-the-race" class="headerlink" title="What we did to prepare for the race"></a>What we did to prepare for the race</h3><p>We did extra curriculum about using paddles in our spare time. All such curriculum were organized by our school. It held nearly 14 lessons and each student had to attend at least 10 of them. (One lesson was nearly one hour.) During the lesson, we learned how to use proper ways to hold paddles at first. Then we did the exercise about the most important part: coordination. We needed to use the paddles with the same frequency so that our force could be maximum. This process was really tough since individuals had their own styles (because they had different body sizes) to use paddles. Whenever I hold the paddle, I paid my quality attention to others so I could adjust their way of using paddles. The process was exhausting, I always felt overwhelmed after training. Anyway, I enjoyed this process of teamwork.</p>
+<h3 id="The-situation-of-race-and-our-final-scores"><a href="#The-situation-of-race-and-our-final-scores" class="headerlink" title="The situation of race and our final scores"></a>The situation of race and our final scores</h3><p>Obviously, we paid more attention during the race. All of us were hard-working enough to use the paddles and the sprays spattered in all directions. The noise of sprays was even louder than the sound from the drummer. I felt that we would have different frequency of using paddles because we couldn’t hear the directives from the drummer during the race. That may make us lose this game so I said “one, two, one, two” to make our coordination better.</p>
+<p>Finally, we won the first prize. The Nanjing Education Sector gave us certificate and medals which made us feel pride.</p>
+<p><img src="https://i.loli.net/2021/07/01/bfXOEnQWwy1kPLs.jpg" alt="微信图片_20210701225655.jpg"></p>
+<h3 id="My-feelings"><a href="#My-feelings" class="headerlink" title="My feelings"></a>My feelings</h3><p>I thought this experience was meaningful, not only we got the first prize, but also the process of coordination and teamwork. As classmates, we had common experience of practicing together, which helped me to make friends. We developed the skills of cooperation by practicing together for a long time, which boosted our further cooperation of doing the project at school in the future.</p>
+<p>In addition, I kept fit by taking part in this race. As a kind of water sports, it brought benefits to me. Tell you the truth, I was slightly overweight. And my body was much stronger after the training. Dragon boat culture is also a kind of traditional culture, I was glad to promote it to the public.</p>
+<blockquote>
+<p>By the way, the teacher said it was clever enough for me to say numbers”1” and “2” as directives during the race. I was surprised that he said I had the gift to be a leader. Actually, this event would be a starter for me to be a leader in the future.</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>Extra curriculum</tag>
+        <tag>Teamwork</tag>
+        <tag>Leadership</tag>
+        <tag>Sports</tag>
+      </tags>
+  </entry>
+</search>

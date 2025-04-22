@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>WarlockAlan</title>
+  
+  <subtitle>My crucible !</subtitle>
+  <link href="https://warlockalan.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://warlockalan.github.io/"/>
+  <updated>2025-04-22T08:40:01.516Z</updated>
+  <id>https://warlockalan.github.io/</id>
+  
+  <author>
+    <name>Alan</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Mediacrawler爬虫抓取数据的攻略</title>
+    <link href="https://warlockalan.github.io/2025/04/22/%E4%BD%BF%E7%94%A8Mediacrawler%E7%88%AC%E8%99%AB%E6%8A%93%E5%8F%96%E6%95%B0%E6%8D%AE%E7%9A%84%E6%94%BB%E7%95%A5/"/>
+    <id>https://warlockalan.github.io/2025/04/22/%E4%BD%BF%E7%94%A8Mediacrawler%E7%88%AC%E8%99%AB%E6%8A%93%E5%8F%96%E6%95%B0%E6%8D%AE%E7%9A%84%E6%94%BB%E7%95%A5/</id>
+    <published>2025-04-22T07:26:05.000Z</published>
+    <updated>2025-04-22T08:40:01.516Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用基于Python开发的Mediacrawler爬虫可以抓取b站、小红书等几乎所有国内新媒体平台的推文、视频数据。这里的数据涵盖观看量、点赞、收藏之类的可公开的量化数据，也包含评论这种文本数据。这个爬虫基于Playwright开发，虽然现在大公司都针对Playwright反爬，但是我拿来平时练手做的项目显然没有那么高级的反爬。Mediacrawler是github的开源项目，不得不说做出这个大佬太强了（github stars最高的含金量）。</p><p>Clone、配置好这个github项目之后运行界面长这样：</p><p><img src="https://matuimg.com/i/2025/04/22/pr4vu7.png" alt="微信图片_20250422153737"></p><p>–platform 选择平台如b站、小红书 –lt 选择登陆方式（login type比如qr cpde)</p><p>–keywords 输入搜索的关键词 -get_comments 选择是否要获取评论文本信息</p><p>输出的数据格式选择csv，因为excel可以直接处理csv格式的数据。</p><p>比如我们在B站搜索“出国旅行”关键词，跑出来以下数据（会出现在data文件夹中，每次爬虫爬完之后记得把Browser_data文件夹给删掉）</p><p>会发现有三个文件，一个是关于视频本身播放量等数据，一个是抓取的评论文本，还有一个是视频Up主的信息。<img src="https://matuimg.com/i/2025/04/22/pr4u9x.jpg" alt="PixPin_2025-04-22_15-44-45"></p><p>打开文件视频数据和作者数据长这样：</p><p><img src="https://matuimg.com/i/2025/04/22/pr548y.png" alt="微信图片_20250422154702"><br><img src="https://matuimg.com/i/2025/04/22/pr547p.png" alt="微信图片_20250422154712"></p><p>评论的数据没有，我没有抓取出国旅行这一关键词的数据，但我抓取了我喜欢的游戏战锤的评论，如图：</p><p><img src="https://matuimg.com/i/2025/04/22/ps8daj.jpg" alt="PixPin_2025-04-22_15-48-13"></p><p>剩下的数据分析工作就很简单了，因为数据分析工作的难点从来不是分析数据而是如何获取数据。现在已经得到了excel文件，那数据分析工作也很简单了。（如果是其他格式的文件可能还得使用Python清洗等）</p><p>有原始数据的话数据分析就很容易，比如我filter 粉丝小于某个数 filter播放量大于某个数由此找到低粉爆款视频。再filter这些博主。</p><p><img src="https://matuimg.com/i/2025/04/22/pn67gz.png" alt="微信图片_20250422155031"></p><p><img src="https://matuimg.com/i/2025/04/22/po5i58.png" alt="微信图片_20250422155146"></p><p>视频的评论直接清洗获得词频再做词云图就好了。文件太大了不能丢给AI做，后续也需要验证AI做的是否可信。</p><p>优化以及后续：不要学我一样先获取comments,爬虫初步抓取的时候先别抓comments，先filter出来低粉爆款视频再抓取这些视频的comments。毕竟comments太多抓取太慢了。同时我b站账号似乎触犯了平台反爬虫的机制，已经不能成功抓取数据了，后续可以配置干净的Ip狠狠抓取。但切记不要玩的太过火，小心吃上国家饭。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;使用基于Python开发的Mediacrawler爬虫可以抓取b站、小红书等几乎所有国内新媒体平台的推文、视频数据。这里的数据涵盖观看量、点赞、收藏之类的可公开的量化数据，也包含评论这种文本数据。这个爬虫基于Playwright开发，虽然现在大公司都针对Playwright</summary>
+      
+    
+    
+    
+    
+    <category term="Statistics and data science" scheme="https://warlockalan.github.io/tags/Statistics-and-data-science/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux_Notes</title>
+    <link href="https://warlockalan.github.io/2025/02/03/Linux-Notes/"/>
+    <id>https://warlockalan.github.io/2025/02/03/Linux-Notes/</id>
+    <published>2025-02-03T13:26:36.000Z</published>
+    <updated>2025-04-22T08:40:01.515Z</updated>
+    
+    <content type="html"><![CDATA[<p>搜索 wt 打开 windows terminal 默认打开的是 powershell （类似 cmd 的东西） 不用管</p><h3 id="PS-your-command-here-PS-wsl-WSL-for-Windows-Subsystem-for-Linux-虚拟机"><a href="#PS-your-command-here-PS-wsl-WSL-for-Windows-Subsystem-for-Linux-虚拟机" class="headerlink" title="PS &gt; __ #your command here PS &gt; wsl # WSL for Windows Subsystem for Linux 虚拟机"></a>PS &gt; __ #your command here PS &gt; wsl # WSL for Windows Subsystem for Linux 虚拟机</h3><p>所有操作都是在终端内进行的</p><h3 id="cd-change-directory-改变当前目录（文件夹）"><a href="#cd-change-directory-改变当前目录（文件夹）" class="headerlink" title="cd change directory 改变当前目录（文件夹）"></a><code>cd</code> change directory 改变当前目录（文件夹）</h3><ul><li>cd my_folder</li><li>cd # 不带任何参数，回到用户目录 <code>~</code> <code>$HOME</code></li><li><code>pwd</code> - print working directory 将当前的目录输出到终端</li><li><code>touch</code> - 创建新文件</li><li><code>-</code> flag  <code>--</code> </li><li><code>ls</code> - list files ** <code>-A</code> &#x2F; <code>--almost-all</code>  - use this to see hidden files - 前面带点的文件 <code>.bashrc</code> 被隐藏的文件 ** <code>-a</code> &#x2F; <code>--all</code> ** <code>-l</code> 输出为一个 table</li><li><code>mkdir</code> - make directory</li></ul><blockquote><p>directory 目录，实际上就是文件夹</p></blockquote><ul><li><code>rm</code> - remove ** <code>-r</code> recursive 递归删除 - 删除该文件和他的子文件</li><li><code>rmdir</code> - remove directory - useless</li><li><code>explorer.exe</code> 用微软文件管理器打开 只在 wsl 里可用</li><li>大部分命令都实现了 <code>-h</code> 这个 flag，或 <code>--help</code> 使用这个flag查看命令说明</li><li><code>man</code> manual 查看某个命令的手册</li></ul><p>** <code>man mkdir</code></p><ul><li><code>nano</code> 文本编辑器 ** 在终端中 <code>^</code> 代表 CTRL</li><li><code>sudo</code> - super user do ** 如果要求你使用 <code>root</code> （根用户），操作需要 <code>elevated</code> （提升权限），<code>permission denied</code></li></ul><hr><p>黑马的教程用的是 CentOS，他安装软件使用 <code>yum</code> 或者 <code>rpm</code>，我是用的是 Ubuntu，安装软件使用 <code>apt</code></p><p><code>apt search</code> 搜索软件包</p><p><code>apt install</code> 安装软件包</p><p>如果你太久没更新 apt，里面的包太老了，所以就没法安装某些新软件</p><p><code>apt update</code> 是更新 apt</p><p><code>apt upgrade</code> 更新你用 apt 安装的软件</p><hr><p>启动 MySQL</p><ul><li><p><code>systemctl start mysql</code></p></li><li><p><code>systemctl</code> system control</p></li><li><p><code>mysqld</code> MySQL Daemon </p></li><li><p>start &#x2F; restart &#x2F; stop</p><p><code>sudo mysql -u root -p </code></p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;搜索 wt 打开 windows terminal 默认打开的是 powershell （类似 cmd 的东西） 不用管&lt;/p&gt;
+&lt;h3 id=&quot;PS-your-command-here-PS-wsl-WSL-for-Windows-Subsystem-for-Linux-</summary>
+      
+    
+    
+    
+    
+    <category term="Notes" scheme="https://warlockalan.github.io/tags/Notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL_NOTES</title>
+    <link href="https://warlockalan.github.io/2025/02/03/SQL-NOTES/"/>
+    <id>https://warlockalan.github.io/2025/02/03/SQL-NOTES/</id>
+    <published>2025-02-03T13:10:35.000Z</published>
+    <updated>2025-04-22T08:40:01.516Z</updated>
+    
+    <content type="html"><![CDATA[<p>网上挑选了一些SQL笔记，这一份比较的凝练实用。</p><p><img src="E:\sql_notes\1.jpg" alt="P1"></p><p><img src="E:\sql_notes\2.jpg" alt="P2"></p><p><img src="E:\sql_notes\3.jpg" alt="P3"></p><p><img src="E:\sql_notes\4.jpg" alt="P4"></p><p><img src="E:\sql_notes\5.jpg" alt="P5"></p><p><img src="E:\sql_notes\6.jpg" alt="P6"></p><p><img src="E:\sql_notes\7.jpg" alt="P7"></p><p><img src="E:\sql_notes\8.jpg" alt="P8"></p><p><img src="E:\sql_notes\9.jpg" alt="P9"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;网上挑选了一些SQL笔记，这一份比较的凝练实用。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;E:&#92;sql_notes&#92;1.jpg&quot; alt=&quot;P1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;E:&#92;sql_notes&#92;2.jpg&quot; alt=&quot;P2&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;E</summary>
+      
+    
+    
+    
+    
+    <category term="Notes" scheme="https://warlockalan.github.io/tags/Notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Edinburgh_Travel_Guide</title>
+    <link href="https://warlockalan.github.io/2025/02/02/Edinburgh-Travel-Guide/"/>
+    <id>https://warlockalan.github.io/2025/02/02/Edinburgh-Travel-Guide/</id>
+    <published>2025-02-02T22:16:27.000Z</published>
+    <updated>2025-04-22T08:40:01.514Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Explore-Edinburgh-A-Timeless-Journey-through-Scotland’s-Capital-🏰"><a href="#Explore-Edinburgh-A-Timeless-Journey-through-Scotland’s-Capital-🏰" class="headerlink" title="Explore Edinburgh: A Timeless Journey through Scotland’s Capital 🏰"></a>Explore Edinburgh: A Timeless Journey through Scotland’s Capital 🏰</h1><p><strong>✨ In-Depth Highlights of Edinburgh</strong>  </p><ul><li><p><strong>Edinburgh Castle</strong><br><img src="https://imgur.com/a/EsSa1Wq" alt="Edinburgh Castle"><br>Perched atop Castle Rock, this iconic fortress houses the Crown Jewels of Scotland and the Stone of Destiny. Explore its medieval Great Hall and the poignant National War Museum, while soaking in sweeping views of the city.  </p></li><li><p><strong>Royal Mile</strong><br><img src="https://imgur.com/a/REfipPz" alt="Royal Mile"><br>A vibrant artery connecting the castle to Holyrood Palace, this mile-long stretch buzzes with street performers, traditional tartan shops, and hidden closes (alleys) revealing tales of Edinburgh’s medieval past. Don’t miss the Writers’ Museum, celebrating literary legends like Robert Burns.  </p></li><li><p><strong>Arthur’s Seat</strong><br><img src="https://imgur.com/a/L6I1EJO" alt="Arthur’s Seat"><br>An extinct volcano in Holyrood Park, this rugged hike rewards adventurers with 360° vistas of Edinburgh’s skyline, the Firth of Forth, and lush countryside. Geologists adore its ancient rock formations dating back 350 million years.  </p></li><li><p><strong>Holyrood Palace</strong><br><img src="https://imgur.com/a/3HvlMG2" alt="Holyrood Palace"><br>Wander through the opulent State Apartments where Mary, Queen of Scots once lived, and explore the haunting ruins of the 12th-century abbey adjacent to the palace. The palace gardens bloom with Scottish flora in summer.  </p></li><li><p><strong>Edinburgh Fringe Festival</strong><br><img src="https://imgur.com/a/Xo0oanm" alt="Fringe Festival"><br>The world’s largest arts festival transforms the city every August, with over 3,000 shows spanning comedy, theatre, and avant-garde performances. Streets pulse with creativity, making it a cultural pilgrim’s paradise. 🎭</p></li></ul><p><strong>💡 Travel Tips</strong>  </p><ul><li><strong>Best Time</strong>: May-September for mild weather and festivals.  </li><li><strong>Transport</strong>: Walkable city center; use buses for longer distances.  </li><li><strong>Must-Try</strong>: Haggis (with whisky sauce!), shortbread, and local craft beers.</li></ul><p><del>欢迎大家来爱丁堡这个愚蠢的地方陪我坐牢</del></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Explore-Edinburgh-A-Timeless-Journey-through-Scotland’s-Capital-🏰&quot;&gt;&lt;a href=&quot;#Explore-Edinburgh-A-Timeless-Journey-through-Scotland’</summary>
+      
+    
+    
+    
+    
+    <category term="Tourism Industry" scheme="https://warlockalan.github.io/tags/Tourism-Industry/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Acknowledgement</title>
+    <link href="https://warlockalan.github.io/2025/02/02/Acknowledgement/"/>
+    <id>https://warlockalan.github.io/2025/02/02/Acknowledgement/</id>
+    <published>2025-02-02T14:56:26.000Z</published>
+    <updated>2025-04-22T08:40:01.513Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>感谢<em>Jason哥哥</em> 援助的脚本和自动部署，之前本博客的自动部署失效了。</p><p>滴水之恩当涌泉相报。</p><p><img src="https://tb2.bdstatic.com/tb/editor/images/face/i_f09.png?t=20140803" alt="感谢Jason哥哥"></p><p>即日起重新开始更新本博客。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;鸣谢&quot;&gt;&lt;a href=&quot;#鸣谢&quot; class=&quot;headerlink&quot; title=&quot;鸣谢&quot;&gt;&lt;/a&gt;鸣谢&lt;/h2&gt;&lt;p&gt;感谢&lt;em&gt;Jason哥哥&lt;/em&gt; 援助的脚本和自动部署，之前本博客的自动部署失效了。&lt;/p&gt;
+&lt;p&gt;滴水之恩当涌泉相报。&lt;/p&gt;
+&lt;p&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Reading notes related to text mining</title>
+    <link href="https://warlockalan.github.io/2022/08/14/Text%20mining/"/>
+    <id>https://warlockalan.github.io/2022/08/14/Text%20mining/</id>
+    <published>2022-08-14T15:59:59.000Z</published>
+    <updated>2025-04-22T08:40:01.516Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="reading-notes–-Further-learning-in-statistics-and-data-science"><a href="#reading-notes–-Further-learning-in-statistics-and-data-science" class="headerlink" title="reading notes– Further learning in statistics and data science"></a>reading notes– Further learning in statistics and data science</h3><p>I read the book ‘Opinion Mining and Sentiment Analysis’ by Pang and Lee and thus made notes related to statistics and data science. </p><h4 id="Text-mining"><a href="#Text-mining" class="headerlink" title="Text mining"></a>Text mining</h4><blockquote><p>Text mining (also known as text analysis), is the process of transforming unstructured text into structured data for easy analysis. Text mining uses natural language processing (NLP), allowing machines to understand the human language and process it automatically.</p></blockquote><h5 id="Normalisation"><a href="#Normalisation" class="headerlink" title="Normalisation"></a>Normalisation</h5><blockquote><p>Text normalization is the process of transforming text into a single canonical form that it might not have had before.</p></blockquote><p>Stemming and lemmatisation are two approaches for text normalisation.</p><p>1.Lemmatization is a text normalization technique used in Natural Language Processing (NLP), that switches any kind of a word to its base root mode. Lemmatization is responsible for grouping different inflected forms of words into the root form, having the same meaning.</p><p><strong>Lemma: the basic form of a word, for example the singular form of a noun or the infinitive form of a verb, as it is shown at the beginning of a dictionary entry</strong></p><p>2.In linguistic morphology and information retrieval, stemming is the process of reducing inflected (or sometimes derived) words to their word stem, base or root form—generally a written word form.</p><blockquote><p>notes in Chinese</p></blockquote><p>最常见的词汇规范化的实践有：</p><ol><li><p>词干提取（Stemming）：词干提取是一个初级的、基于规则的脱去后缀（如“ing”，“ly”，“es”，“s”等等）的过程</p></li><li><p>词元化（Lemmatization）：另一方面，词元化，是一个组织好的、一步一步的获取词根的过程。</p></li><li><p>词汇规范化: 另外一种文本型的噪音与一个词语的多种表达形式有关。例如，“play”，“player”，“played”，“plays”和“playing”都是单词“play”的变种。尽管它们有不同的意思，但是根据上下文来看，它们是意思是相似的。这个步骤是将一个单词的所有不同形式转换为它的规范形式（也被称为词条（lemma））</p></li></ol><h4 id="Opinion-mining"><a href="#Opinion-mining" class="headerlink" title="Opinion mining"></a>Opinion mining</h4><blockquote><p>Opinion mining, or sentiment analysis, is a text analysis technique that uses computational linguistics and natural language processing to automatically identify and extract sentiment or opinion from within text (positive, negative, neutral, etc.)</p></blockquote><p>In my words, opinion mining is just one part in text mining; text mining involves classical text mining and opinion mining；The former one analyses text which are expressed factually whereas the latter one analyses text which are expressed subjectively.</p><blockquote><p>Sentiment analysis, also referred to as opinion mining, is an approach to natural language processing (NLP) that identifies the emotional tone behind a body of text. This is a popular way for organizations to determine and categorize opinions about a product, service, or idea. It involves the use of data mining, machine learning (ML) and artificial intelligence (AI) to mine text for sentiment and subjective information.</p></blockquote><p><strong>Emotional tone refers to positive, negative or neutral attitudes.</strong></p><h4 id="Subjectivity-polarity-score"><a href="#Subjectivity-polarity-score" class="headerlink" title="Subjectivity polarity score"></a>Subjectivity polarity score</h4><p>The polarity score is a float within the range [-1.0, 1.0] . The subjectivity is a float within the range [0.0, 1.0] where 0.0 is very objective and 1.0 is very subjective. </p><p>In short, text polarity is a measure of how negative or how positive a piece of text is.<br>Most of the time, NLP models can predict simply positive or negative words and phrases quite well. For example, the words “amazing”, “superb”, and “wonderful” can easily be labelled as highly positive. The words “bad”, “sad”, and “mad” can easily be labelled as negative. However, we can’t just look at polarity from the frame of individual words, it’s important to take a larger context for evaluating total polarity. For example, the word “bad” may be negative but what about the phrase “not bad”? Is that neutral? Or is that the opposite of bad? At this point we’re getting into linguistics and semantics rather than natural language processing.</p><p>The two biggest open source libraries for NLP in Python are spaCy and NLTK, and both of these libraries measure polarity on a normalized scale of -1 to 1. The Text API measures, combines, and normalizes values on both the polarity of the overall text, individual sentences, and individual phrases.</p><blockquote><p>Example <a href="https://www.ebaina.com/articles/140000005269">https://www.ebaina.com/articles/140000005269</a><br>notes in Chinese</p></blockquote><blockquote><p>极性(polarity)指的是一陈述是肯定还是否定的性质，如果某个词只能出现在肯定或者否定的陈述中，那么这个词就是极性项(polarity item)。在英语中at all是一个否定极性项，它只能出现在否定句中。</p></blockquote><h4 id="Opinion-holders-and-opinion-targets"><a href="#Opinion-holders-and-opinion-targets" class="headerlink" title="Opinion holders and opinion targets"></a>Opinion holders and opinion targets</h4><p>One of the key subtasks in sentiment analysis is opinion role extraction. It can be divided into the extraction of opinion holders (OH), i.e. entities ex-pressing an opinion, and the extraction of opinion targets (OT), i.e. entities or propositions at which sentiment is directed.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;reading-notes–-Further-learning-in-statistics-and-data-science&quot;&gt;&lt;a href=&quot;#reading-notes–-Further-learning-in-statistics-and-data-sci</summary>
+      
+    
+    
+    
+    
+    <category term="Extra curriculum" scheme="https://warlockalan.github.io/tags/Extra-curriculum/"/>
+    
+    <category term="Sciences" scheme="https://warlockalan.github.io/tags/Sciences/"/>
+    
+    <category term="Statistics and data science" scheme="https://warlockalan.github.io/tags/Statistics-and-data-science/"/>
+    
+    <category term="Hobbies" scheme="https://warlockalan.github.io/tags/Hobbies/"/>
+    
+    <category term="Reading notes" scheme="https://warlockalan.github.io/tags/Reading-notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Reading notes related to Naive Bayes classifiers and Markov Chain</title>
+    <link href="https://warlockalan.github.io/2022/07/03/Naive%20Bayes%20classifier%20and%20Markov%20Chain/"/>
+    <id>https://warlockalan.github.io/2022/07/03/Naive%20Bayes%20classifier%20and%20Markov%20Chain/</id>
+    <published>2022-07-03T15:59:59.000Z</published>
+    <updated>2025-04-22T08:40:01.515Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="reading-notes-Further-learning-in-statistics-and-data-science"><a href="#reading-notes-Further-learning-in-statistics-and-data-science" class="headerlink" title="reading notes- Further learning in statistics and data science"></a>reading notes- Further learning in statistics and data science</h3><p>I read the book ‘Reinforcement Learning’ by S. Sutton and thus made reading notes about markov chain and also I learned knowledge about Bayes classifiers.</p><h4 id="Classifier"><a href="#Classifier" class="headerlink" title="Classifier"></a>Classifier</h4><blockquote><p>“An algorithm that implements classification, especially in a concrete implementation, is known as a classifier. The term “classifier” sometimes also refers to the mathematical function, implemented by a classification algorithm, that maps input data to a category.”</p></blockquote><h4 id="Bayes-classifier"><a href="#Bayes-classifier" class="headerlink" title="Bayes classifier"></a>Bayes classifier</h4><p>Classifiers based on Bayes’ Theorem.</p><h4 id="Bayes’-Theorem"><a href="#Bayes’-Theorem" class="headerlink" title="Bayes’ Theorem"></a>Bayes’ Theorem</h4><p><img src="https://s2.loli.net/2022/10/18/SkhXpHdMur1abLe.png" alt="3.png"></p><p><img src="https://s2.loli.net/2022/10/18/wOSQCAHdnJNIevY.png" alt="1.png"></p><p><img src="https://s2.loli.net/2022/10/18/rKnV4ILX8Yj6Rl2.png" alt="2.png"></p><h4 id="Naive-Bayes-classifier"><a href="#Naive-Bayes-classifier" class="headerlink" title="Naive Bayes classifier"></a>Naive Bayes classifier</h4><p>Classifiers based on Bayes’ Theorem <strong>with an assumption of independence among predictors</strong>.</p><p>####What are the Pros and Cons of Naive Bayes?</p><p>Pros:</p><ol><li><p>It is easy and fast to predict class of test data set. It also perform well in multi class prediction</p></li><li><p>When assumption of independence holds, a Naive Bayes classifier performs better compare to other models like logistic regression and you need less training data.</p></li><li><p>It perform well in case of categorical input variables compared to numerical variable(s). For numerical variable, normal distribution is assumed (bell curve, which is a strong assumption).</p></li></ol><p>Cons:</p><ol><li>If categorical variable has a category (in test data set), which was not observed in training data set, then model will assign a 0 (zero) probability and will be unable to make a prediction. This is often known as “Zero Frequency”. To solve this, we can use the smoothing technique. One of the simplest smoothing techniques is called Laplace estimation.</li></ol><blockquote><p><a href="https://www.zhihu.com/question/21134457">https://www.zhihu.com/question/21134457</a> (useful linkage to Naive Bayes classifiers)</p></blockquote><h4 id="Markov-chain-and-laplace-smoothing"><a href="#Markov-chain-and-laplace-smoothing" class="headerlink" title="Markov chain and laplace smoothing"></a>Markov chain and laplace smoothing</h4><p>It is a pretty tough section so i only made notes in Chinese to help me understand this section better.</p><p><img src="https://s2.loli.net/2022/10/18/fKgv9LOt1IpoHT6.jpg" alt="1.jpg"></p><p>这个矩阵就是转移概率矩阵P，并且它是保持不变的，就是说第一天到第二天的转移概率矩阵跟第二天到第三天的转移概率矩阵是一样的。</p><p><img src="https://s2.loli.net/2022/10/18/Kq5BHvs6wCuJ2Fp.jpg" alt="2.jpg"></p><blockquote><h4 id="One-application"><a href="#One-application" class="headerlink" title="One application"></a>One application</h4><p>For example, consider a hypothetical market with Markov properties where historical data has given us the following patterns: After a week characterized by a bull market trend there is a 90% chance that another bullish week will follow. Additionally, there is a 7.5% chance that the bull week instead will be followed by a bearish one, or a 2.5% chance that it will be a stagnant one. After a bearish week there’s an 80% chance that the upcoming week also will be bearish, and so on. This data is compiled to form a matrix and then the results are drawn thereof.</p></blockquote><p>拉普拉斯平滑（Laplace Smoothing）又被称为加 1 平滑，是比较常用的平滑方法。平滑方法的存在时为了解决零概率问题。</p><blockquote><p>背景:为什么要做平滑处理?</p></blockquote><p>零概率问题，就是在计算实例的概率时，如果某个量x，在观察样本库（训练集）中没有出现过，会导致整个实例的概率结果是0。在文本分类的问题中，当一个词语没有在训练样本中出现，该词语调概率为0，使用连乘计算文本出现概率时也为0。这是不合理的，不能因为一个事件没有观察到就武断的认为该事件的概率是0。</p><blockquote><p>拉普拉斯的理论支撑</p></blockquote><p>为了解决零概率的问题，法国数学家拉普拉斯最早提出用加1的方法估计没有出现过的现象的概率，所以加法平滑也叫做拉普拉斯平滑。<br>假定训练样本很大时，每个分量x的计数加1造成的估计概率变化可以忽略不计，但可以方便有效的避免零概率问题。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;reading-notes-Further-learning-in-statistics-and-data-science&quot;&gt;&lt;a href=&quot;#reading-notes-Further-learning-in-statistics-and-data-scien</summary>
+      
+    
+    
+    
+    
+    <category term="Extra curriculum" scheme="https://warlockalan.github.io/tags/Extra-curriculum/"/>
+    
+    <category term="Sciences" scheme="https://warlockalan.github.io/tags/Sciences/"/>
+    
+    <category term="Mathematics" scheme="https://warlockalan.github.io/tags/Mathematics/"/>
+    
+    <category term="Statistics and data science" scheme="https://warlockalan.github.io/tags/Statistics-and-data-science/"/>
+    
+    <category term="Hobbies" scheme="https://warlockalan.github.io/tags/Hobbies/"/>
+    
+    <category term="Reading notes" scheme="https://warlockalan.github.io/tags/Reading-notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter19)</title>
+    <link href="https://warlockalan.github.io/2022/06/05/Principles%20of%20Economics(chapter19)/"/>
+    <id>https://warlockalan.github.io/2022/06/05/Principles%20of%20Economics(chapter19)/</id>
+    <published>2022-06-05T15:59:59.000Z</published>
+    <updated>2025-04-22T08:40:01.516Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 19 is Earnings and Discrimination. This chapter introduces different kinds of discrimination. (e.g Why doctors earn more wages than workers)</p><blockquote><p>Labour market discrimination– education</p></blockquote><ul><li><p>A well-educated worker tends to have a greater wage because of human capital and signaling effect. </p></li><li><p>Human capital effect: The well-educated labours have a greater productivity so they have greater wage rates. </p></li><li><p>Signaling effect: The access of university does not increase the productivity of labours but it is a signal that labours have the greater ability to master skills so they have greater wage rates&#x2F;</p></li></ul><blockquote><p>Labour market discrimination– job</p></blockquote><ul><li><p>e.g A superstar always earns a greater wage than a carpenter or a plumber.</p></li><li><p>reason 1: Every customer in the market wants to enjoy the good supplied by the best producer. </p></li><li><p>reason 2: The good is produced with a technology that makes it possible for the best producer to supply every customer at low cost.</p></li></ul><blockquote><p>Discrimination by employers</p></blockquote><ul><li><p>Wage differential will be eliminated by it in markets with free entry and exit.</p></li><li><p>Reason: If employers discriminate one sort of employees, the demand for it will decrease so the wage rate of it decreases in the labour market. Then some employers will recruit them since the cost of these labours decreases.</p></li></ul><h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><p>1.Compensating differential– a difference in wages that arises to offset the nonmonetary characteristics of different jobs</p><p>2.Strike– the organized withdrawal of labor from a firm by a union</p><p>3.Discrimination– the offering of different opportunities to similar individuals who differ only by race, ethnic group, sex, age, or other personal characteristics</p><p>4.Human capital– the knowledge and skills that workers acquire through education and on-the-job training</p><p>5.Efficiency wage– above equilibrium wages paid by firms to increase worker productivity</p><p>6.Statistical discrimination– discrimination that arises because an irrelevant but observable personal characteristic is correlated with a relevant but unobservable attribute</p><p>7.Union– a worker association that bargains with employers over wages and working conditions</p><h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p><blockquote><ol><li>Among full-time U.S. workers, white women earn about_____ percent less than white men, and black men earn about_____ percent less than white men. (Correct answer: C)</li></ol></blockquote><p>a. 5;20</p><p>b. 5;40</p><p>c. 20;20</p><p>d. 20;40</p><p>My wrong answer: A</p><blockquote><ol start="2"><li>The forces of competition in markets with free entry and exit tend to eliminate wage differentials that arise from discrimination by_____ (Correct answer: A)</li></ol></blockquote><p>a. employers</p><p>b. customers</p><p>c. government</p><p>d. all of the above</p><p>My wrong answer: D</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Summary&quot;&gt;&lt;a href=&quot;#Summary&quot; class=&quot;headerlink&quot; title=&quot;Summary&quot;&gt;&lt;/a&gt;Summary&lt;/h3&gt;&lt;p&gt;Chapter 19 is Earnings and Discrimination. This ch</summary>
+      
+    
+    
+    
+    
+    <category term="Economics" scheme="https://warlockalan.github.io/tags/Economics/"/>
+    
+    <category term="Hobbies" scheme="https://warlockalan.github.io/tags/Hobbies/"/>
+    
+    <category term="Reading notes" scheme="https://warlockalan.github.io/tags/Reading-notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>An academic subject inspires me</title>
+    <link href="https://warlockalan.github.io/2022/03/05/Academic%20subject/"/>
+    <id>https://warlockalan.github.io/2022/03/05/Academic%20subject/</id>
+    <published>2022-03-05T15:59:59.000Z</published>
+    <updated>2025-04-22T08:40:01.513Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Introduction</strong></p><p>One of the academic subjects that has boosted my further interest is Economics. This short essay will demonstrate my journey of learning it.</p><p><strong>Background</strong></p><p>I could only start studying Economics in Grade 10, because it was not available on the curriculum before then. (Economics is a subject which can only be studied by international students because it is not a compulsory subject for Chinese national education system.)</p><p><strong>Experience of learning Economics</strong></p><p>Despite my relatively poor English, I still understood the main points from my English Economics teacher quickly perhaps I worked hard in it. Learning about supply and demand in commerce caught my interest quickly in Economics and I found it fascinating and wanted to learn more in this field, for instance, how a market works. I became aware of the need to improve my English language skills when I did not understand some specific vocabulary such as vice versa, ceteris paribus and capita. From then on, I read English books to improve my lexical resources. For example, the book Principles of Economics which illustrates some fundamentals in Economics. From this book, I was surprised to find there is a strong relationship between Mathematics and Economics, for instance, you could use calculus(integration)to calculate total welfare in one market. This opened up a whole new world to me because I did well in Mathematics which helped me study this field in more depth. I finished all exercises in each chapter and made reading notes to summarize the main points.</p><p><strong>Experience of taking part in FBLA</strong></p><p>Because of my outstanding performance in the final exam of the semester, my teacher suggested that I take part in a business contest which was called The Future Business Leader of America (FBLA). The preparation was intense but I learnt a great deal of new information which the school syllabus had not provided. Then I cooperated with two partners to do a presentation focused on a business plan about attracting investment from investors and received excellent scores. I strengthened not only my economic knowledge but also speaking skills during the preparation of the presentation.</p><p><strong>Conclusion</strong></p><p>In conclusion, I have been capable and motivated to learn more about Economics and I hope to focus more on this interesting subject in the future and perhaps study it at university level.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;One of the academic subjects that has boosted my further interest is Economics. This short essay wil</summary>
+      
+    
+    
+    
+    
+    <category term="Personal statement" scheme="https://warlockalan.github.io/tags/Personal-statement/"/>
+    
+    <category term="Economics" scheme="https://warlockalan.github.io/tags/Economics/"/>
+    
+    <category term="Extra curriculum" scheme="https://warlockalan.github.io/tags/Extra-curriculum/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My greatest skill</title>
+    <link href="https://warlockalan.github.io/2022/01/16/My%20greatest%20skill/"/>
+    <id>https://warlockalan.github.io/2022/01/16/My%20greatest%20skill/</id>
+    <published>2022-01-16T15:59:59.000Z</published>
+    <updated>2025-04-22T08:40:01.515Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Introduction</p></blockquote><p>My greatest skill is my ability to use study skills to enhance my understanding of school subjects. These involve the study skills of doing efficient research online, managing time wisely and cooperate with others to solve problems if necessary. This short essay will illustrate how I have been developing and strengthening these study skills.</p><blockquote><p>Background</p></blockquote><p>My home is far away from the school and therefore I live in the school dormitory during weekdays so my parents cannot accompany me as well as give me help. The majority of students in our class tend to have extra-curricular classes to improve their learning in order to get excellent exam scores. For me, I consider self-study to be more advantageous so I do it instead of having those extra curricular-classes.</p><blockquote><p>My study experiences</p></blockquote><p>In the textbooks I use, it is necessary to answer questions in order to check if I have mastered knowledge precisely. However, these questions are limited so I then use the internet to find appropriate exercises. Doing past papers is a good choice, but the majority of them only cover one unit. So, I collaborate with another student to classify questions that cover chapters we have already learned and organize them in an online file. In addition, I pay for an annual subscription of a website called Save My Exams which provides appropriate questions. This website is useful because it addresses individual topics in detail rather than more generally therefore it is more in-depth and improves my learning.</p><blockquote><p>The skill i need to develop</p></blockquote><p>I am keen to avoid procrastination which is the enemy to these study skills especially in terms of time management. I did not master Physics knowledge due to this lack of organizing my time well in revising physics, I did badly in the monthly exam which was disappointing due to the lack of review which occurred owing to my poor ability to execute my plan of reviewing science subjects.  </p><blockquote><p>Conclusion</p></blockquote><p>Overall, because of my experience living in the school dormitory, I have been strengthening my self-study skills which will be beneficial for me when I attend university.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Introduction&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;My greatest skill is my ability to use study skills to enhance my understanding of school </summary>
+      
+    
+    
+    
+    
+    <category term="Personal statement" scheme="https://warlockalan.github.io/tags/Personal-statement/"/>
+    
+    <category term="School life" scheme="https://warlockalan.github.io/tags/School-life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter18)</title>
+    <link href="https://warlockalan.github.io/2021/08/29/Principles%20of%20Economics(chapter18)/"/>
+    <id>https://warlockalan.github.io/2021/08/29/Principles%20of%20Economics(chapter18)/</id>
+    <published>2021-08-29T15:59:59.000Z</published>
+    <updated>2025-04-22T08:40:01.516Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 18 is The Markets for the Factors of Production. This chapter introduces the market for labour, land and capital.</p><blockquote><p>The versatility of supply and demand</p></blockquote><p><img src="https://i.loli.net/2021/08/29/XZBa6EqPDekpugz.png" alt="The market for labour"></p><ul><li>The market for labour</li><li>The price of labours is the wage rate.</li><li>The market price and quantity of labours are determined by the demand and supply of labours.</li></ul><p><img src="https://i.loli.net/2021/08/29/ybQKajT7lEOIpVr.png" alt="The market for land"></p><ul><li>The market for land</li></ul><p><img src="https://i.loli.net/2021/08/29/4ETfjSPzl1q385J.png" alt="The market for capital"></p><ul><li>The market for capital</li></ul><p><strong>The market for land and the market for capital are the same as the market for labour</strong></p><blockquote><p>Production function</p></blockquote><p><img src="https://i.loli.net/2021/08/29/TesQCBpYFbo6wxH.jpg" alt="acb46cbeb5a72834ca8c4e331aadecc.jpg"></p><ul><li>Production function is the relationship between the quantity of inputs used to make a good and the quantity of output of that good.</li></ul><blockquote><p>The value of the marginal product of labour</p></blockquote><p><img src="https://i.loli.net/2021/08/29/eivwhRg3oxkCDnP.png" alt="image.png"></p><ul><li>Value of the marginal product is the marginal product of an input times the price of the output </li><li>It decreases as the quantity of labour increases (because of the diminishing marginal product)</li><li>Diminishing marginal product is the property whereby the marginal product of an input declines as the quantity of the input increases</li><li>The market wage is equal to the value of marginal product</li></ul><h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><p>1.Factors of production– the inputs used to produce goods and services</p><p>2.Production function– the relationship between the quantity of inputs used to make a good and the quantity of output of that good</p><p>3.Marginal product of labour– the increase in the amount of output from an additional unit of labor</p><p>4.Diminishing marginal product– the property whereby the marginal product of an input declines as the quantity of the input increases</p><p>5.Value of the marginal product– the marginal product of an input times the price of the output    </p><p>6.Capital– the equipment and structures used to produce goods and services</p><h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p><blockquote><ol><li>Approximately what percentage of U.S. national income is paid to workers rather than to owners of capital and land? (Correct answer: C)</li></ol></blockquote><p>a. 25 percent</p><p>b. 45 percent</p><p>c. 65 percent</p><p>d. 85 percent</p><p>My wrong answer: B</p><blockquote><ol start="2"><li>Around 1973. the U.S. economy experienced a significant_____ in productivity growth, coupled with a_____ in the growth of real wages. (Correct answer: D)</li></ol></blockquote><p>a. pickup; pickup</p><p>b. pickup; slowdown</p><p>c. slowdown; pickup</p><p>d. slowdown; slowdown</p><p>My wrong answer: D</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Summary&quot;&gt;&lt;a href=&quot;#Summary&quot; class=&quot;headerlink&quot; title=&quot;Summary&quot;&gt;&lt;/a&gt;Summary&lt;/h3&gt;&lt;p&gt;Chapter 18 is The Markets for the Factors of Produ</summary>
+      
+    
+    
+    
+    
+    <category term="Economics" scheme="https://warlockalan.github.io/tags/Economics/"/>
+    
+    <category term="Hobbies" scheme="https://warlockalan.github.io/tags/Hobbies/"/>
+    
+    <category term="Reading notes" scheme="https://warlockalan.github.io/tags/Reading-notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter17)</title>
+    <link href="https://warlockalan.github.io/2021/08/17/Principles%20of%20Economics(chapter17)/"/>
+    <id>https://warlockalan.github.io/2021/08/17/Principles%20of%20Economics(chapter17)/</id>
+    <published>2021-08-17T15:59:59.000Z</published>
+    <updated>2025-04-22T08:40:01.516Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 17 is Oligopoly. This chapter introduces oligopoly, a kind of market structure.</p><ul><li>Oligopoly is a market structure in which only a few sellers offer similar or identical products</li></ul><blockquote><p>Prisoner Dilemma</p></blockquote><p><strong>Prisoners’ dilemma is a particular “game” between two captured prisoners that illustrates why cooperation is difficult to maintain even when it is mutually beneficial.</strong></p><p><img src="https://i.loli.net/2021/08/17/u2BnPTWMERmwdX7.png" alt="image.png"></p><ul><li><p>Each player will choose the best strategy for them regardless of the strategies chosen by others.</p></li><li><p>In this picture, each player will choose to defect although cooperation is mutually beneficial.</p></li></ul><blockquote><p>Nash equilibrium</p></blockquote><ul><li><p>Each company will choose to produce more goods in order to get more market shares rather than producing fewer to keep the market price high.</p></li><li><p>As the supply increases, the market price decreases.</p></li><li><p>Each company stops producing more goods as their total revenue decreases, the quantity they produce is called Nash equilibrium.</p></li><li><p>The quantity supplied in oligopoly is greater than that in monopoly, but smaller than that in the competitive market.</p></li></ul><h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><p>1.Oligopoly– a market structure in which only a few sellers offer similar or identical products</p><p>2.Cartel– a group of firms acting in unison </p><p>3.Prisoners’ dilemma– a particular “game” between two captured prisoners that illustrates why cooperation is difficult to maintain even when it is mutually beneficial</p><p>4.Game theory– the study of how people behave in strategic situations</p><p>5.Nash equilibrium– a situation in which economic actors interacting with one another each choose their best strategy given the strategies that all the other factors have chosen</p><p>6.Dominant strategy– a strategy that is best for a player in a game regardless of the strategies chosen by the other players</p><p>7.Collusion– an agreement among firms in a market about quantities to produce or prices to charge</p><h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>I did all questions correctly! Excellent!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Summary&quot;&gt;&lt;a href=&quot;#Summary&quot; class=&quot;headerlink&quot; title=&quot;Summary&quot;&gt;&lt;/a&gt;Summary&lt;/h3&gt;&lt;p&gt;Chapter 17 is Oligopoly. This chapter introduces o</summary>
+      
+    
+    
+    
+    
+    <category term="Economics" scheme="https://warlockalan.github.io/tags/Economics/"/>
+    
+    <category term="Hobbies" scheme="https://warlockalan.github.io/tags/Hobbies/"/>
+    
+    <category term="Reading notes" scheme="https://warlockalan.github.io/tags/Reading-notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Personal statement-- my stories of learning Mathematics</title>
+    <link href="https://warlockalan.github.io/2021/08/16/My%20stories%20of%20learning%20Mathematics/"/>
+    <id>https://warlockalan.github.io/2021/08/16/My%20stories%20of%20learning%20Mathematics/</id>
+    <published>2021-08-16T15:59:59.000Z</published>
+    <updated>2025-04-22T08:40:01.515Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>The place where I learnt something very important to my personal growth was at the A level centre where I studied my IGCSE examinations. This short essay will focus on my experience with Mathematics when I was in Grade 10. </p></blockquote><h3 id="My-experience-of-a-mock-exam"><a href="#My-experience-of-a-mock-exam" class="headerlink" title="My experience of a mock exam"></a>My experience of a mock exam</h3><p>According to the Cambridge Assessment International Education, Asians perform well in IGCSE Mathematic examinations. The majority of students in my class, including me, always advocate that IGCSE Mathematic examination is easier compared with the Chinese alternative because students need to in Chinese alternative. During the lesson, I used to feel extremely bored and spend the whole course session daydreaming, which caused me to omit some important formulae. After nearly one-month, we were given a mock examination. My exam result was average rather than excellent which was disappointing. Thus, I liaised with the high achieving students and found that they paid full attention to listening to the teacher during class. </p><blockquote><p>From then on, I had previewed and reviewed each mathematic chapter gradually to make sure I could master mathematic formulae clearly. But I still had a problem which was I was too careless. Here is one of my stories.</p></blockquote><h3 id="My-experience-of-Euclid-Contest"><a href="#My-experience-of-Euclid-Contest" class="headerlink" title="My experience of Euclid Contest"></a>My experience of Euclid Contest</h3><p>Three months after the mock examination, I took part in a mathematic contest called Euclid at school which was a little bit difficult because no multiple choices in it. Due to my inattention, I even forgot that our teacher had said there were no multiple choices. In addition, I did not read the question correctly because I read so fast which meant I misunderstood some questions and answered them incorrectly. The results showed that I got 68 out of 100 and the international top 25% required 69 marks.</p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>This contest experience taught me a number of lessons. First, it encouraged me to study harder in the mathematics field as questions in the contest were difficult. Second, I have developed a good learning habit which is reviewing and previewing. Finally, this experience made me try the best and I realized I should be more attentive and improve my concentration and motivation if I want to fulfil my potential.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;The place where I learnt something very important to my personal growth was at the A level centre where I studied my IGCSE e</summary>
+      
+    
+    
+    
+    
+    <category term="Personal statement" scheme="https://warlockalan.github.io/tags/Personal-statement/"/>
+    
+    <category term="School life" scheme="https://warlockalan.github.io/tags/School-life/"/>
+    
+    <category term="Mathematics" scheme="https://warlockalan.github.io/tags/Mathematics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter16)</title>
+    <link href="https://warlockalan.github.io/2021/08/07/Principles%20of%20Economics(chapter16)/"/>
+    <id>https://warlockalan.github.io/2021/08/07/Principles%20of%20Economics(chapter16)/</id>
+    <published>2021-08-07T15:59:59.000Z</published>
+    <updated>2025-04-22T08:40:01.516Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>Chapter 16 is Monopolistic Competition. This chapter introduces monopolistic competition, a kind of market structure.</p><ul><li>Monopolistic competition is a market structure in which many firms sell products that are similar but not identical.</li></ul><blockquote><p>Characteristics</p></blockquote><ul><li>Many sellers: There are many firms competing for the same group of customers.</li><li>Product differentiation: Each firm produces a product that is at least slightly different from those of other firms. Thus, rather being a price taker, each firm faces a downward- sloping demand curve.</li><li>Free entry and exit: Firms can enter or exit the market without restriction. Thus, the number of firms in the market adjusts until economic profits are driven to zero.</li></ul><p><img src="https://i.loli.net/2021/08/07/lQrxTyO5PckMbnR.png" alt="image.png"></p><ul><li>Firms cannot earn economic profits in the long run.</li><li>P &gt; MC</li><li>Profit maximization: sell goods at the quantity where MR &#x3D; MC</li></ul><p><img src="https://i.loli.net/2021/08/07/OTc8H2wWUjtEPdv.png" alt="image.png"></p><ul><li>Efficient scale is the quantity where MC &#x3D; ATC.</li><li>Excess capacity is the difference between efficient scale and quantity produced.</li><li>Markup is the difference between price and marginal cost.</li></ul><h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><p>1.Oligopoly– a market structure in which only a few sellers offer similar or identical products</p><p>2.Monopolistic competition– a market structure in which many firms sell products that are similar but not identical</p><h3 id="Review-1"><a href="#Review-1" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p><blockquote><ol><li>New firms will enter a monopolistically competitive market of_____（Correct answer: D）</li></ol></blockquote><p>a. marginal revenue is greater than marginal cost</p><p>b. marginal revenue is greater than average total cost</p><p>c. price is greater than marginal cost</p><p>d. price is greater than average total cost</p><p>My wrong answer: C</p><blockquote><ol start="2"><li>What is true of a monopolistically competitive market in long-run equilibrium<br>(Correct answer: A)</li></ol></blockquote><p>a. Price is greater than marginal cost</p><p>b. Price is equal to marginal revenue</p><p>c. Firms make positive economic profits</p><p>d. Firms produce at the minimum of average total cost</p><p>My wrong answer: D</p><blockquote><ol start="3"><li>Advertising can be a signal of quality_____ (Correct answer: B)</li></ol></blockquote><p>a. if advertising is freely available to all firms</p><p>b. if the benefit of attracting customers is greater for firms </p><p>c. only if consumers are irrationally attracted to products they see advertised</p><p>d. only if the content of the ads contains credible information about the products</p><p>My wrong answer: D</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Review&quot;&gt;&lt;a href=&quot;#Review&quot; class=&quot;headerlink&quot; title=&quot;Review&quot;&gt;&lt;/a&gt;Review&lt;/h3&gt;&lt;p&gt;Chapter 16 is Monopolistic Competition. This chapter i</summary>
+      
+    
+    
+    
+    
+    <category term="Economics" scheme="https://warlockalan.github.io/tags/Economics/"/>
+    
+    <category term="Hobbies" scheme="https://warlockalan.github.io/tags/Hobbies/"/>
+    
+    <category term="Reading notes" scheme="https://warlockalan.github.io/tags/Reading-notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter15)</title>
+    <link href="https://warlockalan.github.io/2021/08/04/Principles%20of%20Economics(chapter15)/"/>
+    <id>https://warlockalan.github.io/2021/08/04/Principles%20of%20Economics(chapter15)/</id>
+    <published>2021-08-04T15:59:59.000Z</published>
+    <updated>2025-04-22T08:40:01.515Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>The chapter 15 is Monopoly. This chapter introduces the situation of monopoly.</p><ul><li>Monopoly is the situation when a firm that is the sole seller of a product without any close substitutes.</li></ul><p><img src="https://i.loli.net/2021/08/04/P2bMGAODcQ9XmyH.png" alt="image.png"></p><ul><li>Natural monopoly is a type of monopoly that arises because a single firm can supply a  good or service to an entire market at a lower cost than could two or more firms</li></ul><p><img src="https://i.loli.net/2021/08/04/IvF6A2sSkRicqjU.png" alt="image.png"></p><ul><li>A monopolist’s marginal revenue is less than the price of its good because of the downward-sloping demand curve.</li></ul><blockquote><p>Profit maximization</p></blockquote><p><img src="https://i.loli.net/2021/08/04/VEoBq2eclADRg8t.png" alt="image.png"></p><ul><li>Find the Q at which MR &#x3D; MC.</li><li>On the demand curve, find P at which consumers will buy Q.</li><li>If P &gt; ATC, the monopoly earns a profit.</li></ul><p><strong>For a competitive firm: P&#x3D;MR&#x3D;MC</strong></p><p><strong>For a monopoly firm: P&gt;MR&#x3D;MC</strong></p><blockquote><p>The deadweight loss</p></blockquote><p><img src="https://i.loli.net/2021/08/04/cAkUDBSeICVGoXY.png" alt="image.png"></p><ul><li>A benevolent social planner maximizes total surplus in the market by choosing the level of output where the marginal cost curve and demand curve intersect.</li></ul><p><img src="https://i.loli.net/2021/08/04/gPQb2JnkvRZD3Xa.png" alt="image.png"></p><ul><li>Because a monopoly charges a price above the marginal cost, not all consumers who value the good at more than its cost buy it. It causes the deadweight loss.</li></ul><blockquote><p>Price discrimination</p></blockquote><ul><li>Price discrimination is the business practice of selling the same good at different prices to different customers.</li></ul><p><img src="https://i.loli.net/2021/08/04/rBiSuRNO26y4MKI.png" alt="image.png"></p><p><img src="https://i.loli.net/2021/08/04/MT26p1jIhuLRE8Z.png" alt="image.png"></p><ul><li>Because different consumers have different willingnesses to buy the same good, the price discrimination increases the total surplus.</li></ul><blockquote><p>Differences between Competition and Monopoly</p></blockquote><p><img src="https://i.loli.net/2021/08/04/jTmZ8XaHGLBxDIi.png" alt="image.png"></p><h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><p>1.Monopoly– a firm that is the sole seller of a product without any close substitutes</p><p>2.Natural monopoly– a type of monopoly that arises because a single firm can supply a  good or service to an entire market at a lower cost than could two or more firms</p><p>3.Price discrimination– the business practice of selling the same good at different prices to different customers</p><h3 id="Review-1"><a href="#Review-1" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p><blockquote><ol><li>If a monopoly’s fixed costs increase, its price will_____ and its profit will_____. (Correct answer: D）</li></ol></blockquote><p>a. increase; decrease</p><p>b. decrease; increase</p><p>c. increase; stay the same</p><p>d. stay the same; decrease</p><p>My wrong answer: A</p><blockquote><ol start="2"><li>The deadweight loss from monopoly arises because_____. (Correct answer: B)</li></ol></blockquote><p>a. the monopoly firm makes higher profits than a competitive firm would</p><p>b. some potential consumers who forgo buying the good value it more than its marginal cost</p><p>c. consumers who buy the good have to pay more than marginal cost, reducing their consumer surplus</p><p>d. the monopoly firm chooses a quantity that fails to equate price and average revenue</p><p>My wrong answer: D</p><blockquote><ol start="3"><li>Antitrust regulators are likely to prohibit two firms from merging if_____. (Correct answer: C)</li></ol></blockquote><p>a. there are many other firms in the industry</p><p>b. there are sizable synergies to the combination</p><p>c. the combined firm will have a large share of the market</p><p>d. the combined firm will undercut competitors with lower prices</p><p>My wrong answer: A</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Review&quot;&gt;&lt;a href=&quot;#Review&quot; class=&quot;headerlink&quot; title=&quot;Review&quot;&gt;&lt;/a&gt;Review&lt;/h3&gt;&lt;p&gt;The chapter 15 is Monopoly. This chapter introduces th</summary>
+      
+    
+    
+    
+    
+    <category term="Economics" scheme="https://warlockalan.github.io/tags/Economics/"/>
+    
+    <category term="Hobbies" scheme="https://warlockalan.github.io/tags/Hobbies/"/>
+    
+    <category term="Reading notes" scheme="https://warlockalan.github.io/tags/Reading-notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter14)</title>
+    <link href="https://warlockalan.github.io/2021/07/30/Principles%20of%20Economics(chapter14)/"/>
+    <id>https://warlockalan.github.io/2021/07/30/Principles%20of%20Economics(chapter14)/</id>
+    <published>2021-07-30T15:59:59.000Z</published>
+    <updated>2025-04-22T08:40:01.515Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>This chapter 14 is the Firms in Competitive markets. This chapter introduces the nature and characteristics of competitive markets.</p><blockquote><p>What it is</p></blockquote><ul><li>Competitive market is a market with many buyers and sellers trading identical products so that each buyer and seller is a price taker.</li></ul><blockquote><p>Characteristics</p></blockquote><ul><li>average revenue &#x3D; price</li><li>marginal revenue &#x3D; price</li></ul><blockquote><p>Profit</p></blockquote><p><img src="https://i.loli.net/2021/07/30/KunAmLQGigFEd6S.png" alt="image.png"></p><p><img src="https://i.loli.net/2021/07/30/9oY7mPQyKrk5pVO.png" alt="image.png"></p><ul><li>Profit &#x3D; TR - TC</li><li>Profit &#x3D; (TR&#x2F;Q - TC&#x2F;Q）* Q</li><li>Profit &#x3D; (P - ATC) * Q</li></ul><blockquote><p>Profit maximization</p></blockquote><p><img src="https://i.loli.net/2021/07/30/VgOZPLUDhGmCMqS.png" alt="image.png"></p><ul><li>marginal cost &#x3D; marginal revenue </li><li>price &#x3D; marginal revenue</li><li>produce the quantity when P &#x3D; MC</li></ul><blockquote><p>Exit</p></blockquote><ul><li>Exit means firms do not produce goods any more in the long run.</li><li>Firms loss its revenue but do not burden the total cost of production.</li><li>Firms exit if the total revenue is smaller than the total cost.</li></ul><blockquote><p>Shut down</p></blockquote><ul><li>Shut down means firms do not produce goods any more in the short run.</li><li>Firms loss its revenue but do not burden the variable cost of production.</li><li>Firms shut down if the total revenue is smaller than the variable cost.</li></ul><p><img src="https://i.loli.net/2021/07/30/qrWc8Lz2QX7akjt.png" alt="image.png"></p><blockquote><p>Supply curve in a competitive market</p></blockquote><ul><li>In the short run</li></ul><p><img src="https://i.loli.net/2021/07/30/Ud3FZiQebYxKfjS.png" alt="image.png"></p><p><img src="https://i.loli.net/2021/07/30/8tEZKBHeaI2TjJh.png" alt="image.png"></p><ul><li>In the long run</li></ul><p><img src="https://i.loli.net/2021/07/30/TJ7AkRCxsyl5u1n.png" alt="image.png"></p><p><img src="https://i.loli.net/2021/07/30/nR1cBHsxAjMK7C5.png" alt="image.png"></p><p><strong>Price &#x3D; minimum ATC in the long run</strong></p><h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol><li><p>Competitive market– a market with many buyers and sellers trading identical products so that each buyer and seller is a price taker</p></li><li><p>Marginal revenue– the change in total revenue from an additional unit sold</p></li><li><p>Average revenue– total revenue divided by the quantity sold</p></li><li><p>Sunk cost– a cost that has already been committed and cannot be recovered</p></li></ol><h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p><blockquote><ol><li>A competitive firm maximizes profit by choosing the quantity at which_____(Correct answer: B)</li></ol></blockquote><p>a. average total cost is at its minimum</p><p>b. marginal cost equals the price</p><p>c. average total cost equals the price</p><p>d. marginal cost equals average total cost</p><p>My wrong answer: D</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Summary&quot;&gt;&lt;a href=&quot;#Summary&quot; class=&quot;headerlink&quot; title=&quot;Summary&quot;&gt;&lt;/a&gt;Summary&lt;/h3&gt;&lt;p&gt;This chapter 14 is the Firms in Competitive market</summary>
+      
+    
+    
+    
+    
+    <category term="Economics" scheme="https://warlockalan.github.io/tags/Economics/"/>
+    
+    <category term="Hobbies" scheme="https://warlockalan.github.io/tags/Hobbies/"/>
+    
+    <category term="Reading notes" scheme="https://warlockalan.github.io/tags/Reading-notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter 13)</title>
+    <link href="https://warlockalan.github.io/2021/07/28/Principles%20of%20Economics(chapter13)/"/>
+    <id>https://warlockalan.github.io/2021/07/28/Principles%20of%20Economics(chapter13)/</id>
+    <published>2021-07-28T15:59:59.000Z</published>
+    <updated>2025-04-22T08:40:01.515Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 13 is the Cost of Production. This chapter introduces revenue, cost and profit.</p><blockquote><p>Revenue</p></blockquote><ul><li>Total revenue is the amount a firm receives for the sale of its output.</li><li>Revenue &#x3D; quantity * price</li></ul><blockquote><p>Cost</p></blockquote><ul><li>Explicit cost is input cost that requires an outlay of money by the firm.</li><li>Implicit cost is input cost that does not require an outlay of money by the firm.</li><li>Fixed cost is cost that does not vary with the quantity of output produced.</li><li>Variable costs is cost that varies with the quantity of output produced.</li></ul><blockquote><p>Profit </p></blockquote><ul><li>Profit &#x3D; Total revenue - Total cost</li><li>Economic profit is total revenue minus total cost, including both explicit and implicit costs.</li><li>Accounting profit is total revenue minus total explicit cost.</li><li>Total opportunity cost is implicit cost pluses explicit cost.</li></ul><blockquote><p>Production function</p></blockquote><ul><li>The relationship between the quantity of inputs used to make a good and the quantity of output of that good.</li></ul><blockquote><p>Diminishing marginal product </p></blockquote><ul><li><p>The property whereby the marginal product of an input declines as the quantity of the input increases.</p></li><li><p>Due to it, the production function gets flatter as the number of input increases.</p></li></ul><p><img src="https://i.loli.net/2021/07/28/df1SsRHgyJZajCr.png" alt="image.png"></p><ul><li>Due to it, the total-cost curve gets steeper as the quantity of output increases.</li></ul><p><img src="https://i.loli.net/2021/07/28/OhmKpoyqiLw6V1v.png" alt="image.png"></p><ul><li><p>Profit maximization</p></li><li><p>Average total cost &#x3D; marginal cost</p></li></ul><p><img src="https://i.loli.net/2021/07/28/SIznELUaAkb1yjl.png" alt="image.png"></p><h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol><li><p>Total revenue– the amount a firm receives for the sale of its output</p></li><li><p>Total cost– the market value of the inputs a firm uses in production</p></li></ol><blockquote><p>TC &#x3D; FC + VC</p></blockquote><ol start="3"><li><p>Profit– total revenue minus total cost</p></li><li><p>Explicit costs– input costs that require an outlay of money by the firm</p></li><li><p>Implicit costs– input costs that do not require an outlay of money by the firm</p></li><li><p>Economic profit– total revenue minus total cost, including both explicit and implicit costs</p></li><li><p>Accounting profit– total revenue minus total explicit cost</p></li><li><p>Production function– the relationship between the quantity of inputs used to make a good and the quantity of output of that good</p></li><li><p>Marginal product– the increase in output that arises from an additional unit of input</p></li><li><p>Diminishing marginal product– the property whereby the marginal product of an input declines as the quantity of the input increases</p></li><li><p>Fixed cost– costs that do not vary with the quantity of output produced</p></li></ol><blockquote><p>FC</p></blockquote><ol start="12"><li>Variable costs– costs that vary with the quantity of output produced</li></ol><blockquote><p>VC</p></blockquote><ol start="13"><li>Average total cost– total cost divided by the quantity of output</li></ol><blockquote><p>ATC &#x3D; TC &#x2F; Q</p></blockquote><ol start="14"><li>Average fixed cost– fixed cost divided by the quantity of output</li></ol><blockquote><p>AFC &#x3D; FC &#x2F; Q</p></blockquote><ol start="15"><li>Average variable cost– variable cost divided by the quantity of output</li></ol><blockquote><p>AVC &#x3D; VC &#x2F; Q</p></blockquote><ol start="16"><li>Marginal cost– the increase in total cost that arises from an extra unit of production</li></ol><blockquote><p>MC &#x3D;  <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\Delta&space;TC&space;}{\Delta&space;Q&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\Delta&space;TC&space;}{\Delta&space;Q&space;}" title="\frac{\Delta TC }{\Delta Q }" /></a></p></blockquote><ol start="17"><li><p>Efficient scale– the quantity of output that minimizes average total cost</p></li><li><p>Economies of scale– the property whereby long-run average total costs falls as the quantity of output increases</p></li><li><p>Diseconomies of scale– the property whereby long-run average total cost rises as the quantity of output increases</p></li><li><p>Constant returns to scale– the property whereby long-run average total cost stays the same as the quantity of output changes</p></li></ol><h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>I did all questions correctly! Excellent!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Summary&quot;&gt;&lt;a href=&quot;#Summary&quot; class=&quot;headerlink&quot; title=&quot;Summary&quot;&gt;&lt;/a&gt;Summary&lt;/h3&gt;&lt;p&gt;Chapter 13 is the Cost of Production. This chapter</summary>
+      
+    
+    
+    
+    
+    <category term="Economics" scheme="https://warlockalan.github.io/tags/Economics/"/>
+    
+    <category term="Hobbies" scheme="https://warlockalan.github.io/tags/Hobbies/"/>
+    
+    <category term="Reading notes" scheme="https://warlockalan.github.io/tags/Reading-notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter12)</title>
+    <link href="https://warlockalan.github.io/2021/07/26/Principles%20of%20Economics(chapter12)/"/>
+    <id>https://warlockalan.github.io/2021/07/26/Principles%20of%20Economics(chapter12)/</id>
+    <published>2021-07-26T15:59:59.000Z</published>
+    <updated>2025-04-22T08:40:01.515Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 12 is the Design of the Tax System. This chapter introduces different tax systems and the tax system in the US.</p><blockquote><p>US tax system</p></blockquote><ul><li><p>The most important taxes for the federal government are personal income taxes and payroll taxes for social insurance. </p></li><li><p>The most important taxes for state and local governments are sales taxes and property taxes.</p></li></ul><blockquote><p>Different tax systems</p></blockquote><ul><li><p>Proportional tax is a tax for which high-income and low-income taxpayers pay the same fraction of income.</p></li><li><p>Regressive tax is a tax for which high-income taxpayers pay a smaller fraction of their income than do low-income taxpayers.</p></li><li><p>Progressive tax is a tax for which high-income taxpayers pay a larger fraction of their income than do low-income taxpayers.</p></li></ul><blockquote><p>Principles of tax</p></blockquote><ul><li>Equity</li></ul><p>1.It should obey the benefits principle (the idea that people should pay taxes based on the benefits they receive from government services).</p><p>2.It should obey the ability-to-pay principle (the idea that taxes should be levied on a person according to how well that person can shoulder the burden).</p><ul><li>Efficiency</li></ul><h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol><li><p>Average tax rate– total taxes paid divided by total income </p></li><li><p>Marginal tax rate– the amount by which taxes increase from an additional dollar of income</p></li><li><p>Lump-sum tax rate– a tax that is the same amount for every person</p></li><li><p>Benefits principle– the idea that people should pay taxes based on the benefits they receive from government services</p></li><li><p>Ability-to-pay principle– the idea that taxes should be levied on a person according to how well that person can shoulder the burden</p></li><li><p>Vertical equity– the idea that taxpayers with a greater ability to pay taxes should pay larger amounts</p></li><li><p>Horizontal equity– the idea that taxpayers with similar abilities to pay taxes should pay the same amount</p></li><li><p>Proportional tax– a tax for which high-income and low-income taxpayers pay the same fraction of income</p></li><li><p>Regressive tax– a tax for which high-income taxpayers pay a smaller fraction of their income than do low-income taxpayers</p></li><li><p>Progressive tax– a tax for which high-income taxpayers pay a larger fraction of their income than do low-income taxpayers</p></li></ol><h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p><blockquote><ol><li>Betty gives piano lessons. She has an opportunity cost of 50 dollars per lesson and charges 60 dollars. She has two students: Archie, who has a willingness to pay of 70 dollars, and Veronica, who has a willingness to pay of 90 dollars. When the government puts a 20 dollars tax on piano lessons and Betty raises her price to 80 dollars, the deadweight loss is_____ and the tax revenue is_____.  (Correct answer: C)</li></ol></blockquote><p>a. 10,20</p><p>b. 10,40</p><p>c. 20.20</p><p>d. 20,40</p><p>My wrong answer: A</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Summary&quot;&gt;&lt;a href=&quot;#Summary&quot; class=&quot;headerlink&quot; title=&quot;Summary&quot;&gt;&lt;/a&gt;Summary&lt;/h3&gt;&lt;p&gt;Chapter 12 is the Design of the Tax System. This c</summary>
+      
+    
+    
+    
+    
+    <category term="Economics" scheme="https://warlockalan.github.io/tags/Economics/"/>
+    
+    <category term="Hobbies" scheme="https://warlockalan.github.io/tags/Hobbies/"/>
+    
+    <category term="Reading notes" scheme="https://warlockalan.github.io/tags/Reading-notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter11)</title>
+    <link href="https://warlockalan.github.io/2021/07/23/Principles%20of%20Economics(chapter11)/"/>
+    <id>https://warlockalan.github.io/2021/07/23/Principles%20of%20Economics(chapter11)/</id>
+    <published>2021-07-23T15:59:59.000Z</published>
+    <updated>2025-04-22T08:40:01.515Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 11 is Public Goods and Common Resources. This chapter divides the goods into four categories by using the definition of excludability (he property of a good whereby a person can be prevented from using it) and rivalry in consumption(the property of a good whereby one person’s use diminishes other people’s use).</p><blockquote><p>Private goods</p></blockquote><ul><li>Rival in consumption</li><li>Excludable</li><li>e.g ice-cream cones, clothing, congested toll roads</li></ul><blockquote><p>Club goods</p></blockquote><ul><li>Not rival in consumption</li><li>Excludable</li><li>e.g satellite TV, fire protection, uncongested toll roads</li></ul><blockquote><p>Common resources</p></blockquote><ul><li>Non-excludable</li><li>Rival in consumption</li><li>e.g fish in the ocean, the environment, congested non-toll roads</li><li>The common resources tend to be used excessively.</li></ul><blockquote><p>Public goods</p></blockquote><ul><li>Non-excludable</li><li>Not rival in consumption</li><li>e.g tornado siren, national defense, uncongested non-toll roads</li><li>People who receive the benefit of a good but avoid paying for it is called free riders.</li></ul><h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol><li><p>Excludability– the property of a good whereby a person can be prevented from using it</p></li><li><p>Public goods– good that are neither excludable nor rival in consumption</p></li><li><p>Free rider– a person who receives the benefit of a good but avoids paying for it</p></li><li><p>Rivalry in consumption– the property of a good whereby one person’s use diminishes other people’s use</p></li><li><p>Common resources– goods that are excludable but not rival in consumption</p></li><li><p>Cost-benefit analysis– a study that compares the costs and benefits to society of providing a public good</p></li><li><p>Private goods– goods that are both excludable and rival in consumption</p></li><li><p>Club goods– goods that are excludable but not rival in consumption</p></li><li><p>Tragedy of the Commons– a parable that illustrates why common resources are used more than is desirable from the standpoint of society as a whole</p></li></ol><h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p><blockquote><p>1.Common resources are_____(Correct answer: C)</p></blockquote><p>a. efficiently provided by the market forces</p><p>b. underprovided in the absence of government</p><p>c. overused in the absence of government</p><p>d. a type of natural monopoly</p><p>My wrong answer: B</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Summary&quot;&gt;&lt;a href=&quot;#Summary&quot; class=&quot;headerlink&quot; title=&quot;Summary&quot;&gt;&lt;/a&gt;Summary&lt;/h3&gt;&lt;p&gt;Chapter 11 is Public Goods and Common Resources. T</summary>
+      
+    
+    
+    
+    
+    <category term="Economics" scheme="https://warlockalan.github.io/tags/Economics/"/>
+    
+    <category term="Hobbies" scheme="https://warlockalan.github.io/tags/Hobbies/"/>
+    
+    <category term="Reading notes" scheme="https://warlockalan.github.io/tags/Reading-notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Reading notes--Principles of Economics (chapter10)</title>
+    <link href="https://warlockalan.github.io/2021/07/22/Principles%20of%20Economics(chapter10)/"/>
+    <id>https://warlockalan.github.io/2021/07/22/Principles%20of%20Economics(chapter10)/</id>
+    <published>2021-07-22T15:59:59.000Z</published>
+    <updated>2025-04-22T08:40:01.515Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 10 is Externalities. This chapter introduces the situation when the producers and consumers are not the only interested parties.</p><p><img src="https://i.loli.net/2021/07/22/wxVsohOCNI8tcdH.png" alt="image.png"></p><p><img src="https://i.loli.net/2021/07/22/53aFvksLRUjDC4W.png" alt="image.png"></p><ul><li>Externalities include external cost and external benefit.</li><li>Externalities make the equilibrium not the optimum.</li><li>The use of tax or subsidy can make the equilibrium equal to the optimum if the new supply curve(private cost) coincides with the social-cost curve.</li></ul><p><img src="https://i.loli.net/2021/07/22/Kiuq5TMcjhs17NP.png" alt="image.png"></p><p><img src="https://i.loli.net/2021/07/22/piUTMqukotO3zQF.png" alt="image.png"></p><ul><li>Corrective tax and pollution permits are used for decreasing negative externality.</li><li>Pollution permits mean the firms can buy the rights to pollute more from other firms.</li><li>Pollution permits could be better because different kinds of firms have the different cost to avoid polluting. </li><li>Regulation can be another way to limit the negative externality. If the negative externality is much greater than the private benefits, the regulation would be better.</li></ul><blockquote><p>Coase theorem is the proposition that if private parties can bargain without cost over the allocation of resources, they can solve the problem of externalities on their own.</p></blockquote><ul><li>Private parties may not solve the problem of negative externality if the process of bargain has the cost.</li></ul><h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ol><li><p>Externality– the uncompensated impact of one person’s actions on the well-being of a bystander</p></li><li><p>Internalizing the externality– altering incentives so that people take into account the external effects of their actions</p></li><li><p>Corrective taxes– a tax designed to induce private decision makers to take into account the social costs that arise from a negative externality</p></li><li><p>Coase theorem– the proposition that if private parties can bargain without cost over the allocation of resources, they can solve the problem of externalities on their own</p></li><li><p>Transaction costs– the costs that parties incur during the process of agreeing to and following through on a bargain</p></li></ol><h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>I did all questions correctly! Excellent!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Summary&quot;&gt;&lt;a href=&quot;#Summary&quot; class=&quot;headerlink&quot; title=&quot;Summary&quot;&gt;&lt;/a&gt;Summary&lt;/h3&gt;&lt;p&gt;Chapter 10 is Externalities. This chapter introduc</summary>
+      
+    
+    
+    
+    
+    <category term="Economics" scheme="https://warlockalan.github.io/tags/Economics/"/>
+    
+    <category term="Hobbies" scheme="https://warlockalan.github.io/tags/Hobbies/"/>
+    
+    <category term="Reading notes" scheme="https://warlockalan.github.io/tags/Reading-notes/"/>
+    
+  </entry>
+  
+</feed>

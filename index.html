@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> WarlockAlan</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <!-- mermaid -->
+      
+    <link rel="alternate" href="/atom.xml" title="WarlockAlan" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      <canvas class="fireworks"></canvas>
+      <style>
+        .fireworks {
+          position: fixed;
+          left: 0;
+          top: 0;
+          z-index: 99999;
+          pointer-events: none;
+        }
+      </style>
+      
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover1.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">WarlockAlan</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['Welcome and Greetings!', '', ''],
+        startDelay: 0,
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  
+  
+<div class="notice" style="margin-top:50px">
+    <i class="ri-heart-fill"></i>
+    <div class="notice-content">B4 is a good step for chess, not for me.</div>
+</div>
+
+
+<style>
+    .notice {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+    }
+
+    .notice i {
+        float: left;
+        color: #999;
+        font-size: 16px;
+        padding-right: 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+
+    .notice-content {
+        display: initial;
+        vertical-align: middle;
+    }
+</style>
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-使用Mediacrawler爬虫抓取数据的攻略"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2025/04/22/%E4%BD%BF%E7%94%A8Mediacrawler%E7%88%AC%E8%99%AB%E6%8A%93%E5%8F%96%E6%95%B0%E6%8D%AE%E7%9A%84%E6%94%BB%E7%95%A5/"
+    >使用Mediacrawler爬虫抓取数据的攻略</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2025/04/22/%E4%BD%BF%E7%94%A8Mediacrawler%E7%88%AC%E8%99%AB%E6%8A%93%E5%8F%96%E6%95%B0%E6%8D%AE%E7%9A%84%E6%94%BB%E7%95%A5/" class="article-date">
+  <time datetime="2025-04-22T07:26:05.000Z" itemprop="datePublished">2025-04-22</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>使用基于Python开发的Mediacrawler爬虫可以抓取b站、小红书等几乎所有国内新媒体平台的推文、视频数据。这里的数据涵盖观看量、点赞、收藏之类的可公开的量化数据，也包含评论这种文本数据。这个爬虫基于Playwright开发，虽然现在大公司都针对Playwright反爬，但是我拿来平时练手做的项目显然没有那么高级的反爬。Mediacrawler是github的开源项目，不得不说做出这个大佬太强了（github stars最高的含金量）。</p>
+<p>Clone、配置好这个github项目之后运行界面长这样：</p>
+<p><img src="https://matuimg.com/i/2025/04/22/pr4vu7.png" alt="微信图片_20250422153737"></p>
+<p>–platform 选择平台如b站、小红书 –lt 选择登陆方式（login type比如qr cpde)</p>
+<p>–keywords 输入搜索的关键词 -get_comments 选择是否要获取评论文本信息</p>
+<p>输出的数据格式选择csv，因为excel可以直接处理csv格式的数据。</p>
+<p>比如我们在B站搜索“出国旅行”关键词，跑出来以下数据（会出现在data文件夹中，每次爬虫爬完之后记得把Browser_data文件夹给删掉）</p>
+<p>会发现有三个文件，一个是关于视频本身播放量等数据，一个是抓取的评论文本，还有一个是视频Up主的信息。<img src="https://matuimg.com/i/2025/04/22/pr4u9x.jpg" alt="PixPin_2025-04-22_15-44-45"></p>
+<p>打开文件视频数据和作者数据长这样：</p>
+<p><img src="https://matuimg.com/i/2025/04/22/pr548y.png" alt="微信图片_20250422154702"><br><img src="https://matuimg.com/i/2025/04/22/pr547p.png" alt="微信图片_20250422154712"></p>
+<p>评论的数据没有，我没有抓取出国旅行这一关键词的数据，但我抓取了我喜欢的游戏战锤的评论，如图：</p>
+<p><img src="https://matuimg.com/i/2025/04/22/ps8daj.jpg" alt="PixPin_2025-04-22_15-48-13"></p>
+<p>剩下的数据分析工作就很简单了，因为数据分析工作的难点从来不是分析数据而是如何获取数据。现在已经得到了excel文件，那数据分析工作也很简单了。（如果是其他格式的文件可能还得使用Python清洗等）</p>
+<p>有原始数据的话数据分析就很容易，比如我filter 粉丝小于某个数 filter播放量大于某个数由此找到低粉爆款视频。再filter这些博主。</p>
+<p><img src="https://matuimg.com/i/2025/04/22/pn67gz.png" alt="微信图片_20250422155031"></p>
+<p><img src="https://matuimg.com/i/2025/04/22/po5i58.png" alt="微信图片_20250422155146"></p>
+<p>视频的评论直接清洗获得词频再做词云图就好了。文件太大了不能丢给AI做，后续也需要验证AI做的是否可信。</p>
+<p>优化以及后续：不要学我一样先获取comments,爬虫初步抓取的时候先别抓comments，先filter出来低粉爆款视频再抓取这些视频的comments。毕竟comments太多抓取太慢了。同时我b站账号似乎触犯了平台反爬虫的机制，已经不能成功抓取数据了，后续可以配置干净的Ip狠狠抓取。但切记不要玩的太过火，小心吃上国家饭。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Statistics-and-data-science/" rel="tag">Statistics and data science</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Linux-Notes"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2025/02/03/Linux-Notes/"
+    >Linux_Notes</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2025/02/03/Linux-Notes/" class="article-date">
+  <time datetime="2025-02-03T13:26:36.000Z" itemprop="datePublished">2025-02-03</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>搜索 wt 打开 windows terminal 默认打开的是 powershell （类似 cmd 的东西） 不用管</p>
+<h3 id="PS-your-command-here-PS-wsl-WSL-for-Windows-Subsystem-for-Linux-虚拟机"><a href="#PS-your-command-here-PS-wsl-WSL-for-Windows-Subsystem-for-Linux-虚拟机" class="headerlink" title="PS &gt; __ #your command here PS &gt; wsl # WSL for Windows Subsystem for Linux 虚拟机"></a>PS &gt; __ #your command here PS &gt; wsl # WSL for Windows Subsystem for Linux 虚拟机</h3><p>所有操作都是在终端内进行的</p>
+<h3 id="cd-change-directory-改变当前目录（文件夹）"><a href="#cd-change-directory-改变当前目录（文件夹）" class="headerlink" title="cd change directory 改变当前目录（文件夹）"></a><code>cd</code> change directory 改变当前目录（文件夹）</h3><ul>
+<li>cd my_folder</li>
+<li>cd # 不带任何参数，回到用户目录 <code>~</code> <code>$HOME</code></li>
+<li><code>pwd</code> - print working directory 将当前的目录输出到终端</li>
+<li><code>touch</code> - 创建新文件</li>
+<li><code>-</code> flag  <code>--</code> </li>
+<li><code>ls</code> - list files ** <code>-A</code> &#x2F; <code>--almost-all</code>  - use this to see hidden files - 前面带点的文件 <code>.bashrc</code> 被隐藏的文件 ** <code>-a</code> &#x2F; <code>--all</code> ** <code>-l</code> 输出为一个 table</li>
+<li><code>mkdir</code> - make directory</li>
+</ul>
+<blockquote>
+<p>directory 目录，实际上就是文件夹</p>
+</blockquote>
+<ul>
+<li><code>rm</code> - remove ** <code>-r</code> recursive 递归删除 - 删除该文件和他的子文件</li>
+<li><code>rmdir</code> - remove directory - useless</li>
+<li><code>explorer.exe</code> 用微软文件管理器打开 只在 wsl 里可用</li>
+<li>大部分命令都实现了 <code>-h</code> 这个 flag，或 <code>--help</code> 使用这个flag查看命令说明</li>
+<li><code>man</code> manual 查看某个命令的手册</li>
+</ul>
+<p>** <code>man mkdir</code></p>
+<ul>
+<li><code>nano</code> 文本编辑器 ** 在终端中 <code>^</code> 代表 CTRL</li>
+<li><code>sudo</code> - super user do ** 如果要求你使用 <code>root</code> （根用户），操作需要 <code>elevated</code> （提升权限），<code>permission denied</code></li>
+</ul>
+<hr>
+<p>黑马的教程用的是 CentOS，他安装软件使用 <code>yum</code> 或者 <code>rpm</code>，我是用的是 Ubuntu，安装软件使用 <code>apt</code></p>
+<p><code>apt search</code> 搜索软件包</p>
+<p><code>apt install</code> 安装软件包</p>
+<p>如果你太久没更新 apt，里面的包太老了，所以就没法安装某些新软件</p>
+<p><code>apt update</code> 是更新 apt</p>
+<p><code>apt upgrade</code> 更新你用 apt 安装的软件</p>
+<hr>
+<p>启动 MySQL</p>
+<ul>
+<li><p><code>systemctl start mysql</code></p>
+</li>
+<li><p><code>systemctl</code> system control</p>
+</li>
+<li><p><code>mysqld</code> MySQL Daemon </p>
+</li>
+<li><p>start &#x2F; restart &#x2F; stop</p>
+<p><code>sudo mysql -u root -p </code></p>
+</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-SQL-NOTES"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2025/02/03/SQL-NOTES/"
+    >SQL_NOTES</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2025/02/03/SQL-NOTES/" class="article-date">
+  <time datetime="2025-02-03T13:10:35.000Z" itemprop="datePublished">2025-02-03</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>网上挑选了一些SQL笔记，这一份比较的凝练实用。</p>
+<p><img src="E:\sql_notes\1.jpg" alt="P1"></p>
+<p><img src="E:\sql_notes\2.jpg" alt="P2"></p>
+<p><img src="E:\sql_notes\3.jpg" alt="P3"></p>
+<p><img src="E:\sql_notes\4.jpg" alt="P4"></p>
+<p><img src="E:\sql_notes\5.jpg" alt="P5"></p>
+<p><img src="E:\sql_notes\6.jpg" alt="P6"></p>
+<p><img src="E:\sql_notes\7.jpg" alt="P7"></p>
+<p><img src="E:\sql_notes\8.jpg" alt="P8"></p>
+<p><img src="E:\sql_notes\9.jpg" alt="P9"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Notes/" rel="tag">Notes</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Edinburgh-Travel-Guide"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2025/02/02/Edinburgh-Travel-Guide/"
+    >Edinburgh_Travel_Guide</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2025/02/02/Edinburgh-Travel-Guide/" class="article-date">
+  <time datetime="2025-02-02T22:16:27.000Z" itemprop="datePublished">2025-02-03</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Explore-Edinburgh-A-Timeless-Journey-through-Scotland’s-Capital-🏰"><a href="#Explore-Edinburgh-A-Timeless-Journey-through-Scotland’s-Capital-🏰" class="headerlink" title="Explore Edinburgh: A Timeless Journey through Scotland’s Capital 🏰"></a>Explore Edinburgh: A Timeless Journey through Scotland’s Capital 🏰</h1><p><strong>✨ In-Depth Highlights of Edinburgh</strong>  </p>
+<ul>
+<li><p><strong>Edinburgh Castle</strong><br><img src="https://imgur.com/a/EsSa1Wq" alt="Edinburgh Castle"><br>Perched atop Castle Rock, this iconic fortress houses the Crown Jewels of Scotland and the Stone of Destiny. Explore its medieval Great Hall and the poignant National War Museum, while soaking in sweeping views of the city.  </p>
+</li>
+<li><p><strong>Royal Mile</strong><br><img src="https://imgur.com/a/REfipPz" alt="Royal Mile"><br>A vibrant artery connecting the castle to Holyrood Palace, this mile-long stretch buzzes with street performers, traditional tartan shops, and hidden closes (alleys) revealing tales of Edinburgh’s medieval past. Don’t miss the Writers’ Museum, celebrating literary legends like Robert Burns.  </p>
+</li>
+<li><p><strong>Arthur’s Seat</strong><br><img src="https://imgur.com/a/L6I1EJO" alt="Arthur’s Seat"><br>An extinct volcano in Holyrood Park, this rugged hike rewards adventurers with 360° vistas of Edinburgh’s skyline, the Firth of Forth, and lush countryside. Geologists adore its ancient rock formations dating back 350 million years.  </p>
+</li>
+<li><p><strong>Holyrood Palace</strong><br><img src="https://imgur.com/a/3HvlMG2" alt="Holyrood Palace"><br>Wander through the opulent State Apartments where Mary, Queen of Scots once lived, and explore the haunting ruins of the 12th-century abbey adjacent to the palace. The palace gardens bloom with Scottish flora in summer.  </p>
+</li>
+<li><p><strong>Edinburgh Fringe Festival</strong><br><img src="https://imgur.com/a/Xo0oanm" alt="Fringe Festival"><br>The world’s largest arts festival transforms the city every August, with over 3,000 shows spanning comedy, theatre, and avant-garde performances. Streets pulse with creativity, making it a cultural pilgrim’s paradise. 🎭</p>
+</li>
+</ul>
+<p><strong>💡 Travel Tips</strong>  </p>
+<ul>
+<li><strong>Best Time</strong>: May-September for mild weather and festivals.  </li>
+<li><strong>Transport</strong>: Walkable city center; use buses for longer distances.  </li>
+<li><strong>Must-Try</strong>: Haggis (with whisky sauce!), shortbread, and local craft beers.</li>
+</ul>
+<p><del>欢迎大家来爱丁堡这个愚蠢的地方陪我坐牢</del></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tourism-Industry/" rel="tag">Tourism Industry</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Acknowledgement"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2025/02/02/Acknowledgement/"
+    >Acknowledgement</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2025/02/02/Acknowledgement/" class="article-date">
+  <time datetime="2025-02-02T14:56:26.000Z" itemprop="datePublished">2025-02-02</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>感谢<em>Jason哥哥</em> 援助的脚本和自动部署，之前本博客的自动部署失效了。</p>
+<p>滴水之恩当涌泉相报。</p>
+<p><img src="https://tb2.bdstatic.com/tb/editor/images/face/i_f09.png?t=20140803" alt="感谢Jason哥哥"></p>
+<p>即日起重新开始更新本博客。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Text mining"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/08/14/Text%20mining/"
+    >Reading notes related to text mining</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/08/14/Text%20mining/" class="article-date">
+  <time datetime="2022-08-14T15:59:59.000Z" itemprop="datePublished">2022-08-14</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="reading-notes–-Further-learning-in-statistics-and-data-science"><a href="#reading-notes–-Further-learning-in-statistics-and-data-science" class="headerlink" title="reading notes– Further learning in statistics and data science"></a>reading notes– Further learning in statistics and data science</h3><p>I read the book ‘Opinion Mining and Sentiment Analysis’ by Pang and Lee and thus made notes related to statistics and data science. </p>
+<h4 id="Text-mining"><a href="#Text-mining" class="headerlink" title="Text mining"></a>Text mining</h4><blockquote>
+<p>Text mining (also known as text analysis), is the process of transforming unstructured text into structured data for easy analysis. Text mining uses natural language processing (NLP), allowing machines to understand the human language and process it automatically.</p>
+</blockquote>
+<h5 id="Normalisation"><a href="#Normalisation" class="headerlink" title="Normalisation"></a>Normalisation</h5><blockquote>
+<p>Text normalization is the process of transforming text into a single canonical form that it might not have had before.</p>
+</blockquote>
+<p>Stemming and lemmatisation are two approaches for text normalisation.</p>
+<p>1.Lemmatization is a text normalization technique used in Natural Language Processing (NLP), that switches any kind of a word to its base root mode. Lemmatization is responsible for grouping different inflected forms of words into the root form, having the same meaning.</p>
+<p><strong>Lemma: the basic form of a word, for example the singular form of a noun or the infinitive form of a verb, as it is shown at the beginning of a dictionary entry</strong></p>
+<p>2.In linguistic morphology and information retrieval, stemming is the process of reducing inflected (or sometimes derived) words to their word stem, base or root form—generally a written word form.</p>
+<blockquote>
+<p>notes in Chinese</p>
+</blockquote>
+<p>最常见的词汇规范化的实践有：</p>
+<ol>
+<li><p>词干提取（Stemming）：词干提取是一个初级的、基于规则的脱去后缀（如“ing”，“ly”，“es”，“s”等等）的过程</p>
+</li>
+<li><p>词元化（Lemmatization）：另一方面，词元化，是一个组织好的、一步一步的获取词根的过程。</p>
+</li>
+<li><p>词汇规范化: 另外一种文本型的噪音与一个词语的多种表达形式有关。例如，“play”，“player”，“played”，“plays”和“playing”都是单词“play”的变种。尽管它们有不同的意思，但是根据上下文来看，它们是意思是相似的。这个步骤是将一个单词的所有不同形式转换为它的规范形式（也被称为词条（lemma））</p>
+</li>
+</ol>
+<h4 id="Opinion-mining"><a href="#Opinion-mining" class="headerlink" title="Opinion mining"></a>Opinion mining</h4><blockquote>
+<p>Opinion mining, or sentiment analysis, is a text analysis technique that uses computational linguistics and natural language processing to automatically identify and extract sentiment or opinion from within text (positive, negative, neutral, etc.)</p>
+</blockquote>
+<p>In my words, opinion mining is just one part in text mining; text mining involves classical text mining and opinion mining；The former one analyses text which are expressed factually whereas the latter one analyses text which are expressed subjectively.</p>
+<blockquote>
+<p>Sentiment analysis, also referred to as opinion mining, is an approach to natural language processing (NLP) that identifies the emotional tone behind a body of text. This is a popular way for organizations to determine and categorize opinions about a product, service, or idea. It involves the use of data mining, machine learning (ML) and artificial intelligence (AI) to mine text for sentiment and subjective information.</p>
+</blockquote>
+<p><strong>Emotional tone refers to positive, negative or neutral attitudes.</strong></p>
+<h4 id="Subjectivity-polarity-score"><a href="#Subjectivity-polarity-score" class="headerlink" title="Subjectivity polarity score"></a>Subjectivity polarity score</h4><p>The polarity score is a float within the range [-1.0, 1.0] . The subjectivity is a float within the range [0.0, 1.0] where 0.0 is very objective and 1.0 is very subjective. </p>
+<p>In short, text polarity is a measure of how negative or how positive a piece of text is.<br>Most of the time, NLP models can predict simply positive or negative words and phrases quite well. For example, the words “amazing”, “superb”, and “wonderful” can easily be labelled as highly positive. The words “bad”, “sad”, and “mad” can easily be labelled as negative. However, we can’t just look at polarity from the frame of individual words, it’s important to take a larger context for evaluating total polarity. For example, the word “bad” may be negative but what about the phrase “not bad”? Is that neutral? Or is that the opposite of bad? At this point we’re getting into linguistics and semantics rather than natural language processing.</p>
+<p>The two biggest open source libraries for NLP in Python are spaCy and NLTK, and both of these libraries measure polarity on a normalized scale of -1 to 1. The Text API measures, combines, and normalizes values on both the polarity of the overall text, individual sentences, and individual phrases.</p>
+<blockquote>
+<p>Example <a target="_blank" rel="noopener" href="https://www.ebaina.com/articles/140000005269">https://www.ebaina.com/articles/140000005269</a><br>notes in Chinese</p>
+</blockquote>
+<blockquote>
+<p>极性(polarity)指的是一陈述是肯定还是否定的性质，如果某个词只能出现在肯定或者否定的陈述中，那么这个词就是极性项(polarity item)。在英语中at all是一个否定极性项，它只能出现在否定句中。</p>
+</blockquote>
+<h4 id="Opinion-holders-and-opinion-targets"><a href="#Opinion-holders-and-opinion-targets" class="headerlink" title="Opinion holders and opinion targets"></a>Opinion holders and opinion targets</h4><p>One of the key subtasks in sentiment analysis is opinion role extraction. It can be divided into the extraction of opinion holders (OH), i.e. entities ex-pressing an opinion, and the extraction of opinion targets (OT), i.e. entities or propositions at which sentiment is directed.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Extra-curriculum/" rel="tag">Extra curriculum</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hobbies/" rel="tag">Hobbies</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Reading-notes/" rel="tag">Reading notes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sciences/" rel="tag">Sciences</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Statistics-and-data-science/" rel="tag">Statistics and data science</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Naive Bayes classifier and Markov Chain"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/07/03/Naive%20Bayes%20classifier%20and%20Markov%20Chain/"
+    >Reading notes related to Naive Bayes classifiers and Markov Chain</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/07/03/Naive%20Bayes%20classifier%20and%20Markov%20Chain/" class="article-date">
+  <time datetime="2022-07-03T15:59:59.000Z" itemprop="datePublished">2022-07-03</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="reading-notes-Further-learning-in-statistics-and-data-science"><a href="#reading-notes-Further-learning-in-statistics-and-data-science" class="headerlink" title="reading notes- Further learning in statistics and data science"></a>reading notes- Further learning in statistics and data science</h3><p>I read the book ‘Reinforcement Learning’ by S. Sutton and thus made reading notes about markov chain and also I learned knowledge about Bayes classifiers.</p>
+<h4 id="Classifier"><a href="#Classifier" class="headerlink" title="Classifier"></a>Classifier</h4><blockquote>
+<p>“An algorithm that implements classification, especially in a concrete implementation, is known as a classifier. The term “classifier” sometimes also refers to the mathematical function, implemented by a classification algorithm, that maps input data to a category.”</p>
+</blockquote>
+<h4 id="Bayes-classifier"><a href="#Bayes-classifier" class="headerlink" title="Bayes classifier"></a>Bayes classifier</h4><p>Classifiers based on Bayes’ Theorem.</p>
+<h4 id="Bayes’-Theorem"><a href="#Bayes’-Theorem" class="headerlink" title="Bayes’ Theorem"></a>Bayes’ Theorem</h4><p><img src="https://s2.loli.net/2022/10/18/SkhXpHdMur1abLe.png" alt="3.png"></p>
+<p><img src="https://s2.loli.net/2022/10/18/wOSQCAHdnJNIevY.png" alt="1.png"></p>
+<p><img src="https://s2.loli.net/2022/10/18/rKnV4ILX8Yj6Rl2.png" alt="2.png"></p>
+<h4 id="Naive-Bayes-classifier"><a href="#Naive-Bayes-classifier" class="headerlink" title="Naive Bayes classifier"></a>Naive Bayes classifier</h4><p>Classifiers based on Bayes’ Theorem <strong>with an assumption of independence among predictors</strong>.</p>
+<p>####What are the Pros and Cons of Naive Bayes?</p>
+<p>Pros:</p>
+<ol>
+<li><p>It is easy and fast to predict class of test data set. It also perform well in multi class prediction</p>
+</li>
+<li><p>When assumption of independence holds, a Naive Bayes classifier performs better compare to other models like logistic regression and you need less training data.</p>
+</li>
+<li><p>It perform well in case of categorical input variables compared to numerical variable(s). For numerical variable, normal distribution is assumed (bell curve, which is a strong assumption).</p>
+</li>
+</ol>
+<p>Cons:</p>
+<ol>
+<li>If categorical variable has a category (in test data set), which was not observed in training data set, then model will assign a 0 (zero) probability and will be unable to make a prediction. This is often known as “Zero Frequency”. To solve this, we can use the smoothing technique. One of the simplest smoothing techniques is called Laplace estimation.</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/21134457">https://www.zhihu.com/question/21134457</a> (useful linkage to Naive Bayes classifiers)</p>
+</blockquote>
+<h4 id="Markov-chain-and-laplace-smoothing"><a href="#Markov-chain-and-laplace-smoothing" class="headerlink" title="Markov chain and laplace smoothing"></a>Markov chain and laplace smoothing</h4><p>It is a pretty tough section so i only made notes in Chinese to help me understand this section better.</p>
+<p><img src="https://s2.loli.net/2022/10/18/fKgv9LOt1IpoHT6.jpg" alt="1.jpg"></p>
+<p>这个矩阵就是转移概率矩阵P，并且它是保持不变的，就是说第一天到第二天的转移概率矩阵跟第二天到第三天的转移概率矩阵是一样的。</p>
+<p><img src="https://s2.loli.net/2022/10/18/Kq5BHvs6wCuJ2Fp.jpg" alt="2.jpg"></p>
+<blockquote>
+<h4 id="One-application"><a href="#One-application" class="headerlink" title="One application"></a>One application</h4><p>For example, consider a hypothetical market with Markov properties where historical data has given us the following patterns: After a week characterized by a bull market trend there is a 90% chance that another bullish week will follow. Additionally, there is a 7.5% chance that the bull week instead will be followed by a bearish one, or a 2.5% chance that it will be a stagnant one. After a bearish week there’s an 80% chance that the upcoming week also will be bearish, and so on. This data is compiled to form a matrix and then the results are drawn thereof.</p>
+</blockquote>
+<p>拉普拉斯平滑（Laplace Smoothing）又被称为加 1 平滑，是比较常用的平滑方法。平滑方法的存在时为了解决零概率问题。</p>
+<blockquote>
+<p>背景:为什么要做平滑处理?</p>
+</blockquote>
+<p>零概率问题，就是在计算实例的概率时，如果某个量x，在观察样本库（训练集）中没有出现过，会导致整个实例的概率结果是0。在文本分类的问题中，当一个词语没有在训练样本中出现，该词语调概率为0，使用连乘计算文本出现概率时也为0。这是不合理的，不能因为一个事件没有观察到就武断的认为该事件的概率是0。</p>
+<blockquote>
+<p>拉普拉斯的理论支撑</p>
+</blockquote>
+<p>为了解决零概率的问题，法国数学家拉普拉斯最早提出用加1的方法估计没有出现过的现象的概率，所以加法平滑也叫做拉普拉斯平滑。<br>假定训练样本很大时，每个分量x的计数加1造成的估计概率变化可以忽略不计，但可以方便有效的避免零概率问题。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Extra-curriculum/" rel="tag">Extra curriculum</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hobbies/" rel="tag">Hobbies</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mathematics/" rel="tag">Mathematics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Reading-notes/" rel="tag">Reading notes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sciences/" rel="tag">Sciences</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Statistics-and-data-science/" rel="tag">Statistics and data science</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Principles of Economics(chapter19)"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/06/05/Principles%20of%20Economics(chapter19)/"
+    >Reading notes--Principles of Economics (chapter19)</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/06/05/Principles%20of%20Economics(chapter19)/" class="article-date">
+  <time datetime="2022-06-05T15:59:59.000Z" itemprop="datePublished">2022-06-05</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Chapter 19 is Earnings and Discrimination. This chapter introduces different kinds of discrimination. (e.g Why doctors earn more wages than workers)</p>
+<blockquote>
+<p>Labour market discrimination– education</p>
+</blockquote>
+<ul>
+<li><p>A well-educated worker tends to have a greater wage because of human capital and signaling effect. </p>
+</li>
+<li><p>Human capital effect: The well-educated labours have a greater productivity so they have greater wage rates. </p>
+</li>
+<li><p>Signaling effect: The access of university does not increase the productivity of labours but it is a signal that labours have the greater ability to master skills so they have greater wage rates&#x2F;</p>
+</li>
+</ul>
+<blockquote>
+<p>Labour market discrimination– job</p>
+</blockquote>
+<ul>
+<li><p>e.g A superstar always earns a greater wage than a carpenter or a plumber.</p>
+</li>
+<li><p>reason 1: Every customer in the market wants to enjoy the good supplied by the best producer. </p>
+</li>
+<li><p>reason 2: The good is produced with a technology that makes it possible for the best producer to supply every customer at low cost.</p>
+</li>
+</ul>
+<blockquote>
+<p>Discrimination by employers</p>
+</blockquote>
+<ul>
+<li><p>Wage differential will be eliminated by it in markets with free entry and exit.</p>
+</li>
+<li><p>Reason: If employers discriminate one sort of employees, the demand for it will decrease so the wage rate of it decreases in the labour market. Then some employers will recruit them since the cost of these labours decreases.</p>
+</li>
+</ul>
+<h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><p>1.Compensating differential– a difference in wages that arises to offset the nonmonetary characteristics of different jobs</p>
+<p>2.Strike– the organized withdrawal of labor from a firm by a union</p>
+<p>3.Discrimination– the offering of different opportunities to similar individuals who differ only by race, ethnic group, sex, age, or other personal characteristics</p>
+<p>4.Human capital– the knowledge and skills that workers acquire through education and on-the-job training</p>
+<p>5.Efficiency wage– above equilibrium wages paid by firms to increase worker productivity</p>
+<p>6.Statistical discrimination– discrimination that arises because an irrelevant but observable personal characteristic is correlated with a relevant but unobservable attribute</p>
+<p>7.Union– a worker association that bargains with employers over wages and working conditions</p>
+<h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><p>There are some exercises in this book. I recorded questions I didn’t answer correctly here.</p>
+<blockquote>
+<ol>
+<li>Among full-time U.S. workers, white women earn about_____ percent less than white men, and black men earn about_____ percent less than white men. (Correct answer: C)</li>
+</ol>
+</blockquote>
+<p>a. 5;20</p>
+<p>b. 5;40</p>
+<p>c. 20;20</p>
+<p>d. 20;40</p>
+<p>My wrong answer: A</p>
+<blockquote>
+<ol start="2">
+<li>The forces of competition in markets with free entry and exit tend to eliminate wage differentials that arise from discrimination by_____ (Correct answer: A)</li>
+</ol>
+</blockquote>
+<p>a. employers</p>
+<p>b. customers</p>
+<p>c. government</p>
+<p>d. all of the above</p>
+<p>My wrong answer: D</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Economics/" rel="tag">Economics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hobbies/" rel="tag">Hobbies</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Reading-notes/" rel="tag">Reading notes</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Academic subject"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/03/05/Academic%20subject/"
+    >An academic subject inspires me</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/03/05/Academic%20subject/" class="article-date">
+  <time datetime="2022-03-05T15:59:59.000Z" itemprop="datePublished">2022-03-05</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><strong>Introduction</strong></p>
+<p>One of the academic subjects that has boosted my further interest is Economics. This short essay will demonstrate my journey of learning it.</p>
+<p><strong>Background</strong></p>
+<p>I could only start studying Economics in Grade 10, because it was not available on the curriculum before then. (Economics is a subject which can only be studied by international students because it is not a compulsory subject for Chinese national education system.)</p>
+<p><strong>Experience of learning Economics</strong></p>
+<p>Despite my relatively poor English, I still understood the main points from my English Economics teacher quickly perhaps I worked hard in it. Learning about supply and demand in commerce caught my interest quickly in Economics and I found it fascinating and wanted to learn more in this field, for instance, how a market works. I became aware of the need to improve my English language skills when I did not understand some specific vocabulary such as vice versa, ceteris paribus and capita. From then on, I read English books to improve my lexical resources. For example, the book Principles of Economics which illustrates some fundamentals in Economics. From this book, I was surprised to find there is a strong relationship between Mathematics and Economics, for instance, you could use calculus(integration)to calculate total welfare in one market. This opened up a whole new world to me because I did well in Mathematics which helped me study this field in more depth. I finished all exercises in each chapter and made reading notes to summarize the main points.</p>
+<p><strong>Experience of taking part in FBLA</strong></p>
+<p>Because of my outstanding performance in the final exam of the semester, my teacher suggested that I take part in a business contest which was called The Future Business Leader of America (FBLA). The preparation was intense but I learnt a great deal of new information which the school syllabus had not provided. Then I cooperated with two partners to do a presentation focused on a business plan about attracting investment from investors and received excellent scores. I strengthened not only my economic knowledge but also speaking skills during the preparation of the presentation.</p>
+<p><strong>Conclusion</strong></p>
+<p>In conclusion, I have been capable and motivated to learn more about Economics and I hope to focus more on this interesting subject in the future and perhaps study it at university level.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Economics/" rel="tag">Economics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Extra-curriculum/" rel="tag">Extra curriculum</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Personal-statement/" rel="tag">Personal statement</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-My greatest skill"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/01/16/My%20greatest%20skill/"
+    >My greatest skill</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/01/16/My%20greatest%20skill/" class="article-date">
+  <time datetime="2022-01-16T15:59:59.000Z" itemprop="datePublished">2022-01-16</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <blockquote>
+<p>Introduction</p>
+</blockquote>
+<p>My greatest skill is my ability to use study skills to enhance my understanding of school subjects. These involve the study skills of doing efficient research online, managing time wisely and cooperate with others to solve problems if necessary. This short essay will illustrate how I have been developing and strengthening these study skills.</p>
+<blockquote>
+<p>Background</p>
+</blockquote>
+<p>My home is far away from the school and therefore I live in the school dormitory during weekdays so my parents cannot accompany me as well as give me help. The majority of students in our class tend to have extra-curricular classes to improve their learning in order to get excellent exam scores. For me, I consider self-study to be more advantageous so I do it instead of having those extra curricular-classes.</p>
+<blockquote>
+<p>My study experiences</p>
+</blockquote>
+<p>In the textbooks I use, it is necessary to answer questions in order to check if I have mastered knowledge precisely. However, these questions are limited so I then use the internet to find appropriate exercises. Doing past papers is a good choice, but the majority of them only cover one unit. So, I collaborate with another student to classify questions that cover chapters we have already learned and organize them in an online file. In addition, I pay for an annual subscription of a website called Save My Exams which provides appropriate questions. This website is useful because it addresses individual topics in detail rather than more generally therefore it is more in-depth and improves my learning.</p>
+<blockquote>
+<p>The skill i need to develop</p>
+</blockquote>
+<p>I am keen to avoid procrastination which is the enemy to these study skills especially in terms of time management. I did not master Physics knowledge due to this lack of organizing my time well in revising physics, I did badly in the monthly exam which was disappointing due to the lack of review which occurred owing to my poor ability to execute my plan of reviewing science subjects.  </p>
+<blockquote>
+<p>Conclusion</p>
+</blockquote>
+<p>Overall, because of my experience living in the school dormitory, I have been strengthening my self-study skills which will be beneficial for me when I attend university.</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Personal-statement/" rel="tag">Personal statement</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/School-life/" rel="tag">School life</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next Page</a>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021-2025
+        <i class="ri-heart-fill heart_icon"></i> Alan
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/favicon.png" alt="WarlockAlan"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">Home</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">Archives</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">Tags</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://alevel.justin.education">A-Level</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">Links</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">About</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script>
+
+<script src="/js/clickBoom1.js"></script>
+ 
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+  </div>
+</body>
+
+</html>
